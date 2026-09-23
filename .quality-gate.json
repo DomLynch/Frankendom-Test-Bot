@@ -1,0 +1,9 @@
+{
+  "commands": [
+    ["sh", "-n", "run-baseline.sh"]
+  ],
+  "manual": [
+    "Run a pinned browser fight and inspect its JSON result and WebM recording"
+  ],
+  "timeout_seconds": 30
+}
