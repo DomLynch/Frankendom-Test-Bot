@@ -10,5 +10,5 @@
   "completion_commands": [
     ["./run-latest.sh", "--smoke", "--no-video", "--step-ms=64", "--out=artifacts/combat/launcher-gate"]
   ],
-  "timeout_seconds": 900
+  "timeout_seconds": 420
 }
