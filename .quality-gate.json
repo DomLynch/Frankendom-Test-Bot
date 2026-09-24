@@ -1,9 +1,12 @@
 {
   "commands": [
-    ["sh", "-n", "run-baseline.sh"]
+    ["sh", "-n", "run-latest.sh", "run-baseline.sh", "archive/run-heavy-only.sh"]
   ],
   "manual": [
-    "Run a pinned browser fight and inspect its JSON result and WebM recording"
+    "Inspect a pinned browser fight's JSON result and WebM recording"
   ],
-  "timeout_seconds": 30
+  "completion_commands": [
+    ["./run-latest.sh", "--smoke", "--no-video", "--step-ms=64", "--out=artifacts/combat/launcher-gate"]
+  ],
+  "timeout_seconds": 900
 }
