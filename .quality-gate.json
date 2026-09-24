@@ -1,6 +1,8 @@
 {
   "commands": [
-    ["sh", "-n", "run-latest.sh", "run-baseline.sh", "archive/run-heavy-only.sh"]
+    ["sh", "-n", "run-latest.sh"],
+    ["sh", "-n", "run-baseline.sh"],
+    ["sh", "-n", "archive/run-heavy-only.sh"]
   ],
   "manual": [
     "Inspect a pinned browser fight's JSON result and WebM recording"
