@@ -3,8 +3,12 @@ set -eu
 root=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 game="$root/game"
 sha=$(cat "$root/current-game.sha")
+mode=limited
 for arg do
-  case "$arg" in --strategy=*) echo 'run-latest.sh always uses tactical; use archive/run-heavy-only.sh for the old policy' >&2; exit 2;; esac
+  case "$arg" in
+    --strategy=*) echo 'run-latest.sh always uses tactical; use archive/run-heavy-only.sh for the old policy' >&2; exit 2;;
+    --observation=*) mode=${arg#*=};;
+  esac
 done
 if [ ! -d "$game/.git" ]; then
   git clone --branch codex/01a0ceea/task-3 --single-branch https://github.com/DomLynch/RPG-game.git "$game"
@@ -30,5 +34,5 @@ if [ ! -f dist/index.html ] || [ "$(cat dist/.bot-revision 2>/dev/null || :)" !=
   npm run build
   printf '%s\n' "$sha" > dist/.bot-revision
 fi
-echo "LATEST tactical bot · $sha · Easy · debug observation" >&2
+echo "LATEST tactical bot · $sha · Easy · $mode observation" >&2
 exec node scripts/player-bot.mjs --strategy=tactical "$@"
