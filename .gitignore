@@ -1,1 +1,4 @@
 game/
+node_modules/
+archive/game-*/
+artifacts/
