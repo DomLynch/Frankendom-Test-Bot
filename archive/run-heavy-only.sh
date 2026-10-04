@@ -1,7 +1,7 @@
 #!/bin/sh
 set -eu
 root=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
-game="$root/game"
+game="$root/archive/game-heavy-only"
 echo 'ARCHIVED heavy-only bot · game 22ca94ff · charged · Easy · debug observation' >&2
 if [ ! -d "$game/.git" ]; then
   git clone --branch combat/player-bot-v2-all-easy --single-branch https://github.com/DomLynch/RPG-game.git "$game"

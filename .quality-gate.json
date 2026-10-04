@@ -1,14 +1,51 @@
 {
   "commands": [
-    ["sh", "-n", "run-latest.sh"],
-    ["sh", "-n", "run-baseline.sh"],
-    ["sh", "-n", "archive/run-heavy-only.sh"]
+    [
+      "sh",
+      "-n",
+      "run-latest.sh"
+    ],
+    [
+      "sh",
+      "-n",
+      "run-sim.sh"
+    ],
+    [
+      "sh",
+      "-n",
+      "scripts/prepare-game.sh"
+    ],
+    [
+      "sh",
+      "-n",
+      "run-baseline.sh"
+    ],
+    [
+      "sh",
+      "-n",
+      "archive/run-heavy-only.sh"
+    ],
+    [
+      "sh",
+      "-n",
+      "archive/run-tactical-20260924.sh"
+    ],
+    [
+      "npm",
+      "test"
+    ]
   ],
   "manual": [
     "Inspect a pinned browser fight's JSON result and WebM recording"
   ],
   "completion_commands": [
-    ["./run-latest.sh", "--smoke", "--no-video", "--step-ms=64", "--out=artifacts/combat/launcher-gate"]
+    [
+      "./run-latest.sh",
+      "--smoke",
+      "--no-video",
+      "--step-ms=64",
+      "--out=artifacts/combat/launcher-gate"
+    ]
   ],
   "timeout_seconds": 420
 }
