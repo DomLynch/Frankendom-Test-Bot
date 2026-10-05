@@ -2,6 +2,8 @@
 
 **Purpose:** autonomous combat research—fight, review, reproduce findings and help improve the game. Competent play supports this; win rate is one measure. See the [research objective and player-skill profiles](docs/testing-objective.md).
 
+Latest [five-part player-experience pilot](docs/player-senses-20261005.md): 27 engine fights, nine rendered browser fights, masked visual review, native game audio and trusted touch coverage. Includes short AV clips, measured results and game-team proposals. These research tools do not replace the normal policy; physical-phone comfort and perceptual sound judgment remain untested.
+
 **This is the canonical bot entry repo.** Git and Node.js **22.18+** are required. Clone it, then run the current tactical browser bot:
 
 ```sh

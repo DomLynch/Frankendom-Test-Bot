@@ -12,11 +12,11 @@ const out = values.out ?? 'artifacts/combat/profile-pilot/' + new Date().toISOSt
 const opponents = values.opponents.split(','), players = values.players.split(','), count = Number(values.fights), seed = Number(values.seed);
 if (!Number.isInteger(count) || count < 1 || count > 100 || !Number.isInteger(seed) || seed < 0 || seed > 0xffffffff) throw new Error('Invalid fights/seed');
 if (!players.every(p => Object.hasOwn(PLAYER_PROFILES,p))) throw new Error('Unknown player profile');
-if (!opponents.every(p => ['pitborn','veteran'].includes(p))) throw new Error('Pilot is limited to Pitborn/Veteran');
+if (!opponents.every(p => ['pitborn','veteran','goblin','executioner'].includes(p))) throw new Error('Pilot supports Pitborn/Veteran/Goblin/Executioner');
 if (new Set(opponents).size !== opponents.length || new Set(players).size !== players.length) throw new Error('Duplicate opponent/player');
 if (existsSync(`${out}/summary.json`)) throw new Error('Output already contains a run; choose a new --out directory to retain every result');
 mkdirSync(out,{recursive:true});
-const files = ['scripts/lib/profile-fight.mjs','scripts/lib/player-profiles.mjs','scripts/lib/player-bot-policy.mjs','scripts/lib/player-bot-observation.mjs','scripts/lib/player-bot-review.mjs','scripts/lib/combat-learning.mjs'];
+const files = ['scripts/profile-pilot.mjs','scripts/lib/profile-fight.mjs','scripts/lib/player-profiles.mjs','scripts/lib/player-bot-policy.mjs','scripts/lib/player-bot-observation.mjs','scripts/lib/player-bot-review.mjs','scripts/lib/combat-learning.mjs'];
 const source = { engineRevision:readFileSync('current-game.sha','utf8').trim(), controllerSha256:createHash('sha256').update(files.map(f => f+'\0'+readFileSync(f,'utf8')).join('\0')).digest('hex') };
 const rows = [], seeds = fightSeeds(seed,count);
 for (const opponent of opponents) for (const player of players) for (const seed of seeds) {
