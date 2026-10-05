@@ -1,0 +1,272 @@
+{
+  "audit": "all2520frames independently hash checked; same state/event hashes within each three-view replay",
+  "rows": [
+    {
+      "case": "defence-metal",
+      "source": {
+        "revision": "4056467af826b03166a575002f7a4f4b04f9dfe7",
+        "botRevision": "2aeae17ebe308d206a0186ca1dd7c10f33fe66ab",
+        "cameraModuleSha256": "840d062167753d3f25111240eb5489f5804c29a54d150b7cd4f0a3e872ae8770",
+        "fixtureSha256": "372df639795c439cc7ee6f6f9c7f454cf333227958caf808b3cb14f0541fb149",
+        "recordSha256": "f856f75da83674b0e9550c38137a09abbfa3659596f323244625e73f53a74219",
+        "seed": 2026100504,
+        "opponent": "veteran",
+        "fromTick": 630,
+        "toTick": 1050,
+        "evidence": "rendered replay of retained engine-authored inputs; camera-only prototype, not a fresh player-policy acceptance fight",
+        "limits": "normal game HUD retained; angular camera residual retained approximately; positional impact offsets differ; arena culling/presentation calculations still use baseline camera before final draw; no audio/touch/real-time FPS acceptance",
+        "receipts": [
+          {
+            "revision": "4056467af826b03166a575002f7a4f4b04f9dfe7",
+            "botRevision": "2aeae17ebe308d206a0186ca1dd7c10f33fe66ab",
+            "cameraModuleSha256": "840d062167753d3f25111240eb5489f5804c29a54d150b7cd4f0a3e872ae8770",
+            "fixtureSha256": "372df639795c439cc7ee6f6f9c7f454cf333227958caf808b3cb14f0541fb149",
+            "recordSha256": "f856f75da83674b0e9550c38137a09abbfa3659596f323244625e73f53a74219",
+            "seed": 2026100504,
+            "opponent": "veteran",
+            "fromTick": 630,
+            "toTick": 1050,
+            "evidence": "rendered replay of retained engine-authored inputs; camera-only prototype, not a fresh player-policy acceptance fight",
+            "limits": "normal game HUD retained; angular camera residual retained approximately; positional impact offsets differ; arena culling/presentation calculations still use baseline camera before final draw; no audio/touch/real-time FPS acceptance",
+            "preset": "current",
+            "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+            "frames": {
+              "directory": "/Users/domininclynch/Developer/frankendom-test-bot-launcher-20261005/artifacts/combat/camera-lab-20261005/defence-metal/current-frames",
+              "basis": "actual paused rendered JPEGs; tick read before and after screenshot",
+              "frameCount": 420,
+              "firstTick": 631,
+              "lastTick": 1050,
+              "maxGapTicks": 1,
+              "aligned": true,
+              "playback": "simulation time at 60 ticks/sec; not measured realtime/game FPS",
+              "audio": false
+            },
+            "eventsSha256": "31ed66d36c09e200837e590b39c4b56133fb362f293212100cb06f548127e828",
+            "statesSha256": "45742a1c5ec344a92f47c7ed7721c0f459171e356b351a98106fdb04a12c3105",
+            "errors": [],
+            "parity": "raw retained event list and verified final fighter state match"
+          },
+          {
+            "revision": "4056467af826b03166a575002f7a4f4b04f9dfe7",
+            "botRevision": "2aeae17ebe308d206a0186ca1dd7c10f33fe66ab",
+            "cameraModuleSha256": "840d062167753d3f25111240eb5489f5804c29a54d150b7cd4f0a3e872ae8770",
+            "fixtureSha256": "372df639795c439cc7ee6f6f9c7f454cf333227958caf808b3cb14f0541fb149",
+            "recordSha256": "f856f75da83674b0e9550c38137a09abbfa3659596f323244625e73f53a74219",
+            "seed": 2026100504,
+            "opponent": "veteran",
+            "fromTick": 630,
+            "toTick": 1050,
+            "evidence": "rendered replay of retained engine-authored inputs; camera-only prototype, not a fresh player-policy acceptance fight",
+            "limits": "normal game HUD retained; angular camera residual retained approximately; positional impact offsets differ; arena culling/presentation calculations still use baseline camera before final draw; no audio/touch/real-time FPS acceptance",
+            "preset": "elevated",
+            "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+            "frames": {
+              "directory": "/Users/domininclynch/Developer/frankendom-test-bot-launcher-20261005/artifacts/combat/camera-lab-20261005/defence-metal/elevated-frames",
+              "basis": "actual paused rendered JPEGs; tick read before and after screenshot",
+              "frameCount": 420,
+              "firstTick": 631,
+              "lastTick": 1050,
+              "maxGapTicks": 1,
+              "aligned": true,
+              "playback": "simulation time at 60 ticks/sec; not measured realtime/game FPS",
+              "audio": false
+            },
+            "eventsSha256": "31ed66d36c09e200837e590b39c4b56133fb362f293212100cb06f548127e828",
+            "statesSha256": "45742a1c5ec344a92f47c7ed7721c0f459171e356b351a98106fdb04a12c3105",
+            "errors": [],
+            "parity": "raw retained event list and verified final fighter state match"
+          },
+          {
+            "revision": "4056467af826b03166a575002f7a4f4b04f9dfe7",
+            "botRevision": "2aeae17ebe308d206a0186ca1dd7c10f33fe66ab",
+            "cameraModuleSha256": "840d062167753d3f25111240eb5489f5804c29a54d150b7cd4f0a3e872ae8770",
+            "fixtureSha256": "372df639795c439cc7ee6f6f9c7f454cf333227958caf808b3cb14f0541fb149",
+            "recordSha256": "f856f75da83674b0e9550c38137a09abbfa3659596f323244625e73f53a74219",
+            "seed": 2026100504,
+            "opponent": "veteran",
+            "fromTick": 630,
+            "toTick": 1050,
+            "evidence": "rendered replay of retained engine-authored inputs; camera-only prototype, not a fresh player-policy acceptance fight",
+            "limits": "normal game HUD retained; angular camera residual retained approximately; positional impact offsets differ; arena culling/presentation calculations still use baseline camera before final draw; no audio/touch/real-time FPS acceptance",
+            "preset": "shoulder",
+            "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+            "frames": {
+              "directory": "/Users/domininclynch/Developer/frankendom-test-bot-launcher-20261005/artifacts/combat/camera-lab-20261005/defence-metal/shoulder-frames",
+              "basis": "actual paused rendered JPEGs; tick read before and after screenshot",
+              "frameCount": 420,
+              "firstTick": 631,
+              "lastTick": 1050,
+              "maxGapTicks": 1,
+              "aligned": true,
+              "playback": "simulation time at 60 ticks/sec; not measured realtime/game FPS",
+              "audio": false
+            },
+            "eventsSha256": "31ed66d36c09e200837e590b39c4b56133fb362f293212100cb06f548127e828",
+            "statesSha256": "45742a1c5ec344a92f47c7ed7721c0f459171e356b351a98106fdb04a12c3105",
+            "errors": [],
+            "parity": "raw retained event list and verified final fighter state match"
+          }
+        ],
+        "parity": "all camera views have identical tick/state/event hashes"
+      },
+      "summarySha256": "137cba44b8c839ab7754be5f6157fbaa419081fd526d8d872901b19fde0e1cfe"
+    },
+    {
+      "case": "roll-metal",
+      "source": {
+        "revision": "4056467af826b03166a575002f7a4f4b04f9dfe7",
+        "botRevision": "2aeae17ebe308d206a0186ca1dd7c10f33fe66ab",
+        "cameraModuleSha256": "840d062167753d3f25111240eb5489f5804c29a54d150b7cd4f0a3e872ae8770",
+        "fixtureSha256": "d1329face59cb94fb009ca82b911d71e90aea20277a578a6c7f37f70a101090b",
+        "recordSha256": "9446c162cc791652b1155d849e72f7bf3f8d6398b8e9c086e6c8f450e80bab25",
+        "seed": 2096410118,
+        "opponent": "veteran",
+        "fromTick": 1130,
+        "toTick": 1550,
+        "evidence": "rendered replay of retained engine-authored inputs; camera-only prototype, not a fresh player-policy acceptance fight",
+        "limits": "normal game HUD retained; angular camera residual retained approximately; positional impact offsets differ; arena culling/presentation calculations still use baseline camera before final draw; no audio/touch/real-time FPS acceptance",
+        "receipts": [
+          {
+            "revision": "4056467af826b03166a575002f7a4f4b04f9dfe7",
+            "botRevision": "2aeae17ebe308d206a0186ca1dd7c10f33fe66ab",
+            "cameraModuleSha256": "840d062167753d3f25111240eb5489f5804c29a54d150b7cd4f0a3e872ae8770",
+            "fixtureSha256": "d1329face59cb94fb009ca82b911d71e90aea20277a578a6c7f37f70a101090b",
+            "recordSha256": "9446c162cc791652b1155d849e72f7bf3f8d6398b8e9c086e6c8f450e80bab25",
+            "seed": 2096410118,
+            "opponent": "veteran",
+            "fromTick": 1130,
+            "toTick": 1550,
+            "evidence": "rendered replay of retained engine-authored inputs; camera-only prototype, not a fresh player-policy acceptance fight",
+            "limits": "normal game HUD retained; angular camera residual retained approximately; positional impact offsets differ; arena culling/presentation calculations still use baseline camera before final draw; no audio/touch/real-time FPS acceptance",
+            "preset": "current",
+            "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+            "frames": {
+              "directory": "/Users/domininclynch/Developer/frankendom-test-bot-launcher-20261005/artifacts/combat/camera-lab-20261005/roll-metal/current-frames",
+              "basis": "actual paused rendered JPEGs; tick read before and after screenshot",
+              "frameCount": 420,
+              "firstTick": 1131,
+              "lastTick": 1550,
+              "maxGapTicks": 1,
+              "aligned": true,
+              "playback": "simulation time at 60 ticks/sec; not measured realtime/game FPS",
+              "audio": false
+            },
+            "eventsSha256": "7e4682a951c24f7e3b2cf000e13b7c66306537f06942946869086d3377352c83",
+            "statesSha256": "f3543527026fc8b5bbd87d8ba9d497c1e2b24810c053a362a0705c1fef894163",
+            "errors": [],
+            "parity": "raw retained event list and verified final fighter state match"
+          },
+          {
+            "revision": "4056467af826b03166a575002f7a4f4b04f9dfe7",
+            "botRevision": "2aeae17ebe308d206a0186ca1dd7c10f33fe66ab",
+            "cameraModuleSha256": "840d062167753d3f25111240eb5489f5804c29a54d150b7cd4f0a3e872ae8770",
+            "fixtureSha256": "d1329face59cb94fb009ca82b911d71e90aea20277a578a6c7f37f70a101090b",
+            "recordSha256": "9446c162cc791652b1155d849e72f7bf3f8d6398b8e9c086e6c8f450e80bab25",
+            "seed": 2096410118,
+            "opponent": "veteran",
+            "fromTick": 1130,
+            "toTick": 1550,
+            "evidence": "rendered replay of retained engine-authored inputs; camera-only prototype, not a fresh player-policy acceptance fight",
+            "limits": "normal game HUD retained; angular camera residual retained approximately; positional impact offsets differ; arena culling/presentation calculations still use baseline camera before final draw; no audio/touch/real-time FPS acceptance",
+            "preset": "elevated",
+            "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+            "frames": {
+              "directory": "/Users/domininclynch/Developer/frankendom-test-bot-launcher-20261005/artifacts/combat/camera-lab-20261005/roll-metal/elevated-frames",
+              "basis": "actual paused rendered JPEGs; tick read before and after screenshot",
+              "frameCount": 420,
+              "firstTick": 1131,
+              "lastTick": 1550,
+              "maxGapTicks": 1,
+              "aligned": true,
+              "playback": "simulation time at 60 ticks/sec; not measured realtime/game FPS",
+              "audio": false
+            },
+            "eventsSha256": "7e4682a951c24f7e3b2cf000e13b7c66306537f06942946869086d3377352c83",
+            "statesSha256": "f3543527026fc8b5bbd87d8ba9d497c1e2b24810c053a362a0705c1fef894163",
+            "errors": [],
+            "parity": "raw retained event list and verified final fighter state match"
+          },
+          {
+            "revision": "4056467af826b03166a575002f7a4f4b04f9dfe7",
+            "botRevision": "2aeae17ebe308d206a0186ca1dd7c10f33fe66ab",
+            "cameraModuleSha256": "840d062167753d3f25111240eb5489f5804c29a54d150b7cd4f0a3e872ae8770",
+            "fixtureSha256": "d1329face59cb94fb009ca82b911d71e90aea20277a578a6c7f37f70a101090b",
+            "recordSha256": "9446c162cc791652b1155d849e72f7bf3f8d6398b8e9c086e6c8f450e80bab25",
+            "seed": 2096410118,
+            "opponent": "veteran",
+            "fromTick": 1130,
+            "toTick": 1550,
+            "evidence": "rendered replay of retained engine-authored inputs; camera-only prototype, not a fresh player-policy acceptance fight",
+            "limits": "normal game HUD retained; angular camera residual retained approximately; positional impact offsets differ; arena culling/presentation calculations still use baseline camera before final draw; no audio/touch/real-time FPS acceptance",
+            "preset": "shoulder",
+            "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+            "frames": {
+              "directory": "/Users/domininclynch/Developer/frankendom-test-bot-launcher-20261005/artifacts/combat/camera-lab-20261005/roll-metal/shoulder-frames",
+              "basis": "actual paused rendered JPEGs; tick read before and after screenshot",
+              "frameCount": 420,
+              "firstTick": 1131,
+              "lastTick": 1550,
+              "maxGapTicks": 1,
+              "aligned": true,
+              "playback": "simulation time at 60 ticks/sec; not measured realtime/game FPS",
+              "audio": false
+            },
+            "eventsSha256": "7e4682a951c24f7e3b2cf000e13b7c66306537f06942946869086d3377352c83",
+            "statesSha256": "f3543527026fc8b5bbd87d8ba9d497c1e2b24810c053a362a0705c1fef894163",
+            "errors": [],
+            "parity": "raw retained event list and verified final fighter state match"
+          }
+        ],
+        "parity": "all camera views have identical tick/state/event hashes"
+      },
+      "summarySha256": "8882a4395716a912a44bda42a463286e30a3b7ee32dac858f80e302cb8fffd2a"
+    }
+  ],
+  "exports": [
+    {
+      "case": "defence",
+      "video": "defence-comparison.mp4",
+      "sha256": "2cafaddc0171f2aaf073dc55524fde518d818dbf9598bfa3d3257c6dc4cc3640",
+      "decode": "PASS",
+      "order": [
+        "current",
+        "elevated",
+        "shoulder"
+      ]
+    },
+    {
+      "case": "roll",
+      "video": "roll-comparison.mp4",
+      "sha256": "f38d38a4e680849bd33e5057a4fc78280b2e4293815c25611f17a295b6b3afcb",
+      "decode": "PASS",
+      "order": [
+        "current",
+        "elevated",
+        "shoulder"
+      ]
+    }
+  ],
+  "validation": {
+    "tests": 91,
+    "failed": 0,
+    "result": {
+      "job": "camera-validation-stage-05a232ccf57f",
+      "hostname": "Brain",
+      "source_files_verified": 786,
+      "command": [
+        "bash",
+        "-lc",
+        "npm test > tests.log 2>&1; result=$?; tail -14 tests.log; exit \"$result\""
+      ],
+      "exit_code": 0,
+      "stopped_for_disk_reserve": false,
+      "elapsed_seconds": 2.01,
+      "finished_epoch": 1791190687.9093335
+    },
+    "sourceFiles": {
+      "scripts/camera-lab.mjs": "397c797a612c32ed8554faf6c17a386b362c9cb1ba88ee0fa45fb44b1f053ece",
+      "scripts/lib/camera-lab.mjs": "840d062167753d3f25111240eb5489f5804c29a54d150b7cd4f0a3e872ae8770",
+      "tests/camera-lab.test.mjs": "e16f53a2ea3a028fc25750bd247f14922287d931bb28806010b588e87fe697b2"
+    }
+  }
+}
