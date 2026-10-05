@@ -4,6 +4,12 @@ import { BOT_CONFIG, chooseChargedAttack, chooseGuardCounter, chooseTacticalAtta
 
 const observation = (rest = {}) => ({ tick: 100, hp: 150, enemyHp: 190, stamina: 100, gap: 2, phase: 'ready', enemyPhase: 'attack', heavy: true, events: [], ...rest });
 
+test('tactical policy uses straight guard against an observed thrust after its delay', () => {
+  const state = {}, config = { thrustRange: 1.9, wallRadius: 7, windup: { thrust: 18 } };
+  chooseTacticalAttack(observation({events:[{tick:100,type:'AttackStarted',actor:1,move:'thrust',direction:'thrust'}]}),state,11,config);
+  assert.deepEqual(chooseTacticalAttack(observation({tick:111,events:[]}),state,11,config).keys,['KeyQ']);
+});
+
 test('test player holds guard, then changes side only after its reaction delay', () => {
   const state = { tell: null, counterUntil: 0 };
   assert.deepEqual(chooseGuardCounter(observation({ events: [{ tick: 100, type: 'AttackStarted', actor: 1, direction: 'right' }] }), state, 12), { keys: ['KeyW', 'KeyQ'], press: null });
@@ -102,6 +108,15 @@ test('tactical player answers a confirmed block with a quick counter before heav
   const action = chooseTacticalAttack(observation({ tick: 112, gap: 1.5, light: true }), state, 12, config);
   assert.equal(action.press, 'KeyF');
   assert.equal(action.reason, 'slash after defence');
+});
+
+test('a critical Heavy finisher consumes the same attack budget as other heavies', () => {
+  const state = {}, config = { ...charged, thrustRange: 1.9, wallRadius: 7.15 };
+  const starts = ['thrust', 'thrust', 'thrust', 'thrust', 'critical'].map((move, i) => ({ tick: 100 + i, type: 'AttackStarted', actor: 0, move }));
+  chooseTacticalAttack(observation({ tick: 200, events: [...starts, { tick: 200, type: 'Blocked', actor: 0 }], gap: 1.5 }), state, 12, config);
+  assert.equal(state.heavies, 1);
+  assert.equal(state.quickRestUntil, 174, "critical retains the original recovery pause");
+  assert.notEqual(chooseTacticalAttack(observation({ tick: 212, gap: 1.5 }), state, 12, config).press, 'KeyG');
 });
 
 test('tactical heavy counter requires four actual quick attack starts', () => {

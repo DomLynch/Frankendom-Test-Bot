@@ -17,11 +17,32 @@ export function intentFor(decision, obs, strategy, recentEvents) {
 export function explainDecisions(decisions, events) {
   return decisions.map((d, index) => {
     const after = events.filter(e => e.tick >= d.tick && e.tick <= d.tick + 180);
+    if (d.press === 'Skill') {
+      const started = after.find(e => e.type === 'SpecialStarted' && e.actor === 0 && e.tick <= d.tick + 8);
+      const nextStart = started && events.find(e => e.type === 'SpecialStarted' && e.actor === 0 && e.tick > started.tick)?.tick;
+      const result = started && after.find(e => e.tick >= started.tick && e.tick < (nextStart ?? Infinity)
+        && e.actor === 0 && e.move === started.move && ['SpecialLanded', 'SpecialFizzled'].includes(e.type));
+      return { ...d, outcome: !started ? 'no special started' : !result ? 'unresolved' : result.type === 'SpecialLanded' ? 'special landed' : 'special fizzled',
+        attackStart: started?.tick ?? null, move: started?.move ?? null, evidence: result?.tick ?? started?.tick ?? null };
+    }
+    if (d.intent.includes('feint')) {
+      const accepted = after.find(e => e.type === 'ActionStarted' && e.actor === 0 && e.action === 'feint' && e.tick <= d.tick + 8);
+      const canceled = accepted && events.filter(e => e.type === 'AttackStarted' && e.actor === 0 && e.tick <= accepted.tick).at(-1);
+      return { ...d, outcome: accepted ? 'feint accepted' : 'no feint started', canceledMove: canceled?.move ?? null, evidence: accepted?.tick ?? null };
+    }
     if (['KeyF', 'KeyT', 'KeyG', 'KeyC'].includes(d.press) || d.intent === 'charge heavy' || d.intent === 'charged heavy at reach') {
-      const started = after.find(e => e.type === 'AttackStarted' && e.actor === 0 && e.tick <= d.tick + 8);
+      const matches = move => d.press === 'KeyT' ? ['thrust', 'riposte'].includes(move) : d.press === 'KeyC' ? move === 'kick'
+        : d.press === 'KeyF' ? /^(light_|slash_riposte$)/.test(move ?? '') : /^(heavy_|critical$)/.test(move ?? '');
+      const started = after.find(e => e.type === 'AttackStarted' && e.actor === 0 && e.tick <= d.tick + 8 && matches(e.move));
       if (!started) return { ...d, outcome: 'no attack started', evidence: d.phase === 'ready' ? 'no matching start event' : `input during ${d.phase}` };
-      const result = after.find(e => e.tick >= started.tick && e.actor === 0 && (e.type === 'Hit' || e.type === 'AttackMissed'));
-      return { ...d, outcome: result?.type === 'Hit' ? 'hit' : result?.type === 'AttackMissed' ? 'missed' : 'unresolved', evidence: result?.tick ?? started.tick };
+      const nextStart = events.find(e => e.type === 'AttackStarted' && e.actor === 0 && e.tick > started.tick)?.tick ?? Infinity;
+      const result = after.find(e => e.tick >= started.tick && e.tick < nextStart && (
+        (e.actor === 0 && e.move === started.move && ['Hit', 'AttackMissed', 'GuardBroken'].includes(e.type)) ||
+        (e.actor === 1 && e.move === started.move && ['Blocked', 'Parried'].includes(e.type)) ||
+        (e.type === 'Hit' && e.target === 0 && e.stop) || (e.type === 'Staggered' && e.actor === 0)));
+      const outcome = !result ? 'unresolved' : result.type === 'Hit' ? (result.actor === 0 ? 'hit' : 'interrupted')
+        : ({ AttackMissed: 'missed', Blocked: 'blocked', Parried: 'parried', GuardBroken: 'guard broken', Staggered: 'interrupted' })[result.type];
+      return { ...d, outcome, attackStart: started.tick, move: started.move, evidence: result?.tick ?? started.tick };
     }
     if (d.intent.includes('guard')) {
       const nextInputTick = decisions[index + 1]?.tick ?? Infinity;
@@ -126,9 +147,27 @@ export function defenceEarned(events, track, moves, charge = 1.5) {
     const answer = opened ? events.find(x => x.type === 'AttackStarted' && x.actor === 0 && x.tick > from && x.tick <= Math.min(until, nextThreat)) : undefined;
     const landed = answer ? events.some(x => x.type === 'Hit' && x.actor === 0 && x.move === answer.move && x.tick >= answer.tick && x.tick <= answer.tick + 60) : false;
     const before = gapAt(track, e.tick), after = gapAt(track, e.tick + 30);
-    list.push({ tick: e.tick, type, against: attack?.start.move ?? null, charged: !!attack?.charged, result, avoided, windowOpened: opened,
+    list.push({ tick: e.tick, type, attackTick: attack?.start.tick ?? null, resolutionTick: end?.tick ?? null, against: attack?.start.move ?? null, charged: !!attack?.charged, result, avoided, windowOpened: opened,
       windowUsed: !!answer, answer: answer?.move ?? null, counterMove: !!answer && (answer.move === 'heavy_counter' || RIPOSTES.has(answer.move)), landed,
       distance: before && after ? +(after.gap - before.gap).toFixed(2) : null, wall: before && after ? +(after.radius - before.radius).toFixed(2) : null });
+  }
+  // Several evasions can answer one held swing. Credit its nominal avoided
+  // damage once, to the last successful defence before resolution. Earlier
+  // actions remain visible as positioning, not independent avoided attacks.
+  const credit = new Map();
+  for (const row of list) if (row.avoided && row.attackTick != null) {
+    const previous = credit.get(row.attackTick);
+    if (previous) { previous.avoided = 0; previous.avoidanceCredited = false; }
+    row.avoidanceCredited = true;
+    credit.set(row.attackTick, row);
+  }
+  const windows = new Map();
+  for (const row of list) if (row.windowOpened && row.attackTick != null) {
+    const key = `${row.attackTick}/${row.resolutionTick}`;
+    const previous = windows.get(key);
+    if (previous) previous.windowCredited = false;
+    row.windowCredited = true;
+    windows.set(key, row);
   }
   return list;
 }
@@ -140,8 +179,8 @@ export function summarizeDefences(list) {
     const rows = list.filter(d => d.type === type), moved = rows.filter(d => d.distance !== null);
     const mean = key => moved.length ? +(moved.reduce((n, d) => n + d[key], 0) / moved.length).toFixed(2) : null;
     out[type] = { count: rows.length, underThreat: rows.filter(d => d.against).length, avoided: rows.reduce((n, d) => n + d.avoided, 0),
-      hitAnyway: rows.filter(d => d.result === 'hit anyway').length, windowsOpened: rows.filter(d => d.windowOpened).length,
-      windowsUsed: rows.filter(d => d.windowUsed).length, landed: rows.filter(d => d.landed).length, distance: mean('distance'), wall: mean('wall') };
+      hitAnyway: rows.filter(d => d.result === 'hit anyway').length, windowsOpened: rows.filter(d => d.windowCredited !== false && d.windowOpened).length,
+      windowsUsed: rows.filter(d => d.windowCredited !== false && d.windowUsed).length, landed: rows.filter(d => d.windowCredited !== false && d.landed).length, distance: mean('distance'), wall: mean('wall') };
   }
   return out;
 }

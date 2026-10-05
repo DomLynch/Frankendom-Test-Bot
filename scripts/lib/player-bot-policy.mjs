@@ -4,6 +4,7 @@
 // (Pitborn in the 2026-09-24 browser gate; Goblin and five others headless), so a 3-fight gate row held 1 or 2 real fights.
 // Per opponent: [the range the bot fights at, its defence choice, optional policy flags]. Lives here so a test can pin it.
 export const BOT_CONFIG = { veteran: [2.1, 'guard'], pitborn: [2.1, 'dodge'], goblin: [1.8, 'parry'], nightborn: [2.1, 'parry'], executioner: [2.1, 'dodge'], knight: [2.1, 'dodge'], dwarf: [1.8, 'dodge'], plaguedoctor: [1.8, 'parry'], witch: [2.1, 'guard'], shieldmaiden: [1.8, 'dodge', { holdWorn: true }] };   // holdWorn: see player-bot-policy.mjs (worn hysteresis)
+export const isHeavyMove = move => move?.startsWith('heavy') || move === 'critical'; // Critical is the Heavy button's earned finisher.
 
 export function fightSeeds(first, count) {
   const seeds = [first >>> 0];
@@ -92,6 +93,7 @@ export function chooseChargedAttack(obs, state, reactionTicks, config) {
 
 // Review policy: take a reachable punish or earned counter, otherwise create a safe heavy opening.
 export function chooseTacticalAttack(obs, state, reactionTicks, config) {
+  const attackGap = obs.gapUpper ?? obs.gap;
   state.attacks ??= 0;
   state.heavies ??= 0;
   for (const e of obs.events) {
@@ -106,8 +108,8 @@ export function chooseTacticalAttack(obs, state, reactionTicks, config) {
     if (e.type === 'Blocked' && e.actor === 1) state.enemyBlock = e.tick;
     if (e.type === 'AttackStarted' && e.actor === 0) {
       state.attacks++;
-      if (e.move?.startsWith('heavy')) state.heavies++;
-      else state.quickRestUntil = e.tick + 70;
+      if (isHeavyMove(e.move)) state.heavies++;
+      if (!e.move?.startsWith('heavy')) state.quickRestUntil = e.tick + 70; // retain the critical finisher's existing recovery pause
       state.heavyPending = 0;
     }
     if (e.type === 'Charged' && e.actor === 0 || e.type === 'ChargeCue' && state.charging) state.charged = true;
@@ -132,21 +134,21 @@ export function chooseTacticalAttack(obs, state, reactionTicks, config) {
     eligible.push({ kind: 'evade charged overhead', tick: threat.tick, cue: threat.cue });
     return choice([nearWall ? 'KeyW' : 'KeyA'], 'KeyE', `lateral roll clear of charged overhead (${threat.cue})`);
   }
-  const counterReady = state.defence && obs.tick >= state.defence.ready && obs.tick <= state.defence.until && obs.stamina >= 30 && obs.gap <= 1.9;
-  const quickReady = state.miss && obs.tick >= state.miss.ready && obs.tick <= state.miss.until && obs.stamina >= 45 && obs.gap <= config.thrustRange && (own === 'ready' || own === 'guard');
+  const counterReady = state.defence && obs.tick >= state.defence.ready && obs.tick <= state.defence.until && obs.stamina >= 30 && attackGap <= 1.9;
+  const quickReady = state.miss && obs.tick >= state.miss.ready && obs.tick <= state.miss.until && obs.stamina >= 45 && attackGap <= config.thrustRange && (own === 'ready' || own === 'guard');
   if (counterReady) eligible.push({ kind: 'guard counter', tick: state.defence.tick });
   if (quickReady) eligible.push({ kind: 'quick punish', tick: state.miss.tick });
   if (counterReady) {
     state.defence = null;
     if (heavyAllowed && obs.heavy) { state.heavyPending = obs.tick; return choice([], 'KeyG', 'budgeted heavy after defence'); }
-    if (obs.gap <= 1.55 && obs.light && obs.stamina >= 55) return choice([], 'KeyF', 'slash after defence');
+    if (attackGap <= 1.55 && obs.light && obs.stamina >= 55) return choice([], 'KeyF', 'slash after defence');
     if (obs.thrust && obs.stamina >= 50) return choice([], 'KeyT', 'thrust after defence');
   }
   if (state.miss && obs.tick < state.miss.ready && obs.tick <= state.miss.until)
     return choice(obs.gap > config.thrustRange ? ['KeyW'] : [], null, 'wait for missed-swing punish');
   if (quickReady) {
     state.miss = null;
-    if (obs.gap <= 1.55 && obs.light && obs.stamina >= 55) return choice(['KeyW'], 'KeyF', 'quick slash after miss');
+    if (attackGap <= 1.55 && obs.light && obs.stamina >= 55) return choice(['KeyW'], 'KeyF', 'quick slash after miss');
     if (obs.thrust && obs.stamina >= 50) return choice(['KeyW'], 'KeyT', 'reachable thrust after miss');
   }
   // Worn down: posture high (the on-screen meter) and stamina low. Another block would feed the posture break, so get out: roll away
@@ -169,18 +171,18 @@ export function chooseTacticalAttack(obs, state, reactionTicks, config) {
       return obs.dodge !== false && obs.stamina >= 30 ? choice([away], 'KeyE', 'roll out: heavy, stamina too low to block') : choice([away], null, 'walk out: heavy, stamina too low to block');
     }
     const side = MIRROR[tell.direction];
-    if (side) { eligible.push({ kind: 'guard tell', tick: tell.tick }); return choice(['KeyQ', side], null, 'guard the observed attack'); }
+    if (side || tell.direction === 'thrust') { eligible.push({ kind: 'guard tell', tick: tell.tick }); return choice(['KeyQ', ...(side ? [side] : [])], null, 'guard the observed attack'); }
   }
   if (obs.enemyPhase === 'attack') return choice([], null, 'wait for attack tell');
   if (worn && (config.holdWorn || obs.gap < (config.disengageGap ?? 3))) return choice(obs.gap < (config.disengageGap ?? 3) ? [away] : [], null, 'back off: posture high, stamina low');
   if (state.quickRestUntil > obs.tick) return choice(obs.gap < 1.25 && !nearWall ? ['KeyS'] : [], null, 'recover after quick attack');
   if (obs.stamina < 50) return choice(nearWall && obs.gap > 1.2 ? ['KeyW'] : [], null, 'recover defensive stamina');
-  if (obs.gap > config.thrustRange) return choice(['KeyW'], null, 'close to thrust range');
-  if (heavyAllowed && obs.heavy && state.enemyBlock && obs.tick - state.enemyBlock <= 60 && obs.gap <= 1.9) {
+  if (attackGap > config.thrustRange) return choice(['KeyW'], null, 'close to thrust range');
+  if (heavyAllowed && obs.heavy && state.enemyBlock && obs.tick - state.enemyBlock <= 60 && attackGap <= 1.9) {
     state.heavyPending = obs.tick; state.charging = true;
     return choice(['KeyG'], null, 'budgeted heavy against guard');
   }
-  if (obs.gap <= 1.55 && obs.light && obs.stamina >= 55) return choice([], 'KeyF', 'range-aware quick slash');
+  if (attackGap <= 1.55 && obs.light && obs.stamina >= 55) return choice([], 'KeyF', 'range-aware quick slash');
   if (obs.thrust) return choice([], 'KeyT', 'range-aware thrust');
   return choice([], null, 'wait for legal quick attack');
 }

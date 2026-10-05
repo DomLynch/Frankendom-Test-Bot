@@ -38,6 +38,15 @@ export function limitedObservation(raw, memory, delayTicks) {
   const cutoff = raw.tick - delayTicks;
   while (memory.snapshots.length > 1 && memory.snapshots[1].tick <= cutoff) memory.snapshots.shift();
   const seen = memory.snapshots[0];
+  const gap = Math.round(seen.gap * 2) / 2;
+  // Estimate retreat from already-delayed, half-metre observations only. Never use
+  // the current exact gap to decide whether an attack can reach.
+  memory.spacing ??= [];
+  if (memory.spacing.at(-1)?.tick !== seen.tick) memory.spacing.push({ tick: seen.tick, gap });
+  while (memory.spacing.length > 1 && memory.spacing[1].tick <= seen.tick - delayTicks) memory.spacing.shift();
+  const previous = memory.spacing[0];
+  const outwardPerTick = seen.tick > previous.tick ? Math.max(0, (gap - previous.gap) / (seen.tick - previous.tick)) : 0;
+  const gapUpper = gap + .25 + outwardPerTick * (raw.tick - seen.tick);
   const events = memory.pendingEvents.filter(e => e.tick <= cutoff);
   memory.pendingEvents = memory.pendingEvents.filter(e => e.tick > cutoff);
   for (const e of events) {
@@ -46,6 +55,6 @@ export function limitedObservation(raw, memory, delayTicks) {
   }
   if (memory.swing != null && cutoff - memory.swing > SWING_CAP) memory.swing = null;
   const enemyPhase = memory.swing != null ? 'attack' : 'other';
-  return { ...raw, gap: Math.round(seen.gap * 2) / 2, radius: Math.round(seen.radius * 2) / 2, stamina: raw.meterStamina ?? raw.stamina,
+  return { ...raw, gap, gapUpper, gapObservedTick: seen.tick, radius: Math.round(seen.radius * 2) / 2, stamina: raw.meterStamina ?? raw.stamina,
     enemyPhase, enemyState: enemyPhase, events };
 }

@@ -11,5 +11,5 @@ done
 case "$mode" in limited|debug) ;; *) echo 'Observation must be limited or debug.' >&2; exit 2;; esac
 . "$root/scripts/prepare-game.sh"
 prepare_game "$root" browser
-echo "CURRENT TEST BUILD · $sha · tactical · Easy · $mode observation · rendered acceptance pending" >&2
+echo "CURRENT TEST BUILD · $sha · tactical · Easy · $mode observation · real rendering" >&2
 exec node scripts/player-bot.mjs --strategy=tactical "$@"
