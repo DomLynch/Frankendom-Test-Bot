@@ -72,3 +72,5 @@ Owner-authorized scythe-spacing and reaction-threshold bot workarounds are opt-i
 Each engine/browser receipt now includes `learning`: sampled spacing, defence-to-useful-hit latency, dodge position/re-entry, bounded two-sided damage exchanges, and review cases for block, parry, blood/hit effects, roll camera and charge. These are review prompts, not automatic aesthetic scores. [Workflow and limitations](docs/learning-evidence-20261005.md). No game graphics/camera changes are made here.
 
 An opt-in [camera lab](docs/camera-lab-20261005.md) now replays identical retained inputs through the current view and two experimental automatic tracking views. It temporarily overrides only the local debug renderer; the normal launcher and game source remain unchanged. See the report for the isolated command, matched clip evidence and production-integration limits.
+
+Camera follow-up: [Goblin, Executioner, boundary and actual keyboard/touch probe](docs/camera-followup-20261005.md). Fixed offset remains experimental; keep the current camera.

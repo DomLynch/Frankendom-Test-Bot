@@ -1,0 +1,359 @@
+{
+  "goblin": {
+    "fixtureSha256": "fcd52865b9acc16bf9ee184eb832c7be2cc7dd5ea71947e5ad08cd5039a892e9",
+    "cameraModuleSha256": "ba5c3a51f35e7dc6fd56a7eafe0732df17dd1f35e23475f5b6541d9ee35f1661",
+    "fromTick": 1080,
+    "toTick": 1500,
+    "parity": "all camera views have identical tick/state/event hashes",
+    "views": [
+      {
+        "preset": "current",
+        "frames": 420,
+        "maxGapTicks": 1,
+        "statesSha256": "3f902c1b2ee042ac4dcf60308ebb9b35d631a63582b0a534a4af5a74fd3ea651",
+        "eventsSha256": "b0033b1fe14939c1b2c42c8e62df468b73d31ba2bc204cd8ddab8968b3402fe8",
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "outsidePointSamples": {
+          "playerFeet": 0,
+          "opponentFeet": 0,
+          "playerChest": 0,
+          "opponentChest": 3
+        }
+      },
+      {
+        "preset": "shoulder",
+        "frames": 420,
+        "maxGapTicks": 1,
+        "statesSha256": "3f902c1b2ee042ac4dcf60308ebb9b35d631a63582b0a534a4af5a74fd3ea651",
+        "eventsSha256": "b0033b1fe14939c1b2c42c8e62df468b73d31ba2bc204cd8ddab8968b3402fe8",
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "outsidePointSamples": {
+          "playerFeet": 0,
+          "opponentFeet": 0,
+          "playerChest": 0,
+          "opponentChest": 0
+        }
+      }
+    ]
+  },
+  "executioner": {
+    "fixtureSha256": "19cbf8f838accf21263747213540f630a7e994d625170a68f5c3cae130d8f16d",
+    "cameraModuleSha256": "ba5c3a51f35e7dc6fd56a7eafe0732df17dd1f35e23475f5b6541d9ee35f1661",
+    "fromTick": 1080,
+    "toTick": 1500,
+    "parity": "all camera views have identical tick/state/event hashes",
+    "views": [
+      {
+        "preset": "current",
+        "frames": 420,
+        "maxGapTicks": 1,
+        "statesSha256": "a6828912ae2625f3b303a7dee3b44057dabe4e3adca78b456ba4a74e9d85e8f5",
+        "eventsSha256": "a0a45dfa432256601538db2fea9261849dbfbb32127663da0b2832997c9aae02",
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "outsidePointSamples": {
+          "playerFeet": 0,
+          "opponentFeet": 0,
+          "playerChest": 0,
+          "opponentChest": 0
+        }
+      },
+      {
+        "preset": "shoulder",
+        "frames": 420,
+        "maxGapTicks": 1,
+        "statesSha256": "a6828912ae2625f3b303a7dee3b44057dabe4e3adca78b456ba4a74e9d85e8f5",
+        "eventsSha256": "a0a45dfa432256601538db2fea9261849dbfbb32127663da0b2832997c9aae02",
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "outsidePointSamples": {
+          "playerFeet": 0,
+          "opponentFeet": 0,
+          "playerChest": 0,
+          "opponentChest": 0
+        }
+      }
+    ]
+  },
+  "boundary": {
+    "fixtureSha256": "f0cf61a7f4e4b1e1981941933279bd10d9741977fabadc8f5da51e606c1a5007",
+    "cameraModuleSha256": "ba5c3a51f35e7dc6fd56a7eafe0732df17dd1f35e23475f5b6541d9ee35f1661",
+    "fromTick": 230,
+    "toTick": 650,
+    "parity": "all camera views have identical tick/state/event hashes",
+    "views": [
+      {
+        "preset": "current",
+        "frames": 420,
+        "maxGapTicks": 1,
+        "statesSha256": "523d74fe903415e70f4893d76641c18063d767bc997bb44570897393b1a7db0d",
+        "eventsSha256": "29ac48386bbc25ba38f8ed59347bc14d9b84fceecc45aae5a41ff169953cb1f6",
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "outsidePointSamples": {
+          "playerFeet": 0,
+          "opponentFeet": 0,
+          "playerChest": 0,
+          "opponentChest": 0
+        }
+      },
+      {
+        "preset": "shoulder",
+        "frames": 420,
+        "maxGapTicks": 1,
+        "statesSha256": "523d74fe903415e70f4893d76641c18063d767bc997bb44570897393b1a7db0d",
+        "eventsSha256": "29ac48386bbc25ba38f8ed59347bc14d9b84fceecc45aae5a41ff169953cb1f6",
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "outsidePointSamples": {
+          "playerFeet": 0,
+          "opponentFeet": 0,
+          "playerChest": 0,
+          "opponentChest": 0
+        }
+      }
+    ]
+  },
+  "controls": {
+    "revision": "4056467af826b03166a575002f7a4f4b04f9dfe7",
+    "source": {
+      "botRevision": "677d63414b47b249d18245373dab646e8db36ad5",
+      "dirty": "M scripts/lib/camera-lab.mjs\n M tests/camera-lab.test.mjs\n?? scripts/camera-controls.mjs\n?? scripts/camera-fixtures.mjs",
+      "probeSha256": "96c843257730c08c926a5f868b351e3e428efef3b68709cb4e8aa0ba87c867c2",
+      "moduleSha256": "ba5c3a51f35e7dc6fd56a7eafe0732df17dd1f35e23475f5b6541d9ee35f1661"
+    },
+    "evidence": "fresh live local browser control pulses, not replay; trusted touch plus keyboard; controlled time; excludes contacts/walls; ground-plane axis error, not perspective pixel drift; sequential changed geometry; no human thumb comfort or raw accepted-intent claim",
+    "rows": [
+      {
+        "preset": "current",
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "pulses": [
+          {
+            "input": "KeyW",
+            "downTick": 47,
+            "upTick": 58,
+            "motion": null,
+            "meanAngleDeg": 0,
+            "released": {
+              "transform": "",
+              "run": "false"
+            },
+            "releaseEvidence": "key/touch-end delivered; touch stick UI cleared, not a raw Match intent audit"
+          },
+          {
+            "input": "KeyD",
+            "downTick": 64,
+            "upTick": 75,
+            "motion": null,
+            "meanAngleDeg": 0.5325532914510502,
+            "released": {
+              "transform": "",
+              "run": "false"
+            },
+            "releaseEvidence": "key/touch-end delivered; touch stick UI cleared, not a raw Match intent audit"
+          },
+          {
+            "input": "touch-up",
+            "downTick": 81,
+            "upTick": 93,
+            "motion": null,
+            "meanAngleDeg": 1.11213464239728,
+            "released": {
+              "transform": "",
+              "run": "false"
+            },
+            "releaseEvidence": "key/touch-end delivered; touch stick UI cleared, not a raw Match intent audit"
+          },
+          {
+            "input": "touch-right",
+            "downTick": 98,
+            "upTick": 110,
+            "motion": null,
+            "meanAngleDeg": 0.886383616200522,
+            "released": {
+              "transform": "",
+              "run": "false"
+            },
+            "releaseEvidence": "key/touch-end delivered; touch stick UI cleared, not a raw Match intent audit"
+          }
+        ],
+        "events": [
+          {
+            "type": "keydown",
+            "code": "KeyF",
+            "trusted": true,
+            "target": ""
+          },
+          {
+            "type": "keyup",
+            "code": "KeyF",
+            "trusted": true,
+            "target": ""
+          },
+          {
+            "type": "keydown",
+            "code": "KeyW",
+            "trusted": true,
+            "target": ""
+          },
+          {
+            "type": "keyup",
+            "code": "KeyW",
+            "trusted": true,
+            "target": ""
+          },
+          {
+            "type": "keydown",
+            "code": "KeyD",
+            "trusted": true,
+            "target": ""
+          },
+          {
+            "type": "keyup",
+            "code": "KeyD",
+            "trusted": true,
+            "target": ""
+          },
+          {
+            "type": "pointerdown",
+            "pointerType": "touch",
+            "trusted": true,
+            "target": "joystick"
+          },
+          {
+            "type": "pointerup",
+            "pointerType": "touch",
+            "trusted": true,
+            "target": "joystick"
+          },
+          {
+            "type": "pointerdown",
+            "pointerType": "touch",
+            "trusted": true,
+            "target": "joystick"
+          },
+          {
+            "type": "pointerup",
+            "pointerType": "touch",
+            "trusted": true,
+            "target": "joystick"
+          }
+        ],
+        "errors": []
+      },
+      {
+        "preset": "shoulder",
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "pulses": [
+          {
+            "input": "KeyW",
+            "downTick": 46,
+            "upTick": 58,
+            "motion": null,
+            "meanAngleDeg": 11.413566739159394,
+            "released": {
+              "transform": "",
+              "run": "false"
+            },
+            "releaseEvidence": "key/touch-end delivered; touch stick UI cleared, not a raw Match intent audit"
+          },
+          {
+            "input": "KeyD",
+            "downTick": 64,
+            "upTick": 75,
+            "motion": null,
+            "meanAngleDeg": 11.308322278943367,
+            "released": {
+              "transform": "",
+              "run": "false"
+            },
+            "releaseEvidence": "key/touch-end delivered; touch stick UI cleared, not a raw Match intent audit"
+          },
+          {
+            "input": "touch-up",
+            "downTick": 81,
+            "upTick": 93,
+            "motion": null,
+            "meanAngleDeg": 10.843855126752109,
+            "released": {
+              "transform": "",
+              "run": "false"
+            },
+            "releaseEvidence": "key/touch-end delivered; touch stick UI cleared, not a raw Match intent audit"
+          },
+          {
+            "input": "touch-right",
+            "downTick": 98,
+            "upTick": 110,
+            "motion": null,
+            "meanAngleDeg": 11.512225696552752,
+            "released": {
+              "transform": "",
+              "run": "false"
+            },
+            "releaseEvidence": "key/touch-end delivered; touch stick UI cleared, not a raw Match intent audit"
+          }
+        ],
+        "events": [
+          {
+            "type": "keydown",
+            "code": "KeyF",
+            "trusted": true,
+            "target": ""
+          },
+          {
+            "type": "keyup",
+            "code": "KeyF",
+            "trusted": true,
+            "target": ""
+          },
+          {
+            "type": "keydown",
+            "code": "KeyW",
+            "trusted": true,
+            "target": ""
+          },
+          {
+            "type": "keyup",
+            "code": "KeyW",
+            "trusted": true,
+            "target": ""
+          },
+          {
+            "type": "keydown",
+            "code": "KeyD",
+            "trusted": true,
+            "target": ""
+          },
+          {
+            "type": "keyup",
+            "code": "KeyD",
+            "trusted": true,
+            "target": ""
+          },
+          {
+            "type": "pointerdown",
+            "pointerType": "touch",
+            "trusted": true,
+            "target": "joystick"
+          },
+          {
+            "type": "pointerup",
+            "pointerType": "touch",
+            "trusted": true,
+            "target": "joystick"
+          },
+          {
+            "type": "pointerdown",
+            "pointerType": "touch",
+            "trusted": true,
+            "target": "joystick"
+          },
+          {
+            "type": "pointerup",
+            "pointerType": "touch",
+            "trusted": true,
+            "target": "joystick"
+          }
+        ],
+        "errors": []
+      }
+    ]
+  }
+}
