@@ -1,0 +1,3646 @@
+{
+  "date": "2026-10-05",
+  "revision": "4056467af826b03166a575002f7a4f4b04f9dfe7",
+  "source": [
+    {
+      "file": "scripts/player-bot.mjs",
+      "sha256": "0f5ca643fb538bc865eec24bb12fe3615eaa25f39d9cc487127b7f6feb45db93",
+      "equalsBaseline": true
+    },
+    {
+      "file": "scripts/lib/player-bot-policy.mjs",
+      "sha256": "80160390c224b6628e6836fcf11d7171a74df0986911e12fb8455f3716fd461d",
+      "equalsBaseline": true
+    },
+    {
+      "file": "scripts/lib/player-profiles.mjs",
+      "sha256": "08fe9d7a57d0af7181428d84c70e1b8f155b88d659687aba223d291b683f4d00",
+      "equalsBaseline": true
+    },
+    {
+      "file": "scripts/lib/player-bot-observation.mjs",
+      "sha256": "61826b2c9a095436d0a62b2893dbe5766856feee86198f730ee2aa5dfd524e90",
+      "equalsBaseline": true
+    },
+    {
+      "file": "scripts/lib/profile-fight.mjs",
+      "sha256": "f2940daefdc14c4b977ff39d13e78e90e1b69342b50d2a2cc177221d6d03deb1",
+      "equalsBaseline": true
+    }
+  ],
+  "engine": {
+    "settings": "L6 longsword; no equipped specials; workarounds OFF",
+    "seeds": [
+      2026100507,
+      779510380,
+      3718897322
+    ],
+    "rows": [
+      {
+        "profile": "beginner",
+        "profileParameters": {
+          "reactionMs": 450,
+          "jitterMs": 50,
+          "gapBias": -0.25,
+          "staminaBias": 20,
+          "wrongGuard": 0.28,
+          "missedCounter": 0.65,
+          "slashPreference": 0.7
+        },
+        "opponent": "goblin",
+        "seed": 2026100507,
+        "outcome": "loss",
+        "health": [
+          0,
+          84
+        ],
+        "attackMix": {
+          "attacks": 6,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        }
+      },
+      {
+        "profile": "beginner",
+        "profileParameters": {
+          "reactionMs": 450,
+          "jitterMs": 50,
+          "gapBias": -0.25,
+          "staminaBias": 20,
+          "wrongGuard": 0.28,
+          "missedCounter": 0.65,
+          "slashPreference": 0.7
+        },
+        "opponent": "goblin",
+        "seed": 779510380,
+        "outcome": "win",
+        "health": [
+          80,
+          0
+        ],
+        "attackMix": {
+          "attacks": 16,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        }
+      },
+      {
+        "profile": "beginner",
+        "profileParameters": {
+          "reactionMs": 450,
+          "jitterMs": 50,
+          "gapBias": -0.25,
+          "staminaBias": 20,
+          "wrongGuard": 0.28,
+          "missedCounter": 0.65,
+          "slashPreference": 0.7
+        },
+        "opponent": "goblin",
+        "seed": 3718897322,
+        "outcome": "loss",
+        "health": [
+          0,
+          92
+        ],
+        "attackMix": {
+          "attacks": 7,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        }
+      },
+      {
+        "profile": "intermediate",
+        "profileParameters": {
+          "reactionMs": 280,
+          "jitterMs": 40,
+          "gapBias": -0.1,
+          "staminaBias": 5,
+          "wrongGuard": 0.08,
+          "missedCounter": 0.2,
+          "slashPreference": 0.2
+        },
+        "opponent": "goblin",
+        "seed": 2026100507,
+        "outcome": "loss",
+        "health": [
+          0,
+          40
+        ],
+        "attackMix": {
+          "attacks": 11,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        }
+      },
+      {
+        "profile": "intermediate",
+        "profileParameters": {
+          "reactionMs": 280,
+          "jitterMs": 40,
+          "gapBias": -0.1,
+          "staminaBias": 5,
+          "wrongGuard": 0.08,
+          "missedCounter": 0.2,
+          "slashPreference": 0.2
+        },
+        "opponent": "goblin",
+        "seed": 779510380,
+        "outcome": "loss",
+        "health": [
+          0,
+          31
+        ],
+        "attackMix": {
+          "attacks": 12,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        }
+      },
+      {
+        "profile": "intermediate",
+        "profileParameters": {
+          "reactionMs": 280,
+          "jitterMs": 40,
+          "gapBias": -0.1,
+          "staminaBias": 5,
+          "wrongGuard": 0.08,
+          "missedCounter": 0.2,
+          "slashPreference": 0.2
+        },
+        "opponent": "goblin",
+        "seed": 3718897322,
+        "outcome": "loss",
+        "health": [
+          0,
+          6
+        ],
+        "attackMix": {
+          "attacks": 18,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        }
+      },
+      {
+        "profile": "advanced",
+        "profileParameters": {
+          "reactionMs": 180,
+          "jitterMs": 0,
+          "gapBias": 0,
+          "staminaBias": 0,
+          "wrongGuard": 0,
+          "missedCounter": 0,
+          "slashPreference": 0
+        },
+        "opponent": "goblin",
+        "seed": 2026100507,
+        "outcome": "loss",
+        "health": [
+          0,
+          33
+        ],
+        "attackMix": {
+          "attacks": 9,
+          "heavies": 1,
+          "heavyPercent": 11.11111111111111,
+          "passed": true
+        }
+      },
+      {
+        "profile": "advanced",
+        "profileParameters": {
+          "reactionMs": 180,
+          "jitterMs": 0,
+          "gapBias": 0,
+          "staminaBias": 0,
+          "wrongGuard": 0,
+          "missedCounter": 0,
+          "slashPreference": 0
+        },
+        "opponent": "goblin",
+        "seed": 779510380,
+        "outcome": "win",
+        "health": [
+          124,
+          0
+        ],
+        "attackMix": {
+          "attacks": 14,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        }
+      },
+      {
+        "profile": "advanced",
+        "profileParameters": {
+          "reactionMs": 180,
+          "jitterMs": 0,
+          "gapBias": 0,
+          "staminaBias": 0,
+          "wrongGuard": 0,
+          "missedCounter": 0,
+          "slashPreference": 0
+        },
+        "opponent": "goblin",
+        "seed": 3718897322,
+        "outcome": "win",
+        "health": [
+          130,
+          0
+        ],
+        "attackMix": {
+          "attacks": 13,
+          "heavies": 1,
+          "heavyPercent": 7.6923076923076925,
+          "passed": true
+        }
+      },
+      {
+        "profile": "beginner",
+        "profileParameters": {
+          "reactionMs": 450,
+          "jitterMs": 50,
+          "gapBias": -0.25,
+          "staminaBias": 20,
+          "wrongGuard": 0.28,
+          "missedCounter": 0.65,
+          "slashPreference": 0.7
+        },
+        "opponent": "veteran",
+        "seed": 2026100507,
+        "outcome": "loss",
+        "health": [
+          0,
+          100
+        ],
+        "attackMix": {
+          "attacks": 14,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        }
+      },
+      {
+        "profile": "beginner",
+        "profileParameters": {
+          "reactionMs": 450,
+          "jitterMs": 50,
+          "gapBias": -0.25,
+          "staminaBias": 20,
+          "wrongGuard": 0.28,
+          "missedCounter": 0.65,
+          "slashPreference": 0.7
+        },
+        "opponent": "veteran",
+        "seed": 779510380,
+        "outcome": "win",
+        "health": [
+          53,
+          0
+        ],
+        "attackMix": {
+          "attacks": 17,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        }
+      },
+      {
+        "profile": "beginner",
+        "profileParameters": {
+          "reactionMs": 450,
+          "jitterMs": 50,
+          "gapBias": -0.25,
+          "staminaBias": 20,
+          "wrongGuard": 0.28,
+          "missedCounter": 0.65,
+          "slashPreference": 0.7
+        },
+        "opponent": "veteran",
+        "seed": 3718897322,
+        "outcome": "loss",
+        "health": [
+          0,
+          122
+        ],
+        "attackMix": {
+          "attacks": 9,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        }
+      },
+      {
+        "profile": "intermediate",
+        "profileParameters": {
+          "reactionMs": 280,
+          "jitterMs": 40,
+          "gapBias": -0.1,
+          "staminaBias": 5,
+          "wrongGuard": 0.08,
+          "missedCounter": 0.2,
+          "slashPreference": 0.2
+        },
+        "opponent": "veteran",
+        "seed": 2026100507,
+        "outcome": "loss",
+        "health": [
+          0,
+          73
+        ],
+        "attackMix": {
+          "attacks": 13,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        }
+      },
+      {
+        "profile": "intermediate",
+        "profileParameters": {
+          "reactionMs": 280,
+          "jitterMs": 40,
+          "gapBias": -0.1,
+          "staminaBias": 5,
+          "wrongGuard": 0.08,
+          "missedCounter": 0.2,
+          "slashPreference": 0.2
+        },
+        "opponent": "veteran",
+        "seed": 779510380,
+        "outcome": "win",
+        "health": [
+          37,
+          0
+        ],
+        "attackMix": {
+          "attacks": 19,
+          "heavies": 2,
+          "heavyPercent": 10.526315789473685,
+          "passed": true
+        }
+      },
+      {
+        "profile": "intermediate",
+        "profileParameters": {
+          "reactionMs": 280,
+          "jitterMs": 40,
+          "gapBias": -0.1,
+          "staminaBias": 5,
+          "wrongGuard": 0.08,
+          "missedCounter": 0.2,
+          "slashPreference": 0.2
+        },
+        "opponent": "veteran",
+        "seed": 3718897322,
+        "outcome": "win",
+        "health": [
+          73,
+          0
+        ],
+        "attackMix": {
+          "attacks": 17,
+          "heavies": 1,
+          "heavyPercent": 5.882352941176471,
+          "passed": true
+        }
+      },
+      {
+        "profile": "advanced",
+        "profileParameters": {
+          "reactionMs": 180,
+          "jitterMs": 0,
+          "gapBias": 0,
+          "staminaBias": 0,
+          "wrongGuard": 0,
+          "missedCounter": 0,
+          "slashPreference": 0
+        },
+        "opponent": "veteran",
+        "seed": 2026100507,
+        "outcome": "win",
+        "health": [
+          51,
+          0
+        ],
+        "attackMix": {
+          "attacks": 13,
+          "heavies": 2,
+          "heavyPercent": 15.384615384615385,
+          "passed": true
+        }
+      },
+      {
+        "profile": "advanced",
+        "profileParameters": {
+          "reactionMs": 180,
+          "jitterMs": 0,
+          "gapBias": 0,
+          "staminaBias": 0,
+          "wrongGuard": 0,
+          "missedCounter": 0,
+          "slashPreference": 0
+        },
+        "opponent": "veteran",
+        "seed": 779510380,
+        "outcome": "win",
+        "health": [
+          77,
+          0
+        ],
+        "attackMix": {
+          "attacks": 18,
+          "heavies": 1,
+          "heavyPercent": 5.555555555555555,
+          "passed": true
+        }
+      },
+      {
+        "profile": "advanced",
+        "profileParameters": {
+          "reactionMs": 180,
+          "jitterMs": 0,
+          "gapBias": 0,
+          "staminaBias": 0,
+          "wrongGuard": 0,
+          "missedCounter": 0,
+          "slashPreference": 0
+        },
+        "opponent": "veteran",
+        "seed": 3718897322,
+        "outcome": "win",
+        "health": [
+          110,
+          0
+        ],
+        "attackMix": {
+          "attacks": 12,
+          "heavies": 2,
+          "heavyPercent": 16.666666666666668,
+          "passed": true
+        }
+      },
+      {
+        "profile": "beginner",
+        "profileParameters": {
+          "reactionMs": 450,
+          "jitterMs": 50,
+          "gapBias": -0.25,
+          "staminaBias": 20,
+          "wrongGuard": 0.28,
+          "missedCounter": 0.65,
+          "slashPreference": 0.7
+        },
+        "opponent": "executioner",
+        "seed": 2026100507,
+        "outcome": "loss",
+        "health": [
+          0,
+          132
+        ],
+        "attackMix": {
+          "attacks": 7,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        }
+      },
+      {
+        "profile": "beginner",
+        "profileParameters": {
+          "reactionMs": 450,
+          "jitterMs": 50,
+          "gapBias": -0.25,
+          "staminaBias": 20,
+          "wrongGuard": 0.28,
+          "missedCounter": 0.65,
+          "slashPreference": 0.7
+        },
+        "opponent": "executioner",
+        "seed": 779510380,
+        "outcome": "win",
+        "health": [
+          100,
+          0
+        ],
+        "attackMix": {
+          "attacks": 17,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        }
+      },
+      {
+        "profile": "beginner",
+        "profileParameters": {
+          "reactionMs": 450,
+          "jitterMs": 50,
+          "gapBias": -0.25,
+          "staminaBias": 20,
+          "wrongGuard": 0.28,
+          "missedCounter": 0.65,
+          "slashPreference": 0.7
+        },
+        "opponent": "executioner",
+        "seed": 3718897322,
+        "outcome": "win",
+        "health": [
+          56,
+          0
+        ],
+        "attackMix": {
+          "attacks": 19,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        }
+      },
+      {
+        "profile": "intermediate",
+        "profileParameters": {
+          "reactionMs": 280,
+          "jitterMs": 40,
+          "gapBias": -0.1,
+          "staminaBias": 5,
+          "wrongGuard": 0.08,
+          "missedCounter": 0.2,
+          "slashPreference": 0.2
+        },
+        "opponent": "executioner",
+        "seed": 2026100507,
+        "outcome": "win",
+        "health": [
+          91,
+          0
+        ],
+        "attackMix": {
+          "attacks": 12,
+          "heavies": 1,
+          "heavyPercent": 8.333333333333334,
+          "passed": true
+        }
+      },
+      {
+        "profile": "intermediate",
+        "profileParameters": {
+          "reactionMs": 280,
+          "jitterMs": 40,
+          "gapBias": -0.1,
+          "staminaBias": 5,
+          "wrongGuard": 0.08,
+          "missedCounter": 0.2,
+          "slashPreference": 0.2
+        },
+        "opponent": "executioner",
+        "seed": 779510380,
+        "outcome": "win",
+        "health": [
+          54,
+          0
+        ],
+        "attackMix": {
+          "attacks": 11,
+          "heavies": 2,
+          "heavyPercent": 18.181818181818183,
+          "passed": true
+        }
+      },
+      {
+        "profile": "intermediate",
+        "profileParameters": {
+          "reactionMs": 280,
+          "jitterMs": 40,
+          "gapBias": -0.1,
+          "staminaBias": 5,
+          "wrongGuard": 0.08,
+          "missedCounter": 0.2,
+          "slashPreference": 0.2
+        },
+        "opponent": "executioner",
+        "seed": 3718897322,
+        "outcome": "win",
+        "health": [
+          17,
+          0
+        ],
+        "attackMix": {
+          "attacks": 16,
+          "heavies": 1,
+          "heavyPercent": 6.25,
+          "passed": true
+        }
+      },
+      {
+        "profile": "advanced",
+        "profileParameters": {
+          "reactionMs": 180,
+          "jitterMs": 0,
+          "gapBias": 0,
+          "staminaBias": 0,
+          "wrongGuard": 0,
+          "missedCounter": 0,
+          "slashPreference": 0
+        },
+        "opponent": "executioner",
+        "seed": 2026100507,
+        "outcome": "win",
+        "health": [
+          80,
+          0
+        ],
+        "attackMix": {
+          "attacks": 14,
+          "heavies": 1,
+          "heavyPercent": 7.142857142857143,
+          "passed": true
+        }
+      },
+      {
+        "profile": "advanced",
+        "profileParameters": {
+          "reactionMs": 180,
+          "jitterMs": 0,
+          "gapBias": 0,
+          "staminaBias": 0,
+          "wrongGuard": 0,
+          "missedCounter": 0,
+          "slashPreference": 0
+        },
+        "opponent": "executioner",
+        "seed": 779510380,
+        "outcome": "win",
+        "health": [
+          115,
+          0
+        ],
+        "attackMix": {
+          "attacks": 15,
+          "heavies": 1,
+          "heavyPercent": 6.666666666666667,
+          "passed": true
+        }
+      },
+      {
+        "profile": "advanced",
+        "profileParameters": {
+          "reactionMs": 180,
+          "jitterMs": 0,
+          "gapBias": 0,
+          "staminaBias": 0,
+          "wrongGuard": 0,
+          "missedCounter": 0,
+          "slashPreference": 0
+        },
+        "opponent": "executioner",
+        "seed": 3718897322,
+        "outcome": "win",
+        "health": [
+          7,
+          0
+        ],
+        "attackMix": {
+          "attacks": 11,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        }
+      }
+    ],
+    "source": {
+      "engineRevision": "4056467af826b03166a575002f7a4f4b04f9dfe7",
+      "controllerSha256": "7a255837dc6ea27ba0e6c4762a35517400bcc5dfabbc6dc6bb72c43d410af557"
+    }
+  },
+  "browser": [
+    {
+      "profile": "beginner",
+      "opponent": "goblin",
+      "seed": 2026100507,
+      "outcome": "loss",
+      "durationSeconds": 30.25,
+      "health": {
+        "player": 0,
+        "opponent": 34
+      },
+      "attackMix": {
+        "attacks": 14,
+        "heavies": 0,
+        "heavyPercent": 0,
+        "passed": true
+      },
+      "blocks": 0,
+      "parries": 0,
+      "emptySwings": 5,
+      "renderer": {
+        "name": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "canvas": [
+          390,
+          844
+        ],
+        "dpr": 1
+      },
+      "rawSha256": "c5acb843090e7086c6fd555f4f5464a93a5e8acc83a32ac08e16c0a850175824",
+      "videoSha256": "d7c3ef7528d68c21ee42a77a6bb63ff3b38f59fb86cdceb1034d5d723f7b9e83",
+      "defenceOutcomes": []
+    },
+    {
+      "profile": "beginner",
+      "opponent": "veteran",
+      "seed": 2026100507,
+      "outcome": "win",
+      "durationSeconds": 41.07,
+      "health": {
+        "player": 6,
+        "opponent": 0
+      },
+      "attackMix": {
+        "attacks": 23,
+        "heavies": 1,
+        "heavyPercent": 4.3,
+        "passed": true
+      },
+      "blocks": 0,
+      "parries": 1,
+      "emptySwings": 5,
+      "renderer": {
+        "name": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "canvas": [
+          390,
+          844
+        ],
+        "dpr": 1
+      },
+      "rawSha256": "fb0fd3dd66272ee180145a8e1236c250ed75884c75ce588eb3eebbb2c04f0f5a",
+      "videoSha256": "8b4782007e3a7ca82317905024d1f93f1c4521db63920dc371f0f755247758df",
+      "defenceOutcomes": [
+        {
+          "tick": 319,
+          "type": "parry",
+          "attackTick": 287,
+          "resolutionTick": 319,
+          "against": "heavy_overhead",
+          "charged": false,
+          "result": "parried",
+          "avoided": 16,
+          "windowOpened": true,
+          "windowUsed": false,
+          "answer": null,
+          "counterMove": false,
+          "landed": false,
+          "distance": 1,
+          "wall": 0.96,
+          "avoidanceCredited": true,
+          "windowCredited": true,
+          "positionBefore": {
+            "tick": 319,
+            "gap": 0.85,
+            "radius": 0.93,
+            "hp": 150,
+            "enemyHp": 136,
+            "stamina": 73.00000000000013,
+            "posture": 0,
+            "ownState": "guard",
+            "enemyState": "hurt",
+            "sampleAgeTicks": 0
+          },
+          "positionAfter": {
+            "tick": 347,
+            "gap": 1.85,
+            "radius": 1.89,
+            "hp": 150,
+            "enemyHp": 136,
+            "stamina": 46.000000000000085,
+            "posture": 0,
+            "ownState": "roll",
+            "enemyState": "hurt",
+            "sampleAgeTicks": 2
+          },
+          "nextUsefulHit": {
+            "tick": 445,
+            "move": "light_right",
+            "damage": 14,
+            "secondsAfterAction": 2.1,
+            "secondsAfterResolution": 2.1,
+            "beforeNextThreat": true
+          },
+          "damageReceivedBeforeNextHit": 0,
+          "observation": "Recorded sequence, not proof the defence caused subsequent damage or a miss."
+        },
+        {
+          "tick": 329,
+          "type": "roll",
+          "attackTick": null,
+          "resolutionTick": null,
+          "against": null,
+          "charged": false,
+          "result": "no attack in flight",
+          "avoided": 0,
+          "windowOpened": false,
+          "windowUsed": false,
+          "answer": null,
+          "counterMove": false,
+          "landed": false,
+          "distance": 1.97,
+          "wall": 1.92,
+          "positionBefore": {
+            "tick": 328,
+            "gap": 0.85,
+            "radius": 0.93,
+            "hp": 150,
+            "enemyHp": 136,
+            "stamina": 76.00000000000009,
+            "posture": 0,
+            "ownState": "guard",
+            "enemyState": "hurt",
+            "sampleAgeTicks": 1
+          },
+          "positionAfter": {
+            "tick": 363,
+            "gap": 3.15,
+            "radius": 3.17,
+            "hp": 150,
+            "enemyHp": 136,
+            "stamina": 46.000000000000085,
+            "posture": 0,
+            "ownState": "roll",
+            "enemyState": "hurt",
+            "sampleAgeTicks": 2
+          },
+          "nextUsefulHit": {
+            "tick": 445,
+            "move": "light_right",
+            "damage": 14,
+            "secondsAfterAction": 1.933,
+            "secondsAfterResolution": 1.933,
+            "beforeNextThreat": true
+          },
+          "damageReceivedBeforeNextHit": 0,
+          "observation": "Recorded sequence, not proof the defence caused subsequent damage or a miss."
+        }
+      ]
+    },
+    {
+      "profile": "beginner",
+      "opponent": "executioner",
+      "seed": 2026100507,
+      "outcome": "win",
+      "durationSeconds": 42.8,
+      "health": {
+        "player": 51,
+        "opponent": 0
+      },
+      "attackMix": {
+        "attacks": 25,
+        "heavies": 0,
+        "heavyPercent": 0,
+        "passed": true
+      },
+      "blocks": 1,
+      "parries": 1,
+      "emptySwings": 8,
+      "renderer": {
+        "name": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "canvas": [
+          390,
+          844
+        ],
+        "dpr": 1
+      },
+      "rawSha256": "7b5f69b7e9c8fdf41495121ab87aae30d3f736447fee96512ecba06ae3bf33c6",
+      "videoSha256": "8e0092afccf9b842231735b038fbc2e6cdec4445a854fa8a844f98f786b17144",
+      "defenceOutcomes": [
+        {
+          "tick": 552,
+          "type": "parry",
+          "attackTick": 516,
+          "resolutionTick": 552,
+          "against": "heavy_overhead",
+          "charged": false,
+          "result": "parried",
+          "avoided": 22,
+          "windowOpened": true,
+          "windowUsed": false,
+          "answer": null,
+          "counterMove": false,
+          "landed": false,
+          "distance": 1,
+          "wall": 1.55,
+          "avoidanceCredited": true,
+          "windowCredited": true,
+          "positionBefore": {
+            "tick": 552,
+            "gap": 0.85,
+            "radius": 0.1,
+            "hp": 150,
+            "enemyHp": 128,
+            "stamina": 100,
+            "posture": 0,
+            "ownState": "guard",
+            "enemyState": "hurt",
+            "sampleAgeTicks": 0
+          },
+          "positionAfter": {
+            "tick": 581,
+            "gap": 1.85,
+            "radius": 1.65,
+            "hp": 150,
+            "enemyHp": 128,
+            "stamina": 70,
+            "posture": 0,
+            "ownState": "roll",
+            "enemyState": "hurt",
+            "sampleAgeTicks": 1
+          },
+          "nextUsefulHit": {
+            "tick": 1043,
+            "move": "light_right",
+            "damage": 18,
+            "secondsAfterAction": 8.183,
+            "secondsAfterResolution": 8.183,
+            "beforeNextThreat": false
+          },
+          "damageReceivedBeforeNextHit": 38,
+          "observation": "Recorded sequence, not proof the defence caused subsequent damage or a miss."
+        },
+        {
+          "tick": 563,
+          "type": "roll",
+          "attackTick": null,
+          "resolutionTick": null,
+          "against": null,
+          "charged": false,
+          "result": "no attack in flight",
+          "avoided": 0,
+          "windowOpened": false,
+          "windowUsed": false,
+          "answer": null,
+          "counterMove": false,
+          "landed": false,
+          "distance": 1.97,
+          "wall": 2.59,
+          "positionBefore": {
+            "tick": 562,
+            "gap": 0.85,
+            "radius": 0.1,
+            "hp": 150,
+            "enemyHp": 128,
+            "stamina": 100,
+            "posture": 0,
+            "ownState": "guard",
+            "enemyState": "hurt",
+            "sampleAgeTicks": 1
+          },
+          "positionAfter": {
+            "tick": 597,
+            "gap": 3.15,
+            "radius": 3.03,
+            "hp": 150,
+            "enemyHp": 128,
+            "stamina": 70,
+            "posture": 0,
+            "ownState": "roll",
+            "enemyState": "hurt",
+            "sampleAgeTicks": 2
+          },
+          "nextUsefulHit": {
+            "tick": 1043,
+            "move": "light_right",
+            "damage": 18,
+            "secondsAfterAction": 8,
+            "secondsAfterResolution": 8,
+            "beforeNextThreat": false
+          },
+          "damageReceivedBeforeNextHit": 38,
+          "observation": "Recorded sequence, not proof the defence caused subsequent damage or a miss."
+        },
+        {
+          "tick": 2212,
+          "type": "perfect block",
+          "attackTick": 2176,
+          "resolutionTick": 2212,
+          "against": "heavy_overhead",
+          "charged": false,
+          "result": "clean",
+          "avoided": 22,
+          "windowOpened": true,
+          "windowUsed": false,
+          "answer": null,
+          "counterMove": false,
+          "landed": false,
+          "distance": 1.06,
+          "wall": 0.99,
+          "avoidanceCredited": true,
+          "windowCredited": true,
+          "positionBefore": {
+            "tick": 2212,
+            "gap": 1.12,
+            "radius": 1.9,
+            "hp": 51,
+            "enemyHp": 29,
+            "stamina": 8.366666666666635,
+            "posture": 18,
+            "ownState": "guard",
+            "enemyState": "heavy_overhead",
+            "sampleAgeTicks": 0
+          },
+          "positionAfter": {
+            "tick": 2241,
+            "gap": 2.18,
+            "radius": 2.89,
+            "hp": 51,
+            "enemyHp": 29,
+            "stamina": 8.366666666666635,
+            "posture": 18,
+            "ownState": "ready",
+            "enemyState": "heavy_overhead",
+            "sampleAgeTicks": 1
+          },
+          "nextUsefulHit": {
+            "tick": 2350,
+            "move": "light_right",
+            "damage": 14,
+            "secondsAfterAction": 2.3,
+            "secondsAfterResolution": 2.3,
+            "beforeNextThreat": true
+          },
+          "damageReceivedBeforeNextHit": 0,
+          "observation": "Recorded sequence, not proof the defence caused subsequent damage or a miss."
+        }
+      ]
+    },
+    {
+      "profile": "intermediate",
+      "opponent": "goblin",
+      "seed": 2026100507,
+      "outcome": "win",
+      "durationSeconds": 32.83,
+      "health": {
+        "player": 63,
+        "opponent": 0
+      },
+      "attackMix": {
+        "attacks": 17,
+        "heavies": 0,
+        "heavyPercent": 0,
+        "passed": true
+      },
+      "blocks": 0,
+      "parries": 1,
+      "emptySwings": 3,
+      "renderer": {
+        "name": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "canvas": [
+          390,
+          844
+        ],
+        "dpr": 1
+      },
+      "rawSha256": "bd59cfad052aead516e4ab981bf404a0fdf5495d6a9aaf149ac947060b7efb3d",
+      "videoSha256": "0d10149f44f388672517006e8fdaacf0604e4eb61c48dcc565f823c67a958541",
+      "defenceOutcomes": [
+        {
+          "tick": 520,
+          "type": "parry",
+          "attackTick": 498,
+          "resolutionTick": 520,
+          "against": "heavy_overhead",
+          "charged": false,
+          "result": "parried",
+          "avoided": 14,
+          "windowOpened": true,
+          "windowUsed": false,
+          "answer": null,
+          "counterMove": false,
+          "landed": false,
+          "distance": 1.01,
+          "wall": 0.46,
+          "avoidanceCredited": true,
+          "windowCredited": true,
+          "positionBefore": {
+            "tick": 520,
+            "gap": 0.85,
+            "radius": 1.18,
+            "hp": 118,
+            "enemyHp": 109,
+            "stamina": 68.79999999999994,
+            "posture": 19.600000000000005,
+            "ownState": "guard",
+            "enemyState": "hurt",
+            "sampleAgeTicks": 0
+          },
+          "positionAfter": {
+            "tick": 548,
+            "gap": 1.86,
+            "radius": 1.64,
+            "hp": 118,
+            "enemyHp": 109,
+            "stamina": 41.19999999999993,
+            "posture": 14.800000000000022,
+            "ownState": "roll",
+            "enemyState": "hurt",
+            "sampleAgeTicks": 2
+          },
+          "nextUsefulHit": {
+            "tick": 646,
+            "move": "thrust",
+            "damage": 17,
+            "secondsAfterAction": 2.1,
+            "secondsAfterResolution": 2.1,
+            "beforeNextThreat": false
+          },
+          "damageReceivedBeforeNextHit": 0,
+          "observation": "Recorded sequence, not proof the defence caused subsequent damage or a miss."
+        },
+        {
+          "tick": 530,
+          "type": "roll",
+          "attackTick": null,
+          "resolutionTick": null,
+          "against": null,
+          "charged": false,
+          "result": "no attack in flight",
+          "avoided": 0,
+          "windowOpened": false,
+          "windowUsed": false,
+          "answer": null,
+          "counterMove": false,
+          "landed": false,
+          "distance": 1.97,
+          "wall": 1.32,
+          "positionBefore": {
+            "tick": 529,
+            "gap": 0.85,
+            "radius": 1.18,
+            "hp": 118,
+            "enemyHp": 109,
+            "stamina": 71.19999999999993,
+            "posture": 17.80000000000001,
+            "ownState": "guard",
+            "enemyState": "hurt",
+            "sampleAgeTicks": 1
+          },
+          "positionAfter": {
+            "tick": 564,
+            "gap": 3.16,
+            "radius": 2.82,
+            "hp": 118,
+            "enemyHp": 109,
+            "stamina": 41.19999999999993,
+            "posture": 10.800000000000036,
+            "ownState": "roll",
+            "enemyState": "hurt",
+            "sampleAgeTicks": 2
+          },
+          "nextUsefulHit": {
+            "tick": 646,
+            "move": "thrust",
+            "damage": 17,
+            "secondsAfterAction": 1.933,
+            "secondsAfterResolution": 1.933,
+            "beforeNextThreat": false
+          },
+          "damageReceivedBeforeNextHit": 0,
+          "observation": "Recorded sequence, not proof the defence caused subsequent damage or a miss."
+        },
+        {
+          "tick": 1586,
+          "type": "roll",
+          "attackTick": 1538,
+          "resolutionTick": 1590,
+          "against": "heavy_overhead",
+          "charged": true,
+          "result": "dodged",
+          "avoided": 21,
+          "windowOpened": true,
+          "windowUsed": false,
+          "answer": null,
+          "counterMove": false,
+          "landed": false,
+          "distance": 1.94,
+          "wall": 2.09,
+          "avoidanceCredited": true,
+          "windowCredited": true,
+          "positionBefore": {
+            "tick": 1585,
+            "gap": 0.85,
+            "radius": 0.87,
+            "hp": 81,
+            "enemyHp": 7,
+            "stamina": 30.399999999999736,
+            "posture": 36.79999999999991,
+            "ownState": "guard",
+            "enemyState": "heavy_overhead",
+            "sampleAgeTicks": 1
+          },
+          "positionAfter": {
+            "tick": 1620,
+            "gap": 3.12,
+            "radius": 3.29,
+            "hp": 81,
+            "enemyHp": 7,
+            "stamina": 0.3999999999997357,
+            "posture": 29.999999999999854,
+            "ownState": "roll",
+            "enemyState": "heavy_overhead",
+            "sampleAgeTicks": 2
+          },
+          "nextUsefulHit": {
+            "tick": 1970,
+            "move": "thrust",
+            "damage": 17,
+            "secondsAfterAction": 6.4,
+            "secondsAfterResolution": 6.333,
+            "beforeNextThreat": false
+          },
+          "damageReceivedBeforeNextHit": 18,
+          "observation": "Recorded sequence, not proof the defence caused subsequent damage or a miss."
+        }
+      ]
+    },
+    {
+      "profile": "intermediate",
+      "opponent": "veteran",
+      "seed": 2026100507,
+      "outcome": "win",
+      "durationSeconds": 33.58,
+      "health": {
+        "player": 30,
+        "opponent": 0
+      },
+      "attackMix": {
+        "attacks": 19,
+        "heavies": 1,
+        "heavyPercent": 5.3,
+        "passed": true
+      },
+      "blocks": 0,
+      "parries": 2,
+      "emptySwings": 0,
+      "renderer": {
+        "name": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "canvas": [
+          390,
+          844
+        ],
+        "dpr": 1
+      },
+      "rawSha256": "7eb732e5f512e1555415f864b6c800150717da55f02f3887bcd982ae0049c894",
+      "videoSha256": "4bff37466d25c40f7010ccb7a58d071a176ab1be117b02e30e6e5220602ee438",
+      "defenceOutcomes": [
+        {
+          "tick": 461,
+          "type": "parry",
+          "attackTick": 441,
+          "resolutionTick": 461,
+          "against": "light_right",
+          "charged": false,
+          "result": "parried",
+          "avoided": 12,
+          "windowOpened": true,
+          "windowUsed": true,
+          "answer": "slash_riposte",
+          "counterMove": true,
+          "landed": true,
+          "distance": 0.2,
+          "wall": 0,
+          "avoidanceCredited": true,
+          "windowCredited": true,
+          "positionBefore": {
+            "tick": 461,
+            "gap": 0.85,
+            "radius": 0.46,
+            "hp": 125,
+            "enemyHp": 121,
+            "stamina": 82.66666666666666,
+            "posture": 36.29999999999998,
+            "ownState": "guard",
+            "enemyState": "hurt",
+            "sampleAgeTicks": 0
+          },
+          "positionAfter": {
+            "tick": 489,
+            "gap": 1.05,
+            "radius": 0.46,
+            "hp": 125,
+            "enemyHp": 97,
+            "stamina": 66.66666666666664,
+            "posture": 30.69999999999993,
+            "ownState": "slash_riposte",
+            "enemyState": "hurt",
+            "sampleAgeTicks": 2
+          },
+          "nextUsefulHit": {
+            "tick": 489,
+            "move": "slash_riposte",
+            "damage": 24,
+            "secondsAfterAction": 0.467,
+            "secondsAfterResolution": 0.467,
+            "beforeNextThreat": true
+          },
+          "damageReceivedBeforeNextHit": 0,
+          "observation": "Recorded sequence, not proof the defence caused subsequent damage or a miss."
+        },
+        {
+          "tick": 1976,
+          "type": "parry",
+          "attackTick": 1960,
+          "resolutionTick": 1976,
+          "against": "thrust",
+          "charged": false,
+          "result": "parried",
+          "avoided": 13,
+          "windowOpened": true,
+          "windowUsed": true,
+          "answer": "heavy_riposte",
+          "counterMove": true,
+          "landed": true,
+          "distance": 0,
+          "wall": 0,
+          "avoidanceCredited": true,
+          "windowCredited": true,
+          "positionBefore": {
+            "tick": 1976,
+            "gap": 0.85,
+            "radius": 0.51,
+            "hp": 30,
+            "enemyHp": 14,
+            "stamina": 52,
+            "posture": 0,
+            "ownState": "guard",
+            "enemyState": "hurt",
+            "sampleAgeTicks": 0
+          },
+          "positionAfter": {
+            "tick": 2005,
+            "gap": 0.85,
+            "radius": 0.51,
+            "hp": 30,
+            "enemyHp": 14,
+            "stamina": 17,
+            "posture": 0,
+            "ownState": "heavy_riposte",
+            "enemyState": "hurt",
+            "sampleAgeTicks": 1
+          },
+          "nextUsefulHit": {
+            "tick": 2015,
+            "move": "heavy_riposte",
+            "damage": 30,
+            "secondsAfterAction": 0.65,
+            "secondsAfterResolution": 0.65,
+            "beforeNextThreat": true
+          },
+          "damageReceivedBeforeNextHit": 0,
+          "observation": "Recorded sequence, not proof the defence caused subsequent damage or a miss."
+        }
+      ]
+    },
+    {
+      "profile": "intermediate",
+      "opponent": "executioner",
+      "seed": 2026100507,
+      "outcome": "win",
+      "durationSeconds": 23.27,
+      "health": {
+        "player": 110,
+        "opponent": 0
+      },
+      "attackMix": {
+        "attacks": 13,
+        "heavies": 0,
+        "heavyPercent": 0,
+        "passed": true
+      },
+      "blocks": 0,
+      "parries": 1,
+      "emptySwings": 0,
+      "renderer": {
+        "name": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "canvas": [
+          390,
+          844
+        ],
+        "dpr": 1
+      },
+      "rawSha256": "141d4cce9ddd824147ed6f87a75dff962fcac1dd80108eb473de1dcb3a701260",
+      "videoSha256": "8e161a132f05b6dc07dd321fe9052dd93e0dd53b322202056f0b4f03f4f0cfbf",
+      "defenceOutcomes": [
+        {
+          "tick": 244,
+          "type": "parry",
+          "attackTick": 208,
+          "resolutionTick": 244,
+          "against": "heavy_overhead",
+          "charged": false,
+          "result": "parried",
+          "avoided": 22,
+          "windowOpened": true,
+          "windowUsed": false,
+          "answer": null,
+          "counterMove": false,
+          "landed": false,
+          "distance": 1,
+          "wall": 1.6,
+          "avoidanceCredited": true,
+          "windowCredited": true,
+          "positionBefore": {
+            "tick": 244,
+            "gap": 0.85,
+            "radius": 0.05,
+            "hp": 150,
+            "enemyHp": 149,
+            "stamina": 82.99999999999996,
+            "posture": 0,
+            "ownState": "guard",
+            "enemyState": "hurt",
+            "sampleAgeTicks": 0
+          },
+          "positionAfter": {
+            "tick": 272,
+            "gap": 1.85,
+            "radius": 1.65,
+            "hp": 150,
+            "enemyHp": 149,
+            "stamina": 55.999999999999915,
+            "posture": 0,
+            "ownState": "roll",
+            "enemyState": "hurt",
+            "sampleAgeTicks": 2
+          },
+          "nextUsefulHit": {
+            "tick": 359,
+            "move": "light_right",
+            "damage": 14,
+            "secondsAfterAction": 1.917,
+            "secondsAfterResolution": 1.917,
+            "beforeNextThreat": true
+          },
+          "damageReceivedBeforeNextHit": 0,
+          "observation": "Recorded sequence, not proof the defence caused subsequent damage or a miss."
+        },
+        {
+          "tick": 254,
+          "type": "roll",
+          "attackTick": null,
+          "resolutionTick": null,
+          "against": null,
+          "charged": false,
+          "result": "no attack in flight",
+          "avoided": 0,
+          "windowOpened": false,
+          "windowUsed": false,
+          "answer": null,
+          "counterMove": false,
+          "landed": false,
+          "distance": 1.97,
+          "wall": 2.64,
+          "positionBefore": {
+            "tick": 253,
+            "gap": 0.85,
+            "radius": 0.05,
+            "hp": 150,
+            "enemyHp": 149,
+            "stamina": 85.33333333333326,
+            "posture": 0,
+            "ownState": "guard",
+            "enemyState": "hurt",
+            "sampleAgeTicks": 1
+          },
+          "positionAfter": {
+            "tick": 288,
+            "gap": 3.15,
+            "radius": 3.03,
+            "hp": 150,
+            "enemyHp": 149,
+            "stamina": 55.999999999999915,
+            "posture": 0,
+            "ownState": "roll",
+            "enemyState": "hurt",
+            "sampleAgeTicks": 2
+          },
+          "nextUsefulHit": {
+            "tick": 359,
+            "move": "light_right",
+            "damage": 14,
+            "secondsAfterAction": 1.75,
+            "secondsAfterResolution": 1.75,
+            "beforeNextThreat": true
+          },
+          "damageReceivedBeforeNextHit": 0,
+          "observation": "Recorded sequence, not proof the defence caused subsequent damage or a miss."
+        }
+      ]
+    },
+    {
+      "profile": "advanced",
+      "opponent": "goblin",
+      "seed": 2026100507,
+      "outcome": "timeout",
+      "durationSeconds": 90,
+      "health": {
+        "player": 62,
+        "opponent": 6
+      },
+      "attackMix": {
+        "attacks": 14,
+        "heavies": 0,
+        "heavyPercent": 0,
+        "passed": true
+      },
+      "blocks": 0,
+      "parries": 1,
+      "emptySwings": 0,
+      "renderer": {
+        "name": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "canvas": [
+          390,
+          844
+        ],
+        "dpr": 1
+      },
+      "rawSha256": "24b218fc02190c5758c6e21ab942d030203510edebecec19f874b6ea22f95b2d",
+      "videoSha256": "7ee7252bd117f44398fff005e7cbe760571856dfdc3bdd129586db37f85d6f07",
+      "defenceOutcomes": [
+        {
+          "tick": 627,
+          "type": "roll",
+          "attackTick": 596,
+          "resolutionTick": 652,
+          "against": "heavy_overhead",
+          "charged": true,
+          "result": "swing missed",
+          "avoided": 21,
+          "windowOpened": true,
+          "windowUsed": false,
+          "answer": null,
+          "counterMove": false,
+          "landed": false,
+          "distance": 1.26,
+          "wall": 1.46,
+          "avoidanceCredited": true,
+          "windowCredited": true,
+          "positionBefore": {
+            "tick": 626,
+            "gap": 1.17,
+            "radius": 0.61,
+            "hp": 127,
+            "enemyHp": 67,
+            "stamina": 82.73333333333326,
+            "posture": 6.800000000000024,
+            "ownState": "guard",
+            "enemyState": "heavy_overhead",
+            "sampleAgeTicks": 1
+          },
+          "positionAfter": {
+            "tick": 660,
+            "gap": 2.76,
+            "radius": 2.41,
+            "hp": 127,
+            "enemyHp": 67,
+            "stamina": 52.73333333333326,
+            "posture": 0.20000000000001983,
+            "ownState": "roll",
+            "enemyState": "heavy_overhead",
+            "sampleAgeTicks": 3
+          },
+          "nextUsefulHit": {
+            "tick": 716,
+            "move": "thrust",
+            "damage": 11,
+            "secondsAfterAction": 1.483,
+            "secondsAfterResolution": 1.067,
+            "beforeNextThreat": true
+          },
+          "damageReceivedBeforeNextHit": 0,
+          "observation": "Recorded sequence, not proof the defence caused subsequent damage or a miss."
+        },
+        {
+          "tick": 759,
+          "type": "parry",
+          "attackTick": 737,
+          "resolutionTick": 759,
+          "against": "heavy_overhead",
+          "charged": false,
+          "result": "parried",
+          "avoided": 14,
+          "windowOpened": true,
+          "windowUsed": false,
+          "answer": null,
+          "counterMove": false,
+          "landed": false,
+          "distance": 0.94,
+          "wall": 1.62,
+          "avoidanceCredited": true,
+          "windowCredited": true,
+          "positionBefore": {
+            "tick": 759,
+            "gap": 0.99,
+            "radius": 1.11,
+            "hp": 127,
+            "enemyHp": 56,
+            "stamina": 53.266666666666524,
+            "posture": 0,
+            "ownState": "guard",
+            "enemyState": "hurt",
+            "sampleAgeTicks": 0
+          },
+          "positionAfter": {
+            "tick": 787,
+            "gap": 1.93,
+            "radius": 2.73,
+            "hp": 127,
+            "enemyHp": 56,
+            "stamina": 25.666666666666515,
+            "posture": 0,
+            "ownState": "roll",
+            "enemyState": "hurt",
+            "sampleAgeTicks": 2
+          },
+          "nextUsefulHit": {
+            "tick": 900,
+            "move": "thrust",
+            "damage": 11,
+            "secondsAfterAction": 2.35,
+            "secondsAfterResolution": 2.35,
+            "beforeNextThreat": true
+          },
+          "damageReceivedBeforeNextHit": 0,
+          "observation": "Recorded sequence, not proof the defence caused subsequent damage or a miss."
+        },
+        {
+          "tick": 769,
+          "type": "roll",
+          "attackTick": null,
+          "resolutionTick": null,
+          "against": null,
+          "charged": false,
+          "result": "no attack in flight",
+          "avoided": 0,
+          "windowOpened": false,
+          "windowUsed": false,
+          "answer": null,
+          "counterMove": false,
+          "landed": false,
+          "distance": 1.88,
+          "wall": 2.66,
+          "positionBefore": {
+            "tick": 768,
+            "gap": 0.99,
+            "radius": 1.11,
+            "hp": 127,
+            "enemyHp": 56,
+            "stamina": 55.133333333333184,
+            "posture": 0,
+            "ownState": "guard",
+            "enemyState": "hurt",
+            "sampleAgeTicks": 1
+          },
+          "positionAfter": {
+            "tick": 803,
+            "gap": 3.2,
+            "radius": 4.12,
+            "hp": 127,
+            "enemyHp": 56,
+            "stamina": 25.666666666666515,
+            "posture": 0,
+            "ownState": "roll",
+            "enemyState": "hurt",
+            "sampleAgeTicks": 2
+          },
+          "nextUsefulHit": {
+            "tick": 900,
+            "move": "thrust",
+            "damage": 11,
+            "secondsAfterAction": 2.183,
+            "secondsAfterResolution": 2.183,
+            "beforeNextThreat": true
+          },
+          "damageReceivedBeforeNextHit": 0,
+          "observation": "Recorded sequence, not proof the defence caused subsequent damage or a miss."
+        }
+      ]
+    },
+    {
+      "profile": "advanced",
+      "opponent": "veteran",
+      "seed": 2026100507,
+      "outcome": "win",
+      "durationSeconds": 22.63,
+      "health": {
+        "player": 150,
+        "opponent": 0
+      },
+      "attackMix": {
+        "attacks": 14,
+        "heavies": 1,
+        "heavyPercent": 7.1,
+        "passed": true
+      },
+      "blocks": 0,
+      "parries": 1,
+      "emptySwings": 0,
+      "renderer": {
+        "name": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "canvas": [
+          390,
+          844
+        ],
+        "dpr": 1
+      },
+      "rawSha256": "22c14151935b34698a79da042c54d46d14ca78602f134895f2cb3346ee9eaeeb",
+      "videoSha256": "2c76c95e561fc51829c912f4530c4f3286f4b98612f6c39429c275ee690a7230",
+      "defenceOutcomes": [
+        {
+          "tick": 1323,
+          "type": "parry",
+          "attackTick": 1307,
+          "resolutionTick": 1323,
+          "against": "thrust",
+          "charged": false,
+          "result": "parried",
+          "avoided": 13,
+          "windowOpened": true,
+          "windowUsed": true,
+          "answer": "heavy_riposte",
+          "counterMove": true,
+          "landed": true,
+          "distance": 0,
+          "wall": 0,
+          "avoidanceCredited": true,
+          "windowCredited": true,
+          "positionBefore": {
+            "tick": 1323,
+            "gap": 0.85,
+            "radius": 0.98,
+            "hp": 150,
+            "enemyHp": 14,
+            "stamina": 100,
+            "posture": 0,
+            "ownState": "guard",
+            "enemyState": "hurt",
+            "sampleAgeTicks": 0
+          },
+          "positionAfter": {
+            "tick": 1352,
+            "gap": 0.85,
+            "radius": 0.98,
+            "hp": 150,
+            "enemyHp": 14,
+            "stamina": 65,
+            "posture": 0,
+            "ownState": "heavy_riposte",
+            "enemyState": "hurt",
+            "sampleAgeTicks": 1
+          },
+          "nextUsefulHit": {
+            "tick": 1358,
+            "move": "heavy_riposte",
+            "damage": 30,
+            "secondsAfterAction": 0.583,
+            "secondsAfterResolution": 0.583,
+            "beforeNextThreat": true
+          },
+          "damageReceivedBeforeNextHit": 0,
+          "observation": "Recorded sequence, not proof the defence caused subsequent damage or a miss."
+        }
+      ]
+    },
+    {
+      "profile": "advanced",
+      "opponent": "executioner",
+      "seed": 2026100507,
+      "outcome": "win",
+      "durationSeconds": 21.42,
+      "health": {
+        "player": 139,
+        "opponent": 0
+      },
+      "attackMix": {
+        "attacks": 11,
+        "heavies": 0,
+        "heavyPercent": 0,
+        "passed": true
+      },
+      "blocks": 2,
+      "parries": 0,
+      "emptySwings": 0,
+      "renderer": {
+        "name": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "canvas": [
+          390,
+          844
+        ],
+        "dpr": 1
+      },
+      "rawSha256": "1b74eeedc8d3167300b15a82fe8b85d9a9235b9d6a6749879327e523b53eb17e",
+      "videoSha256": "74d6d02a36b9fe3c338adf8182f35edbb600eeee2fdffa07fdfe2cd27a27a648",
+      "defenceOutcomes": [
+        {
+          "tick": 228,
+          "type": "perfect block",
+          "attackTick": 192,
+          "resolutionTick": 228,
+          "against": "heavy_overhead",
+          "charged": false,
+          "result": "clean",
+          "avoided": 22,
+          "windowOpened": true,
+          "windowUsed": true,
+          "answer": "light_right",
+          "counterMove": false,
+          "landed": true,
+          "distance": 0,
+          "wall": 0,
+          "avoidanceCredited": true,
+          "windowCredited": true,
+          "positionBefore": {
+            "tick": 228,
+            "gap": 0.85,
+            "radius": 0.01,
+            "hp": 150,
+            "enemyHp": 149,
+            "stamina": 65.49999999999996,
+            "posture": 18,
+            "ownState": "guard",
+            "enemyState": "heavy_overhead",
+            "sampleAgeTicks": 0
+          },
+          "positionAfter": {
+            "tick": 258,
+            "gap": 0.85,
+            "radius": 0.01,
+            "hp": 150,
+            "enemyHp": 149,
+            "stamina": 40.49999999999996,
+            "posture": 18,
+            "ownState": "light_right",
+            "enemyState": "heavy_overhead",
+            "sampleAgeTicks": 0
+          },
+          "nextUsefulHit": {
+            "tick": 260,
+            "move": "light_right",
+            "damage": 18,
+            "secondsAfterAction": 0.533,
+            "secondsAfterResolution": 0.533,
+            "beforeNextThreat": true
+          },
+          "damageReceivedBeforeNextHit": 0,
+          "observation": "Recorded sequence, not proof the defence caused subsequent damage or a miss."
+        },
+        {
+          "tick": 410,
+          "type": "block",
+          "attackTick": 374,
+          "resolutionTick": 410,
+          "against": "heavy_overhead",
+          "charged": false,
+          "result": "chip",
+          "avoided": 11,
+          "windowOpened": true,
+          "windowUsed": false,
+          "answer": null,
+          "counterMove": false,
+          "landed": false,
+          "distance": 0.55,
+          "wall": 0.03,
+          "avoidanceCredited": true,
+          "windowCredited": true,
+          "positionBefore": {
+            "tick": 410,
+            "gap": 0.85,
+            "radius": 0.26,
+            "hp": 139,
+            "enemyHp": 120,
+            "stamina": 28.833333333333265,
+            "posture": 36,
+            "ownState": "guard",
+            "enemyState": "heavy_overhead",
+            "sampleAgeTicks": 0
+          },
+          "positionAfter": {
+            "tick": 440,
+            "gap": 1.4,
+            "radius": 0.29,
+            "hp": 139,
+            "enemyHp": 120,
+            "stamina": 28.833333333333265,
+            "posture": 36,
+            "ownState": "ready",
+            "enemyState": "heavy_overhead",
+            "sampleAgeTicks": 0
+          },
+          "nextUsefulHit": {
+            "tick": 634,
+            "move": "thrust",
+            "damage": 17,
+            "secondsAfterAction": 3.733,
+            "secondsAfterResolution": 3.733,
+            "beforeNextThreat": false
+          },
+          "damageReceivedBeforeNextHit": 11,
+          "observation": "Recorded sequence, not proof the defence caused subsequent damage or a miss."
+        },
+        {
+          "tick": 510,
+          "type": "roll",
+          "attackTick": 463,
+          "resolutionTick": 533,
+          "against": "heavy_overhead",
+          "charged": true,
+          "result": "swing missed",
+          "avoided": 33,
+          "windowOpened": true,
+          "windowUsed": false,
+          "answer": null,
+          "counterMove": false,
+          "landed": false,
+          "distance": 1.27,
+          "wall": 2.42,
+          "avoidanceCredited": true,
+          "windowCredited": true,
+          "positionBefore": {
+            "tick": 509,
+            "gap": 1.38,
+            "radius": 0.29,
+            "hp": 139,
+            "enemyHp": 120,
+            "stamina": 54.16666666666664,
+            "posture": 25.19999999999997,
+            "ownState": "guard",
+            "enemyState": "heavy_overhead",
+            "sampleAgeTicks": 1
+          },
+          "positionAfter": {
+            "tick": 544,
+            "gap": 2.97,
+            "radius": 3.04,
+            "hp": 139,
+            "enemyHp": 120,
+            "stamina": 24.166666666666643,
+            "posture": 18.799999999999994,
+            "ownState": "roll",
+            "enemyState": "heavy_overhead",
+            "sampleAgeTicks": 2
+          },
+          "nextUsefulHit": {
+            "tick": 634,
+            "move": "thrust",
+            "damage": 17,
+            "secondsAfterAction": 2.067,
+            "secondsAfterResolution": 1.683,
+            "beforeNextThreat": false
+          },
+          "damageReceivedBeforeNextHit": 0,
+          "observation": "Recorded sequence, not proof the defence caused subsequent damage or a miss."
+        }
+      ]
+    }
+  ],
+  "audio": [
+    {
+      "foe": "executioner",
+      "revision": "4056467af826b03166a575002f7a4f4b04f9dfe7",
+      "probeSha256": "eaba6c1c96a07cf701518758418c6d76d5089891c1ace37d37f4c3d2d8d87573",
+      "moduleSha256": "db4ac00d0c45be0972cea7bd8d53adfb5f2598cf8734c28318fff3008294e852",
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+      "fromTick": 1089,
+      "toTick": 1500,
+      "wallSeconds": 7.21220000000298,
+      "renderedFrames": 430,
+      "renderedFramesPerSecond": 59.62119741546579,
+      "chargeAudit": [
+        {
+          "event": {
+            "tick": 1165,
+            "type": "Charging",
+            "actor": 1,
+            "move": "heavy_overhead"
+          },
+          "sourceId": 6,
+          "heardCue": "charge_foe",
+          "scheduledSeconds": 5.472,
+          "exposedAtStart": false,
+          "limitation": "decoded source scheduled on real game output; not human recognition or a listening policy"
+        }
+      ],
+      "clipSha256": "922290ba105dd8d7cecdf7707236ebee4c5f20da458a2620758d29e5c1ae41d9",
+      "peak": 0.10518968105316162,
+      "events": [
+        {
+          "tick": 1101,
+          "type": "AttackStarted",
+          "actor": 0,
+          "move": "thrust",
+          "direction": "thrust"
+        },
+        {
+          "tick": 1117,
+          "type": "AttackActive",
+          "actor": 0,
+          "move": "thrust"
+        },
+        {
+          "tick": 1117,
+          "type": "Hit",
+          "actor": 0,
+          "target": 1,
+          "move": "thrust",
+          "damage": 11,
+          "location": "torso",
+          "heading": 1.9807351981119492,
+          "counter": false,
+          "rear": false,
+          "charged": false,
+          "weapon": "longsword",
+          "material": "iron"
+        },
+        {
+          "tick": 1128,
+          "type": "ActionStarted",
+          "actor": 1,
+          "action": "guard"
+        },
+        {
+          "tick": 1153,
+          "type": "AttackStarted",
+          "actor": 1,
+          "move": "heavy_overhead",
+          "direction": "overhead"
+        },
+        {
+          "tick": 1165,
+          "type": "ActionStarted",
+          "actor": 0,
+          "action": "parry"
+        },
+        {
+          "tick": 1165,
+          "type": "Charging",
+          "actor": 1,
+          "move": "heavy_overhead"
+        },
+        {
+          "tick": 1194,
+          "type": "Charged",
+          "actor": 1,
+          "move": "heavy_overhead"
+        },
+        {
+          "tick": 1201,
+          "type": "ActionStarted",
+          "actor": 0,
+          "action": "roll"
+        },
+        {
+          "tick": 1219,
+          "type": "AttackActive",
+          "actor": 1,
+          "move": "heavy_overhead"
+        },
+        {
+          "tick": 1219,
+          "type": "Dodged",
+          "actor": 0,
+          "target": 1,
+          "move": "heavy_overhead"
+        },
+        {
+          "tick": 1262,
+          "type": "WhipRaised",
+          "actor": 0,
+          "target": 0,
+          "x": -5.75951969402261,
+          "z": -6.319053164372469,
+          "lead": 60,
+          "guard": 3
+        },
+        {
+          "tick": 1285,
+          "type": "AttackStarted",
+          "actor": 0,
+          "move": "thrust",
+          "direction": "thrust"
+        },
+        {
+          "tick": 1301,
+          "type": "AttackActive",
+          "actor": 0,
+          "move": "thrust"
+        },
+        {
+          "tick": 1301,
+          "type": "Hit",
+          "actor": 0,
+          "target": 1,
+          "move": "thrust",
+          "damage": 11,
+          "location": "torso",
+          "heading": 0.9785902053207577,
+          "counter": false,
+          "rear": false,
+          "charged": false,
+          "weapon": "longsword",
+          "material": "iron"
+        },
+        {
+          "tick": 1302,
+          "type": "ActionStarted",
+          "actor": 1,
+          "action": "guard"
+        },
+        {
+          "tick": 1361,
+          "type": "AttackStarted",
+          "actor": 0,
+          "move": "thrust",
+          "direction": "thrust"
+        },
+        {
+          "tick": 1368,
+          "type": "AttackStarted",
+          "actor": 1,
+          "move": "kick"
+        },
+        {
+          "tick": 1377,
+          "type": "AttackActive",
+          "actor": 0,
+          "move": "thrust"
+        },
+        {
+          "tick": 1377,
+          "type": "Hit",
+          "actor": 0,
+          "target": 1,
+          "move": "thrust",
+          "damage": 17,
+          "location": "torso",
+          "heading": 0.9785902053207566,
+          "counter": true,
+          "rear": false,
+          "charged": false,
+          "weapon": "longsword",
+          "material": "iron",
+          "stop": true
+        },
+        {
+          "tick": 1377,
+          "type": "Staggered",
+          "actor": 1,
+          "ticks": 35
+        },
+        {
+          "tick": 1413,
+          "type": "AttackStarted",
+          "actor": 1,
+          "move": "kick"
+        },
+        {
+          "tick": 1431,
+          "type": "AttackActive",
+          "actor": 1,
+          "move": "kick"
+        },
+        {
+          "tick": 1431,
+          "type": "Hit",
+          "actor": 1,
+          "target": 0,
+          "move": "kick",
+          "damage": 4,
+          "location": "torso",
+          "heading": -2.1630024482690375,
+          "counter": false,
+          "rear": false,
+          "charged": false,
+          "weapon": "scythe",
+          "material": "iron"
+        },
+        {
+          "tick": 1431,
+          "type": "Staggered",
+          "actor": 0,
+          "ticks": 18
+        }
+      ],
+      "horizonTiltMaxDeg": 6.961468041647169
+    },
+    {
+      "foe": "goblin",
+      "revision": "4056467af826b03166a575002f7a4f4b04f9dfe7",
+      "probeSha256": "eaba6c1c96a07cf701518758418c6d76d5089891c1ace37d37f4c3d2d8d87573",
+      "moduleSha256": "db4ac00d0c45be0972cea7bd8d53adfb5f2598cf8734c28318fff3008294e852",
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+      "fromTick": 1087,
+      "toTick": 1500,
+      "wallSeconds": 7.304399999991059,
+      "renderedFrames": 432,
+      "renderedFramesPerSecond": 59.14243469696741,
+      "chargeAudit": [],
+      "clipSha256": "039f17ff9a9bcfa5b537b3a9511da5653f4654755c8d1e4b22a1ded01be76464",
+      "peak": 0.1277831792831421,
+      "events": [
+        {
+          "tick": 1114,
+          "type": "AttackStarted",
+          "actor": 1,
+          "move": "kick"
+        },
+        {
+          "tick": 1132,
+          "type": "AttackActive",
+          "actor": 1,
+          "move": "kick"
+        },
+        {
+          "tick": 1132,
+          "type": "Hit",
+          "actor": 1,
+          "target": 0,
+          "move": "kick",
+          "damage": 4,
+          "location": "torso",
+          "heading": 2.7052689625007944,
+          "counter": false,
+          "rear": false,
+          "charged": false,
+          "weapon": "knife",
+          "material": "iron"
+        },
+        {
+          "tick": 1132,
+          "type": "Staggered",
+          "actor": 0,
+          "ticks": 30,
+          "walled": true
+        },
+        {
+          "tick": 1165,
+          "type": "AttackStarted",
+          "actor": 0,
+          "move": "light_left",
+          "direction": "left"
+        },
+        {
+          "tick": 1184,
+          "type": "ActionStarted",
+          "actor": 1,
+          "action": "backstep"
+        },
+        {
+          "tick": 1185,
+          "type": "AttackActive",
+          "actor": 0,
+          "move": "light_left"
+        },
+        {
+          "tick": 1192,
+          "type": "AttackMissed",
+          "actor": 0,
+          "move": "light_left"
+        },
+        {
+          "tick": 1334,
+          "type": "WhipRaised",
+          "actor": 0,
+          "target": 0,
+          "x": -0.7770834586352368,
+          "z": -8.514613396879245,
+          "lead": 60,
+          "guard": 4
+        },
+        {
+          "tick": 1394,
+          "type": "Whipped",
+          "actor": 0,
+          "target": 0,
+          "x": -0.548250068955395,
+          "z": -8.532404225181224,
+          "damage": 3,
+          "guard": 4
+        },
+        {
+          "tick": 1394,
+          "type": "WhipRaised",
+          "actor": 1,
+          "target": 1,
+          "x": -2.0199441374760574,
+          "z": -7.436310766384543,
+          "lead": 60,
+          "guard": 4
+        },
+        {
+          "tick": 1395,
+          "type": "AttackStarted",
+          "actor": 1,
+          "move": "thrust",
+          "direction": "thrust"
+        },
+        {
+          "tick": 1407,
+          "type": "AttackActive",
+          "actor": 1,
+          "move": "thrust"
+        },
+        {
+          "tick": 1407,
+          "type": "Hit",
+          "actor": 1,
+          "target": 0,
+          "move": "thrust",
+          "damage": 9,
+          "location": "torso",
+          "heading": 2.3747330060249334,
+          "counter": false,
+          "rear": false,
+          "charged": false,
+          "weapon": "knife",
+          "material": "iron"
+        },
+        {
+          "tick": 1407,
+          "type": "Staggered",
+          "actor": 0,
+          "ticks": 26,
+          "walled": true
+        },
+        {
+          "tick": 1424,
+          "type": "WhipRaised",
+          "actor": 0,
+          "target": 0,
+          "x": -0.9133187314262434,
+          "z": -8.50107927823438,
+          "lead": 30,
+          "guard": 4
+        },
+        {
+          "tick": 1432,
+          "type": "AttackStarted",
+          "actor": 1,
+          "move": "light_right",
+          "direction": "right"
+        },
+        {
+          "tick": 1437,
+          "type": "AttackStarted",
+          "actor": 0,
+          "move": "light_right",
+          "direction": "right"
+        },
+        {
+          "tick": 1446,
+          "type": "AttackActive",
+          "actor": 1,
+          "move": "light_right"
+        },
+        {
+          "tick": 1446,
+          "type": "Hit",
+          "actor": 1,
+          "target": 0,
+          "move": "light_right",
+          "damage": 13,
+          "location": "torso",
+          "heading": 2.313660017138574,
+          "counter": true,
+          "rear": false,
+          "charged": false,
+          "weapon": "knife",
+          "material": "iron"
+        },
+        {
+          "tick": 1446,
+          "type": "Staggered",
+          "actor": 0,
+          "ticks": 39,
+          "walled": true
+        },
+        {
+          "tick": 1469,
+          "type": "AttackStarted",
+          "actor": 1,
+          "move": "light_left",
+          "direction": "left"
+        },
+        {
+          "tick": 1481,
+          "type": "AttackActive",
+          "actor": 1,
+          "move": "light_left"
+        },
+        {
+          "tick": 1481,
+          "type": "Hit",
+          "actor": 1,
+          "target": 0,
+          "move": "light_left",
+          "damage": 10,
+          "location": "torso",
+          "heading": 2.2738331635889795,
+          "counter": false,
+          "rear": false,
+          "charged": false,
+          "weapon": "knife",
+          "material": "iron"
+        },
+        {
+          "tick": 1481,
+          "type": "Staggered",
+          "actor": 0,
+          "ticks": 30,
+          "walled": true
+        },
+        {
+          "tick": 1481,
+          "type": "PostureBroken",
+          "actor": 1,
+          "target": 0,
+          "ticks": 90
+        }
+      ],
+      "horizonTiltMaxDeg": 9.54166404439055e-15
+    },
+    {
+      "foe": "veteran",
+      "revision": "4056467af826b03166a575002f7a4f4b04f9dfe7",
+      "probeSha256": "eaba6c1c96a07cf701518758418c6d76d5089891c1ace37d37f4c3d2d8d87573",
+      "moduleSha256": "db4ac00d0c45be0972cea7bd8d53adfb5f2598cf8734c28318fff3008294e852",
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+      "fromTick": 688,
+      "toTick": 1100,
+      "wallSeconds": 8.05070000000298,
+      "renderedFrames": 479,
+      "renderedFramesPerSecond": 59.497931856835145,
+      "chargeAudit": [],
+      "clipSha256": "2a3c827f75f11ac2e44c24e812721864a684f56b396df22d09cea9317b336a2a",
+      "peak": 0.13855788111686707,
+      "events": [
+        {
+          "tick": 693,
+          "type": "AttackStarted",
+          "actor": 0,
+          "move": "thrust",
+          "direction": "thrust"
+        },
+        {
+          "tick": 699,
+          "type": "AttackActive",
+          "actor": 1,
+          "move": "thrust"
+        },
+        {
+          "tick": 699,
+          "type": "Hit",
+          "actor": 1,
+          "target": 0,
+          "move": "thrust",
+          "damage": 20,
+          "location": "torso",
+          "heading": -0.009365690450656283,
+          "counter": true,
+          "rear": false,
+          "charged": false,
+          "weapon": "gladius",
+          "material": "steel",
+          "stop": true
+        },
+        {
+          "tick": 699,
+          "type": "Staggered",
+          "actor": 0,
+          "ticks": 35
+        },
+        {
+          "tick": 726,
+          "type": "AttackStarted",
+          "actor": 1,
+          "move": "light_right",
+          "direction": "right"
+        },
+        {
+          "tick": 741,
+          "type": "ActionStarted",
+          "actor": 0,
+          "action": "roll"
+        },
+        {
+          "tick": 746,
+          "type": "AttackActive",
+          "actor": 1,
+          "move": "light_right"
+        },
+        {
+          "tick": 753,
+          "type": "AttackMissed",
+          "actor": 1,
+          "move": "light_right"
+        },
+        {
+          "tick": 808,
+          "type": "AttackStarted",
+          "actor": 1,
+          "move": "thrust",
+          "direction": "thrust"
+        },
+        {
+          "tick": 821,
+          "type": "ActionStarted",
+          "actor": 0,
+          "action": "parry"
+        },
+        {
+          "tick": 824,
+          "type": "AttackActive",
+          "actor": 1,
+          "move": "thrust"
+        },
+        {
+          "tick": 824,
+          "type": "Parried",
+          "actor": 0,
+          "target": 1,
+          "move": "thrust",
+          "weapon": "gladius",
+          "material": "steel"
+        },
+        {
+          "tick": 824,
+          "type": "Staggered",
+          "actor": 1,
+          "ticks": 90
+        },
+        {
+          "tick": 885,
+          "type": "AttackStarted",
+          "actor": 0,
+          "move": "riposte",
+          "direction": "thrust"
+        },
+        {
+          "tick": 897,
+          "type": "AttackActive",
+          "actor": 0,
+          "move": "riposte"
+        },
+        {
+          "tick": 897,
+          "type": "Hit",
+          "actor": 0,
+          "target": 1,
+          "move": "riposte",
+          "damage": 24,
+          "location": "torso",
+          "heading": 3.1360070464281877,
+          "counter": false,
+          "rear": false,
+          "charged": false,
+          "weapon": "longsword",
+          "material": "iron"
+        },
+        {
+          "tick": 897,
+          "type": "Staggered",
+          "actor": 1,
+          "ticks": 24
+        },
+        {
+          "tick": 973,
+          "type": "AttackStarted",
+          "actor": 0,
+          "move": "thrust",
+          "direction": "thrust"
+        },
+        {
+          "tick": 989,
+          "type": "ActionStarted",
+          "actor": 1,
+          "action": "guard"
+        },
+        {
+          "tick": 989,
+          "type": "AttackActive",
+          "actor": 0,
+          "move": "thrust"
+        },
+        {
+          "tick": 989,
+          "type": "Blocked",
+          "actor": 1,
+          "target": 0,
+          "move": "thrust",
+          "stamina": 7.5,
+          "perfect": true,
+          "weapon": "longsword",
+          "material": "iron"
+        },
+        {
+          "tick": 990,
+          "type": "AttackStarted",
+          "actor": 1,
+          "move": "heavy_counter",
+          "direction": "overhead"
+        },
+        {
+          "tick": 1010,
+          "type": "AttackActive",
+          "actor": 1,
+          "move": "heavy_counter"
+        },
+        {
+          "tick": 1010,
+          "type": "Hit",
+          "actor": 1,
+          "target": 0,
+          "move": "heavy_counter",
+          "damage": 25,
+          "location": "torso",
+          "heading": -0.006636637265029178,
+          "counter": true,
+          "rear": false,
+          "charged": false,
+          "weapon": "gladius",
+          "material": "steel"
+        },
+        {
+          "tick": 1010,
+          "type": "Staggered",
+          "actor": 0,
+          "ticks": 45
+        },
+        {
+          "tick": 1041,
+          "type": "AttackStarted",
+          "actor": 1,
+          "move": "light_right",
+          "direction": "right"
+        },
+        {
+          "tick": 1057,
+          "type": "ActionStarted",
+          "actor": 0,
+          "action": "parry"
+        },
+        {
+          "tick": 1061,
+          "type": "AttackActive",
+          "actor": 1,
+          "move": "light_right"
+        },
+        {
+          "tick": 1061,
+          "type": "Parried",
+          "actor": 0,
+          "target": 1,
+          "move": "light_right",
+          "weapon": "gladius",
+          "material": "steel"
+        },
+        {
+          "tick": 1061,
+          "type": "Staggered",
+          "actor": 1,
+          "ticks": 90
+        },
+        {
+          "tick": 1073,
+          "type": "AttackStarted",
+          "actor": 0,
+          "move": "heavy_riposte",
+          "direction": "overhead"
+        },
+        {
+          "tick": 1093,
+          "type": "AttackActive",
+          "actor": 0,
+          "move": "heavy_riposte"
+        },
+        {
+          "tick": 1093,
+          "type": "Hit",
+          "actor": 0,
+          "target": 1,
+          "move": "heavy_riposte",
+          "damage": 30,
+          "location": "legs",
+          "heading": 3.134956016324764,
+          "counter": false,
+          "rear": false,
+          "charged": false,
+          "weapon": "longsword",
+          "material": "iron"
+        },
+        {
+          "tick": 1093,
+          "type": "Staggered",
+          "actor": 1,
+          "ticks": 24
+        }
+      ],
+      "horizonTiltMaxDeg": 7.38705655982126
+    }
+  ],
+  "touch": [
+    {
+      "name": "draw",
+      "kit": {
+        "difficulty": "dummy",
+        "skill": "pommel"
+      },
+      "effect": {
+        "accepted": [
+          {
+            "tick": 58,
+            "type": "ActionStarted",
+            "actor": 0,
+            "action": "draw"
+          }
+        ],
+        "contacts": [],
+        "displacement": 0,
+        "guardDirections": []
+      },
+      "passed": true,
+      "released": true,
+      "releaseUI": {
+        "held": 0,
+        "stick": ""
+      }
+    },
+    {
+      "name": "slash",
+      "kit": {
+        "difficulty": "dummy",
+        "skill": "pommel"
+      },
+      "effect": {
+        "accepted": [
+          {
+            "tick": 183,
+            "type": "AttackStarted",
+            "actor": 0,
+            "move": "light_right",
+            "direction": "right"
+          }
+        ],
+        "contacts": [
+          {
+            "tick": 203,
+            "type": "Hit",
+            "actor": 0,
+            "target": 1,
+            "move": "light_right",
+            "damage": 14,
+            "location": "torso",
+            "heading": -3.141592653589793,
+            "counter": false,
+            "rear": false,
+            "charged": false,
+            "weapon": "longsword",
+            "material": "iron"
+          }
+        ],
+        "displacement": 0.3200000000000003,
+        "guardDirections": []
+      },
+      "passed": true,
+      "released": true,
+      "releaseUI": {
+        "held": 0,
+        "stick": ""
+      }
+    },
+    {
+      "name": "stab",
+      "kit": {
+        "difficulty": "dummy",
+        "skill": "pommel"
+      },
+      "effect": {
+        "accepted": [
+          {
+            "tick": 284,
+            "type": "AttackStarted",
+            "actor": 0,
+            "move": "thrust",
+            "direction": "thrust"
+          }
+        ],
+        "contacts": [
+          {
+            "tick": 300,
+            "type": "Hit",
+            "actor": 0,
+            "target": 1,
+            "move": "thrust",
+            "damage": 11,
+            "location": "torso",
+            "heading": 3.141592653589793,
+            "counter": false,
+            "rear": false,
+            "charged": false,
+            "weapon": "longsword",
+            "material": "iron"
+          }
+        ],
+        "displacement": 0.274881889763788,
+        "guardDirections": []
+      },
+      "passed": true,
+      "released": true,
+      "releaseUI": {
+        "held": 0,
+        "stick": ""
+      }
+    },
+    {
+      "name": "kick",
+      "kit": {
+        "difficulty": "dummy",
+        "skill": "pommel"
+      },
+      "effect": {
+        "accepted": [
+          {
+            "tick": 377,
+            "type": "AttackStarted",
+            "actor": 0,
+            "move": "kick"
+          }
+        ],
+        "contacts": [
+          {
+            "tick": 395,
+            "type": "Hit",
+            "actor": 0,
+            "target": 1,
+            "move": "kick",
+            "damage": 4,
+            "location": "torso",
+            "heading": 3.141592653589793,
+            "counter": false,
+            "rear": false,
+            "charged": false,
+            "weapon": "longsword",
+            "material": "iron"
+          }
+        ],
+        "displacement": 0.3300000000000003,
+        "guardDirections": []
+      },
+      "passed": true,
+      "released": true,
+      "releaseUI": {
+        "held": 0,
+        "stick": ""
+      }
+    },
+    {
+      "name": "pommel",
+      "kit": {
+        "difficulty": "dummy",
+        "skill": "pommel"
+      },
+      "effect": {
+        "accepted": [
+          {
+            "tick": 472,
+            "type": "AttackStarted",
+            "actor": 0,
+            "move": "skill_pommel",
+            "direction": "thrust"
+          }
+        ],
+        "contacts": [
+          {
+            "tick": 490,
+            "type": "Hit",
+            "actor": 0,
+            "target": 1,
+            "move": "skill_pommel",
+            "damage": 20,
+            "location": "torso",
+            "heading": 3.141592653589793,
+            "counter": false,
+            "rear": false,
+            "charged": false,
+            "weapon": "longsword",
+            "material": "iron"
+          }
+        ],
+        "displacement": 0.2200000000000002,
+        "guardDirections": []
+      },
+      "passed": true,
+      "released": true,
+      "releaseUI": {
+        "held": 0,
+        "stick": ""
+      }
+    },
+    {
+      "name": "charged-heavy",
+      "kit": {
+        "difficulty": "dummy",
+        "skill": "pommel"
+      },
+      "effect": {
+        "accepted": [
+          {
+            "tick": 563,
+            "type": "AttackStarted",
+            "actor": 0,
+            "move": "heavy_overhead",
+            "direction": "overhead"
+          },
+          {
+            "tick": 603,
+            "type": "Charged",
+            "actor": 0,
+            "move": "heavy_overhead"
+          }
+        ],
+        "contacts": [],
+        "displacement": 0.7699999999999997,
+        "guardDirections": []
+      },
+      "passed": true,
+      "released": true,
+      "releaseUI": {
+        "held": 0,
+        "stick": ""
+      }
+    },
+    {
+      "name": "guard-straight",
+      "kit": {
+        "difficulty": "dummy",
+        "skill": "pommel"
+      },
+      "effect": {
+        "accepted": [
+          {
+            "tick": 666,
+            "type": "ActionStarted",
+            "actor": 0,
+            "action": "parry"
+          }
+        ],
+        "contacts": [],
+        "displacement": 0,
+        "guardDirections": [
+          null
+        ]
+      },
+      "passed": true,
+      "released": true,
+      "releaseUI": {
+        "held": 0,
+        "stick": ""
+      }
+    },
+    {
+      "name": "guard-left",
+      "kit": {
+        "difficulty": "dummy",
+        "skill": "pommel"
+      },
+      "effect": {
+        "accepted": [
+          {
+            "tick": 690,
+            "type": "ActionStarted",
+            "actor": 0,
+            "action": "guard"
+          }
+        ],
+        "contacts": [],
+        "displacement": 0,
+        "guardDirections": [
+          "left"
+        ]
+      },
+      "passed": true,
+      "released": true,
+      "releaseUI": {
+        "held": 0,
+        "stick": ""
+      }
+    },
+    {
+      "name": "guard-right",
+      "kit": {
+        "difficulty": "dummy",
+        "skill": "pommel"
+      },
+      "effect": {
+        "accepted": [
+          {
+            "tick": 714,
+            "type": "ActionStarted",
+            "actor": 0,
+            "action": "parry"
+          }
+        ],
+        "contacts": [],
+        "displacement": 0,
+        "guardDirections": [
+          "right"
+        ]
+      },
+      "passed": true,
+      "released": true,
+      "releaseUI": {
+        "held": 0,
+        "stick": ""
+      }
+    },
+    {
+      "name": "guard-overhead",
+      "kit": {
+        "difficulty": "dummy",
+        "skill": "pommel"
+      },
+      "effect": {
+        "accepted": [
+          {
+            "tick": 738,
+            "type": "ActionStarted",
+            "actor": 0,
+            "action": "guard"
+          }
+        ],
+        "contacts": [],
+        "displacement": 0,
+        "guardDirections": [
+          "overhead"
+        ]
+      },
+      "passed": true,
+      "released": true,
+      "releaseUI": {
+        "held": 0,
+        "stick": ""
+      }
+    },
+    {
+      "name": "guard-low",
+      "kit": {
+        "difficulty": "dummy",
+        "skill": "pommel"
+      },
+      "effect": {
+        "accepted": [
+          {
+            "tick": 762,
+            "type": "ActionStarted",
+            "actor": 0,
+            "action": "parry"
+          }
+        ],
+        "contacts": [],
+        "displacement": 0,
+        "guardDirections": [
+          "low"
+        ]
+      },
+      "passed": true,
+      "released": true,
+      "releaseUI": {
+        "held": 0,
+        "stick": ""
+      }
+    },
+    {
+      "name": "short-step",
+      "kit": {
+        "difficulty": "dummy",
+        "skill": "pommel"
+      },
+      "effect": {
+        "accepted": [
+          {
+            "tick": 786,
+            "type": "ActionStarted",
+            "actor": 0,
+            "action": "backstep"
+          }
+        ],
+        "contacts": [],
+        "displacement": 0.6000000000000003,
+        "guardDirections": []
+      },
+      "passed": true,
+      "released": true,
+      "releaseUI": {
+        "held": 0,
+        "stick": ""
+      }
+    },
+    {
+      "name": "held-roll",
+      "kit": {
+        "difficulty": "dummy",
+        "skill": "pommel"
+      },
+      "effect": {
+        "accepted": [
+          {
+            "tick": 828,
+            "type": "ActionStarted",
+            "actor": 0,
+            "action": "backstep"
+          },
+          {
+            "tick": 838,
+            "type": "ActionStarted",
+            "actor": 0,
+            "action": "roll"
+          }
+        ],
+        "contacts": [],
+        "displacement": 3.6200000000000028,
+        "guardDirections": []
+      },
+      "passed": true,
+      "released": true,
+      "releaseUI": {
+        "held": 0,
+        "stick": ""
+      }
+    },
+    {
+      "name": "moving-roll",
+      "kit": {
+        "difficulty": "dummy",
+        "skill": "pommel"
+      },
+      "effect": {
+        "accepted": [
+          {
+            "tick": 898,
+            "type": "ActionStarted",
+            "actor": 0,
+            "action": "roll"
+          }
+        ],
+        "contacts": [],
+        "displacement": 3.196377952755909,
+        "guardDirections": []
+      },
+      "passed": true,
+      "released": true,
+      "releaseUI": {
+        "held": 0,
+        "stick": ""
+      }
+    },
+    {
+      "name": "feint",
+      "kit": {
+        "difficulty": "dummy",
+        "skill": "pommel"
+      },
+      "effect": {
+        "accepted": [
+          {
+            "tick": 958,
+            "type": "AttackStarted",
+            "actor": 0,
+            "move": "heavy_overhead",
+            "direction": "overhead"
+          },
+          {
+            "tick": 959,
+            "type": "ActionStarted",
+            "actor": 0,
+            "action": "feint"
+          }
+        ],
+        "contacts": [],
+        "displacement": 0,
+        "guardDirections": [
+          null
+        ]
+      },
+      "passed": true,
+      "released": true,
+      "releaseUI": {
+        "held": 0,
+        "stick": ""
+      }
+    },
+    {
+      "name": "cancel-heavy",
+      "kit": {
+        "difficulty": "dummy",
+        "skill": "pommel"
+      },
+      "effect": {
+        "accepted": [],
+        "contacts": [],
+        "displacement": 0,
+        "guardDirections": []
+      },
+      "passed": true,
+      "released": true,
+      "releaseUI": {
+        "held": 0,
+        "stick": ""
+      }
+    },
+    {
+      "name": "move-and-guard",
+      "kit": {
+        "difficulty": "dummy",
+        "skill": "pommel"
+      },
+      "effect": {
+        "accepted": [
+          {
+            "tick": 1028,
+            "type": "ActionStarted",
+            "actor": 0,
+            "action": "parry"
+          }
+        ],
+        "contacts": [],
+        "displacement": 0.3203811093763463,
+        "guardDirections": [
+          null
+        ]
+      },
+      "passed": true,
+      "released": true,
+      "releaseUI": {
+        "held": 0,
+        "stick": ""
+      }
+    },
+    {
+      "name": "draw",
+      "kit": {
+        "difficulty": "6",
+        "skill": "none"
+      },
+      "effect": {
+        "accepted": [
+          {
+            "tick": 65,
+            "type": "ActionStarted",
+            "actor": 0,
+            "action": "draw"
+          }
+        ],
+        "contacts": [],
+        "displacement": 0,
+        "guardDirections": []
+      },
+      "passed": true,
+      "released": true,
+      "releaseUI": {
+        "held": 0,
+        "stick": ""
+      }
+    },
+    {
+      "name": "contact-parry",
+      "kit": {
+        "difficulty": "6",
+        "skill": "none"
+      },
+      "effect": {
+        "accepted": [
+          {
+            "tick": 224,
+            "type": "ActionStarted",
+            "actor": 0,
+            "action": "parry"
+          }
+        ],
+        "contacts": [
+          {
+            "tick": 229,
+            "type": "Parried",
+            "actor": 0,
+            "target": 1,
+            "move": "heavy_overhead",
+            "weapon": "gladius",
+            "material": "steel"
+          }
+        ],
+        "displacement": 0,
+        "guardDirections": [
+          "overhead"
+        ]
+      },
+      "passed": true,
+      "released": true,
+      "releaseUI": {
+        "held": 0,
+        "stick": ""
+      }
+    },
+    {
+      "name": "contact-block",
+      "kit": {
+        "difficulty": "6",
+        "skill": "none"
+      },
+      "effect": {
+        "accepted": [
+          {
+            "tick": 431,
+            "type": "ActionStarted",
+            "actor": 0,
+            "action": "parry"
+          }
+        ],
+        "contacts": [
+          {
+            "tick": 446,
+            "type": "Blocked",
+            "actor": 0,
+            "target": 1,
+            "move": "thrust",
+            "stamina": 20,
+            "perfect": false,
+            "weapon": "gladius",
+            "material": "steel"
+          }
+        ],
+        "displacement": 0,
+        "guardDirections": [
+          null
+        ]
+      },
+      "passed": true,
+      "released": true,
+      "releaseUI": {
+        "held": 0,
+        "stick": ""
+      }
+    }
+  ],
+  "blind": {
+    "predictionsSha256": "9658eff92191cd444ac65622eaf8c6e8ac5323619b4edea3b62606ac24df21c0",
+    "scored": [
+      {
+        "id": "scene-1",
+        "prediction": {
+          "id": "scene-1",
+          "type": "heavy",
+          "direction": "overhead",
+          "answer": "Timed overhead parry or evade; do not assume held guard stops a charged version",
+          "confidence": 0.7,
+          "evidence": "Weapon rises above shoulder before downward trail; shield and hero hide part of the preparation.",
+          "method": "Offline four-frame chronological masked sequence review before reading event answers; reviewer knows game and selection categories; not an independent human or real-time recognition test"
+        },
+        "actual": {
+          "direction": "overhead",
+          "type": "heavy",
+          "move": "heavy_counter"
+        },
+        "directionCorrect": true,
+        "typeCorrect": true,
+        "source": "artifacts/combat/player-senses-20261005/engine/veteran-advanced-2026100507.json",
+        "from": 984,
+        "to": 1009
+      },
+      {
+        "id": "scene-2",
+        "prediction": {
+          "id": "scene-2",
+          "type": "thrust",
+          "direction": "thrust",
+          "answer": "Straight guard or precise step away from the point",
+          "confidence": 0.65,
+          "evidence": "Short forward weapon motion at body height; blade is partly hidden behind the hero.",
+          "method": "Offline four-frame chronological masked sequence review before reading event answers; reviewer knows game and selection categories; not an independent human or real-time recognition test"
+        },
+        "actual": {
+          "direction": "thrust",
+          "type": "thrust",
+          "move": "thrust"
+        },
+        "directionCorrect": true,
+        "typeCorrect": true,
+        "source": "artifacts/combat/player-senses-20261005/engine/veteran-advanced-2026100507.json",
+        "from": 677,
+        "to": 698
+      },
+      {
+        "id": "scene-3",
+        "prediction": {
+          "id": "scene-3",
+          "type": "heavy",
+          "direction": "overhead",
+          "answer": "Overhead parry or evade; charge status cannot be determined confidently from four stills",
+          "confidence": 0.95,
+          "evidence": "Long shaft lifts diagonally above the hood then drops; large overhead silhouette is visible.",
+          "method": "Offline four-frame chronological masked sequence review before reading event answers; reviewer knows game and selection categories; not an independent human or real-time recognition test"
+        },
+        "actual": {
+          "direction": "overhead",
+          "type": "heavy",
+          "move": "heavy_overhead"
+        },
+        "directionCorrect": true,
+        "typeCorrect": true,
+        "source": "artifacts/combat/player-senses-20261005/engine/executioner-advanced-2026100507.json",
+        "from": 1999,
+        "to": 2040
+      },
+      {
+        "id": "scene-4",
+        "prediction": {
+          "id": "scene-4",
+          "type": "heavy",
+          "direction": "overhead",
+          "answer": "Overhead parry or evade, then regain the foe after the roll",
+          "confidence": 0.85,
+          "evidence": "Small knife visibly raised above the hero shoulder; player rolls as threat descends.",
+          "method": "Offline four-frame chronological masked sequence review before reading event answers; reviewer knows game and selection categories; not an independent human or real-time recognition test"
+        },
+        "actual": {
+          "direction": "overhead",
+          "type": "heavy",
+          "move": "heavy_overhead"
+        },
+        "directionCorrect": true,
+        "typeCorrect": true,
+        "source": "artifacts/combat/player-senses-20261005/engine/goblin-advanced-2026100507.json",
+        "from": 865,
+        "to": 922
+      },
+      {
+        "id": "scene-5",
+        "prediction": {
+          "id": "scene-5",
+          "type": "unclear",
+          "direction": "unclear",
+          "answer": "Make space instead of guessing a directional parry",
+          "confidence": 0.2,
+          "evidence": "Weapon stays near waist while torso and legs overlap the hero; cannot reliably identify whether a kick or blade attack starts.",
+          "method": "Offline four-frame chronological masked sequence review before reading event answers; reviewer knows game and selection categories; not an independent human or real-time recognition test"
+        },
+        "actual": {
+          "direction": "right",
+          "type": "slash",
+          "move": "light_right"
+        },
+        "directionCorrect": false,
+        "typeCorrect": false,
+        "source": "artifacts/combat/player-senses-20261005/engine/executioner-advanced-2026100507.json",
+        "from": 891,
+        "to": 920
+      },
+      {
+        "id": "scene-6",
+        "prediction": {
+          "id": "scene-6",
+          "type": "thrust",
+          "direction": "thrust",
+          "answer": "Straight guard or short evasion",
+          "confidence": 0.6,
+          "evidence": "Knife begins low and advances through centre while crouched; close overlap hides most of its path.",
+          "method": "Offline four-frame chronological masked sequence review before reading event answers; reviewer knows game and selection categories; not an independent human or real-time recognition test"
+        },
+        "actual": {
+          "direction": "thrust",
+          "type": "thrust",
+          "move": "thrust"
+        },
+        "directionCorrect": true,
+        "typeCorrect": true,
+        "source": "artifacts/combat/player-senses-20261005/engine/goblin-advanced-2026100507.json",
+        "from": 1825,
+        "to": 1842
+      }
+    ],
+    "limits": "Offline AI recognition in six curated masked sequences; not human reaction speed or a general accuracy rate."
+  },
+  "limitations": [
+    "Synthetic profiles, semantic limited observation and controlled browser timing; not human populations",
+    "Native audio-output evidence and scheduled cue identity, no perceptual listening verdict",
+    "Scripted trusted touch, not physical-phone thumb comfort",
+    "Frozen local game, no production changes or policy promotion"
+  ],
+  "media": {
+    "files": [
+      {
+        "foe": "executioner",
+        "sourceSha256": "922290ba105dd8d7cecdf7707236ebee4c5f20da458a2620758d29e5c1ae41d9",
+        "exportSha256": "12deed2944bc13ad1993c9fa98a6d47c16438703f6c93a62db5c4347a7682ec1",
+        "decode": "PASS",
+        "nativeFrames": 430,
+        "wallSeconds": 7.21220000000298,
+        "programs": [],
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 390,
+            "height": 844,
+            "start_time": "0.000000",
+            "duration": "7.199000",
+            "nb_read_frames": "7199"
+          },
+          {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "start_time": "0.003000",
+            "duration": "7.218333",
+            "nb_read_frames": "339"
+          }
+        ],
+        "format": {
+          "duration": "7.221333"
+        }
+      },
+      {
+        "foe": "goblin",
+        "sourceSha256": "039f17ff9a9bcfa5b537b3a9511da5653f4654755c8d1e4b22a1ded01be76464",
+        "exportSha256": "e3b8891be28d8ba831192a5b15e617ef4318fa177cc93230be4b4008ca53795e",
+        "decode": "PASS",
+        "nativeFrames": 432,
+        "wallSeconds": 7.304399999991059,
+        "programs": [],
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 390,
+            "height": 844,
+            "start_time": "0.000000",
+            "duration": "7.279000",
+            "nb_read_frames": "7279"
+          },
+          {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "start_time": "0.012000",
+            "duration": "7.281333",
+            "nb_read_frames": "342"
+          }
+        ],
+        "format": {
+          "duration": "7.293333"
+        }
+      },
+      {
+        "foe": "veteran",
+        "sourceSha256": "2a3c827f75f11ac2e44c24e812721864a684f56b396df22d09cea9317b336a2a",
+        "exportSha256": "732efb565de02391ebf59035f46d59f130e1559b89574818c52ca624bd39b8a0",
+        "decode": "PASS",
+        "nativeFrames": 479,
+        "wallSeconds": 8.05070000000298,
+        "programs": [],
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 390,
+            "height": 844,
+            "start_time": "0.000000",
+            "duration": "8.011000",
+            "nb_read_frames": "8011"
+          },
+          {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "start_time": "0.014000",
+            "duration": "8.061333",
+            "nb_read_frames": "378"
+          }
+        ],
+        "format": {
+          "duration": "8.075333"
+        }
+      }
+    ],
+    "method": "Derived MP4 with original native canvas and game-output audio; no invented sound or time scaling. Stills seek by captured native render timestamps, subject to encoder start alignment, not exact independent tick detection."
+  },
+  "validation": {
+    "tests": 97,
+    "passed": 97,
+    "failed": 0,
+    "skipped": 0,
+    "job": "player-senses-stage-c09d8456d315",
+    "independentOperator": "Frankendom - Bot Combat, raw attack counts/releases and bounded sampled visual review; no hearing tool",
+    "codeReview": "Distinct self-review by Bot Dev; no separate source reviewer"
+  }
+}
