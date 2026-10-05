@@ -1,5 +1,7 @@
 # Frankendom Test Bot
 
+**Purpose:** autonomous combat research—fight, review, reproduce findings and help improve the game. Competent play supports this; win rate is one measure. See the [research objective and planned player-skill profiles](docs/testing-objective.md).
+
 **This is the canonical bot entry repo.** Git and Node.js **22.18+** are required. Clone it, then run the current tactical browser bot:
 
 ```sh
