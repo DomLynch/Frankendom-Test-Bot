@@ -28,7 +28,7 @@ export function perceivable(events) {
 // current so death and input cancellation are immediate.
 const SWING_ENDS = e => (e.type === 'Hit' || e.type === 'GuardBroken' || e.type === 'AttackMissed') && e.actor === 1
   || (e.type === 'Blocked' || e.type === 'Parried' || e.type === 'Dodged') && e.target === 1
-  || e.type === 'Hit' && e.target === 1 || e.type === 'Staggered' && e.actor === 1 || e.type === 'Killed';
+  || e.type === 'Staggered' && e.actor === 1 || e.type === 'Killed';
 export const SWING_CAP = 150;   // ticks: a seen swing with no seen end is dropped after this (longer than any windup + full charge + active)
 export function limitedObservation(raw, memory, delayTicks) {
   memory.snapshots ??= [];

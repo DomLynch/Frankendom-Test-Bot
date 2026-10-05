@@ -139,10 +139,10 @@ test('tactical policy guards a tell after its reaction delay', () => {
 test('tactical policy rolls sideways once after an observed charged overhead', () => {
   const state = {}, config = { ...charged, thrustRange: 1.9, wallRadius: 7.15 };
   const charge = { tick: 100, type: 'Charged', actor: 1, move: 'heavy_overhead' };
-  chooseTacticalAttack(observation({ tick: 100, events: [charge], gap: 1.2, stamina: 40 }), state, 12, config);
-  const roll = chooseTacticalAttack(observation({ tick: 112, gap: 1.2, stamina: 40 }), state, 12, config);
+  chooseTacticalAttack(observation({ tick: 100, events: [{ tick: 80, type: 'AttackStarted', actor: 1, move: 'heavy_overhead', direction: 'overhead' }, charge], gap: 1.2, stamina: 80 }), state, 12, config);
+  const roll = chooseTacticalAttack(observation({ tick: 112, gap: 1.2, stamina: 80 }), state, 12, config);
   assert.deepEqual({ keys: roll.keys, press: roll.press }, { keys: ['KeyA'], press: 'KeyE' });
-  assert.notEqual(chooseTacticalAttack(observation({ tick: 113, gap: 1.2, stamina: 40 }), state, 12, config).press, 'KeyE');
+  assert.notEqual(chooseTacticalAttack(observation({ tick: 113, gap: 1.2, stamina: 80 }), state, 12, config).press, 'KeyE');
 });
 
 test('tactical player does not repeat quick attacks into a ready opponent at low stamina', () => {
@@ -226,4 +226,31 @@ test('worn clears on recovery by default, and holds until the posture meter drai
     chooseTacticalAttack(obs({ tick: 102, posture: 20, stamina: 60, gap: 2 }), state, 12, cfg);
     assert.equal(state.worn, false);
   }
+});
+
+test('a new light tell replaces stale charged-overhead memory (Pitborn decision823)', () => {
+  const config = { ...charged, thrustRange: 1.9, wallRadius: 7.15 };
+  const state = { tell: { tick: 193, move: 'heavy_overhead', direction: 'overhead' }, chargedThreat: { tick: 230, ready: 241, cue: 'hold time' } };
+  const answer = chooseTacticalAttack(observation({ tick: 823, gap: 1.3, stamina: 80,
+    events: [{ tick: 775, type: 'AttackStarted', actor: 1, move: 'light_right', direction: 'right' }] }), state, 11, config);
+  assert.equal(answer.reason, 'guard the observed attack');
+  assert.equal(state.chargedThreat, undefined);
+});
+
+test('a resolved charge cannot evade a later swing; own non-stopping hits do not erase an active charge', () => {
+  const config = { ...charged, thrustRange: 1.9, wallRadius: 7.15 };
+  const swing = { tick: 100, type: 'AttackStarted', actor: 1, move: 'heavy_overhead', direction: 'overhead' };
+  for (const resolved of [
+    { tick: 140, type: 'Hit', actor: 1, target: 0 },
+    { tick: 140, type: 'Parried', actor: 0, target: 1 },
+    { tick: 140, type: 'ActionStarted', actor: 1, action: 'feint' },
+    { tick: 140, type: 'Staggered', actor: 1 },
+  ]) {
+    const state = { tell: swing, chargedThreat: { tick: 130, swingTick: 100, ready: 141, cue: 'event' } };
+    const answer = chooseTacticalAttack(observation({ tick: 151, stamina: 80, events: [resolved] }), state, 11, config);
+    assert.doesNotMatch(answer.reason, /charged overhead/);
+    assert.equal(state.chargedThreat, undefined);
+  }
+  const state = { tell: swing, chargedThreat: { tick: 130, swingTick: 100, ready: 141, cue: 'event' } };
+  assert.match(chooseTacticalAttack(observation({ tick: 141, events: [{tick:140,type:'Hit',actor:0,target:1,stop:false}] }), state, 11, config).reason, /charged overhead/);
 });

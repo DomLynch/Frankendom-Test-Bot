@@ -16,7 +16,7 @@ First use downloads the pinned game, installs dependencies and Playwright Chromi
 - All **ten** playable Easy opponents: `./run-latest.sh --opponents=all --fights=3`
 - Exact-state diagnostic: add `--observation=debug`; the default is limited observation.
 - Faster measurement without videos: add `--no-video`.
-- Results: `artifacts/combat/player-bot/` contains summary/per-fight JSON and, by default, full WebM recordings. Short review clips are opt-in with `--clips` and require `ffmpeg` on PATH; full recordings need no ffmpeg. Retain losses/timeouts and send the seed, JSON and matching video with a finding.
+- Results: `artifacts/combat/player-bot/<timestamp>/` contains summary/per-fight JSON and, by default, full WebM recordings. Full WebMs are wall-time recordings, not verified event-aligned clips. Add `--review-frames` (or `--clips`) for tick-verified rendered JPEGs; export normal simulation-speed videos/clips with `python3 scripts/render-review.py <fight-frames-directory>` on the VPS. No ffmpeg processing runs inside the browser bot. Retain losses/timeouts and send the seed, JSON and matching video with a finding.
 
 ## Current version and evidence
 
@@ -24,9 +24,9 @@ Bot runners, policies, observation filters, damage reporting, scripted probes an
 
 The launcher fetches the explicit game branch and verifies the exact commit, including when upgrading an older single-branch clone. Dirty game checkouts are refused; no local edits are reset. Bot and engine revisions are recorded separately. Updating this repo never deploys frankendom.com.
 
-**Rendered Easy acceptance passed on October5:** ten opponents, three seeds each;29/30 wins, with Veteran2/3 and all others3/3. All per-fight Heavy shares are <=20%, counting critical attacks too. The affected critical-budget fight was freshly replayed; originals retained. Real headless Chrome for Testing used Mac Metal, and six matched visible/headless fights had identical outcomes and remaining HP. Full headless recordings decoded and showed combat.63 VPS tests passed;45 focused tests passed after the narrow recovery correction. See [the evaluation and limitations](docs/evaluation-20261005.md).
+**Previous policy rendered Easy acceptance passed on October5:** ten opponents, three seeds each;29/30 wins, with Veteran2/3 and all others3/3. All per-fight Heavy shares are <=20%, counting critical attacks too. The affected critical-budget fight was freshly replayed; originals retained. Real headless Chrome for Testing used Mac Metal, and six matched visible/headless fights had identical outcomes and remaining HP. Full headless recordings decoded and showed combat.63 VPS tests passed;45 focused tests passed after the narrow recovery correction. See [the evaluation and limitations](docs/evaluation-20261005.md).
 
-The default is headless with full video and64ms controlled input cadence. No ordinary Chrome pop-ups are needed. Videos are silent and their25fps capture rate is not gameplay FPS. Useful defence is evidenced; kicks and offensive feint benefit remain unproven. This policy remains thrust dominant. It is not a validated human player or phone comfort test.
+The charge-tracking correction changes the policy; its fresh acceptance is recorded separately in [learning evidence](docs/learning-evidence-20261005.md). The default is headless with full video and64ms controlled input cadence. No ordinary Chrome pop-ups are needed. Videos are silent and their25fps capture rate is not gameplay FPS. Useful defence is evidenced; kicks and offensive feint benefit remain unproven. This policy remains thrust dominant. It is not a validated human player or phone comfort test.
 
 The browser runner enforces at least two wins out of three per requested opponent and at most 20% heavy attack starts in each fight. A one-fight smoke checks that individual fight; it is not a three-fight acceptance batch. Limited observation still reads delayed semantic events and own telemetry; it is not vision/audio perception or proof of phone control comfort. The current browser policy is fixed to Easy (engine L6), longsword and its own scripted configuration; use the engine runner for explicitly selected configurations.
 
@@ -66,3 +66,7 @@ Registered specials must match the actual engine level's authored band. Display 
 ## Temporary known-bug diagnostics
 
 Owner-authorized scythe-spacing and reaction-threshold bot workarounds are opt-in through `./run-sim.sh ... --workaround=known-combat-bugs`. The runner always retains the matching no-workaround baseline and labels variants artificial/not acceptance. The normal browser policy is unchanged. See the [copyable combat bug register](docs/combat-bug-register.md) for reproduction, measured outcomes, developer investigation and removal instructions.
+
+## Combat feel and visual learning
+
+Each engine/browser receipt now includes `learning`: sampled spacing, defence-to-useful-hit latency, dodge position/re-entry, bounded two-sided damage exchanges, and review cases for block, parry, blood/hit effects, roll camera and charge. These are review prompts, not automatic aesthetic scores. [Workflow and limitations](docs/learning-evidence-20261005.md). No game graphics/camera changes are made here.

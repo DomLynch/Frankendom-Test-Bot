@@ -14,6 +14,14 @@ export function intentFor(decision, obs, strategy, recentEvents) {
   return strategy === 'counter' ? 'wait for opening' : 'recover';
 }
 
+export function inputMatchesMove(d, move) {
+  if (d.press === 'KeyT') return ['thrust', 'riposte'].includes(move);
+  if (d.press === 'KeyC') return move === 'kick';
+  if (d.press === 'KeyF') return /^(light_|slash_riposte$)/.test(move ?? '');
+  if (d.press === 'KeyG' || d.keys?.includes('KeyG') || ['charge heavy', 'charged heavy at reach'].includes(d.intent)) return /^(heavy_|critical$)/.test(move ?? '');
+  return false;
+}
+
 export function explainDecisions(decisions, events) {
   return decisions.map((d, index) => {
     const after = events.filter(e => e.tick >= d.tick && e.tick <= d.tick + 180);
@@ -31,15 +39,13 @@ export function explainDecisions(decisions, events) {
       return { ...d, outcome: accepted ? 'feint accepted' : 'no feint started', canceledMove: canceled?.move ?? null, evidence: accepted?.tick ?? null };
     }
     if (['KeyF', 'KeyT', 'KeyG', 'KeyC'].includes(d.press) || d.intent === 'charge heavy' || d.intent === 'charged heavy at reach') {
-      const matches = move => d.press === 'KeyT' ? ['thrust', 'riposte'].includes(move) : d.press === 'KeyC' ? move === 'kick'
-        : d.press === 'KeyF' ? /^(light_|slash_riposte$)/.test(move ?? '') : /^(heavy_|critical$)/.test(move ?? '');
-      const started = after.find(e => e.type === 'AttackStarted' && e.actor === 0 && e.tick <= d.tick + 8 && matches(e.move));
+      const started = after.find(e => e.type === 'AttackStarted' && e.actor === 0 && e.tick <= d.tick + 8 && inputMatchesMove(d, e.move));
       if (!started) return { ...d, outcome: 'no attack started', evidence: d.phase === 'ready' ? 'no matching start event' : `input during ${d.phase}` };
       const nextStart = events.find(e => e.type === 'AttackStarted' && e.actor === 0 && e.tick > started.tick)?.tick ?? Infinity;
       const result = after.find(e => e.tick >= started.tick && e.tick < nextStart && (
         (e.actor === 0 && e.move === started.move && ['Hit', 'AttackMissed', 'GuardBroken'].includes(e.type)) ||
         (e.actor === 1 && e.move === started.move && ['Blocked', 'Parried'].includes(e.type)) ||
-        (e.type === 'Hit' && e.target === 0 && e.stop) || (e.type === 'Staggered' && e.actor === 0)));
+        (e.type === 'Staggered' && e.actor === 0)));
       const outcome = !result ? 'unresolved' : result.type === 'Hit' ? (result.actor === 0 ? 'hit' : 'interrupted')
         : ({ AttackMissed: 'missed', Blocked: 'blocked', Parried: 'parried', GuardBroken: 'guard broken', Staggered: 'interrupted' })[result.type];
       return { ...d, outcome, attackStart: started.tick, move: started.move, evidence: result?.tick ?? started.tick };
@@ -51,8 +57,13 @@ export function explainDecisions(decisions, events) {
       return { ...d, outcome: result?.type === 'Hit' ? 'got hit' : result ? 'defended' : 'no contact', evidence: result?.tick ?? null };
     }
     if (d.press === 'KeyE') {
-      const result = after.find(e => e.type === 'Dodged' && e.actor === 0 || e.type === 'AttackMissed' && e.actor === 1);
-      return { ...d, outcome: result ? 'attack avoided' : 'unresolved', evidence: result?.tick ?? null };
+      const accepted = after.find(e => e.type === 'ActionStarted' && e.actor === 0 && ['roll', 'backstep'].includes(e.action) && e.tick <= d.tick + 8);
+      if (!accepted) return { ...d, outcome: 'no evade started', evidence: null, answeredAttackTick: null };
+      const attack = attackAt(events, accepted.tick), result = attack?.end;
+      const outcome = !attack ? 'positioning between attacks' : !result ? 'unresolved'
+        : ['Dodged', 'AttackMissed'].includes(result.type) ? 'attack avoided'
+        : ['Hit', 'GuardBroken'].includes(result.type) ? 'hit despite evade' : 'defended otherwise';
+      return { ...d, outcome, evidence: result?.tick ?? accepted.tick, answeredAttackTick: attack?.start.tick ?? null };
     }
     return { ...d, outcome: 'movement or recovery', evidence: null };
   });
@@ -114,7 +125,11 @@ export const DEFENCE_WINDOWS = { block: 20, 'perfect block': 20, parry: 90, roll
 function attackAt(events, tick) {
   const starts = events.filter(e => e.type === 'AttackStarted' && e.actor === 1 && e.tick <= tick);
   for (let i = starts.length - 1; i >= 0; i--) {
-    const start = starts[i], end = events.find(e => e.tick >= start.tick && RESOLVES(e));
+    const start = starts[i];
+    const next = events.find(e => e.type === 'AttackStarted' && e.actor === 1 && e.tick > start.tick)?.tick ?? Infinity;
+    const end = events.find(e => e.tick >= start.tick && e.tick < next && (RESOLVES(e)
+      || e.type === 'Staggered' && e.actor === 1 || e.type === 'Killed'
+      || e.type === 'ActionStarted' && e.actor === 1 && e.action === 'feint'));
     if (!end || end.tick >= tick) return { start, end, charged: events.some(e => e.type === 'Charged' && e.actor === 1 && e.tick >= start.tick && (!end || e.tick <= end.tick)) };
     if (i < starts.length - 1) break;
   }
@@ -145,7 +160,8 @@ export function defenceEarned(events, track, moves, charge = 1.5) {
     const from = type === 'roll' || type === 'backstep' ? end?.tick ?? e.tick : e.tick, until = from + DEFENCE_WINDOWS[type];
     const nextThreat = events.find(x => x.type === 'AttackStarted' && x.actor === 1 && x.tick > from)?.tick ?? Infinity;
     const answer = opened ? events.find(x => x.type === 'AttackStarted' && x.actor === 0 && x.tick > from && x.tick <= Math.min(until, nextThreat)) : undefined;
-    const landed = answer ? events.some(x => x.type === 'Hit' && x.actor === 0 && x.move === answer.move && x.tick >= answer.tick && x.tick <= answer.tick + 60) : false;
+    const nextOwnStart = answer ? events.find(x => x.type === 'AttackStarted' && x.actor === 0 && x.tick > answer.tick)?.tick ?? Infinity : Infinity;
+    const landed = answer ? events.some(x => x.type === 'Hit' && x.actor === 0 && x.move === answer.move && x.tick >= answer.tick && x.tick < nextOwnStart && x.tick <= answer.tick + 60) : false;
     const before = gapAt(track, e.tick), after = gapAt(track, e.tick + 30);
     list.push({ tick: e.tick, type, attackTick: attack?.start.tick ?? null, resolutionTick: end?.tick ?? null, against: attack?.start.move ?? null, charged: !!attack?.charged, result, avoided, windowOpened: opened,
       windowUsed: !!answer, answer: answer?.move ?? null, counterMove: !!answer && (answer.move === 'heavy_counter' || RIPOSTES.has(answer.move)), landed,
@@ -216,7 +232,7 @@ export function defenceExchanges(events, decisions, samples, endTick) {
         (e.actor === 1 && ['Hit', 'GuardBroken', 'AttackMissed'].includes(e.type))))));
     const interrupt = active.find(e => e.tick >= tell.tick && e.tick < (contact?.tick ?? until) &&
       e.type === 'Hit' && e.actor === 0 && e.target === 1 &&
-      (e.stop || active.some(s => s.tick === e.tick && s.type === 'Staggered' && s.actor === 1)));
+      active.some(s => s.tick === e.tick && s.type === 'Staggered' && s.actor === 1));
     const result = interrupt ?? contact;
     const action = result && decisions.filter(d => d.tick >= tell.tick && d.tick <= result.tick &&
       (d.press === 'KeyE' || d.keys?.includes('KeyQ'))).at(-1);

@@ -65,3 +65,20 @@ test('only perceivable events and fields reach the bot', () => {
     { tick: 6, type: 'ActionStarted', actor: 0, action: 'roll' },
   ]);
 });
+
+test('limited observation preserves a charge across own contact until the enemy actually resolves or staggers', async () => {
+  const {createPlayerProfile,chooseProfiledAttack}=await import('../scripts/lib/player-profiles.mjs');
+  const memory={},state={},profile=createPlayerProfile('advanced',2026100502);
+  const config={wallRadius:7.15,thrustRange:1.9,windup:{heavy_overhead:50}};
+  const raw={gap:1.3,radius:1,hp:100,enemyHp:100,stamina:80,meterStamina:80,phase:'ready',ownState:'ready',heavy:true,thrust:true,light:true};
+  const step=(tick,events=[])=>chooseProfiledAttack(limitedObservation({...raw,tick,events},memory,11),state,profile,config);
+  step(1241,[{tick:1230,type:'AttackStarted',actor:1,move:'heavy_overhead',direction:'overhead'}]);
+  step(1269,[{tick:1258,type:'Hit',actor:0,target:1,move:'thrust',damage:17,stop:true}]);
+  assert.match(step(1284,[{tick:1273,type:'Charged',actor:1,move:'heavy_overhead'}]).reason,/charged overhead/);
+  assert.equal(memory.swing,1230);
+  step(1306,[{tick:1295,type:'Hit',actor:1,target:0,move:'heavy_overhead',damage:24}]);
+  assert.equal(memory.swing,null);
+  step(1321,[{tick:1310,type:'AttackStarted',actor:1,move:'heavy_overhead',direction:'overhead'}]);
+  step(1341,[{tick:1330,type:'Staggered',actor:1}]);
+  assert.equal(memory.swing,null);
+});

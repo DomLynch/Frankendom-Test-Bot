@@ -202,6 +202,7 @@ test('a stopped enemy attack is reported as an interruption, not an unresolved d
   const events = [
     { tick: 600, type: 'AttackStarted', actor: 1, move: 'kick' },
     { tick: 606, type: 'Hit', actor: 0, target: 1, move: 'thrust', damage: 17, stop: true },
+    { tick: 606, type: 'Staggered', actor: 1 },
   ];
   const [exchange] = defenceExchanges(events, [], [], 606);
   assert.equal(exchange.result.type, 'Interrupted');
@@ -232,4 +233,36 @@ test('a later hit after a new incoming attack is not credited to the previous de
   assert.equal(rows[0].nextUsefulHit.tick, 505);
   assert.equal(rows[0].nextUsefulHit.beforeNextEnemyAttack, false);
   assert.equal(rows[1].nextUsefulHit.beforeNextEnemyAttack, true);
+});
+
+test('an accepted roll between swings is positioning, not avoidance of a later miss', () => {
+  const events = [{tick:775,type:'AttackStarted',actor:1,move:'light_right'},
+    {tick:797,type:'Hit',actor:1,target:0,move:'light_right',damage:17},
+    {tick:824,type:'ActionStarted',actor:0,action:'roll'},
+    {tick:832,type:'AttackStarted',actor:1,move:'light_left'},
+    {tick:857,type:'AttackMissed',actor:1,move:'light_left'}];
+  const row = explainDecisions([{tick:823,intent:'lateral roll clear of charged overhead',keys:['KeyA'],press:'KeyE'}], events)[0];
+  assert.equal(row.outcome, 'positioning between attacks');
+  assert.equal(row.evidence, 824);
+  assert.equal(row.answeredAttackTick, null);
+});
+
+
+test('a poised enemy that keeps its charged swing is not credited as interrupted by a stop-tagged hit',()=>{
+  const events=[{tick:1230,type:'AttackStarted',actor:1,move:'heavy_overhead'},
+    {tick:1258,type:'Hit',actor:0,target:1,move:'thrust',damage:17,stop:true},
+    {tick:1273,type:'Charged',actor:1,move:'heavy_overhead'},
+    {tick:1295,type:'Hit',actor:1,target:0,move:'heavy_overhead',damage:24}];
+  const [row]=defenceExchanges(events,[],[],1295);
+  assert.equal(row.result.type,'Hit');assert.equal(row.result.damageTaken,24);
+});
+
+test('a missed counter is not credited with a later same-move hit',async()=>{
+  const {defenceEarned}=await import('../scripts/lib/player-bot-review.mjs');
+  const events=[{tick:100,type:'AttackStarted',actor:1,move:'thrust'},
+    {tick:110,type:'Blocked',actor:0,target:1,move:'thrust'},
+    {tick:120,type:'AttackStarted',actor:0,move:'thrust'},
+    {tick:145,type:'AttackStarted',actor:0,move:'thrust'},
+    {tick:160,type:'Hit',actor:0,target:1,move:'thrust',damage:12}];
+  assert.equal(defenceEarned(events,[],{thrust:10})[0].landed,false);
 });
