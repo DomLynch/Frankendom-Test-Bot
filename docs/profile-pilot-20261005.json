@@ -1,0 +1,2761 @@
+{
+  "engineRevision": "4056467af826b03166a575002f7a4f4b04f9dfe7",
+  "engineSource": {
+    "engineRevision": "4056467af826b03166a575002f7a4f4b04f9dfe7",
+    "controllerSha256": "b67dd2a8cc8a5c5bbcbd4eba583ac2d0f2b19e0045e5861e792b5c300452cc43"
+  },
+  "engineRows": [
+    {
+      "evidenceTier": "direct-production-engine-no-rendering",
+      "observation": "delayed semantic events and rounded gap; current own bars/action legality; fixed camera yaw0; four-tick cadence",
+      "temporaryWorkaround": null,
+      "seed": 2026100501,
+      "playerProfile": {
+        "name": "beginner",
+        "seed": 2026100501,
+        "reactionMs": 500,
+        "settings": {
+          "reactionMs": 450,
+          "jitterMs": 50,
+          "gapBias": -0.25,
+          "staminaBias": 20,
+          "wrongGuard": 0.28,
+          "missedCounter": 0.65,
+          "slashPreference": 0.7
+        },
+        "interventions": {
+          "optimistic range/stamina judgement": 19,
+          "prefers simple slash": 1,
+          "wrong directional guard": 1
+        },
+        "model": "seeded synthetic persona; not a validated human skill distribution",
+        "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+      },
+      "outcome": "win",
+      "endTick": 2213,
+      "finalHealth": [
+        85,
+        0
+      ],
+      "damageTaken": 65,
+      "damageDealt": 200,
+      "attackMix": {
+        "attacks": 19,
+        "heavies": 0,
+        "heavyPercent": 0,
+        "passed": true
+      },
+      "emptySwings": 3,
+      "blocks": 0,
+      "parries": 1,
+      "exhaustions": 0,
+      "defenceSummary": {
+        "block": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "perfect block": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "parry": {
+          "count": 1,
+          "underThreat": 1,
+          "avoided": 26,
+          "hitAnyway": 0,
+          "windowsOpened": 1,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": 0.73,
+          "wall": 1.68
+        },
+        "roll": {
+          "count": 1,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": 1.6,
+          "wall": 2.57
+        },
+        "backstep": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        }
+      },
+      "inputReleaseEvidence": "not-applicable-direct-engine; no browser keys",
+      "opponent": "pitborn",
+      "artifact": "pitborn-beginner-2026100501.json"
+    },
+    {
+      "evidenceTier": "direct-production-engine-no-rendering",
+      "observation": "delayed semantic events and rounded gap; current own bars/action legality; fixed camera yaw0; four-tick cadence",
+      "temporaryWorkaround": null,
+      "seed": 866561695,
+      "playerProfile": {
+        "name": "beginner",
+        "seed": 866561695,
+        "reactionMs": 400,
+        "settings": {
+          "reactionMs": 450,
+          "jitterMs": 50,
+          "gapBias": -0.25,
+          "staminaBias": 20,
+          "wrongGuard": 0.28,
+          "missedCounter": 0.65,
+          "slashPreference": 0.7
+        },
+        "interventions": {
+          "optimistic range/stamina judgement": 21,
+          "prefers simple slash": 6
+        },
+        "model": "seeded synthetic persona; not a validated human skill distribution",
+        "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+      },
+      "outcome": "loss",
+      "endTick": 2026,
+      "finalHealth": [
+        0,
+        10
+      ],
+      "damageTaken": 160,
+      "damageDealt": 180,
+      "attackMix": {
+        "attacks": 21,
+        "heavies": 0,
+        "heavyPercent": 0,
+        "passed": true
+      },
+      "emptySwings": 3,
+      "blocks": 0,
+      "parries": 0,
+      "exhaustions": 0,
+      "defenceSummary": {
+        "block": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "perfect block": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "parry": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "roll": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "backstep": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        }
+      },
+      "inputReleaseEvidence": "not-applicable-direct-engine; no browser keys",
+      "opponent": "pitborn",
+      "artifact": "pitborn-beginner-866561695.json"
+    },
+    {
+      "evidenceTier": "direct-production-engine-no-rendering",
+      "observation": "delayed semantic events and rounded gap; current own bars/action legality; fixed camera yaw0; four-tick cadence",
+      "temporaryWorkaround": null,
+      "seed": 169106580,
+      "playerProfile": {
+        "name": "beginner",
+        "seed": 169106580,
+        "reactionMs": 450,
+        "settings": {
+          "reactionMs": 450,
+          "jitterMs": 50,
+          "gapBias": -0.25,
+          "staminaBias": 20,
+          "wrongGuard": 0.28,
+          "missedCounter": 0.65,
+          "slashPreference": 0.7
+        },
+        "interventions": {
+          "optimistic range/stamina judgement": 24,
+          "prefers simple slash": 7,
+          "wrong directional guard": 1
+        },
+        "model": "seeded synthetic persona; not a validated human skill distribution",
+        "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+      },
+      "outcome": "win",
+      "endTick": 2157,
+      "finalHealth": [
+        90,
+        0
+      ],
+      "damageTaken": 60,
+      "damageDealt": 203,
+      "attackMix": {
+        "attacks": 24,
+        "heavies": 0,
+        "heavyPercent": 0,
+        "passed": true
+      },
+      "emptySwings": 6,
+      "blocks": 0,
+      "parries": 0,
+      "exhaustions": 0,
+      "defenceSummary": {
+        "block": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "perfect block": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "parry": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "roll": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "backstep": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        }
+      },
+      "inputReleaseEvidence": "not-applicable-direct-engine; no browser keys",
+      "opponent": "pitborn",
+      "artifact": "pitborn-beginner-169106580.json"
+    },
+    {
+      "evidenceTier": "direct-production-engine-no-rendering",
+      "observation": "delayed semantic events and rounded gap; current own bars/action legality; fixed camera yaw0; four-tick cadence",
+      "temporaryWorkaround": null,
+      "seed": 2026100501,
+      "playerProfile": {
+        "name": "intermediate",
+        "seed": 2026100501,
+        "reactionMs": 320,
+        "settings": {
+          "reactionMs": 280,
+          "jitterMs": 40,
+          "gapBias": -0.1,
+          "staminaBias": 5,
+          "wrongGuard": 0.08,
+          "missedCounter": 0.2,
+          "slashPreference": 0.2
+        },
+        "interventions": {
+          "optimistic range/stamina judgement": 20,
+          "prefers simple slash": 6,
+          "wrong directional guard": 1
+        },
+        "model": "seeded synthetic persona; not a validated human skill distribution",
+        "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+      },
+      "outcome": "loss",
+      "endTick": 3091,
+      "finalHealth": [
+        0,
+        29
+      ],
+      "damageTaken": 155,
+      "damageDealt": 161,
+      "attackMix": {
+        "attacks": 20,
+        "heavies": 0,
+        "heavyPercent": 0,
+        "passed": true
+      },
+      "emptySwings": 5,
+      "blocks": 1,
+      "parries": 3,
+      "exhaustions": 0,
+      "defenceSummary": {
+        "block": {
+          "count": 1,
+          "underThreat": 1,
+          "avoided": 14,
+          "hitAnyway": 0,
+          "windowsOpened": 1,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": 0,
+          "wall": 0
+        },
+        "perfect block": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "parry": {
+          "count": 3,
+          "underThreat": 3,
+          "avoided": 51,
+          "hitAnyway": 0,
+          "windowsOpened": 3,
+          "windowsUsed": 1,
+          "landed": 1,
+          "distance": -0.01,
+          "wall": -0.01
+        },
+        "roll": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "backstep": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        }
+      },
+      "inputReleaseEvidence": "not-applicable-direct-engine; no browser keys",
+      "opponent": "pitborn",
+      "artifact": "pitborn-intermediate-2026100501.json"
+    },
+    {
+      "evidenceTier": "direct-production-engine-no-rendering",
+      "observation": "delayed semantic events and rounded gap; current own bars/action legality; fixed camera yaw0; four-tick cadence",
+      "temporaryWorkaround": null,
+      "seed": 866561695,
+      "playerProfile": {
+        "name": "intermediate",
+        "seed": 866561695,
+        "reactionMs": 280,
+        "settings": {
+          "reactionMs": 280,
+          "jitterMs": 40,
+          "gapBias": -0.1,
+          "staminaBias": 5,
+          "wrongGuard": 0.08,
+          "missedCounter": 0.2,
+          "slashPreference": 0.2
+        },
+        "interventions": {
+          "optimistic range/stamina judgement": 18
+        },
+        "model": "seeded synthetic persona; not a validated human skill distribution",
+        "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+      },
+      "outcome": "win",
+      "endTick": 1945,
+      "finalHealth": [
+        78,
+        0
+      ],
+      "damageTaken": 72,
+      "damageDealt": 201,
+      "attackMix": {
+        "attacks": 18,
+        "heavies": 1,
+        "heavyPercent": 5.555555555555555,
+        "passed": true
+      },
+      "emptySwings": 0,
+      "blocks": 1,
+      "parries": 1,
+      "exhaustions": 0,
+      "defenceSummary": {
+        "block": {
+          "count": 1,
+          "underThreat": 1,
+          "avoided": 13,
+          "hitAnyway": 0,
+          "windowsOpened": 1,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": 1.16,
+          "wall": 1.56
+        },
+        "perfect block": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "parry": {
+          "count": 1,
+          "underThreat": 1,
+          "avoided": 7,
+          "hitAnyway": 0,
+          "windowsOpened": 1,
+          "windowsUsed": 1,
+          "landed": 1,
+          "distance": 0,
+          "wall": 0
+        },
+        "roll": {
+          "count": 1,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": 1.96,
+          "wall": 2.41
+        },
+        "backstep": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        }
+      },
+      "inputReleaseEvidence": "not-applicable-direct-engine; no browser keys",
+      "opponent": "pitborn",
+      "artifact": "pitborn-intermediate-866561695.json"
+    },
+    {
+      "evidenceTier": "direct-production-engine-no-rendering",
+      "observation": "delayed semantic events and rounded gap; current own bars/action legality; fixed camera yaw0; four-tick cadence",
+      "temporaryWorkaround": null,
+      "seed": 169106580,
+      "playerProfile": {
+        "name": "intermediate",
+        "seed": 169106580,
+        "reactionMs": 320,
+        "settings": {
+          "reactionMs": 280,
+          "jitterMs": 40,
+          "gapBias": -0.1,
+          "staminaBias": 5,
+          "wrongGuard": 0.08,
+          "missedCounter": 0.2,
+          "slashPreference": 0.2
+        },
+        "interventions": {
+          "optimistic range/stamina judgement": 18,
+          "prefers simple slash": 5
+        },
+        "model": "seeded synthetic persona; not a validated human skill distribution",
+        "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+      },
+      "outcome": "win",
+      "endTick": 1749,
+      "finalHealth": [
+        129,
+        0
+      ],
+      "damageTaken": 21,
+      "damageDealt": 200,
+      "attackMix": {
+        "attacks": 18,
+        "heavies": 0,
+        "heavyPercent": 0,
+        "passed": true
+      },
+      "emptySwings": 1,
+      "blocks": 0,
+      "parries": 0,
+      "exhaustions": 0,
+      "defenceSummary": {
+        "block": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "perfect block": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "parry": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "roll": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "backstep": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        }
+      },
+      "inputReleaseEvidence": "not-applicable-direct-engine; no browser keys",
+      "opponent": "pitborn",
+      "artifact": "pitborn-intermediate-169106580.json"
+    },
+    {
+      "evidenceTier": "direct-production-engine-no-rendering",
+      "observation": "delayed semantic events and rounded gap; current own bars/action legality; fixed camera yaw0; four-tick cadence",
+      "temporaryWorkaround": null,
+      "seed": 2026100501,
+      "playerProfile": {
+        "name": "advanced",
+        "seed": 2026100501,
+        "reactionMs": 180,
+        "settings": {
+          "reactionMs": 180,
+          "jitterMs": 0,
+          "gapBias": 0,
+          "staminaBias": 0,
+          "wrongGuard": 0,
+          "missedCounter": 0,
+          "slashPreference": 0
+        },
+        "interventions": {},
+        "model": "seeded synthetic persona; not a validated human skill distribution",
+        "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+      },
+      "outcome": "win",
+      "endTick": 1493,
+      "finalHealth": [
+        120,
+        0
+      ],
+      "damageTaken": 30,
+      "damageDealt": 214,
+      "attackMix": {
+        "attacks": 17,
+        "heavies": 2,
+        "heavyPercent": 11.764705882352942,
+        "passed": true
+      },
+      "emptySwings": 1,
+      "blocks": 0,
+      "parries": 2,
+      "exhaustions": 0,
+      "defenceSummary": {
+        "block": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "perfect block": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "parry": {
+          "count": 2,
+          "underThreat": 2,
+          "avoided": 24,
+          "hitAnyway": 0,
+          "windowsOpened": 2,
+          "windowsUsed": 2,
+          "landed": 2,
+          "distance": -0.17,
+          "wall": 0.14
+        },
+        "roll": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "backstep": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        }
+      },
+      "inputReleaseEvidence": "not-applicable-direct-engine; no browser keys",
+      "opponent": "pitborn",
+      "artifact": "pitborn-advanced-2026100501.json"
+    },
+    {
+      "evidenceTier": "direct-production-engine-no-rendering",
+      "observation": "delayed semantic events and rounded gap; current own bars/action legality; fixed camera yaw0; four-tick cadence",
+      "temporaryWorkaround": null,
+      "seed": 866561695,
+      "playerProfile": {
+        "name": "advanced",
+        "seed": 866561695,
+        "reactionMs": 180,
+        "settings": {
+          "reactionMs": 180,
+          "jitterMs": 0,
+          "gapBias": 0,
+          "staminaBias": 0,
+          "wrongGuard": 0,
+          "missedCounter": 0,
+          "slashPreference": 0
+        },
+        "interventions": {},
+        "model": "seeded synthetic persona; not a validated human skill distribution",
+        "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+      },
+      "outcome": "win",
+      "endTick": 1145,
+      "finalHealth": [
+        115,
+        0
+      ],
+      "damageTaken": 35,
+      "damageDealt": 191,
+      "attackMix": {
+        "attacks": 12,
+        "heavies": 1,
+        "heavyPercent": 8.333333333333334,
+        "passed": true
+      },
+      "emptySwings": 0,
+      "blocks": 0,
+      "parries": 2,
+      "exhaustions": 0,
+      "defenceSummary": {
+        "block": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "perfect block": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "parry": {
+          "count": 2,
+          "underThreat": 2,
+          "avoided": 24,
+          "hitAnyway": 0,
+          "windowsOpened": 2,
+          "windowsUsed": 2,
+          "landed": 2,
+          "distance": 0.1,
+          "wall": 0
+        },
+        "roll": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "backstep": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        }
+      },
+      "inputReleaseEvidence": "not-applicable-direct-engine; no browser keys",
+      "opponent": "pitborn",
+      "artifact": "pitborn-advanced-866561695.json"
+    },
+    {
+      "evidenceTier": "direct-production-engine-no-rendering",
+      "observation": "delayed semantic events and rounded gap; current own bars/action legality; fixed camera yaw0; four-tick cadence",
+      "temporaryWorkaround": null,
+      "seed": 169106580,
+      "playerProfile": {
+        "name": "advanced",
+        "seed": 169106580,
+        "reactionMs": 180,
+        "settings": {
+          "reactionMs": 180,
+          "jitterMs": 0,
+          "gapBias": 0,
+          "staminaBias": 0,
+          "wrongGuard": 0,
+          "missedCounter": 0,
+          "slashPreference": 0
+        },
+        "interventions": {},
+        "model": "seeded synthetic persona; not a validated human skill distribution",
+        "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+      },
+      "outcome": "win",
+      "endTick": 1469,
+      "finalHealth": [
+        102,
+        0
+      ],
+      "damageTaken": 48,
+      "damageDealt": 197,
+      "attackMix": {
+        "attacks": 15,
+        "heavies": 2,
+        "heavyPercent": 13.333333333333334,
+        "passed": true
+      },
+      "emptySwings": 0,
+      "blocks": 1,
+      "parries": 2,
+      "exhaustions": 0,
+      "defenceSummary": {
+        "block": {
+          "count": 1,
+          "underThreat": 1,
+          "avoided": 14,
+          "hitAnyway": 0,
+          "windowsOpened": 1,
+          "windowsUsed": 1,
+          "landed": 1,
+          "distance": -0.35,
+          "wall": -0.34
+        },
+        "perfect block": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "parry": {
+          "count": 2,
+          "underThreat": 2,
+          "avoided": 24,
+          "hitAnyway": 0,
+          "windowsOpened": 2,
+          "windowsUsed": 2,
+          "landed": 2,
+          "distance": 0.1,
+          "wall": 0
+        },
+        "roll": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "backstep": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        }
+      },
+      "inputReleaseEvidence": "not-applicable-direct-engine; no browser keys",
+      "opponent": "pitborn",
+      "artifact": "pitborn-advanced-169106580.json"
+    },
+    {
+      "evidenceTier": "direct-production-engine-no-rendering",
+      "observation": "delayed semantic events and rounded gap; current own bars/action legality; fixed camera yaw0; four-tick cadence",
+      "temporaryWorkaround": null,
+      "seed": 2026100501,
+      "playerProfile": {
+        "name": "beginner",
+        "seed": 2026100501,
+        "reactionMs": 500,
+        "settings": {
+          "reactionMs": 450,
+          "jitterMs": 50,
+          "gapBias": -0.25,
+          "staminaBias": 20,
+          "wrongGuard": 0.28,
+          "missedCounter": 0.65,
+          "slashPreference": 0.7
+        },
+        "interventions": {
+          "optimistic range/stamina judgement": 13,
+          "prefers simple slash": 4,
+          "wrong directional guard": 1
+        },
+        "model": "seeded synthetic persona; not a validated human skill distribution",
+        "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+      },
+      "outcome": "loss",
+      "endTick": 1386,
+      "finalHealth": [
+        0,
+        62
+      ],
+      "damageTaken": 160,
+      "damageDealt": 88,
+      "attackMix": {
+        "attacks": 13,
+        "heavies": 0,
+        "heavyPercent": 0,
+        "passed": true
+      },
+      "emptySwings": 4,
+      "blocks": 0,
+      "parries": 0,
+      "exhaustions": 0,
+      "defenceSummary": {
+        "block": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "perfect block": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "parry": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "roll": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "backstep": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        }
+      },
+      "inputReleaseEvidence": "not-applicable-direct-engine; no browser keys",
+      "opponent": "veteran",
+      "artifact": "veteran-beginner-2026100501.json"
+    },
+    {
+      "evidenceTier": "direct-production-engine-no-rendering",
+      "observation": "delayed semantic events and rounded gap; current own bars/action legality; fixed camera yaw0; four-tick cadence",
+      "temporaryWorkaround": null,
+      "seed": 866561695,
+      "playerProfile": {
+        "name": "beginner",
+        "seed": 866561695,
+        "reactionMs": 400,
+        "settings": {
+          "reactionMs": 450,
+          "jitterMs": 50,
+          "gapBias": -0.25,
+          "staminaBias": 20,
+          "wrongGuard": 0.28,
+          "missedCounter": 0.65,
+          "slashPreference": 0.7
+        },
+        "interventions": {
+          "optimistic range/stamina judgement": 21,
+          "prefers simple slash": 7
+        },
+        "model": "seeded synthetic persona; not a validated human skill distribution",
+        "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+      },
+      "outcome": "loss",
+      "endTick": 2170,
+      "finalHealth": [
+        0,
+        24
+      ],
+      "damageTaken": 167,
+      "damageDealt": 126,
+      "attackMix": {
+        "attacks": 21,
+        "heavies": 0,
+        "heavyPercent": 0,
+        "passed": true
+      },
+      "emptySwings": 5,
+      "blocks": 0,
+      "parries": 0,
+      "exhaustions": 0,
+      "defenceSummary": {
+        "block": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "perfect block": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "parry": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "roll": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "backstep": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        }
+      },
+      "inputReleaseEvidence": "not-applicable-direct-engine; no browser keys",
+      "opponent": "veteran",
+      "artifact": "veteran-beginner-866561695.json"
+    },
+    {
+      "evidenceTier": "direct-production-engine-no-rendering",
+      "observation": "delayed semantic events and rounded gap; current own bars/action legality; fixed camera yaw0; four-tick cadence",
+      "temporaryWorkaround": null,
+      "seed": 169106580,
+      "playerProfile": {
+        "name": "beginner",
+        "seed": 169106580,
+        "reactionMs": 450,
+        "settings": {
+          "reactionMs": 450,
+          "jitterMs": 50,
+          "gapBias": -0.25,
+          "staminaBias": 20,
+          "wrongGuard": 0.28,
+          "missedCounter": 0.65,
+          "slashPreference": 0.7
+        },
+        "interventions": {
+          "optimistic range/stamina judgement": 15,
+          "prefers simple slash": 3,
+          "wrong directional guard": 1
+        },
+        "model": "seeded synthetic persona; not a validated human skill distribution",
+        "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+      },
+      "outcome": "loss",
+      "endTick": 1633,
+      "finalHealth": [
+        0,
+        66
+      ],
+      "damageTaken": 159,
+      "damageDealt": 84,
+      "attackMix": {
+        "attacks": 15,
+        "heavies": 0,
+        "heavyPercent": 0,
+        "passed": true
+      },
+      "emptySwings": 3,
+      "blocks": 0,
+      "parries": 0,
+      "exhaustions": 0,
+      "defenceSummary": {
+        "block": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "perfect block": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "parry": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "roll": {
+          "count": 1,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": 1.19,
+          "wall": 0.9
+        },
+        "backstep": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        }
+      },
+      "inputReleaseEvidence": "not-applicable-direct-engine; no browser keys",
+      "opponent": "veteran",
+      "artifact": "veteran-beginner-169106580.json"
+    },
+    {
+      "evidenceTier": "direct-production-engine-no-rendering",
+      "observation": "delayed semantic events and rounded gap; current own bars/action legality; fixed camera yaw0; four-tick cadence",
+      "temporaryWorkaround": null,
+      "seed": 2026100501,
+      "playerProfile": {
+        "name": "intermediate",
+        "seed": 2026100501,
+        "reactionMs": 320,
+        "settings": {
+          "reactionMs": 280,
+          "jitterMs": 40,
+          "gapBias": -0.1,
+          "staminaBias": 5,
+          "wrongGuard": 0.08,
+          "missedCounter": 0.2,
+          "slashPreference": 0.2
+        },
+        "interventions": {
+          "optimistic range/stamina judgement": 16,
+          "prefers simple slash": 5
+        },
+        "model": "seeded synthetic persona; not a validated human skill distribution",
+        "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+      },
+      "outcome": "win",
+      "endTick": 1697,
+      "finalHealth": [
+        68,
+        0
+      ],
+      "damageTaken": 82,
+      "damageDealt": 162,
+      "attackMix": {
+        "attacks": 16,
+        "heavies": 0,
+        "heavyPercent": 0,
+        "passed": true
+      },
+      "emptySwings": 2,
+      "blocks": 1,
+      "parries": 1,
+      "exhaustions": 0,
+      "defenceSummary": {
+        "block": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "perfect block": {
+          "count": 1,
+          "underThreat": 1,
+          "avoided": 16,
+          "hitAnyway": 0,
+          "windowsOpened": 1,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": 1.24,
+          "wall": 1.82
+        },
+        "parry": {
+          "count": 1,
+          "underThreat": 1,
+          "avoided": 12,
+          "hitAnyway": 0,
+          "windowsOpened": 1,
+          "windowsUsed": 1,
+          "landed": 1,
+          "distance": -0.08,
+          "wall": -0.07
+        },
+        "roll": {
+          "count": 1,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": 1.87,
+          "wall": 2.56
+        },
+        "backstep": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        }
+      },
+      "inputReleaseEvidence": "not-applicable-direct-engine; no browser keys",
+      "opponent": "veteran",
+      "artifact": "veteran-intermediate-2026100501.json"
+    },
+    {
+      "evidenceTier": "direct-production-engine-no-rendering",
+      "observation": "delayed semantic events and rounded gap; current own bars/action legality; fixed camera yaw0; four-tick cadence",
+      "temporaryWorkaround": null,
+      "seed": 866561695,
+      "playerProfile": {
+        "name": "intermediate",
+        "seed": 866561695,
+        "reactionMs": 280,
+        "settings": {
+          "reactionMs": 280,
+          "jitterMs": 40,
+          "gapBias": -0.1,
+          "staminaBias": 5,
+          "wrongGuard": 0.08,
+          "missedCounter": 0.2,
+          "slashPreference": 0.2
+        },
+        "interventions": {
+          "optimistic range/stamina judgement": 12
+        },
+        "model": "seeded synthetic persona; not a validated human skill distribution",
+        "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+      },
+      "outcome": "loss",
+      "endTick": 1505,
+      "finalHealth": [
+        0,
+        64
+      ],
+      "damageTaken": 151,
+      "damageDealt": 86,
+      "attackMix": {
+        "attacks": 12,
+        "heavies": 0,
+        "heavyPercent": 0,
+        "passed": true
+      },
+      "emptySwings": 0,
+      "blocks": 0,
+      "parries": 0,
+      "exhaustions": 0,
+      "defenceSummary": {
+        "block": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "perfect block": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "parry": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "roll": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "backstep": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        }
+      },
+      "inputReleaseEvidence": "not-applicable-direct-engine; no browser keys",
+      "opponent": "veteran",
+      "artifact": "veteran-intermediate-866561695.json"
+    },
+    {
+      "evidenceTier": "direct-production-engine-no-rendering",
+      "observation": "delayed semantic events and rounded gap; current own bars/action legality; fixed camera yaw0; four-tick cadence",
+      "temporaryWorkaround": null,
+      "seed": 169106580,
+      "playerProfile": {
+        "name": "intermediate",
+        "seed": 169106580,
+        "reactionMs": 320,
+        "settings": {
+          "reactionMs": 280,
+          "jitterMs": 40,
+          "gapBias": -0.1,
+          "staminaBias": 5,
+          "wrongGuard": 0.08,
+          "missedCounter": 0.2,
+          "slashPreference": 0.2
+        },
+        "interventions": {
+          "optimistic range/stamina judgement": 17,
+          "prefers simple slash": 2
+        },
+        "model": "seeded synthetic persona; not a validated human skill distribution",
+        "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+      },
+      "outcome": "loss",
+      "endTick": 2433,
+      "finalHealth": [
+        0,
+        26
+      ],
+      "damageTaken": 156,
+      "damageDealt": 124,
+      "attackMix": {
+        "attacks": 16,
+        "heavies": 0,
+        "heavyPercent": 0,
+        "passed": true
+      },
+      "emptySwings": 2,
+      "blocks": 1,
+      "parries": 1,
+      "exhaustions": 0,
+      "defenceSummary": {
+        "block": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "perfect block": {
+          "count": 1,
+          "underThreat": 1,
+          "avoided": 16,
+          "hitAnyway": 0,
+          "windowsOpened": 1,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": 0,
+          "wall": 0
+        },
+        "parry": {
+          "count": 1,
+          "underThreat": 1,
+          "avoided": 16,
+          "hitAnyway": 0,
+          "windowsOpened": 1,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": 1.73,
+          "wall": 1.73
+        },
+        "roll": {
+          "count": 2,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": 2.37,
+          "wall": 2.51
+        },
+        "backstep": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        }
+      },
+      "inputReleaseEvidence": "not-applicable-direct-engine; no browser keys",
+      "opponent": "veteran",
+      "artifact": "veteran-intermediate-169106580.json"
+    },
+    {
+      "evidenceTier": "direct-production-engine-no-rendering",
+      "observation": "delayed semantic events and rounded gap; current own bars/action legality; fixed camera yaw0; four-tick cadence",
+      "temporaryWorkaround": null,
+      "seed": 2026100501,
+      "playerProfile": {
+        "name": "advanced",
+        "seed": 2026100501,
+        "reactionMs": 180,
+        "settings": {
+          "reactionMs": 180,
+          "jitterMs": 0,
+          "gapBias": 0,
+          "staminaBias": 0,
+          "wrongGuard": 0,
+          "missedCounter": 0,
+          "slashPreference": 0
+        },
+        "interventions": {},
+        "model": "seeded synthetic persona; not a validated human skill distribution",
+        "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+      },
+      "outcome": "win",
+      "endTick": 1241,
+      "finalHealth": [
+        125,
+        0
+      ],
+      "damageTaken": 25,
+      "damageDealt": 166,
+      "attackMix": {
+        "attacks": 14,
+        "heavies": 1,
+        "heavyPercent": 7.142857142857143,
+        "passed": true
+      },
+      "emptySwings": 0,
+      "blocks": 0,
+      "parries": 1,
+      "exhaustions": 0,
+      "defenceSummary": {
+        "block": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "perfect block": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "parry": {
+          "count": 1,
+          "underThreat": 1,
+          "avoided": 13,
+          "hitAnyway": 0,
+          "windowsOpened": 1,
+          "windowsUsed": 1,
+          "landed": 1,
+          "distance": 0,
+          "wall": 0
+        },
+        "roll": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "backstep": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        }
+      },
+      "inputReleaseEvidence": "not-applicable-direct-engine; no browser keys",
+      "opponent": "veteran",
+      "artifact": "veteran-advanced-2026100501.json"
+    },
+    {
+      "evidenceTier": "direct-production-engine-no-rendering",
+      "observation": "delayed semantic events and rounded gap; current own bars/action legality; fixed camera yaw0; four-tick cadence",
+      "temporaryWorkaround": null,
+      "seed": 866561695,
+      "playerProfile": {
+        "name": "advanced",
+        "seed": 866561695,
+        "reactionMs": 180,
+        "settings": {
+          "reactionMs": 180,
+          "jitterMs": 0,
+          "gapBias": 0,
+          "staminaBias": 0,
+          "wrongGuard": 0,
+          "missedCounter": 0,
+          "slashPreference": 0
+        },
+        "interventions": {},
+        "model": "seeded synthetic persona; not a validated human skill distribution",
+        "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+      },
+      "outcome": "win",
+      "endTick": 1177,
+      "finalHealth": [
+        125,
+        0
+      ],
+      "damageTaken": 25,
+      "damageDealt": 157,
+      "attackMix": {
+        "attacks": 13,
+        "heavies": 1,
+        "heavyPercent": 7.6923076923076925,
+        "passed": true
+      },
+      "emptySwings": 0,
+      "blocks": 0,
+      "parries": 1,
+      "exhaustions": 0,
+      "defenceSummary": {
+        "block": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "perfect block": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "parry": {
+          "count": 1,
+          "underThreat": 1,
+          "avoided": 12,
+          "hitAnyway": 0,
+          "windowsOpened": 1,
+          "windowsUsed": 1,
+          "landed": 1,
+          "distance": 0,
+          "wall": 0
+        },
+        "roll": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "backstep": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        }
+      },
+      "inputReleaseEvidence": "not-applicable-direct-engine; no browser keys",
+      "opponent": "veteran",
+      "artifact": "veteran-advanced-866561695.json"
+    },
+    {
+      "evidenceTier": "direct-production-engine-no-rendering",
+      "observation": "delayed semantic events and rounded gap; current own bars/action legality; fixed camera yaw0; four-tick cadence",
+      "temporaryWorkaround": null,
+      "seed": 169106580,
+      "playerProfile": {
+        "name": "advanced",
+        "seed": 169106580,
+        "reactionMs": 180,
+        "settings": {
+          "reactionMs": 180,
+          "jitterMs": 0,
+          "gapBias": 0,
+          "staminaBias": 0,
+          "wrongGuard": 0,
+          "missedCounter": 0,
+          "slashPreference": 0
+        },
+        "interventions": {},
+        "model": "seeded synthetic persona; not a validated human skill distribution",
+        "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+      },
+      "outcome": "win",
+      "endTick": 1669,
+      "finalHealth": [
+        61,
+        0
+      ],
+      "damageTaken": 89,
+      "damageDealt": 153,
+      "attackMix": {
+        "attacks": 17,
+        "heavies": 0,
+        "heavyPercent": 0,
+        "passed": true
+      },
+      "emptySwings": 1,
+      "blocks": 0,
+      "parries": 1,
+      "exhaustions": 0,
+      "defenceSummary": {
+        "block": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "perfect block": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "parry": {
+          "count": 1,
+          "underThreat": 1,
+          "avoided": 12,
+          "hitAnyway": 0,
+          "windowsOpened": 1,
+          "windowsUsed": 1,
+          "landed": 1,
+          "distance": 0.2,
+          "wall": 0
+        },
+        "roll": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        },
+        "backstep": {
+          "count": 0,
+          "underThreat": 0,
+          "avoided": 0,
+          "hitAnyway": 0,
+          "windowsOpened": 0,
+          "windowsUsed": 0,
+          "landed": 0,
+          "distance": null,
+          "wall": null
+        }
+      },
+      "inputReleaseEvidence": "not-applicable-direct-engine; no browser keys",
+      "opponent": "veteran",
+      "artifact": "veteran-advanced-169106580.json"
+    }
+  ],
+  "browserRows": [
+    {
+      "player": "beginner",
+      "opponent": "pitborn",
+      "seed": 2026100501,
+      "outcome": "win",
+      "finalHealth": {
+        "player": 94,
+        "opponent": 0
+      },
+      "attackMix": {
+        "attacks": 22,
+        "heavies": 0,
+        "heavyPercent": 0,
+        "passed": true
+      },
+      "emptySwings": 5,
+      "blocks": 0,
+      "parries": 1,
+      "inputsReleased": true,
+      "errors": [],
+      "renderer": {
+        "name": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "canvas": [
+          390,
+          844
+        ],
+        "dpr": 1
+      },
+      "videoGeometry": {
+        "initial": {
+          "layout": [
+            390,
+            844
+          ],
+          "canvas": [
+            0,
+            0,
+            390,
+            844
+          ]
+        },
+        "checks": 36,
+        "changes": [],
+        "suitableForReview": true
+      },
+      "profile": {
+        "name": "beginner",
+        "seed": 2026100501,
+        "reactionMs": 500,
+        "settings": {
+          "reactionMs": 450,
+          "jitterMs": 50,
+          "gapBias": -0.25,
+          "staminaBias": 20,
+          "wrongGuard": 0.28,
+          "missedCounter": 0.65,
+          "slashPreference": 0.7
+        },
+        "interventions": {
+          "optimistic range/stamina judgement": 22,
+          "prefers simple slash": 3
+        },
+        "model": "seeded synthetic persona; not a validated human skill distribution",
+        "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+      },
+      "defenceRows": [
+        {
+          "tick": 634,
+          "type": "parry",
+          "attackTick": 598,
+          "resolutionTick": 634,
+          "against": "heavy_overhead",
+          "charged": false,
+          "result": "parried",
+          "avoided": 26,
+          "windowOpened": true,
+          "windowUsed": true,
+          "answer": "slash_riposte",
+          "counterMove": true,
+          "landed": false,
+          "distance": 1.01,
+          "wall": 1.23,
+          "avoidanceCredited": true,
+          "windowCredited": true
+        },
+        {
+          "tick": 646,
+          "type": "roll",
+          "attackTick": null,
+          "resolutionTick": null,
+          "against": null,
+          "charged": false,
+          "result": "no attack in flight",
+          "avoided": 0,
+          "windowOpened": false,
+          "windowUsed": false,
+          "answer": null,
+          "counterMove": false,
+          "landed": false,
+          "distance": 1.97,
+          "wall": 2.24
+        }
+      ],
+      "botContentSha256": "8813fe1d52b5a2f5896ed50f297ba2c565978fcd71796dfc615ddc930e531ead",
+      "rawSha256": "396ad684c8e48a551bfc843846afcb455a74d9129b32cb4d459d93d13ac8b1d6"
+    },
+    {
+      "player": "beginner",
+      "opponent": "veteran",
+      "seed": 2026100501,
+      "outcome": "loss",
+      "finalHealth": {
+        "player": 0,
+        "opponent": 54
+      },
+      "attackMix": {
+        "attacks": 18,
+        "heavies": 0,
+        "heavyPercent": 0,
+        "passed": true
+      },
+      "emptySwings": 7,
+      "blocks": 0,
+      "parries": 0,
+      "inputsReleased": true,
+      "errors": [],
+      "renderer": {
+        "name": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "canvas": [
+          390,
+          844
+        ],
+        "dpr": 1
+      },
+      "videoGeometry": {
+        "initial": {
+          "layout": [
+            390,
+            844
+          ],
+          "canvas": [
+            0,
+            0,
+            390,
+            844
+          ]
+        },
+        "checks": 32,
+        "changes": [],
+        "suitableForReview": true
+      },
+      "profile": {
+        "name": "beginner",
+        "seed": 2026100501,
+        "reactionMs": 500,
+        "settings": {
+          "reactionMs": 450,
+          "jitterMs": 50,
+          "gapBias": -0.25,
+          "staminaBias": 20,
+          "wrongGuard": 0.28,
+          "missedCounter": 0.65,
+          "slashPreference": 0.7
+        },
+        "interventions": {
+          "optimistic range/stamina judgement": 18,
+          "prefers simple slash": 3,
+          "wrong directional guard": 1
+        },
+        "model": "seeded synthetic persona; not a validated human skill distribution",
+        "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+      },
+      "defenceRows": [
+        {
+          "tick": 406,
+          "type": "roll",
+          "attackTick": 374,
+          "resolutionTick": 406,
+          "against": "heavy_overhead",
+          "charged": false,
+          "result": "hit anyway",
+          "avoided": 0,
+          "windowOpened": false,
+          "windowUsed": false,
+          "answer": null,
+          "counterMove": false,
+          "landed": false,
+          "distance": 0.03,
+          "wall": 0.01
+        },
+        {
+          "tick": 434,
+          "type": "roll",
+          "attackTick": null,
+          "resolutionTick": null,
+          "against": null,
+          "charged": false,
+          "result": "no attack in flight",
+          "avoided": 0,
+          "windowOpened": false,
+          "windowUsed": false,
+          "answer": null,
+          "counterMove": false,
+          "landed": false,
+          "distance": 1.32,
+          "wall": 1.19
+        }
+      ],
+      "botContentSha256": "8813fe1d52b5a2f5896ed50f297ba2c565978fcd71796dfc615ddc930e531ead",
+      "rawSha256": "b92853800077d7808d7f56b9314ae02474ad031bc1a9426e4c54cdeda97da5ae"
+    },
+    {
+      "player": "intermediate",
+      "opponent": "pitborn",
+      "seed": 2026100501,
+      "outcome": "loss",
+      "finalHealth": {
+        "player": 0,
+        "opponent": 25
+      },
+      "attackMix": {
+        "attacks": 24,
+        "heavies": 0,
+        "heavyPercent": 0,
+        "passed": true
+      },
+      "emptySwings": 6,
+      "blocks": 0,
+      "parries": 0,
+      "inputsReleased": true,
+      "errors": [],
+      "renderer": {
+        "name": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "canvas": [
+          390,
+          844
+        ],
+        "dpr": 1
+      },
+      "videoGeometry": {
+        "initial": {
+          "layout": [
+            390,
+            844
+          ],
+          "canvas": [
+            0,
+            0,
+            390,
+            844
+          ]
+        },
+        "checks": 41,
+        "changes": [],
+        "suitableForReview": true
+      },
+      "profile": {
+        "name": "intermediate",
+        "seed": 2026100501,
+        "reactionMs": 320,
+        "settings": {
+          "reactionMs": 280,
+          "jitterMs": 40,
+          "gapBias": -0.1,
+          "staminaBias": 5,
+          "wrongGuard": 0.08,
+          "missedCounter": 0.2,
+          "slashPreference": 0.2
+        },
+        "interventions": {
+          "optimistic range/stamina judgement": 24,
+          "prefers simple slash": 5,
+          "wrong directional guard": 1
+        },
+        "model": "seeded synthetic persona; not a validated human skill distribution",
+        "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+      },
+      "defenceRows": [],
+      "botContentSha256": "dbd18658bfec6e20eba5b253f0c18fe5278ce2e085f9c1f3f843aa75df435da2",
+      "rawSha256": "ea84caca8218e08157a171cad60d40ea0b98e734c045e573f289fb20a6cc8c6b"
+    },
+    {
+      "player": "intermediate",
+      "opponent": "veteran",
+      "seed": 2026100501,
+      "outcome": "loss",
+      "finalHealth": {
+        "player": 0,
+        "opponent": 92
+      },
+      "attackMix": {
+        "attacks": 8,
+        "heavies": 0,
+        "heavyPercent": 0,
+        "passed": true
+      },
+      "emptySwings": 1,
+      "blocks": 0,
+      "parries": 0,
+      "inputsReleased": true,
+      "errors": [],
+      "renderer": {
+        "name": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "canvas": [
+          390,
+          844
+        ],
+        "dpr": 1
+      },
+      "videoGeometry": {
+        "initial": {
+          "layout": [
+            390,
+            844
+          ],
+          "canvas": [
+            0,
+            0,
+            390,
+            844
+          ]
+        },
+        "checks": 16,
+        "changes": [],
+        "suitableForReview": true
+      },
+      "profile": {
+        "name": "intermediate",
+        "seed": 2026100501,
+        "reactionMs": 320,
+        "settings": {
+          "reactionMs": 280,
+          "jitterMs": 40,
+          "gapBias": -0.1,
+          "staminaBias": 5,
+          "wrongGuard": 0.08,
+          "missedCounter": 0.2,
+          "slashPreference": 0.2
+        },
+        "interventions": {
+          "optimistic range/stamina judgement": 8,
+          "prefers simple slash": 2
+        },
+        "model": "seeded synthetic persona; not a validated human skill distribution",
+        "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+      },
+      "defenceRows": [
+        {
+          "tick": 500,
+          "type": "roll",
+          "attackTick": 479,
+          "resolutionTick": 515,
+          "against": "heavy_overhead",
+          "charged": false,
+          "result": "swing missed",
+          "avoided": 16,
+          "windowOpened": true,
+          "windowUsed": false,
+          "answer": null,
+          "counterMove": false,
+          "landed": false,
+          "distance": 1.19,
+          "wall": 1.39,
+          "avoidanceCredited": true,
+          "windowCredited": true
+        }
+      ],
+      "botContentSha256": "dbd18658bfec6e20eba5b253f0c18fe5278ce2e085f9c1f3f843aa75df435da2",
+      "rawSha256": "a0b2b1efe8418732e724b008adb45ca0d97d2337e689e0efa6d1b99cdb95ba87"
+    },
+    {
+      "player": "advanced",
+      "opponent": "pitborn",
+      "seed": 2026100501,
+      "outcome": "win",
+      "finalHealth": {
+        "player": 37,
+        "opponent": 0
+      },
+      "attackMix": {
+        "attacks": 20,
+        "heavies": 2,
+        "heavyPercent": 10,
+        "passed": true
+      },
+      "emptySwings": 0,
+      "blocks": 0,
+      "parries": 2,
+      "inputsReleased": true,
+      "errors": [],
+      "renderer": {
+        "name": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "canvas": [
+          390,
+          844
+        ],
+        "dpr": 1
+      },
+      "videoGeometry": {
+        "initial": {
+          "layout": [
+            390,
+            844
+          ],
+          "canvas": [
+            0,
+            0,
+            390,
+            844
+          ]
+        },
+        "checks": 31,
+        "changes": [],
+        "suitableForReview": true
+      },
+      "profile": {
+        "name": "advanced",
+        "seed": 2026100501,
+        "reactionMs": 180,
+        "settings": {
+          "reactionMs": 180,
+          "jitterMs": 0,
+          "gapBias": 0,
+          "staminaBias": 0,
+          "wrongGuard": 0,
+          "missedCounter": 0,
+          "slashPreference": 0
+        },
+        "interventions": {},
+        "model": "seeded synthetic persona; not a validated human skill distribution",
+        "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+      },
+      "defenceRows": [
+        {
+          "tick": 897,
+          "type": "parry",
+          "attackTick": 879,
+          "resolutionTick": 897,
+          "against": "thrust",
+          "charged": false,
+          "result": "parried",
+          "avoided": 7,
+          "windowOpened": true,
+          "windowUsed": true,
+          "answer": "heavy_riposte",
+          "counterMove": true,
+          "landed": true,
+          "distance": 0,
+          "wall": 0,
+          "avoidanceCredited": true,
+          "windowCredited": true
+        },
+        {
+          "tick": 1401,
+          "type": "parry",
+          "attackTick": 1383,
+          "resolutionTick": 1401,
+          "against": "thrust",
+          "charged": false,
+          "result": "parried",
+          "avoided": 7,
+          "windowOpened": true,
+          "windowUsed": true,
+          "answer": "heavy_riposte",
+          "counterMove": true,
+          "landed": true,
+          "distance": 0,
+          "wall": 0,
+          "avoidanceCredited": true,
+          "windowCredited": true
+        }
+      ],
+      "botContentSha256": "dbd18658bfec6e20eba5b253f0c18fe5278ce2e085f9c1f3f843aa75df435da2",
+      "rawSha256": "118cd6159c54c923d9f4bfca6e37e69ac093152fc7888f8e9bb800d9d1290edf"
+    },
+    {
+      "player": "advanced",
+      "opponent": "veteran",
+      "seed": 2026100501,
+      "outcome": "win",
+      "finalHealth": {
+        "player": 25,
+        "opponent": 0
+      },
+      "attackMix": {
+        "attacks": 20,
+        "heavies": 0,
+        "heavyPercent": 0,
+        "passed": true
+      },
+      "emptySwings": 0,
+      "blocks": 0,
+      "parries": 1,
+      "inputsReleased": true,
+      "errors": [],
+      "renderer": {
+        "name": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "canvas": [
+          390,
+          844
+        ],
+        "dpr": 1
+      },
+      "videoGeometry": {
+        "initial": {
+          "layout": [
+            390,
+            844
+          ],
+          "canvas": [
+            0,
+            0,
+            390,
+            844
+          ]
+        },
+        "checks": 29,
+        "changes": [],
+        "suitableForReview": true
+      },
+      "profile": {
+        "name": "advanced",
+        "seed": 2026100501,
+        "reactionMs": 180,
+        "settings": {
+          "reactionMs": 180,
+          "jitterMs": 0,
+          "gapBias": 0,
+          "staminaBias": 0,
+          "wrongGuard": 0,
+          "missedCounter": 0,
+          "slashPreference": 0
+        },
+        "interventions": {},
+        "model": "seeded synthetic persona; not a validated human skill distribution",
+        "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+      },
+      "defenceRows": [
+        {
+          "tick": 350,
+          "type": "parry",
+          "attackTick": 330,
+          "resolutionTick": 350,
+          "against": "light_right",
+          "charged": false,
+          "result": "parried",
+          "avoided": 12,
+          "windowOpened": true,
+          "windowUsed": true,
+          "answer": "slash_riposte",
+          "counterMove": true,
+          "landed": true,
+          "distance": 0.2,
+          "wall": 0,
+          "avoidanceCredited": true,
+          "windowCredited": true
+        }
+      ],
+      "botContentSha256": "dbd18658bfec6e20eba5b253f0c18fe5278ce2e085f9c1f3f843aa75df435da2",
+      "rawSha256": "ee7f8440874aa37d5c47a56a86dca2d92c96f71fe1610a71b926f0ab635984dd"
+    }
+  ],
+  "seeds": [
+    2026100501,
+    866561695,
+    169106580
+  ],
+  "media": [
+    {
+      "name": "advanced-pitborn-2026100501",
+      "sourceSha256": "8463cbfc7a905544498d842d009228f6b0be7098bd52e79996752b0868833cf5",
+      "decoded": true,
+      "metadata": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "vp8",
+            "width": 390,
+            "height": 844,
+            "r_frame_rate": "25/1"
+          }
+        ],
+        "format": {
+          "duration": "62.960000"
+        }
+      },
+      "momentTick": 897,
+      "clipTicks": [
+        777,
+        1097
+      ],
+      "capturedSeconds": [
+        15.963017647622952,
+        24.65800013857143
+      ],
+      "clipSpeedScale": 1.63030921705284,
+      "clock": "fixed-step; clip duration normalized approximately through sparse timestamps; silent, not realtime FPS"
+    },
+    {
+      "name": "advanced-veteran-2026100501",
+      "sourceSha256": "86b5fcf812d0ac2cccd76d643eb2ce9d1f299df7c4b06e33dc38d9cf7625b75d",
+      "decoded": true,
+      "metadata": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "vp8",
+            "width": 390,
+            "height": 844,
+            "r_frame_rate": "25/1"
+          }
+        ],
+        "format": {
+          "duration": "28.560000"
+        }
+      },
+      "momentTick": 350,
+      "clipTicks": [
+        230,
+        550
+      ],
+      "capturedSeconds": [
+        5.936978719677421,
+        7.616798067333335
+      ],
+      "clipSpeedScale": 0.3149661276854839,
+      "clock": "fixed-step; clip duration normalized approximately through sparse timestamps; silent, not realtime FPS"
+    },
+    {
+      "name": "beginner-pitborn-2026100501",
+      "sourceSha256": "92bd9454afd375b06b0d63a548dcde9149749c807d407f8421039a9f0ffca1b7",
+      "decoded": true,
+      "metadata": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "vp8",
+            "width": 390,
+            "height": 844,
+            "r_frame_rate": "25/1"
+          }
+        ],
+        "format": {
+          "duration": "61.760000"
+        }
+      },
+      "momentTick": 634,
+      "clipTicks": [
+        514,
+        834
+      ],
+      "capturedSeconds": [
+        11.211065012096775,
+        17.845794360317463
+      ],
+      "clipSpeedScale": 1.244011752791379,
+      "clock": "fixed-step; clip duration normalized approximately through sparse timestamps; silent, not realtime FPS"
+    },
+    {
+      "name": "beginner-veteran-2026100501",
+      "sourceSha256": "d3d224d1c127a4c3ae079b291b5a0e3a00bce329716a65d9fb3943cc04e4dee5",
+      "decoded": true,
+      "metadata": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "vp8",
+            "width": 390,
+            "height": 844,
+            "r_frame_rate": "25/1"
+          }
+        ],
+        "format": {
+          "duration": "24.280000"
+        }
+      },
+      "momentTick": 406,
+      "clipTicks": [
+        286,
+        606
+      ],
+      "capturedSeconds": [
+        5.766024275409841,
+        6.936495576741939
+      ],
+      "clipSpeedScale": 0.21946336899976837,
+      "clock": "fixed-step; clip duration normalized approximately through sparse timestamps; silent, not realtime FPS"
+    },
+    {
+      "name": "intermediate-pitborn-2026100501",
+      "sourceSha256": "b1fc064e36940c9e648f84fb83f379d63dfd241cf5aeeeb8181ee45e808bae9a",
+      "decoded": true,
+      "metadata": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "vp8",
+            "width": 390,
+            "height": 844,
+            "r_frame_rate": "25/1"
+          }
+        ],
+        "format": {
+          "duration": "68.960000"
+        }
+      },
+      "momentTick": 398,
+      "clipTicks": [
+        278,
+        598
+      ],
+      "capturedSeconds": [
+        6.68163405737705,
+        9.707203936612903
+      ],
+      "clipSpeedScale": 0.5672943523567224,
+      "clock": "fixed-step; clip duration normalized approximately through sparse timestamps; silent, not realtime FPS"
+    },
+    {
+      "name": "intermediate-veteran-2026100501",
+      "sourceSha256": "3a92a87688096b11be74ebfe2f0418a45a323980ae98496036307e8bed45c642",
+      "decoded": true,
+      "metadata": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "vp8",
+            "width": 390,
+            "height": 844,
+            "r_frame_rate": "25/1"
+          }
+        ],
+        "format": {
+          "duration": "20.480000"
+        }
+      },
+      "momentTick": 500,
+      "clipTicks": [
+        380,
+        700
+      ],
+      "capturedSeconds": [
+        6.8498482406507994,
+        9.461092995967737
+      ],
+      "clipSpeedScale": 0.4896083916219259,
+      "clock": "fixed-step; clip duration normalized approximately through sparse timestamps; silent, not realtime FPS"
+    }
+  ],
+  "rawRoot": "/Users/domininclynch/Developer/frankendom-test-bot-launcher-20261005/artifacts/profile-pilot-20261005",
+  "receipts": [
+    {
+      "path": "browser/advanced/pitborn-2026100501.json",
+      "sha256": "118cd6159c54c923d9f4bfca6e37e69ac093152fc7888f8e9bb800d9d1290edf"
+    },
+    {
+      "path": "browser/advanced/summary.json",
+      "sha256": "b1f8716cc64030fa73cbf5a5f1ddc3f5c4afd69b04b7f4b47309f652f61ed725"
+    },
+    {
+      "path": "browser/advanced/veteran-2026100501.json",
+      "sha256": "ee7f8440874aa37d5c47a56a86dca2d92c96f71fe1610a71b926f0ab635984dd"
+    },
+    {
+      "path": "browser/beginner/pitborn-2026100501.json",
+      "sha256": "396ad684c8e48a551bfc843846afcb455a74d9129b32cb4d459d93d13ac8b1d6"
+    },
+    {
+      "path": "browser/beginner/summary.json",
+      "sha256": "a8c49e8b2b941245879d4611ff56307374d90e6015e74308a765f7ae24d40961"
+    },
+    {
+      "path": "browser/beginner/veteran-2026100501.json",
+      "sha256": "b92853800077d7808d7f56b9314ae02474ad031bc1a9426e4c54cdeda97da5ae"
+    },
+    {
+      "path": "browser/intermediate/pitborn-2026100501.json",
+      "sha256": "ea84caca8218e08157a171cad60d40ea0b98e734c045e573f289fb20a6cc8c6b"
+    },
+    {
+      "path": "browser/intermediate/summary.json",
+      "sha256": "6dbeb57f3a824b2b73ee81b0d371d201643b19b54d625f5a62d3e037ee6025fd"
+    },
+    {
+      "path": "browser/intermediate/veteran-2026100501.json",
+      "sha256": "a0b2b1efe8418732e724b008adb45ca0d97d2337e689e0efa6d1b99cdb95ba87"
+    },
+    {
+      "path": "checks/media/result.json",
+      "sha256": "15d53df080623b4d095688e0e301e3aa6646ebb1bf72bece2d00747d98d85738"
+    },
+    {
+      "path": "checks/output-retention/result.json",
+      "sha256": "9cda1f739152556ee999e088c0fbb76b4c223169017bf5eb42b15cedd13d1e2f"
+    },
+    {
+      "path": "checks/result.json",
+      "sha256": "284a46fb9fef5b929f9e044693d39218bf40024b1bb96ddc97cde36fe2f7260b"
+    },
+    {
+      "path": "checks/review-fix/result.json",
+      "sha256": "949701a1f4add7f44aacbf8b3e95c7ee2ff799df1b7d85f9e244924e91d07ec2"
+    },
+    {
+      "path": "engine/pitborn-advanced-169106580.json",
+      "sha256": "03bf781bf970c5d51ec1e4526726f9d76726c85a64fa4a5e39c5cbc70675dffa"
+    },
+    {
+      "path": "engine/pitborn-advanced-2026100501.json",
+      "sha256": "258f91f242375370325caf1dd00f943d3d4dd577f08ced6501e073215f8b6384"
+    },
+    {
+      "path": "engine/pitborn-advanced-866561695.json",
+      "sha256": "94cb7e86d636a13f7936cbe4caaf43e0bb1efcbb14f9c8f588a2049ced536277"
+    },
+    {
+      "path": "engine/pitborn-beginner-169106580.json",
+      "sha256": "46e48098cd984b68cbcffa777193cbacbb647c65e08dd2d4ea144cc4322ffbe8"
+    },
+    {
+      "path": "engine/pitborn-beginner-2026100501.json",
+      "sha256": "137ad3a6b902aa2e55027ff7ef0010416d313dae261c0712f4845fa6b77652a4"
+    },
+    {
+      "path": "engine/pitborn-beginner-866561695.json",
+      "sha256": "ce08e15e1ab3b4c5b3be40648211415fbc9127a52a24da0e0a111b66ed1444fc"
+    },
+    {
+      "path": "engine/pitborn-intermediate-169106580.json",
+      "sha256": "c44c42b4d0e11b6b7dbd1d19eb02a1c3130bbbac771d1791432c02a57bc6bf74"
+    },
+    {
+      "path": "engine/pitborn-intermediate-2026100501.json",
+      "sha256": "22e1db5ff66f03aaf6a8b1df594cc96eda4c2c6789502a27479a610426014ebe"
+    },
+    {
+      "path": "engine/pitborn-intermediate-866561695.json",
+      "sha256": "4197adcaa820e00263cac06059fe06eb506eba6a7a784e76940e9ec0392181cd"
+    },
+    {
+      "path": "engine/summary.json",
+      "sha256": "83aa71683705ea5abaf79cc22c212c5369fa99434437b49d3d6ca04ce1d451ea"
+    },
+    {
+      "path": "engine/veteran-advanced-169106580.json",
+      "sha256": "f24c89467e8804bf0aa283cde50a2fc75a48722545ad87155226a1978631c709"
+    },
+    {
+      "path": "engine/veteran-advanced-2026100501.json",
+      "sha256": "ec6eaf83120f45aa3a31e4fedfce395f71f9fe0d86e1c7da24d12a263b9ce60d"
+    },
+    {
+      "path": "engine/veteran-advanced-866561695.json",
+      "sha256": "294d0cd7261e9e06db5bbc8350df46905df3dd278581ef81350d31ab6bcbc85a"
+    },
+    {
+      "path": "engine/veteran-beginner-169106580.json",
+      "sha256": "c4498c6971f810f8013b2be2a8ea25f6f63b9632c520b46ab09c1c9589de93ff"
+    },
+    {
+      "path": "engine/veteran-beginner-2026100501.json",
+      "sha256": "6126283ab2961b27949cc533eb6c08556701f17448035761c08fd643d01dbaf4"
+    },
+    {
+      "path": "engine/veteran-beginner-866561695.json",
+      "sha256": "78d9deeff0b99c18d3b461a675008a417eaad864e87d4dbc833d702d76f73b27"
+    },
+    {
+      "path": "engine/veteran-intermediate-169106580.json",
+      "sha256": "f862054c726fe4f5cfe68c799468186c92902deaa7f188e368404d20b6f6ad2c"
+    },
+    {
+      "path": "engine/veteran-intermediate-2026100501.json",
+      "sha256": "3d28bf6a5f907fe798ff9fb13e91550abb13417bd5916a08b1bceb3c1880b74b"
+    },
+    {
+      "path": "engine/veteran-intermediate-866561695.json",
+      "sha256": "6b5749cf1508a46132fd990462a0979a3d8b31f07ac9df31eeb1d848e479f5b6"
+    },
+    {
+      "path": "media/media-receipt.json",
+      "sha256": "36f40b2078e6d0b8d48f8ff8061e8c9d1c82cbcbb3e167673c2488ed9098a2f4"
+    }
+  ],
+  "sourceDifferences": "Browser captures predate engine N/A release metadata and pilot CLI output-preservation edits. Browser controller/observation/profile actions did not change after capture.",
+  "limits": [
+    "18 engine cases;6 real browser cases; not a roster browser acceptance rerun",
+    "Synthetic personas, not human skill calibration",
+    "Limited observation is delayed semantic telemetry, not pixel/sound perception",
+    "L6longsword; no equipped specials; no temporary workaround",
+    "No exhaustion or missed-punish intervention demonstrated in this sample",
+    "Silent videos;25fps recording is not gameplay FPS; clip timing interpolated approximately from sparse samples",
+    "Camera comparison against old view not performed; vision review is sampled frames, not blind user validation"
+  ]
+}
