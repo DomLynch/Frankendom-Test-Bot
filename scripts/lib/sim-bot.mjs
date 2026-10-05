@@ -1,4 +1,5 @@
 // Direct-engine diagnostics. Reuse the live Match/Sparring path; never emulate combat rules.
+import { WORKAROUND, temporaryCombatIntent } from './temporary-combat-workaround.mjs';
 import { Match } from '../../game/src/match.ts';
 import { OPPONENTS, PLAYER_WEAPONS, profileAt, LEVEL_ANCHORS } from '../../game/src/moves.ts';
 import { LADDER } from '../../game/src/ladder.ts';
@@ -61,14 +62,18 @@ export function eventDamage(log, side) {
     .reduce((n, e) => n + (e.damage ?? 0), 0);
 }
 
-export function runFight(search, seed, strategy = 'light spam', ticks = 7200) {
+export function runFight(search, seed, strategy = 'light spam', ticks = 7200, workaround = null) {
+  if (workaround !== null && workaround !== WORKAROUND) throw new Error('Unknown temporary workaround');
   if (!strategyNames.includes(strategy)) throw new Error('Unknown strategy');
   if (!Number.isInteger(ticks) || ticks < 1 || ticks > 36000) throw new Error('Ticks must be 1–36000');
   const { match, config } = createSparring(search, seed);
   if (strategy === 'skill then light' && !match.practice.duel.fighters[0].skill) throw new Error('skill then light requires an equipped skill or registered special');
-  const intents = [];
+  const intents = [], interventions = {};
   for (let i = 0; i < ticks; i++) {
-    const intent = probeIntent(match.practice.duel, strategy);
+    const base = probeIntent(match.practice.duel, strategy);
+    const choice = workaround ? temporaryCombatIntent(match.practice.duel, config, base) : { intent: base, reason: null };
+    const intent = choice.intent;
+    if (choice.reason) interventions[choice.reason] = (interventions[choice.reason] ?? 0) + 1;
     intents.push(intent);
     const state = match.step(() => intent);
     match.frameEvents = []; // Only the renderer consumes this queue; fightLog retains every event.
@@ -80,7 +85,7 @@ export function runFight(search, seed, strategy = 'light spam', ticks = 7200) {
   // Event damage may include overkill; keep net HP loss separate. Do not count Killed a second time.
   const specialStarts = log.filter(e => e.type === 'SpecialStarted' && e.actor === 0).length;
   return { evidenceTier: 'direct-engine-no-browser', observation: 'perfect-state scripted exploit probe; not a human or varied-player acceptance run',
-    seed, strategy, config, outcome: !finish ? 'timeout' : finish.draw ? 'draw' : finish.victim === 1 ? 'win' : 'loss',
+    seed, strategy, temporaryWorkaround: workaround ? { name: workaround, experimental: true, acceptanceEligible: false, interventions, removal: 'Remove after Claude fixes and the new engine pin is revalidated' } : null, config, outcome: !finish ? 'timeout' : finish.draw ? 'draw' : finish.victim === 1 ? 'win' : 'loss',
     ticks: match.practice.duel.tick, simulatedSeconds: match.practice.duel.tick / 60,
     finalHealth: match.practice.duel.fighters.map(f => f.health),
     netHpLost: match.practice.duel.fighters.map((f, i) => config.initialFighters[i].health - f.health),

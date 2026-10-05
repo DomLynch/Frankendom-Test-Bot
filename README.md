@@ -47,3 +47,7 @@ Registered specials must match the actual engine level's authored band. Display 
 ## Archived versions
 
 `archive/run-tactical-20260924.sh` preserves the old September launcher; `archive/run-heavy-only.sh` preserves the heavy-only policy. Each uses a separate archived checkout and is never selected by the normal launcher. `run-baseline.sh` only prints a migration notice. There is one current pin and one normal browser launch command: `./run-latest.sh`.
+
+## Temporary known-bug diagnostics
+
+Owner-authorized scythe-spacing and reaction-threshold bot workarounds are opt-in through `./run-sim.sh ... --workaround=known-combat-bugs`. The runner always retains the matching no-workaround baseline and labels variants artificial/not acceptance. The normal browser policy is unchanged. See the [copyable combat bug register](docs/combat-bug-register.md) for reproduction, measured outcomes, developer investigation and removal instructions.

@@ -5,19 +5,23 @@ import { resolve, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
+import { WORKAROUND } from './lib/temporary-combat-workaround.mjs';
 import { nextSeed } from '../game/src/match.ts';
 import { runFight, strategyNames } from './lib/sim-bot.mjs';
 
 const { values } = parseArgs({ options: {
   'sparring-url': { type: 'string' }, strategy: { type: 'string', default: 'light spam' },
   fights: { type: 'string', default: '3' }, seed: { type: 'string', default: '20261004' }, ticks: { type: 'string', default: '7200' },
+  workaround: { type: 'string' },
   out: { type: 'string', default: 'artifacts/combat/sim-bot' }, help: { type: 'boolean' },
 } });
 if (values.help) {
-  console.log('Direct engine, no browser. Required: --sparring-url=<copied Start sparring URL>. Optional: --strategy=<name> --fights=3 --seed=20261004 --ticks=7200 --out=<directory>.');
+  console.log('Direct engine, no browser. Required: --sparring-url=<copied Start sparring URL>. Optional: --strategy=<name> --fights=3 --seed=20261004 --ticks=7200 --out=<directory> --workaround=known-combat-bugs (TEMPORARY, not acceptance).');
   console.log('Strategies:', strategyNames.join(', '));
 } else {
   if (!values['sparring-url']) throw new Error('Supply --sparring-url; never infer the engine level from the displayed rank');
+  if (values.workaround && values.workaround !== WORKAROUND) throw new Error('Unknown temporary workaround');
+  if (values.workaround) console.error('TEMPORARY BOT WORKAROUND: exact-state attack/spacing choices; not normal balance or acceptance evidence');
   const fights = Number(values.fights), ticks = Number(values.ticks);
   let seed = Number(values.seed);
   if (!Number.isInteger(fights) || fights < 1 || fights > 1000) throw new Error('Fights must be 1–1000');
@@ -29,7 +33,7 @@ if (values.help) {
     else if (entry.name.endsWith('.ts') || entry.name.endsWith('.json')) digest.update(relative(root, path)).update('\0').update(readFileSync(path));
   } };
   hashTree(join(root, 'game/src'));
-  for (const file of ['scripts/sim-bot.mjs', 'scripts/lib/sim-bot.mjs', 'scripts/lib/probe-strategies.ts']) digest.update(file).update('\0').update(readFileSync(join(root, file)));
+  for (const file of ['scripts/sim-bot.mjs', 'scripts/lib/sim-bot.mjs', 'scripts/lib/probe-strategies.ts', 'scripts/lib/temporary-combat-workaround.mjs']) digest.update(file).update('\0').update(readFileSync(join(root, file)));
   let revision = null, botRevision = null;
   try { revision = execFileSync('git', ['rev-parse', 'HEAD'], { cwd: join(root, 'game'), encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim(); } catch { /* staged source: content hash is authoritative */ }
   try { botRevision = execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim(); } catch { /* content hash identifies staged bot inputs */ }
@@ -38,12 +42,14 @@ if (values.help) {
   mkdirSync(out, { recursive: true });
   const rows = [];
   for (let i = 0; i < fights; i++) {
-    const start = performance.now(), fight = runFight(values['sparring-url'], seed, values.strategy, ticks);
-    const receipt = { ...fight, source, elapsedMs: performance.now() - start };
+    const baseline = values.workaround ? runFight(values['sparring-url'], seed, values.strategy, ticks) : null;
+    if (baseline) writeFileSync(join(out, `${i + 1}-${seed}-baseline.json`), JSON.stringify({ ...baseline, source }, null, 2));
+    const start = performance.now(), fight = runFight(values['sparring-url'], seed, values.strategy, ticks, values.workaround ?? null);
+    const receipt = { ...fight, source, baselineReceipt: baseline ? `${i + 1}-${seed}-baseline.json` : null, elapsedMs: performance.now() - start };
     writeFileSync(join(out, `${i + 1}-${seed}.json`), JSON.stringify(receipt, null, 2));
-    const row = { seed, outcome: fight.outcome, attacks: fight.attacks, heavyAttacks: fight.heavyAttacks, damageTaken: fight.damageTaken, damageDealt: fight.damageDealt };
+    const row = { seed, outcome: fight.outcome, ...(baseline ? { baselineOutcome: baseline.outcome, baselineDamageTaken: baseline.damageTaken, baselineDamageDealt: baseline.damageDealt } : {}), attacks: fight.attacks, heavyAttacks: fight.heavyAttacks, damageTaken: fight.damageTaken, damageDealt: fight.damageDealt };
     rows.push(row); console.log(JSON.stringify(row)); seed = nextSeed(seed);
   }
-  writeFileSync(join(out, 'summary.json'), JSON.stringify({ evidenceTier: 'direct-engine-no-browser', source, sparringUrl: values['sparring-url'], strategy: values.strategy, fights: rows }, null, 2));
+  writeFileSync(join(out, 'summary.json'), JSON.stringify({ evidenceTier: 'direct-engine-no-browser', source, sparringUrl: values['sparring-url'], strategy: values.strategy, temporaryWorkaround: values.workaround ?? null, acceptanceEligible: false, fights: rows }, null, 2));
   console.log('Receipts:', out);
 }
