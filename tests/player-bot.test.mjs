@@ -152,7 +152,7 @@ test('tactical player does not repeat quick attacks into a ready opponent at low
   assert.equal(chooseTacticalAttack(observation({ gap: 1.4, stamina: 34, enemyPhase: 'ready', light: true }), {}, 12, config).press, null);
 });
 
-test('limited: a charge is read from the charge sound (not on our own hold) or from the hold time, never a hidden fact', () => {
+test('limited: enemy charge onset and own completion are distinct, with visual hold fallback', () => {
   const config = { wallRadius: 99, thrustRange: 1.8, windup: { heavy_overhead: 40 } };
   const base = { hp: 100, enemyHp: 100, phase: 'ready', ownState: 'ready', enemyPhase: 'attack', stamina: 80, gap: 1.5, radius: 1, heavy: true, light: true, thrust: true };
   const swing = { tick: 100, type: 'AttackStarted', actor: 1, move: 'heavy_overhead', direction: 'overhead' };
@@ -160,13 +160,13 @@ test('limited: a charge is read from the charge sound (not on our own hold) or f
   const holding = { ...base, phase: 'attack', ownState: 'attack' };
   let state = { charging: true };
   chooseTacticalAttack({ ...holding, tick: 101, events: [swing] }, state, 11, config);
-  chooseTacticalAttack({ ...holding, tick: 110, events: [{ tick: 110, type: 'ChargeCue' }] }, state, 11, config);
+  chooseTacticalAttack({ ...holding, tick: 110, events: [{ tick: 110, type: 'ChargeCue', actor: 0, cue: 'charge' }] }, state, 11, config);
   assert.equal(state.chargedThreat, undefined);
   assert.equal(state.charged, true, 'the cue on our own hold is our own charge');
   // Not holding: the cue during a seen heavy windup is his charge; the roll names the sound.
   state = {};
   chooseTacticalAttack({ ...base, tick: 101, events: [swing] }, state, 11, config);
-  chooseTacticalAttack({ ...base, tick: 110, events: [{ tick: 110, type: 'ChargeCue' }] }, state, 11, config);
+  chooseTacticalAttack({ ...base, tick: 110, events: [{ tick: 110, type: 'ChargeCue', actor: 1, cue: 'charge_foe' }] }, state, 11, config);
   assert.match(chooseTacticalAttack({ ...base, tick: 121, events: [] }, state, 11, config).reason, /charged overhead \(sound\)/);
   // No sound at all: a heavy still winding up past its plain windup + margin reads as held.
   state = {};

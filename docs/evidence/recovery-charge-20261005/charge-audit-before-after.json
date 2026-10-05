@@ -1,0 +1,36 @@
+{
+  "source": "artifacts/combat/player-senses-20261005/audio-final-executioner/audio.json",
+  "sourceSha256": "c26288a8ad1a0f52c6a5d0cd0406be94234555d9819549cae99783755e43b924",
+  "clipSha256": "922290ba105dd8d7cecdf7707236ebee4c5f20da458a2620758d29e5c1ae41d9",
+  "before": [
+    {
+      "event": {
+        "tick": 1165,
+        "type": "Charging",
+        "actor": 1,
+        "move": "heavy_overhead"
+      },
+      "sourceId": 6,
+      "heardCue": "charge_foe",
+      "scheduledSeconds": 5.472,
+      "exposedAtStart": false,
+      "limitation": "decoded source scheduled on real game output; not human recognition or a listening policy"
+    }
+  ],
+  "after": [
+    {
+      "event": {
+        "tick": 1165,
+        "type": "Charging",
+        "actor": 1,
+        "move": "heavy_overhead"
+      },
+      "sourceId": 6,
+      "heardCue": "charge_foe",
+      "scheduledSeconds": 5.472,
+      "exposedAtStart": true,
+      "limitation": "decoded source scheduled on real game output; not human recognition or a listening policy"
+    }
+  ],
+  "scope": "Reuse verified unchanged pinned-game native audio recording; recomputed semantic proxy, not a fresh playback or genuine AI hearing"
+}

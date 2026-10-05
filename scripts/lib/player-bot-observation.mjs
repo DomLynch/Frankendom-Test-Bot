@@ -1,7 +1,9 @@
+import { MOVES } from '../../game/src/moves.ts';
 // Constrain what the bot sees; the browser still records exact state for later review.
 // What a player can perceive of each combat event: the fields the screen or a sound carries, nothing the sim alone knows (damage,
-// stamina costs, charge flags on a hit). An event type missing here is not perceived at all: Charging (the chamber has not yet told
-// anything a heavy windup doesn't), AttackActive, the opponent's StaminaExhausted, feint/guard/parry presses.
+// stamina costs, charge flags on a hit). Charging is represented only when the pinned cue map has a charging sound.
+// AttackActive, the opponent's StaminaExhausted, feint/guard/parry presses remain excluded.
+// ChargeCue is a simulated semantic sound signal, not decoded audio or genuine AI hearing; assumes cues are available.
 const PERCEIVED = {
   AttackStarted: ['move', 'direction'],   // the windup on screen (its side, heavy vs light vs thrust vs kick) + the whoosh
   AttackMissed: ['move'], Hit: ['target', 'move'], GuardBroken: ['target', 'move'], Parried: ['target', 'move'],
@@ -11,8 +13,11 @@ const PERCEIVED = {
 const SEEN_ACTIONS = new Set(['draw', 'roll', 'backstep']);
 export function perceivable(events) {
   return events.flatMap(e => {
-    // The 'charge' cue (audio/cues.ts) is one sound for EITHER fighter's charge: heard, but not whose it is.
-    if (e.type === 'Charged') return [{ tick: e.tick, type: 'ChargeCue' }];
+    // Pinned audio/cues.ts: enemy charge_foe rises from Charging; own charge plays once on Charged.
+    // A held light also emits Charging but has no charge cue. Enemy Charged adds no second sound.
+    if (e.type === 'Charging') return e.actor === 1 && MOVES[e.move]?.charges
+      ? [{ tick: e.tick, type: 'ChargeCue', actor: 1, cue: 'charge_foe' }] : [];
+    if (e.type === 'Charged') return e.actor === 0 ? [{ tick: e.tick, type: 'ChargeCue', actor: 0, cue: 'charge' }] : [];
     if (e.type === 'ActionStarted') return SEEN_ACTIONS.has(e.action) ? [{ tick: e.tick, type: e.type, actor: e.actor, action: e.action }] : [];
     const fields = PERCEIVED[e.type];
     if (!fields) return [];
@@ -55,6 +60,6 @@ export function limitedObservation(raw, memory, delayTicks) {
   }
   if (memory.swing != null && cutoff - memory.swing > SWING_CAP) memory.swing = null;
   const enemyPhase = memory.swing != null ? 'attack' : 'other';
-  return { ...raw, gap, gapUpper, gapObservedTick: seen.tick, radius: Math.round(seen.radius * 2) / 2, stamina: raw.meterStamina ?? raw.stamina,
+  return { ...raw, gap, gapUpper, gapObservedTick: seen.tick, radius: Math.round(seen.radius * 2) / 2, stamina: raw.meterStamina ?? raw.stamina, maxStamina: raw.meterMaxStamina ?? raw.maxStamina ?? 100,
     enemyPhase, enemyState: enemyPhase, events };
 }

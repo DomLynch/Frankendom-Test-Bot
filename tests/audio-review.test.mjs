@@ -10,11 +10,11 @@ test('native sprite source offset identifies enemy charge without confusing shor
  assert.equal(identifySpriteCue({bufferSeconds:1,offset:0},MANIFEST),null);
  assert.equal(identifySpriteCue({bufferSeconds:46,offset:offset+.1},MANIFEST),null);
 });
-test('actual pinned cue map has enemy-specific onset absent in current observation proxy',()=>{
+test('actual pinned cue map has enemy-specific onset represented by the semantic proxy',()=>{
  const event={tick:1165,type:'Charging',actor:1,move:'heavy_overhead'};
  assert.ok(cuesFor([event]).some(c=>c.name==='charge_foe'&&c.hold>0));
  const rows=chargeObservationAudit([event],[{id:3,tick:1165,bufferSeconds:46,offset:MANIFEST.charge_foe[0][0],scheduledSeconds:2}],perceivable([event]),MANIFEST);
- assert.equal(rows.length,1);assert.equal(rows[0].exposedAtStart,false);
+ assert.equal(rows.length,1);assert.equal(rows[0].exposedAtStart,true);
  assert.equal(chargeObservationAudit([event],[],[],MANIFEST).length,0,'do not infer playback from simulation alone');
  assert.ok(!cuesFor([{...event,move:'light_right'}]).some(c=>c.name==='charge_foe'));
  assert.ok(!cuesFor([{...event,actor:0}]).some(c=>c.name==='charge_foe'));

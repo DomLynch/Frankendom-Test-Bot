@@ -89,9 +89,9 @@ const hashBotTree = dir => { for (const entry of readdirSync(dir, { withFileType
 hashBotTree(join(botRoot, 'scripts'));
 for (const file of ['current-game.sha', 'package-lock.json']) digest.update(file).update('\0').update(readFileSync(join(botRoot, file)));
 const botContentSha256 = digest.digest('hex');
-const identity = probe ? `EXPERIMENT ${probe} (coverage only)` : strategy === 'tactical' ? `CURRENT tactical · ${player} persona${research ? ' RESEARCH' : ''}` : 'ARCHIVED diagnostic';
+const identity = probe ? `EXPERIMENT ${probe} (coverage only)` : strategy === 'tactical' ? `${research ? 'EXPERIMENTAL research' : 'CURRENT'} tactical · ${player} persona` : 'ARCHIVED diagnostic';
 console.log(JSON.stringify({ outputDirectory:dir, identity, botRevision, botContentSha256, revision: `${revision}${dirty ? '-dirty' : ''}`, strategy, difficulty: 'easy', observation, headed }));
-const receipt = { outputDirectory:dir, identity, botRevision, botContentSha256, revision: `${revision}${dirty ? '-dirty' : ''}`, opponents, difficulty: 'easy', strategy, reactionMs, stepMs, headed, video: recordVideo, clips: recordClips, observation, observationAccess: observation === 'debug' ? 'exact current debug gap/position/stamina/phase and combat events' : 'player view: stamina/health meters, perceivable events only (a swing seen starting and ending, its side; the charge sound without whose it is; contact sounds, whiffs, rolls), all opponent-side information delayed; charge inferred from the sound or the windup hold time; distance rounded to half-metres; current own phase', playerProfile: player, profileModel: 'synthetic seeded persona; not human skill validation', fights: [] };
+const receipt = { outputDirectory:dir, identity, botRevision, botContentSha256, revision: `${revision}${dirty ? '-dirty' : ''}`, opponents, difficulty: 'easy', strategy, research, reactionMs, stepMs, headed, video: recordVideo, clips: recordClips, observation, observationAccess: observation === 'debug' ? 'exact current debug gap/position/stamina/phase and combat events' : 'player view: stamina/health meters, perceivable events only (a swing seen starting and ending, its side; simulated semantic enemy-charge onset and own completed-charge signals (assumes audible cues; not AI hearing); contact sounds, whiffs, rolls), all opponent-side information delayed; charge inferred from the sound or the windup hold time; distance rounded to half-metres; current own phase and visible shaded stamina ceiling', playerProfile: player, profileModel: 'synthetic seeded persona; not human skill validation', fights: [] };
 try {
   for (const opponent of opponents) for (const seed of seeds) {
     const playerState = createPlayerProfile(player, seed, reactionOverride === null ? undefined : reactionMs);
@@ -175,12 +175,13 @@ try {
             dodge: document.querySelector('#dodge-button').getAttribute('aria-disabled') === 'false',
             skill: document.querySelector('#skill-button').getAttribute('aria-disabled') === 'false',
             meterStamina: Number(document.querySelector('#stamina').value),
+            meterMaxStamina: Number.parseFloat(document.querySelector('#stamina').style.getPropertyValue('--max')) || 100,
             posture: Number(document.querySelector('#posture').value),   // the player's own posture meter (on screen)
             events: window.__botEvents.slice(cursor), count: window.__botEvents.length };
         }, cursor);
         cursor = obs.count;
         fight.events.push(...obs.events);
-        if (fight.track.at(-1)?.tick !== obs.tick) fight.track.push({ tick: obs.tick, gap: obs.gap, radius: +obs.radius.toFixed(2), hp:obs.hp, enemyHp:obs.enemyHp, stamina:obs.meterStamina, posture:obs.posture, ownState:obs.ownState, enemyState:obs.enemyState });
+        if (fight.track.at(-1)?.tick !== obs.tick) fight.track.push({ tick: obs.tick, gap: obs.gap, radius: +obs.radius.toFixed(2), hp:obs.hp, enemyHp:obs.enemyHp, stamina:obs.meterStamina, maxStamina:obs.meterMaxStamina, posture:obs.posture, ownState:obs.ownState, enemyState:obs.enemyState });
         if (!fight.samples.length || obs.tick - fight.samples.at(-1).tick >= 60) {
           fight.samples.push({ tick: obs.tick, videoSeconds: (performance.now() - videoStart) / 1000, hp: obs.hp, enemyHp: obs.enemyHp, stamina: obs.stamina, gap: obs.gap, radius: obs.radius });
           if (recordVideo) {
@@ -210,7 +211,7 @@ try {
           if (!seenEligible.has(id)) { seenEligible.add(id); fight.eligibleOpportunities.push({ observedTick: obs.tick, ...opportunity }); }
         }
         const input = `${decision.keys.join(',')}/${decision.press ?? ''}`;
-        if (input !== lastInput || decision.press) fight.decisions.push({ tick: obs.tick, intent: intentFor(decision, seen, strategy, perceivedEvents.slice(-8)), reason: decision.reason, keys: decision.keys, press: decision.press, phase: seen.phase, gap: seen.gap, gapUpper: seen.gapUpper, gapObservedTick: seen.gapObservedTick, actualGap: obs.gap, stamina: seen.stamina, radius: seen.radius, profileAdjustments: decision.profileAdjustments ?? [], judgement: decision.judgement ?? null });
+        if (input !== lastInput || decision.press) fight.decisions.push({ tick: obs.tick, intent: intentFor(decision, seen, strategy, perceivedEvents.slice(-8)), reason: decision.reason, keys: decision.keys, press: decision.press, phase: seen.phase, gap: seen.gap, gapUpper: seen.gapUpper, gapObservedTick: seen.gapObservedTick, actualGap: obs.gap, stamina: seen.stamina, maxStamina: seen.maxStamina, radius: seen.radius, profileAdjustments: decision.profileAdjustments ?? [], judgement: decision.judgement ?? null });
         lastInput = input;
         await keys(decision.keys, obs.tick);
         if (decision.press) {

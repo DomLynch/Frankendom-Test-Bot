@@ -40,10 +40,10 @@ export function runProfileFight(search, seed, player, ticks = 5400) {
   let cursor = 0, previous = [], intent = idleIntent();
   for (let i = 0; i < ticks; i++) {
     const duel = match.practice.duel, [p,e] = duel.fighters;
-    track.push({ tick: duel.tick, gap: Math.hypot(e.body.x-p.body.x,e.body.z-p.body.z), radius: Math.hypot(p.body.x,p.body.z), hp:p.health,enemyHp:e.health,stamina:p.stamina,posture:p.posture,ownState:p.phase,enemyState:e.phase });
+    track.push({ tick: duel.tick, gap: Math.hypot(e.body.x-p.body.x,e.body.z-p.body.z), radius: Math.hypot(p.body.x,p.body.z), hp:p.health,enemyHp:e.health,stamina:p.stamina,maxStamina:p.maxStamina,posture:p.posture,ownState:p.phase,enemyState:e.phase });
     if (p.phase === 'sheathed') intent = { ...idleIntent(), action: 'light' };
     else if (duel.tick % 4 === 0) {
-      const raw = { ...track.at(-1), hp: p.health, enemyHp: e.health, stamina: p.stamina, meterStamina: p.stamina, posture: p.posture,
+      const raw = { ...track.at(-1), hp: p.health, enemyHp: e.health, stamina: p.stamina, meterStamina: p.stamina, meterMaxStamina: p.maxStamina, posture: p.posture,
         phase: p.phase, ownState: p.phase, ownAge: p.age, enemyPhase: e.phase, enemyState: e.phase,
         events: match.fightLog.slice(cursor), ...Object.fromEntries(['heavy','light','thrust','kick','dodge','skill'].map(a => [a,accepts(match.practice,a)])) };
       cursor = match.fightLog.length;
@@ -51,7 +51,7 @@ export function runProfileFight(search, seed, player, ticks = 5400) {
       const decision = chooseProfiledAttack(seen,memory,profile,policy);
       intent = keyboardIntent(decision,previous); previous = decision.keys;
       decisions.push({ tick: duel.tick, reason: decision.reason, keys: decision.keys, press: decision.press,
-        gap: seen.gap, gapUpper: seen.gapUpper, actualGap: raw.gap, stamina: seen.stamina,
+        gap: seen.gap, gapUpper: seen.gapUpper, actualGap: raw.gap, stamina: seen.stamina, maxStamina: seen.maxStamina,
         judgement: decision.judgement ?? null, profileAdjustments: decision.profileAdjustments ?? [] });
     }
     intents.push({ tick: duel.tick, ...intent });
@@ -63,7 +63,7 @@ export function runProfileFight(search, seed, player, ticks = 5400) {
   const events = match.fightLog, finish = match.practice.finish;
   const starts = events.filter(e => e.type === 'AttackStarted' && e.actor === 0), heavies = starts.filter(e => isHeavyMove(e.move)).length;
   const defences = defenceEarned(events,track,Object.fromEntries(Object.entries(fought.moves).map(([id,t]) => [id,t.damage])));
-  return { evidenceTier: 'direct-production-engine-no-rendering', observation: 'delayed semantic events and rounded gap; current own bars/action legality; fixed camera yaw0; four-tick cadence',
+  return { evidenceTier: 'direct-production-engine-no-rendering', observation: 'delayed semantic events and rounded gap; current own bars/visible stamina ceiling/action legality; simulated semantic charge sound, not AI hearing; fixed camera yaw0; four-tick cadence',
     temporaryWorkaround: null, seed, config, playerProfile: profileReceipt(profile),
     outcome: !finish ? 'timeout' : finish.draw ? 'draw' : finish.victim === 1 ? 'win' : 'loss',
     endTick: match.practice.duel.tick, finalHealth: match.practice.duel.fighters.map(f => f.health),

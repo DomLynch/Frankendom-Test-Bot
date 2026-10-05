@@ -1,0 +1,623 @@
+TAP version 13
+# Subtest: native sprite source offset identifies enemy charge without confusing short other banks
+ok 1 - native sprite source offset identifies enemy charge without confusing short other banks
+  ---
+  duration_ms: 2.748391
+  type: 'test'
+  ...
+# Subtest: actual pinned cue map has enemy-specific onset represented by the semantic proxy
+ok 2 - actual pinned cue map has enemy-specific onset represented by the semantic proxy
+  ---
+  duration_ms: 0.842449
+  type: 'test'
+  ...
+# Subtest: optical basis follows actual quaternion rather than orbital yaw
+ok 3 - optical basis follows actual quaternion rather than orbital yaw
+  ---
+  duration_ms: 2.745528
+  type: 'test'
+  ...
+# Subtest: vertical optical direction cannot masquerade as a usable movement axis
+ok 4 - vertical optical direction cannot masquerade as a usable movement axis
+  ---
+  duration_ms: 0.377739
+  type: 'test'
+  ...
+# Subtest: tracking takes short arc across angle wrap and obeys turn speed
+ok 5 - tracking takes short arc across angle wrap and obeys turn speed
+  ---
+  duration_ms: 0.606376
+  type: 'test'
+  ...
+# Subtest: coincident fighters hold stable yaw; target and eye remain finite
+ok 6 - coincident fighters hold stable yaw; target and eye remain finite
+  ---
+  duration_ms: 1.675271
+  type: 'test'
+  ...
+# Subtest: camera stays inside arena clamp and does not mutate fighter positions
+ok 7 - camera stays inside arena clamp and does not mutate fighter positions
+  ---
+  duration_ms: 0.266158
+  type: 'test'
+  ...
+# Subtest: invalid camera inputs cannot leak nonfinite poses
+ok 8 - invalid camera inputs cannot leak nonfinite poses
+  ---
+  duration_ms: 0.417213
+  type: 'test'
+  ...
+# Subtest: failed draw restores camera and uninstall restores original renderer methods
+ok 9 - failed draw restores camera and uninstall restores original renderer methods
+  ---
+  duration_ms: 2.579196
+  type: 'test'
+  ...
+# Subtest: Sparring URLs retain every embedded equals sign
+ok 10 - Sparring URLs retain every embedded equals sign
+  ---
+  duration_ms: 1.071499
+  type: 'test'
+  ...
+# Subtest: losing exchange is retained in a winning fight, without duplicate guard-break damage
+ok 11 - losing exchange is retained in a winning fight, without duplicate guard-break damage
+  ---
+  duration_ms: 4.744195
+  type: 'test'
+  ...
+# Subtest: dodge positioning and late re-entry stay separate from an earned punish
+ok 12 - dodge positioning and late re-entry stay separate from an earned punish
+  ---
+  duration_ms: 2.322083
+  type: 'test'
+  ...
+# Subtest: spacing keeps perceived, sampled start/contact and reach separate
+ok 13 - spacing keeps perceived, sampled start/contact and reach separate
+  ---
+  duration_ms: 0.745106
+  type: 'test'
+  ...
+# Subtest: spacing attribution cannot credit an unaccepted thrust input to a slash
+ok 14 - spacing attribution cannot credit an unaccepted thrust input to a slash
+  ---
+  duration_ms: 0.467177
+  type: 'test'
+  ...
+# Subtest: touch reports only accepted player starts and actual contact, not request counts
+ok 15 - touch reports only accepted player starts and actual contact, not request counts
+  ---
+  duration_ms: 2.132528
+  type: 'test'
+  ...
+# Subtest: contact and cancel gates reject keypress-only evidence and enemy defence attribution
+ok 16 - contact and cancel gates reject keypress-only evidence and enemy defence attribution
+  ---
+  duration_ms: 0.438482
+  type: 'test'
+  ...
+# Subtest: normal launcher refuses archived strategies and invalid observations before downloading
+ok 17 - normal launcher refuses archived strategies and invalid observations before downloading
+  ---
+  duration_ms: 13.721494
+  type: 'test'
+  ...
+# Subtest: preparation preserves a dirty game checkout and refuses an unexpected remote
+ok 18 - preparation preserves a dirty game checkout and refuses an unexpected remote
+  ---
+  duration_ms: 168.237609
+  type: 'test'
+  ...
+# Subtest: a delayed closing-range reading does not justify a swing at a retreating opponent
+ok 19 - a delayed closing-range reading does not justify a swing at a retreating opponent
+  ---
+  duration_ms: 2.27778
+  type: 'test'
+  ...
+# Subtest: spacing forecast never uses an undelayed exact gap or assumes a closing trend continues
+ok 20 - spacing forecast never uses an undelayed exact gap or assumes a closing trend continues
+  ---
+  duration_ms: 0.405911
+  type: 'test'
+  ...
+# Subtest: limited observations see a swing from its seen start to its seen end, delayed, and stop immediately on death
+ok 21 - limited observations see a swing from its seen start to its seen end, delayed, and stop immediately on death
+  ---
+  duration_ms: 1.767223
+  type: 'test'
+  ...
+# Subtest: only perceivable events and fields reach the bot
+ok 22 - only perceivable events and fields reach the bot
+  ---
+  duration_ms: 0.327285
+  type: 'test'
+  ...
+# Subtest: limited observation preserves a charge across own contact until the enemy actually resolves or staggers
+ok 23 - limited observation preserves a charge across own contact until the enemy actually resolves or staggers
+  ---
+  duration_ms: 2.290484
+  type: 'test'
+  ...
+# Subtest: parry probe waits, then holds the matching side before contact
+ok 24 - parry probe waits, then holds the matching side before contact
+  ---
+  duration_ms: 2.352822
+  type: 'test'
+  ...
+# Subtest: short step has no movement while a roll holds lateral movement
+ok 25 - short step has no movement while a roll holds lateral movement
+  ---
+  duration_ms: 0.223269
+  type: 'test'
+  ...
+# Subtest: kick requires a confirmed guard and legal close range, once per block
+ok 26 - kick requires a confirmed guard and legal close range, once per block
+  ---
+  duration_ms: 1.115401
+  type: 'test'
+  ...
+# Subtest: guard probe terminates after three own guard entries even when limited mode strips action events
+ok 27 - guard probe terminates after three own guard entries even when limited mode strips action events
+  ---
+  duration_ms: 0.948257
+  type: 'test'
+  ...
+# Subtest: accepted specials and feints are not labelled as movement or credited with later hits
+ok 28 - accepted specials and feints are not labelled as movement or credited with later hits
+  ---
+  duration_ms: 2.964869
+  type: 'test'
+  ...
+# Subtest: two rolls against one held overhead count one avoided threat (real probe537..608)
+ok 29 - two rolls against one held overhead count one avoided threat (real probe537..608)
+  ---
+  duration_ms: 3.132372
+  type: 'test'
+  ...
+# Subtest: a blocked slash is not credited with the later thrust hit (real veteran1258 sequence)
+ok 30 - a blocked slash is not credited with the later thrust hit (real veteran1258 sequence)
+  ---
+  duration_ms: 0.724938
+  type: 'test'
+  ...
+# Subtest: a stopped attack is interrupted, never credited with the next slash miss
+ok 31 - a stopped attack is interrupted, never credited with the next slash miss
+  ---
+  duration_ms: 0.322876
+  type: 'test'
+  ...
+# Subtest: a thrust input can legitimately become a posture-earned riposte
+ok 32 - a thrust input can legitimately become a posture-earned riposte
+  ---
+  duration_ms: 0.398647
+  type: 'test'
+  ...
+# Subtest: result matching stops at the next own attack even if both attacks use the same move
+ok 33 - result matching stops at the next own attack even if both attacks use the same move
+  ---
+  duration_ms: 0.241303
+  type: 'test'
+  ...
+# Subtest: the receipt separates attempted inputs from accepted attacks and results
+ok 34 - the receipt separates attempted inputs from accepted attacks and results
+  ---
+  duration_ms: 0.659836
+  type: 'test'
+  ...
+# Subtest: intent, clip moments and video-time mapping are grounded in observed events
+ok 35 - intent, clip moments and video-time mapping are grounded in observed events
+  ---
+  duration_ms: 0.892483
+  type: 'test'
+  ...
+# Subtest: a later hit is not attributed to guard after the bot changed input
+ok 36 - a later hit is not attributed to guard after the bot changed input
+  ---
+  duration_ms: 0.73057
+  type: 'test'
+  ...
+# Subtest: timeout aftermath cannot become an active-fight highlight or a negative clip
+ok 37 - timeout aftermath cannot become an active-fight highlight or a negative clip
+  ---
+  duration_ms: 0.846587
+  type: 'test'
+  ...
+# Subtest: damage sources count guard break once and keep arena damage separate
+ok 38 - damage sources count guard break once and keep arena damage separate
+  ---
+  duration_ms: 0.791574
+  type: 'test'
+  ...
+# Subtest: special damage counts for both attackers alongside defender chip, excluding terminal events
+ok 39 - special damage counts for both attackers alongside defender chip, excluding terminal events
+  ---
+  duration_ms: 0.38913
+  type: 'test'
+  ...
+# Subtest: each defence reports what it earned: damage avoided, window opened and used, distance
+ok 40 - each defence reports what it earned: damage avoided, window opened and used, distance
+  ---
+  duration_ms: 2.846827
+  type: 'test'
+  ...
+# Subtest: defence report connects a real tell, parry and useful hit without inventing avoided damage
+ok 41 - defence report connects a real tell, parry and useful hit without inventing avoided damage
+  ---
+  duration_ms: 0.831589
+  type: 'test'
+  ...
+# Subtest: a stopped enemy attack is reported as an interruption, not an unresolved defence
+ok 42 - a stopped enemy attack is reported as an interruption, not an unresolved defence
+  ---
+  duration_ms: 0.254387
+  type: 'test'
+  ...
+# Subtest: an enemy feint is recorded without pretending a defence landed
+ok 43 - an enemy feint is recorded without pretending a defence landed
+  ---
+  duration_ms: 0.35177
+  type: 'test'
+  ...
+# Subtest: a later hit after a new incoming attack is not credited to the previous defence
+ok 44 - a later hit after a new incoming attack is not credited to the previous defence
+  ---
+  duration_ms: 0.277259
+  type: 'test'
+  ...
+# Subtest: an accepted roll between swings is positioning, not avoidance of a later miss
+ok 45 - an accepted roll between swings is positioning, not avoidance of a later miss
+  ---
+  duration_ms: 0.326232
+  type: 'test'
+  ...
+# Subtest: a poised enemy that keeps its charged swing is not credited as interrupted by a stop-tagged hit
+ok 46 - a poised enemy that keeps its charged swing is not credited as interrupted by a stop-tagged hit
+  ---
+  duration_ms: 0.231884
+  type: 'test'
+  ...
+# Subtest: a missed counter is not credited with a later same-move hit
+ok 47 - a missed counter is not credited with a later same-move hit
+  ---
+  duration_ms: 0.342743
+  type: 'test'
+  ...
+# Subtest: tactical policy uses straight guard against an observed thrust after its delay
+ok 48 - tactical policy uses straight guard against an observed thrust after its delay
+  ---
+  duration_ms: 2.530665
+  type: 'test'
+  ...
+# Subtest: test player holds guard, then changes side only after its reaction delay
+ok 49 - test player holds guard, then changes side only after its reaction delay
+  ---
+  duration_ms: 0.412452
+  type: 'test'
+  ...
+# Subtest: a confirmed block triggers a legal heavy counter and releases guard
+ok 50 - a confirmed block triggers a legal heavy counter and releases guard
+  ---
+  duration_ms: 0.323197
+  type: 'test'
+  ...
+# Subtest: a heavy tell earns a delayed roll once, with movement held at the press
+ok 51 - a heavy tell earns a delayed roll once, with movement held at the press
+  ---
+  duration_ms: 0.356148
+  type: 'test'
+  ...
+# Subtest: a missed overhead may be punished once from reach
+ok 52 - a missed overhead may be punished once from reach
+  ---
+  duration_ms: 0.275777
+  type: 'test'
+  ...
+# Subtest: a distant miss is chased without throwing an out-of-range stab
+ok 53 - a distant miss is chased without throwing an out-of-range stab
+  ---
+  duration_ms: 0.224851
+  type: 'test'
+  ...
+# Subtest: near the wall the player advances or attacks instead of retreating
+ok 54 - near the wall the player advances or attacks instead of retreating
+  ---
+  duration_ms: 0.350768
+  type: 'test'
+  ...
+# Subtest: the player retreats when exhausted and sends no input after death
+ok 55 - the player retreats when exhausted and sends no input after death
+  ---
+  duration_ms: 0.193253
+  type: 'test'
+  ...
+# Subtest: charged policy holds Heavy until the charged event, then releases it
+ok 56 - charged policy holds Heavy until the charged event, then releases it
+  ---
+  duration_ms: 0.558295
+  type: 'test'
+  ...
+# Subtest: charged policy waits before rolling an overhead and parrying a readable tell
+ok 57 - charged policy waits before rolling an overhead and parrying a readable tell
+  ---
+  duration_ms: 0.538189
+  type: 'test'
+  ...
+# Subtest: charged policy moves inward rather than retreating at the wall
+ok 58 - charged policy moves inward rather than retreating at the wall
+  ---
+  duration_ms: 0.380073
+  type: 'test'
+  ...
+# Subtest: tactical player waits for a real missed swing then chooses a reachable quick punish
+ok 59 - tactical player waits for a real missed swing then chooses a reachable quick punish
+  ---
+  duration_ms: 0.251422
+  type: 'test'
+  ...
+# Subtest: tactical player answers a confirmed block with a quick counter before heavy is earned
+ok 60 - tactical player answers a confirmed block with a quick counter before heavy is earned
+  ---
+  duration_ms: 0.191229
+  type: 'test'
+  ...
+# Subtest: a critical Heavy finisher consumes the same attack budget as other heavies
+ok 61 - a critical Heavy finisher consumes the same attack budget as other heavies
+  ---
+  duration_ms: 0.431088
+  type: 'test'
+  ...
+# Subtest: tactical heavy counter requires four actual quick attack starts
+ok 62 - tactical heavy counter requires four actual quick attack starts
+  ---
+  duration_ms: 1.486788
+  type: 'test'
+  ...
+# Subtest: tactical policy guards a tell after its reaction delay
+ok 63 - tactical policy guards a tell after its reaction delay
+  ---
+  duration_ms: 0.2926
+  type: 'test'
+  ...
+# Subtest: tactical policy rolls sideways once after an observed charged overhead
+ok 64 - tactical policy rolls sideways once after an observed charged overhead
+  ---
+  duration_ms: 0.269234
+  type: 'test'
+  ...
+# Subtest: tactical player does not repeat quick attacks into a ready opponent at low stamina
+ok 65 - tactical player does not repeat quick attacks into a ready opponent at low stamina
+  ---
+  duration_ms: 0.21329
+  type: 'test'
+  ...
+# Subtest: limited: enemy charge onset and own completion are distinct, with visual hold fallback
+ok 66 - limited: enemy charge onset and own completion are distinct, with visual hold fallback
+  ---
+  duration_ms: 0.423294
+  type: 'test'
+  ...
+# Subtest: fight seeds start at the given seed and never step the AI's own lcg
+ok 67 - fight seeds start at the given seed and never step the AI's own lcg
+  ---
+  duration_ms: 0.223769
+  type: 'test'
+  ...
+# Subtest: worn down (posture high, stamina low), the tactical bot rolls out of a seen swing and walks out between swings
+ok 68 - worn down (posture high, stamina low), the tactical bot rolls out of a seen swing and walks out between swings
+  ---
+  duration_ms: 0.273312
+  type: 'test'
+  ...
+# Subtest: the tactical bot does not block a heavy its stamina cannot pay for
+ok 69 - the tactical bot does not block a heavy its stamina cannot pay for
+  ---
+  duration_ms: 0.234901
+  type: 'test'
+  ...
+# Subtest: holdWorn is the Shieldmaiden's alone: every other opponent keeps the 03234673 worn rule
+ok 70 - holdWorn is the Shieldmaiden's alone: every other opponent keeps the 03234673 worn rule
+  ---
+  duration_ms: 0.270948
+  type: 'test'
+  ...
+# Subtest: worn clears on recovery by default, and holds until the posture meter drains with holdWorn
+ok 71 - worn clears on recovery by default, and holds until the posture meter drains with holdWorn
+  ---
+  duration_ms: 0.230693
+  type: 'test'
+  ...
+# Subtest: a new light tell replaces stale charged-overhead memory (Pitborn decision823)
+ok 72 - a new light tell replaces stale charged-overhead memory (Pitborn decision823)
+  ---
+  duration_ms: 0.193351
+  type: 'test'
+  ...
+# Subtest: a resolved charge cannot evade a later swing; own non-stopping hits do not erase an active charge
+ok 73 - a resolved charge cannot evade a later swing; own non-stopping hits do not erase an active charge
+  ---
+  duration_ms: 0.311555
+  type: 'test'
+  ...
+# Subtest: advanced preserves the existing tactical choices and memory exactly
+ok 74 - advanced preserves the existing tactical choices and memory exactly
+  ---
+  duration_ms: 5.225696
+  type: 'test'
+  ...
+# Subtest: personas reproduce seeded errors without mutating observations or consuming game RNG
+ok 75 - personas reproduce seeded errors without mutating observations or consuming game RNG
+  ---
+  duration_ms: 0.695323
+  type: 'test'
+  ...
+# Subtest: beginner directional mistakes persist for the same observed threat and are uniquely credited
+ok 76 - beginner directional mistakes persist for the same observed threat and are uniquely credited
+  ---
+  duration_ms: 0.521938
+  type: 'test'
+  ...
+# Subtest: profiles refuse invalid settings and never send inputs after death
+ok 77 - profiles refuse invalid settings and never send inputs after death
+  ---
+  duration_ms: 0.438853
+  type: 'test'
+  ...
+# Subtest: keyboard edges, directional guard and held heavy match input semantics
+ok 78 - keyboard edges, directional guard and held heavy match input semantics
+  ---
+  duration_ms: 3.903879
+  type: 'test'
+  ...
+# Subtest: production engine pilot replays deterministically and keeps actual starts
+ok 79 - production engine pilot replays deterministically and keeps actual starts
+  ---
+  duration_ms: 158.134829
+  type: 'test'
+  ...
+# Subtest: unsupported loadout/level is rejected rather than silently borrowing longsword ranges
+ok 80 - unsupported loadout/level is rejected rather than silently borrowing longsword ranges
+  ---
+  duration_ms: 39.253991
+  type: 'test'
+  ...
+# Subtest: pilot refuses duplicate cases and never overwrites retained results
+ok 81 - pilot refuses duplicate cases and never overwrites retained results
+  ---
+  duration_ms: 840.636491
+  type: 'test'
+  ...
+# Subtest: wounded 44 ceiling permits an actual legal thrust, while below ceiling still recovers
+ok 82 - wounded 44 ceiling permits an actual legal thrust, while below ceiling still recovers
+  ---
+  duration_ms: 16.044049
+  type: 'test'
+  ...
+# Subtest: wounded ceiling can clear held worn state after posture recovers
+ok 83 - wounded ceiling can clear held worn state after posture recovers
+  ---
+  duration_ms: 0.337362
+  type: 'test'
+  ...
+# Subtest: limited ceiling comes from current visible shaded bar, not opponent hidden state
+ok 84 - limited ceiling comes from current visible shaded bar, not opponent hidden state
+  ---
+  duration_ms: 0.539061
+  type: 'test'
+  ...
+# Subtest: charge semantics match actual enemy onset and own completion, not light holds or enemy completion
+ok 85 - charge semantics match actual enemy onset and own completion, not light holds or enemy completion
+  ---
+  duration_ms: 1.812567
+  type: 'test'
+  ...
+# Subtest: enemy cue retains reaction delay and survives simultaneous own charging without completing our charge
+ok 86 - enemy cue retains reaction delay and survives simultaneous own charging without completing our charge
+  ---
+  duration_ms: 0.796824
+  type: 'test'
+  ...
+# Subtest: visual evidence fails closed on missing/non-monotonic frames, not interpolated wall times
+ok 87 - visual evidence fails closed on missing/non-monotonic frames, not interpolated wall times
+  ---
+  duration_ms: 1.304516
+  type: 'test'
+  ...
+# Subtest: exporter independently rejects a forged continuity flag before ffmpeg processing
+ok 88 - exporter independently rejects a forged continuity flag before ffmpeg processing
+  ---
+  duration_ms: 323.443206
+  type: 'test'
+  ...
+# Subtest: engine bot: all ten playable opponents use actual body/profile scaling at low, threshold and boss levels
+ok 89 - engine bot: all ten playable opponents use actual body/profile scaling at low, threshold and boss levels
+  ---
+  duration_ms: 26.881896
+  type: 'test'
+  ...
+# Subtest: engine bot: independent specials do not silently change difficulty, weapon or legacy skill
+ok 90 - engine bot: independent specials do not silently change difficulty, weapon or legacy skill
+  ---
+  duration_ms: 0.862657
+  type: 'test'
+  ...
+# Subtest: engine bot: refuse held/unknown opponents, invalid levels and conflicting selections
+ok 91 - engine bot: refuse held/unknown opponents, invalid levels and conflicting selections
+  ---
+  duration_ms: 0.860663
+  type: 'test'
+  ...
+# Subtest: engine bot: identical seeds reproduce full intents/events; dummy cannot attack; timeouts retained
+ok 92 - engine bot: identical seeds reproduce full intents/events; dummy cannot attack; timeouts retained
+  ---
+  duration_ms: 73.776311
+  type: 'test'
+  ...
+# Subtest: engine bot: special damage and defender chip are counted once, terminal events excluded
+ok 93 - engine bot: special damage and defender chip are counted once, terminal events excluded
+  ---
+  duration_ms: 0.242535
+  type: 'test'
+  ...
+# Subtest: engine bot: knife probe closes the range gap instead of idling outside its shorter reach
+ok 94 - engine bot: knife probe closes the range gap instead of idling outside its shorter reach
+  ---
+  duration_ms: 0.39974
+  type: 'test'
+  ...
+# Subtest: engine bot: level-matched equipped special is actually cast and lands under the skill probe
+ok 95 - engine bot: level-matched equipped special is actually cast and lands under the skill probe
+  ---
+  duration_ms: 35.193589
+  type: 'test'
+  ...
+# Subtest: engine bot: range-thrust probe makes space when already inside its minimum range
+ok 96 - engine bot: range-thrust probe makes space when already inside its minimum range
+  ---
+  duration_ms: 0.559078
+  type: 'test'
+  ...
+# Subtest: battery: real blocked heavy chips defender 0, never attacker
+ok 97 - battery: real blocked heavy chips defender 0, never attacker
+  ---
+  duration_ms: 8.801591
+  type: 'test'
+  ...
+# Subtest: battery: real blocked heavy chips defender 1, never attacker
+ok 98 - battery: real blocked heavy chips defender 1, never attacker
+  ---
+  duration_ms: 1.170665
+  type: 'test'
+  ...
+# Subtest: battery: clean block and non-damaging guard break are not damage; terminal and wall events are not opponent contacts
+ok 99 - battery: clean block and non-damaging guard break are not damage; terminal and wall events are not opponent contacts
+  ---
+  duration_ms: 0.528931
+  type: 'test'
+  ...
+# Subtest: temporary scythe workaround steps out of dead band rather than feeding empty cuts
+ok 100 - temporary scythe workaround steps out of dead band rather than feeding empty cuts
+  ---
+  duration_ms: 5.355611
+  type: 'test'
+  ...
+# Subtest: temporary reaction workaround changes only affected cuts to an authored faster thrust
+ok 101 - temporary reaction workaround changes only affected cuts to an authored faster thrust
+  ---
+  duration_ms: 3.00346
+  type: 'test'
+  ...
+# Subtest: workaround is opt-in, labelled and cannot qualify as acceptance; malformed mode rejected
+ok 102 - workaround is opt-in, labelled and cannot qualify as acceptance; malformed mode rejected
+  ---
+  duration_ms: 104.829657
+  type: 'test'
+  ...
+1..102
+# tests 102
+# suites 0
+# pass 102
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1743.347863
+

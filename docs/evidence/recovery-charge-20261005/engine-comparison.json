@@ -1,0 +1,2236 @@
+[
+  {
+    "variant": "baseline",
+    "group": "matched",
+    "settings": "L6 longsword; no equipped specials; workarounds OFF",
+    "seeds": [
+      2026100507,
+      779510380,
+      3718897322
+    ],
+    "source": {
+      "engineRevision": "4056467af826b03166a575002f7a4f4b04f9dfe7",
+      "controllerSha256": "5117343b0b4154ec8334f30e7079ee7ab85ac218f482c9cc84f43cb8ea144815"
+    },
+    "rows": [
+      {
+        "opponent": "goblin",
+        "seed": 2026100507,
+        "playerProfile": {
+          "name": "advanced",
+          "seed": 2026100507,
+          "reactionMs": 180,
+          "settings": {
+            "reactionMs": 180,
+            "jitterMs": 0,
+            "gapBias": 0,
+            "staminaBias": 0,
+            "wrongGuard": 0,
+            "missedCounter": 0,
+            "slashPreference": 0
+          },
+          "interventions": {},
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "loss",
+        "finalHealth": [
+          0,
+          33
+        ],
+        "damageTaken": 182,
+        "damageDealt": 87,
+        "attackMix": {
+          "attacks": 9,
+          "heavies": 1,
+          "heavyPercent": 11.11111111111111,
+          "passed": true
+        },
+        "emptySwings": 2,
+        "blocks": 0,
+        "parries": 3,
+        "artifact": "goblin-advanced-2026100507.json"
+      },
+      {
+        "opponent": "goblin",
+        "seed": 779510380,
+        "playerProfile": {
+          "name": "advanced",
+          "seed": 779510380,
+          "reactionMs": 180,
+          "settings": {
+            "reactionMs": 180,
+            "jitterMs": 0,
+            "gapBias": 0,
+            "staminaBias": 0,
+            "wrongGuard": 0,
+            "missedCounter": 0,
+            "slashPreference": 0
+          },
+          "interventions": {},
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          124,
+          0
+        ],
+        "damageTaken": 26,
+        "damageDealt": 128,
+        "attackMix": {
+          "attacks": 14,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        },
+        "emptySwings": 4,
+        "blocks": 0,
+        "parries": 0,
+        "artifact": "goblin-advanced-779510380.json"
+      },
+      {
+        "opponent": "goblin",
+        "seed": 3718897322,
+        "playerProfile": {
+          "name": "advanced",
+          "seed": 3718897322,
+          "reactionMs": 180,
+          "settings": {
+            "reactionMs": 180,
+            "jitterMs": 0,
+            "gapBias": 0,
+            "staminaBias": 0,
+            "wrongGuard": 0,
+            "missedCounter": 0,
+            "slashPreference": 0
+          },
+          "interventions": {},
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          130,
+          0
+        ],
+        "damageTaken": 20,
+        "damageDealt": 134,
+        "attackMix": {
+          "attacks": 13,
+          "heavies": 1,
+          "heavyPercent": 7.6923076923076925,
+          "passed": true
+        },
+        "emptySwings": 5,
+        "blocks": 0,
+        "parries": 1,
+        "artifact": "goblin-advanced-3718897322.json"
+      },
+      {
+        "opponent": "executioner",
+        "seed": 2026100507,
+        "playerProfile": {
+          "name": "advanced",
+          "seed": 2026100507,
+          "reactionMs": 180,
+          "settings": {
+            "reactionMs": 180,
+            "jitterMs": 0,
+            "gapBias": 0,
+            "staminaBias": 0,
+            "wrongGuard": 0,
+            "missedCounter": 0,
+            "slashPreference": 0
+          },
+          "interventions": {},
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          80,
+          0
+        ],
+        "damageTaken": 70,
+        "damageDealt": 166,
+        "attackMix": {
+          "attacks": 14,
+          "heavies": 1,
+          "heavyPercent": 7.142857142857143,
+          "passed": true
+        },
+        "emptySwings": 0,
+        "blocks": 2,
+        "parries": 1,
+        "artifact": "executioner-advanced-2026100507.json"
+      },
+      {
+        "opponent": "executioner",
+        "seed": 779510380,
+        "playerProfile": {
+          "name": "advanced",
+          "seed": 779510380,
+          "reactionMs": 180,
+          "settings": {
+            "reactionMs": 180,
+            "jitterMs": 0,
+            "gapBias": 0,
+            "staminaBias": 0,
+            "wrongGuard": 0,
+            "missedCounter": 0,
+            "slashPreference": 0
+          },
+          "interventions": {},
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          115,
+          0
+        ],
+        "damageTaken": 35,
+        "damageDealt": 170,
+        "attackMix": {
+          "attacks": 15,
+          "heavies": 1,
+          "heavyPercent": 6.666666666666667,
+          "passed": true
+        },
+        "emptySwings": 1,
+        "blocks": 1,
+        "parries": 1,
+        "artifact": "executioner-advanced-779510380.json"
+      },
+      {
+        "opponent": "executioner",
+        "seed": 3718897322,
+        "playerProfile": {
+          "name": "advanced",
+          "seed": 3718897322,
+          "reactionMs": 180,
+          "settings": {
+            "reactionMs": 180,
+            "jitterMs": 0,
+            "gapBias": 0,
+            "staminaBias": 0,
+            "wrongGuard": 0,
+            "missedCounter": 0,
+            "slashPreference": 0
+          },
+          "interventions": {},
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          7,
+          0
+        ],
+        "damageTaken": 143,
+        "damageDealt": 172,
+        "attackMix": {
+          "attacks": 11,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        },
+        "emptySwings": 0,
+        "blocks": 2,
+        "parries": 0,
+        "artifact": "executioner-advanced-3718897322.json"
+      }
+    ]
+  },
+  {
+    "variant": "recovery",
+    "group": "matched",
+    "settings": "L6 longsword; no equipped specials; workarounds OFF",
+    "seeds": [
+      2026100507,
+      779510380,
+      3718897322
+    ],
+    "source": {
+      "engineRevision": "4056467af826b03166a575002f7a4f4b04f9dfe7",
+      "controllerSha256": "933778127b768f84d1cd70203cf2b06ce87cfd68067eb1b786eedb53217968b3"
+    },
+    "rows": [
+      {
+        "opponent": "goblin",
+        "seed": 2026100507,
+        "playerProfile": {
+          "name": "advanced",
+          "seed": 2026100507,
+          "reactionMs": 180,
+          "settings": {
+            "reactionMs": 180,
+            "jitterMs": 0,
+            "gapBias": 0,
+            "staminaBias": 0,
+            "wrongGuard": 0,
+            "missedCounter": 0,
+            "slashPreference": 0
+          },
+          "interventions": {},
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "loss",
+        "finalHealth": [
+          0,
+          33
+        ],
+        "damageTaken": 151,
+        "damageDealt": 87,
+        "attackMix": {
+          "attacks": 11,
+          "heavies": 1,
+          "heavyPercent": 9.090909090909092,
+          "passed": true
+        },
+        "emptySwings": 3,
+        "blocks": 0,
+        "parries": 3,
+        "artifact": "goblin-advanced-2026100507.json"
+      },
+      {
+        "opponent": "goblin",
+        "seed": 779510380,
+        "playerProfile": {
+          "name": "advanced",
+          "seed": 779510380,
+          "reactionMs": 180,
+          "settings": {
+            "reactionMs": 180,
+            "jitterMs": 0,
+            "gapBias": 0,
+            "staminaBias": 0,
+            "wrongGuard": 0,
+            "missedCounter": 0,
+            "slashPreference": 0
+          },
+          "interventions": {},
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          124,
+          0
+        ],
+        "damageTaken": 26,
+        "damageDealt": 128,
+        "attackMix": {
+          "attacks": 14,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        },
+        "emptySwings": 4,
+        "blocks": 0,
+        "parries": 0,
+        "artifact": "goblin-advanced-779510380.json"
+      },
+      {
+        "opponent": "goblin",
+        "seed": 3718897322,
+        "playerProfile": {
+          "name": "advanced",
+          "seed": 3718897322,
+          "reactionMs": 180,
+          "settings": {
+            "reactionMs": 180,
+            "jitterMs": 0,
+            "gapBias": 0,
+            "staminaBias": 0,
+            "wrongGuard": 0,
+            "missedCounter": 0,
+            "slashPreference": 0
+          },
+          "interventions": {},
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          130,
+          0
+        ],
+        "damageTaken": 20,
+        "damageDealt": 134,
+        "attackMix": {
+          "attacks": 13,
+          "heavies": 1,
+          "heavyPercent": 7.6923076923076925,
+          "passed": true
+        },
+        "emptySwings": 5,
+        "blocks": 0,
+        "parries": 1,
+        "artifact": "goblin-advanced-3718897322.json"
+      },
+      {
+        "opponent": "executioner",
+        "seed": 2026100507,
+        "playerProfile": {
+          "name": "advanced",
+          "seed": 2026100507,
+          "reactionMs": 180,
+          "settings": {
+            "reactionMs": 180,
+            "jitterMs": 0,
+            "gapBias": 0,
+            "staminaBias": 0,
+            "wrongGuard": 0,
+            "missedCounter": 0,
+            "slashPreference": 0
+          },
+          "interventions": {},
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          80,
+          0
+        ],
+        "damageTaken": 70,
+        "damageDealt": 166,
+        "attackMix": {
+          "attacks": 14,
+          "heavies": 1,
+          "heavyPercent": 7.142857142857143,
+          "passed": true
+        },
+        "emptySwings": 0,
+        "blocks": 2,
+        "parries": 1,
+        "artifact": "executioner-advanced-2026100507.json"
+      },
+      {
+        "opponent": "executioner",
+        "seed": 779510380,
+        "playerProfile": {
+          "name": "advanced",
+          "seed": 779510380,
+          "reactionMs": 180,
+          "settings": {
+            "reactionMs": 180,
+            "jitterMs": 0,
+            "gapBias": 0,
+            "staminaBias": 0,
+            "wrongGuard": 0,
+            "missedCounter": 0,
+            "slashPreference": 0
+          },
+          "interventions": {},
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          115,
+          0
+        ],
+        "damageTaken": 35,
+        "damageDealt": 170,
+        "attackMix": {
+          "attacks": 15,
+          "heavies": 1,
+          "heavyPercent": 6.666666666666667,
+          "passed": true
+        },
+        "emptySwings": 1,
+        "blocks": 1,
+        "parries": 1,
+        "artifact": "executioner-advanced-779510380.json"
+      },
+      {
+        "opponent": "executioner",
+        "seed": 3718897322,
+        "playerProfile": {
+          "name": "advanced",
+          "seed": 3718897322,
+          "reactionMs": 180,
+          "settings": {
+            "reactionMs": 180,
+            "jitterMs": 0,
+            "gapBias": 0,
+            "staminaBias": 0,
+            "wrongGuard": 0,
+            "missedCounter": 0,
+            "slashPreference": 0
+          },
+          "interventions": {},
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          7,
+          0
+        ],
+        "damageTaken": 143,
+        "damageDealt": 172,
+        "attackMix": {
+          "attacks": 11,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        },
+        "emptySwings": 0,
+        "blocks": 2,
+        "parries": 0,
+        "artifact": "executioner-advanced-3718897322.json"
+      }
+    ]
+  },
+  {
+    "variant": "charge",
+    "group": "matched",
+    "settings": "L6 longsword; no equipped specials; workarounds OFF",
+    "seeds": [
+      2026100507,
+      779510380,
+      3718897322
+    ],
+    "source": {
+      "engineRevision": "4056467af826b03166a575002f7a4f4b04f9dfe7",
+      "controllerSha256": "c1de1768b2bc985347d69f85abef4447136c01dac87cb915674f65072076e5b9"
+    },
+    "rows": [
+      {
+        "opponent": "goblin",
+        "seed": 2026100507,
+        "playerProfile": {
+          "name": "advanced",
+          "seed": 2026100507,
+          "reactionMs": 180,
+          "settings": {
+            "reactionMs": 180,
+            "jitterMs": 0,
+            "gapBias": 0,
+            "staminaBias": 0,
+            "wrongGuard": 0,
+            "missedCounter": 0,
+            "slashPreference": 0
+          },
+          "interventions": {},
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "loss",
+        "finalHealth": [
+          0,
+          22
+        ],
+        "damageTaken": 157,
+        "damageDealt": 98,
+        "attackMix": {
+          "attacks": 10,
+          "heavies": 1,
+          "heavyPercent": 10,
+          "passed": true
+        },
+        "emptySwings": 2,
+        "blocks": 0,
+        "parries": 3,
+        "artifact": "goblin-advanced-2026100507.json"
+      },
+      {
+        "opponent": "goblin",
+        "seed": 779510380,
+        "playerProfile": {
+          "name": "advanced",
+          "seed": 779510380,
+          "reactionMs": 180,
+          "settings": {
+            "reactionMs": 180,
+            "jitterMs": 0,
+            "gapBias": 0,
+            "staminaBias": 0,
+            "wrongGuard": 0,
+            "missedCounter": 0,
+            "slashPreference": 0
+          },
+          "interventions": {},
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          115,
+          0
+        ],
+        "damageTaken": 35,
+        "damageDealt": 133,
+        "attackMix": {
+          "attacks": 16,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        },
+        "emptySwings": 6,
+        "blocks": 0,
+        "parries": 0,
+        "artifact": "goblin-advanced-779510380.json"
+      },
+      {
+        "opponent": "goblin",
+        "seed": 3718897322,
+        "playerProfile": {
+          "name": "advanced",
+          "seed": 3718897322,
+          "reactionMs": 180,
+          "settings": {
+            "reactionMs": 180,
+            "jitterMs": 0,
+            "gapBias": 0,
+            "staminaBias": 0,
+            "wrongGuard": 0,
+            "missedCounter": 0,
+            "slashPreference": 0
+          },
+          "interventions": {},
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          133,
+          0
+        ],
+        "damageTaken": 17,
+        "damageDealt": 133,
+        "attackMix": {
+          "attacks": 11,
+          "heavies": 1,
+          "heavyPercent": 9.090909090909092,
+          "passed": true
+        },
+        "emptySwings": 3,
+        "blocks": 0,
+        "parries": 1,
+        "artifact": "goblin-advanced-3718897322.json"
+      },
+      {
+        "opponent": "executioner",
+        "seed": 2026100507,
+        "playerProfile": {
+          "name": "advanced",
+          "seed": 2026100507,
+          "reactionMs": 180,
+          "settings": {
+            "reactionMs": 180,
+            "jitterMs": 0,
+            "gapBias": 0,
+            "staminaBias": 0,
+            "wrongGuard": 0,
+            "missedCounter": 0,
+            "slashPreference": 0
+          },
+          "interventions": {},
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          91,
+          0
+        ],
+        "damageTaken": 59,
+        "damageDealt": 166,
+        "attackMix": {
+          "attacks": 13,
+          "heavies": 1,
+          "heavyPercent": 7.6923076923076925,
+          "passed": true
+        },
+        "emptySwings": 0,
+        "blocks": 1,
+        "parries": 2,
+        "artifact": "executioner-advanced-2026100507.json"
+      },
+      {
+        "opponent": "executioner",
+        "seed": 779510380,
+        "playerProfile": {
+          "name": "advanced",
+          "seed": 779510380,
+          "reactionMs": 180,
+          "settings": {
+            "reactionMs": 180,
+            "jitterMs": 0,
+            "gapBias": 0,
+            "staminaBias": 0,
+            "wrongGuard": 0,
+            "missedCounter": 0,
+            "slashPreference": 0
+          },
+          "interventions": {},
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          83,
+          0
+        ],
+        "damageTaken": 67,
+        "damageDealt": 170,
+        "attackMix": {
+          "attacks": 13,
+          "heavies": 1,
+          "heavyPercent": 7.6923076923076925,
+          "passed": true
+        },
+        "emptySwings": 0,
+        "blocks": 0,
+        "parries": 2,
+        "artifact": "executioner-advanced-779510380.json"
+      },
+      {
+        "opponent": "executioner",
+        "seed": 3718897322,
+        "playerProfile": {
+          "name": "advanced",
+          "seed": 3718897322,
+          "reactionMs": 180,
+          "settings": {
+            "reactionMs": 180,
+            "jitterMs": 0,
+            "gapBias": 0,
+            "staminaBias": 0,
+            "wrongGuard": 0,
+            "missedCounter": 0,
+            "slashPreference": 0
+          },
+          "interventions": {},
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          43,
+          0
+        ],
+        "damageTaken": 107,
+        "damageDealt": 175,
+        "attackMix": {
+          "attacks": 14,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        },
+        "emptySwings": 2,
+        "blocks": 3,
+        "parries": 1,
+        "artifact": "executioner-advanced-3718897322.json"
+      }
+    ]
+  },
+  {
+    "variant": "combined",
+    "group": "matched",
+    "settings": "L6 longsword; no equipped specials; workarounds OFF",
+    "seeds": [
+      2026100507,
+      779510380,
+      3718897322
+    ],
+    "source": {
+      "engineRevision": "4056467af826b03166a575002f7a4f4b04f9dfe7",
+      "controllerSha256": "9bdee9a6557de0069aed0c74901ab58068f273ac86511b1b919d6c4acbeb952b"
+    },
+    "rows": [
+      {
+        "opponent": "goblin",
+        "seed": 2026100507,
+        "playerProfile": {
+          "name": "advanced",
+          "seed": 2026100507,
+          "reactionMs": 180,
+          "settings": {
+            "reactionMs": 180,
+            "jitterMs": 0,
+            "gapBias": 0,
+            "staminaBias": 0,
+            "wrongGuard": 0,
+            "missedCounter": 0,
+            "slashPreference": 0
+          },
+          "interventions": {},
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "loss",
+        "finalHealth": [
+          0,
+          52
+        ],
+        "damageTaken": 160,
+        "damageDealt": 68,
+        "attackMix": {
+          "attacks": 11,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        },
+        "emptySwings": 3,
+        "blocks": 0,
+        "parries": 2,
+        "artifact": "goblin-advanced-2026100507.json"
+      },
+      {
+        "opponent": "goblin",
+        "seed": 779510380,
+        "playerProfile": {
+          "name": "advanced",
+          "seed": 779510380,
+          "reactionMs": 180,
+          "settings": {
+            "reactionMs": 180,
+            "jitterMs": 0,
+            "gapBias": 0,
+            "staminaBias": 0,
+            "wrongGuard": 0,
+            "missedCounter": 0,
+            "slashPreference": 0
+          },
+          "interventions": {},
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          115,
+          0
+        ],
+        "damageTaken": 35,
+        "damageDealt": 133,
+        "attackMix": {
+          "attacks": 16,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        },
+        "emptySwings": 6,
+        "blocks": 0,
+        "parries": 0,
+        "artifact": "goblin-advanced-779510380.json"
+      },
+      {
+        "opponent": "goblin",
+        "seed": 3718897322,
+        "playerProfile": {
+          "name": "advanced",
+          "seed": 3718897322,
+          "reactionMs": 180,
+          "settings": {
+            "reactionMs": 180,
+            "jitterMs": 0,
+            "gapBias": 0,
+            "staminaBias": 0,
+            "wrongGuard": 0,
+            "missedCounter": 0,
+            "slashPreference": 0
+          },
+          "interventions": {},
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          133,
+          0
+        ],
+        "damageTaken": 17,
+        "damageDealt": 133,
+        "attackMix": {
+          "attacks": 11,
+          "heavies": 1,
+          "heavyPercent": 9.090909090909092,
+          "passed": true
+        },
+        "emptySwings": 3,
+        "blocks": 0,
+        "parries": 1,
+        "artifact": "goblin-advanced-3718897322.json"
+      },
+      {
+        "opponent": "executioner",
+        "seed": 2026100507,
+        "playerProfile": {
+          "name": "advanced",
+          "seed": 2026100507,
+          "reactionMs": 180,
+          "settings": {
+            "reactionMs": 180,
+            "jitterMs": 0,
+            "gapBias": 0,
+            "staminaBias": 0,
+            "wrongGuard": 0,
+            "missedCounter": 0,
+            "slashPreference": 0
+          },
+          "interventions": {},
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          91,
+          0
+        ],
+        "damageTaken": 59,
+        "damageDealt": 166,
+        "attackMix": {
+          "attacks": 13,
+          "heavies": 1,
+          "heavyPercent": 7.6923076923076925,
+          "passed": true
+        },
+        "emptySwings": 0,
+        "blocks": 1,
+        "parries": 2,
+        "artifact": "executioner-advanced-2026100507.json"
+      },
+      {
+        "opponent": "executioner",
+        "seed": 779510380,
+        "playerProfile": {
+          "name": "advanced",
+          "seed": 779510380,
+          "reactionMs": 180,
+          "settings": {
+            "reactionMs": 180,
+            "jitterMs": 0,
+            "gapBias": 0,
+            "staminaBias": 0,
+            "wrongGuard": 0,
+            "missedCounter": 0,
+            "slashPreference": 0
+          },
+          "interventions": {},
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          83,
+          0
+        ],
+        "damageTaken": 67,
+        "damageDealt": 170,
+        "attackMix": {
+          "attacks": 13,
+          "heavies": 1,
+          "heavyPercent": 7.6923076923076925,
+          "passed": true
+        },
+        "emptySwings": 0,
+        "blocks": 0,
+        "parries": 2,
+        "artifact": "executioner-advanced-779510380.json"
+      },
+      {
+        "opponent": "executioner",
+        "seed": 3718897322,
+        "playerProfile": {
+          "name": "advanced",
+          "seed": 3718897322,
+          "reactionMs": 180,
+          "settings": {
+            "reactionMs": 180,
+            "jitterMs": 0,
+            "gapBias": 0,
+            "staminaBias": 0,
+            "wrongGuard": 0,
+            "missedCounter": 0,
+            "slashPreference": 0
+          },
+          "interventions": {},
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          43,
+          0
+        ],
+        "damageTaken": 107,
+        "damageDealt": 175,
+        "attackMix": {
+          "attacks": 14,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        },
+        "emptySwings": 2,
+        "blocks": 3,
+        "parries": 1,
+        "artifact": "executioner-advanced-3718897322.json"
+      }
+    ]
+  },
+  {
+    "variant": "combined",
+    "group": "matched-other-profiles",
+    "settings": "L6 longsword; no equipped specials; workarounds OFF",
+    "seeds": [
+      2026100507,
+      779510380,
+      3718897322
+    ],
+    "source": {
+      "engineRevision": "4056467af826b03166a575002f7a4f4b04f9dfe7",
+      "controllerSha256": "9bdee9a6557de0069aed0c74901ab58068f273ac86511b1b919d6c4acbeb952b"
+    },
+    "rows": [
+      {
+        "opponent": "goblin",
+        "seed": 2026100507,
+        "playerProfile": {
+          "name": "beginner",
+          "seed": 2026100507,
+          "reactionMs": 400,
+          "settings": {
+            "reactionMs": 450,
+            "jitterMs": 50,
+            "gapBias": -0.25,
+            "staminaBias": 20,
+            "wrongGuard": 0.28,
+            "missedCounter": 0.65,
+            "slashPreference": 0.7
+          },
+          "interventions": {
+            "optimistic range/stamina judgement": 6
+          },
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "loss",
+        "finalHealth": [
+          0,
+          84
+        ],
+        "damageTaken": 159,
+        "damageDealt": 36,
+        "attackMix": {
+          "attacks": 6,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        },
+        "emptySwings": 0,
+        "blocks": 0,
+        "parries": 0,
+        "artifact": "goblin-beginner-2026100507.json"
+      },
+      {
+        "opponent": "goblin",
+        "seed": 779510380,
+        "playerProfile": {
+          "name": "beginner",
+          "seed": 779510380,
+          "reactionMs": 450,
+          "settings": {
+            "reactionMs": 450,
+            "jitterMs": 50,
+            "gapBias": -0.25,
+            "staminaBias": 20,
+            "wrongGuard": 0.28,
+            "missedCounter": 0.65,
+            "slashPreference": 0.7
+          },
+          "interventions": {
+            "optimistic range/stamina judgement": 17,
+            "missed punish opportunity": 2,
+            "wrong directional guard": 1,
+            "prefers simple slash": 2
+          },
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          40,
+          0
+        ],
+        "damageTaken": 110,
+        "damageDealt": 134,
+        "attackMix": {
+          "attacks": 17,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        },
+        "emptySwings": 4,
+        "blocks": 0,
+        "parries": 0,
+        "artifact": "goblin-beginner-779510380.json"
+      },
+      {
+        "opponent": "goblin",
+        "seed": 3718897322,
+        "playerProfile": {
+          "name": "beginner",
+          "seed": 3718897322,
+          "reactionMs": 400,
+          "settings": {
+            "reactionMs": 450,
+            "jitterMs": 50,
+            "gapBias": -0.25,
+            "staminaBias": 20,
+            "wrongGuard": 0.28,
+            "missedCounter": 0.65,
+            "slashPreference": 0.7
+          },
+          "interventions": {
+            "optimistic range/stamina judgement": 8,
+            "prefers simple slash": 1
+          },
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "loss",
+        "finalHealth": [
+          0,
+          92
+        ],
+        "damageTaken": 176,
+        "damageDealt": 28,
+        "attackMix": {
+          "attacks": 8,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        },
+        "emptySwings": 1,
+        "blocks": 0,
+        "parries": 0,
+        "artifact": "goblin-beginner-3718897322.json"
+      },
+      {
+        "opponent": "goblin",
+        "seed": 2026100507,
+        "playerProfile": {
+          "name": "intermediate",
+          "seed": 2026100507,
+          "reactionMs": 240,
+          "settings": {
+            "reactionMs": 280,
+            "jitterMs": 40,
+            "gapBias": -0.1,
+            "staminaBias": 5,
+            "wrongGuard": 0.08,
+            "missedCounter": 0.2,
+            "slashPreference": 0.2
+          },
+          "interventions": {
+            "optimistic range/stamina judgement": 15,
+            "prefers simple slash": 3,
+            "missed punish opportunity": 2
+          },
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "loss",
+        "finalHealth": [
+          0,
+          40
+        ],
+        "damageTaken": 178,
+        "damageDealt": 80,
+        "attackMix": {
+          "attacks": 15,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        },
+        "emptySwings": 5,
+        "blocks": 0,
+        "parries": 1,
+        "artifact": "goblin-intermediate-2026100507.json"
+      },
+      {
+        "opponent": "goblin",
+        "seed": 779510380,
+        "playerProfile": {
+          "name": "intermediate",
+          "seed": 779510380,
+          "reactionMs": 240,
+          "settings": {
+            "reactionMs": 280,
+            "jitterMs": 40,
+            "gapBias": -0.1,
+            "staminaBias": 5,
+            "wrongGuard": 0.08,
+            "missedCounter": 0.2,
+            "slashPreference": 0.2
+          },
+          "interventions": {
+            "optimistic range/stamina judgement": 13,
+            "prefers simple slash": 1
+          },
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "loss",
+        "finalHealth": [
+          0,
+          31
+        ],
+        "damageTaken": 159,
+        "damageDealt": 89,
+        "attackMix": {
+          "attacks": 12,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        },
+        "emptySwings": 1,
+        "blocks": 0,
+        "parries": 1,
+        "artifact": "goblin-intermediate-779510380.json"
+      },
+      {
+        "opponent": "goblin",
+        "seed": 3718897322,
+        "playerProfile": {
+          "name": "intermediate",
+          "seed": 3718897322,
+          "reactionMs": 240,
+          "settings": {
+            "reactionMs": 280,
+            "jitterMs": 40,
+            "gapBias": -0.1,
+            "staminaBias": 5,
+            "wrongGuard": 0.08,
+            "missedCounter": 0.2,
+            "slashPreference": 0.2
+          },
+          "interventions": {
+            "optimistic range/stamina judgement": 20,
+            "wrong directional guard": 1,
+            "prefers simple slash": 1
+          },
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          42,
+          0
+        ],
+        "damageTaken": 108,
+        "damageDealt": 125,
+        "attackMix": {
+          "attacks": 20,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        },
+        "emptySwings": 7,
+        "blocks": 0,
+        "parries": 3,
+        "artifact": "goblin-intermediate-3718897322.json"
+      },
+      {
+        "opponent": "executioner",
+        "seed": 2026100507,
+        "playerProfile": {
+          "name": "beginner",
+          "seed": 2026100507,
+          "reactionMs": 400,
+          "settings": {
+            "reactionMs": 450,
+            "jitterMs": 50,
+            "gapBias": -0.25,
+            "staminaBias": 20,
+            "wrongGuard": 0.28,
+            "missedCounter": 0.65,
+            "slashPreference": 0.7
+          },
+          "interventions": {
+            "optimistic range/stamina judgement": 8,
+            "prefers simple slash": 2
+          },
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "loss",
+        "finalHealth": [
+          0,
+          132
+        ],
+        "damageTaken": 171,
+        "damageDealt": 28,
+        "attackMix": {
+          "attacks": 7,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        },
+        "emptySwings": 2,
+        "blocks": 3,
+        "parries": 2,
+        "artifact": "executioner-beginner-2026100507.json"
+      },
+      {
+        "opponent": "executioner",
+        "seed": 779510380,
+        "playerProfile": {
+          "name": "beginner",
+          "seed": 779510380,
+          "reactionMs": 450,
+          "settings": {
+            "reactionMs": 450,
+            "jitterMs": 50,
+            "gapBias": -0.25,
+            "staminaBias": 20,
+            "wrongGuard": 0.28,
+            "missedCounter": 0.65,
+            "slashPreference": 0.7
+          },
+          "interventions": {
+            "optimistic range/stamina judgement": 17,
+            "prefers simple slash": 3
+          },
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          100,
+          0
+        ],
+        "damageTaken": 50,
+        "damageDealt": 169,
+        "attackMix": {
+          "attacks": 17,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        },
+        "emptySwings": 5,
+        "blocks": 0,
+        "parries": 1,
+        "artifact": "executioner-beginner-779510380.json"
+      },
+      {
+        "opponent": "executioner",
+        "seed": 3718897322,
+        "playerProfile": {
+          "name": "beginner",
+          "seed": 3718897322,
+          "reactionMs": 400,
+          "settings": {
+            "reactionMs": 450,
+            "jitterMs": 50,
+            "gapBias": -0.25,
+            "staminaBias": 20,
+            "wrongGuard": 0.28,
+            "missedCounter": 0.65,
+            "slashPreference": 0.7
+          },
+          "interventions": {
+            "optimistic range/stamina judgement": 19,
+            "wrong directional guard": 1,
+            "prefers simple slash": 2
+          },
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          56,
+          0
+        ],
+        "damageTaken": 94,
+        "damageDealt": 169,
+        "attackMix": {
+          "attacks": 19,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        },
+        "emptySwings": 8,
+        "blocks": 1,
+        "parries": 1,
+        "artifact": "executioner-beginner-3718897322.json"
+      },
+      {
+        "opponent": "executioner",
+        "seed": 2026100507,
+        "playerProfile": {
+          "name": "intermediate",
+          "seed": 2026100507,
+          "reactionMs": 240,
+          "settings": {
+            "reactionMs": 280,
+            "jitterMs": 40,
+            "gapBias": -0.1,
+            "staminaBias": 5,
+            "wrongGuard": 0.08,
+            "missedCounter": 0.2,
+            "slashPreference": 0.2
+          },
+          "interventions": {
+            "optimistic range/stamina judgement": 12,
+            "prefers simple slash": 2,
+            "wrong directional guard": 1
+          },
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          91,
+          0
+        ],
+        "damageTaken": 59,
+        "damageDealt": 173,
+        "attackMix": {
+          "attacks": 12,
+          "heavies": 1,
+          "heavyPercent": 8.333333333333334,
+          "passed": true
+        },
+        "emptySwings": 0,
+        "blocks": 3,
+        "parries": 1,
+        "artifact": "executioner-intermediate-2026100507.json"
+      },
+      {
+        "opponent": "executioner",
+        "seed": 779510380,
+        "playerProfile": {
+          "name": "intermediate",
+          "seed": 779510380,
+          "reactionMs": 240,
+          "settings": {
+            "reactionMs": 280,
+            "jitterMs": 40,
+            "gapBias": -0.1,
+            "staminaBias": 5,
+            "wrongGuard": 0.08,
+            "missedCounter": 0.2,
+            "slashPreference": 0.2
+          },
+          "interventions": {
+            "optimistic range/stamina judgement": 11
+          },
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          54,
+          0
+        ],
+        "damageTaken": 96,
+        "damageDealt": 172,
+        "attackMix": {
+          "attacks": 11,
+          "heavies": 2,
+          "heavyPercent": 18.181818181818183,
+          "passed": true
+        },
+        "emptySwings": 0,
+        "blocks": 3,
+        "parries": 1,
+        "artifact": "executioner-intermediate-779510380.json"
+      },
+      {
+        "opponent": "executioner",
+        "seed": 3718897322,
+        "playerProfile": {
+          "name": "intermediate",
+          "seed": 3718897322,
+          "reactionMs": 240,
+          "settings": {
+            "reactionMs": 280,
+            "jitterMs": 40,
+            "gapBias": -0.1,
+            "staminaBias": 5,
+            "wrongGuard": 0.08,
+            "missedCounter": 0.2,
+            "slashPreference": 0.2
+          },
+          "interventions": {
+            "optimistic range/stamina judgement": 12,
+            "missed punish opportunity": 1,
+            "prefers simple slash": 2
+          },
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "loss",
+        "finalHealth": [
+          0,
+          24
+        ],
+        "damageTaken": 170,
+        "damageDealt": 136,
+        "attackMix": {
+          "attacks": 11,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        },
+        "emptySwings": 0,
+        "blocks": 2,
+        "parries": 3,
+        "artifact": "executioner-intermediate-3718897322.json"
+      }
+    ]
+  },
+  {
+    "variant": "combined",
+    "group": "unseen",
+    "settings": "L6 longsword; no equipped specials; workarounds OFF",
+    "seeds": [
+      2026100521,
+      778372108,
+      4060022796
+    ],
+    "source": {
+      "engineRevision": "4056467af826b03166a575002f7a4f4b04f9dfe7",
+      "controllerSha256": "9bdee9a6557de0069aed0c74901ab58068f273ac86511b1b919d6c4acbeb952b"
+    },
+    "rows": [
+      {
+        "opponent": "goblin",
+        "seed": 2026100521,
+        "playerProfile": {
+          "name": "beginner",
+          "seed": 2026100521,
+          "reactionMs": 450,
+          "settings": {
+            "reactionMs": 450,
+            "jitterMs": 50,
+            "gapBias": -0.25,
+            "staminaBias": 20,
+            "wrongGuard": 0.28,
+            "missedCounter": 0.65,
+            "slashPreference": 0.7
+          },
+          "interventions": {
+            "optimistic range/stamina judgement": 15,
+            "wrong directional guard": 1,
+            "missed punish opportunity": 1
+          },
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          109,
+          0
+        ],
+        "damageTaken": 41,
+        "damageDealt": 136,
+        "attackMix": {
+          "attacks": 15,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        },
+        "emptySwings": 4,
+        "blocks": 0,
+        "parries": 0,
+        "artifact": "goblin-beginner-2026100521.json"
+      },
+      {
+        "opponent": "goblin",
+        "seed": 778372108,
+        "playerProfile": {
+          "name": "beginner",
+          "seed": 778372108,
+          "reactionMs": 400,
+          "settings": {
+            "reactionMs": 450,
+            "jitterMs": 50,
+            "gapBias": -0.25,
+            "staminaBias": 20,
+            "wrongGuard": 0.28,
+            "missedCounter": 0.65,
+            "slashPreference": 0.7
+          },
+          "interventions": {
+            "optimistic range/stamina judgement": 12,
+            "wrong directional guard": 3,
+            "prefers simple slash": 1
+          },
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "loss",
+        "finalHealth": [
+          0,
+          51
+        ],
+        "damageTaken": 158,
+        "damageDealt": 69,
+        "attackMix": {
+          "attacks": 12,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        },
+        "emptySwings": 4,
+        "blocks": 0,
+        "parries": 0,
+        "artifact": "goblin-beginner-778372108.json"
+      },
+      {
+        "opponent": "goblin",
+        "seed": 4060022796,
+        "playerProfile": {
+          "name": "beginner",
+          "seed": 4060022796,
+          "reactionMs": 400,
+          "settings": {
+            "reactionMs": 450,
+            "jitterMs": 50,
+            "gapBias": -0.25,
+            "staminaBias": 20,
+            "wrongGuard": 0.28,
+            "missedCounter": 0.65,
+            "slashPreference": 0.7
+          },
+          "interventions": {
+            "optimistic range/stamina judgement": 15,
+            "wrong directional guard": 1
+          },
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          36,
+          0
+        ],
+        "damageTaken": 114,
+        "damageDealt": 123,
+        "attackMix": {
+          "attacks": 15,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        },
+        "emptySwings": 2,
+        "blocks": 0,
+        "parries": 0,
+        "artifact": "goblin-beginner-4060022796.json"
+      },
+      {
+        "opponent": "goblin",
+        "seed": 2026100521,
+        "playerProfile": {
+          "name": "intermediate",
+          "seed": 2026100521,
+          "reactionMs": 280,
+          "settings": {
+            "reactionMs": 280,
+            "jitterMs": 40,
+            "gapBias": -0.1,
+            "staminaBias": 5,
+            "wrongGuard": 0.08,
+            "missedCounter": 0.2,
+            "slashPreference": 0.2
+          },
+          "interventions": {
+            "optimistic range/stamina judgement": 17,
+            "prefers simple slash": 1
+          },
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "loss",
+        "finalHealth": [
+          0,
+          84
+        ],
+        "damageTaken": 159,
+        "damageDealt": 36,
+        "attackMix": {
+          "attacks": 17,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        },
+        "emptySwings": 8,
+        "blocks": 0,
+        "parries": 0,
+        "artifact": "goblin-intermediate-2026100521.json"
+      },
+      {
+        "opponent": "goblin",
+        "seed": 778372108,
+        "playerProfile": {
+          "name": "intermediate",
+          "seed": 778372108,
+          "reactionMs": 280,
+          "settings": {
+            "reactionMs": 280,
+            "jitterMs": 40,
+            "gapBias": -0.1,
+            "staminaBias": 5,
+            "wrongGuard": 0.08,
+            "missedCounter": 0.2,
+            "slashPreference": 0.2
+          },
+          "interventions": {
+            "optimistic range/stamina judgement": 16,
+            "wrong directional guard": 1,
+            "prefers simple slash": 1
+          },
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          72,
+          0
+        ],
+        "damageTaken": 78,
+        "damageDealt": 132,
+        "attackMix": {
+          "attacks": 16,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        },
+        "emptySwings": 4,
+        "blocks": 0,
+        "parries": 1,
+        "artifact": "goblin-intermediate-778372108.json"
+      },
+      {
+        "opponent": "goblin",
+        "seed": 4060022796,
+        "playerProfile": {
+          "name": "intermediate",
+          "seed": 4060022796,
+          "reactionMs": 320,
+          "settings": {
+            "reactionMs": 280,
+            "jitterMs": 40,
+            "gapBias": -0.1,
+            "staminaBias": 5,
+            "wrongGuard": 0.08,
+            "missedCounter": 0.2,
+            "slashPreference": 0.2
+          },
+          "interventions": {
+            "optimistic range/stamina judgement": 9
+          },
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "loss",
+        "finalHealth": [
+          0,
+          67
+        ],
+        "damageTaken": 174,
+        "damageDealt": 53,
+        "attackMix": {
+          "attacks": 8,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        },
+        "emptySwings": 1,
+        "blocks": 0,
+        "parries": 1,
+        "artifact": "goblin-intermediate-4060022796.json"
+      },
+      {
+        "opponent": "goblin",
+        "seed": 2026100521,
+        "playerProfile": {
+          "name": "advanced",
+          "seed": 2026100521,
+          "reactionMs": 180,
+          "settings": {
+            "reactionMs": 180,
+            "jitterMs": 0,
+            "gapBias": 0,
+            "staminaBias": 0,
+            "wrongGuard": 0,
+            "missedCounter": 0,
+            "slashPreference": 0
+          },
+          "interventions": {},
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          117,
+          0
+        ],
+        "damageTaken": 33,
+        "damageDealt": 120,
+        "attackMix": {
+          "attacks": 12,
+          "heavies": 1,
+          "heavyPercent": 8.333333333333334,
+          "passed": true
+        },
+        "emptySwings": 2,
+        "blocks": 0,
+        "parries": 2,
+        "artifact": "goblin-advanced-2026100521.json"
+      },
+      {
+        "opponent": "goblin",
+        "seed": 778372108,
+        "playerProfile": {
+          "name": "advanced",
+          "seed": 778372108,
+          "reactionMs": 180,
+          "settings": {
+            "reactionMs": 180,
+            "jitterMs": 0,
+            "gapBias": 0,
+            "staminaBias": 0,
+            "wrongGuard": 0,
+            "missedCounter": 0,
+            "slashPreference": 0
+          },
+          "interventions": {},
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          31,
+          0
+        ],
+        "damageTaken": 119,
+        "damageDealt": 127,
+        "attackMix": {
+          "attacks": 12,
+          "heavies": 2,
+          "heavyPercent": 16.666666666666668,
+          "passed": true
+        },
+        "emptySwings": 3,
+        "blocks": 1,
+        "parries": 4,
+        "artifact": "goblin-advanced-778372108.json"
+      },
+      {
+        "opponent": "goblin",
+        "seed": 4060022796,
+        "playerProfile": {
+          "name": "advanced",
+          "seed": 4060022796,
+          "reactionMs": 180,
+          "settings": {
+            "reactionMs": 180,
+            "jitterMs": 0,
+            "gapBias": 0,
+            "staminaBias": 0,
+            "wrongGuard": 0,
+            "missedCounter": 0,
+            "slashPreference": 0
+          },
+          "interventions": {},
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          141,
+          0
+        ],
+        "damageTaken": 9,
+        "damageDealt": 130,
+        "attackMix": {
+          "attacks": 11,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        },
+        "emptySwings": 2,
+        "blocks": 0,
+        "parries": 0,
+        "artifact": "goblin-advanced-4060022796.json"
+      },
+      {
+        "opponent": "executioner",
+        "seed": 2026100521,
+        "playerProfile": {
+          "name": "beginner",
+          "seed": 2026100521,
+          "reactionMs": 450,
+          "settings": {
+            "reactionMs": 450,
+            "jitterMs": 50,
+            "gapBias": -0.25,
+            "staminaBias": 20,
+            "wrongGuard": 0.28,
+            "missedCounter": 0.65,
+            "slashPreference": 0.7
+          },
+          "interventions": {
+            "optimistic range/stamina judgement": 23,
+            "prefers simple slash": 3,
+            "wrong directional guard": 2
+          },
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          72,
+          0
+        ],
+        "damageTaken": 78,
+        "damageDealt": 162,
+        "attackMix": {
+          "attacks": 24,
+          "heavies": 1,
+          "heavyPercent": 4.166666666666667,
+          "passed": true
+        },
+        "emptySwings": 9,
+        "blocks": 0,
+        "parries": 1,
+        "artifact": "executioner-beginner-2026100521.json"
+      },
+      {
+        "opponent": "executioner",
+        "seed": 778372108,
+        "playerProfile": {
+          "name": "beginner",
+          "seed": 778372108,
+          "reactionMs": 400,
+          "settings": {
+            "reactionMs": 450,
+            "jitterMs": 50,
+            "gapBias": -0.25,
+            "staminaBias": 20,
+            "wrongGuard": 0.28,
+            "missedCounter": 0.65,
+            "slashPreference": 0.7
+          },
+          "interventions": {
+            "optimistic range/stamina judgement": 15,
+            "wrong directional guard": 1,
+            "prefers simple slash": 1
+          },
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "loss",
+        "finalHealth": [
+          0,
+          68
+        ],
+        "damageTaken": 155,
+        "damageDealt": 92,
+        "attackMix": {
+          "attacks": 14,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        },
+        "emptySwings": 6,
+        "blocks": 0,
+        "parries": 1,
+        "artifact": "executioner-beginner-778372108.json"
+      },
+      {
+        "opponent": "executioner",
+        "seed": 4060022796,
+        "playerProfile": {
+          "name": "beginner",
+          "seed": 4060022796,
+          "reactionMs": 400,
+          "settings": {
+            "reactionMs": 450,
+            "jitterMs": 50,
+            "gapBias": -0.25,
+            "staminaBias": 20,
+            "wrongGuard": 0.28,
+            "missedCounter": 0.65,
+            "slashPreference": 0.7
+          },
+          "interventions": {
+            "optimistic range/stamina judgement": 14,
+            "wrong directional guard": 1,
+            "prefers simple slash": 1
+          },
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "loss",
+        "finalHealth": [
+          0,
+          64
+        ],
+        "damageTaken": 156,
+        "damageDealt": 96,
+        "attackMix": {
+          "attacks": 14,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        },
+        "emptySwings": 5,
+        "blocks": 0,
+        "parries": 1,
+        "artifact": "executioner-beginner-4060022796.json"
+      },
+      {
+        "opponent": "executioner",
+        "seed": 2026100521,
+        "playerProfile": {
+          "name": "intermediate",
+          "seed": 2026100521,
+          "reactionMs": 280,
+          "settings": {
+            "reactionMs": 280,
+            "jitterMs": 40,
+            "gapBias": -0.1,
+            "staminaBias": 5,
+            "wrongGuard": 0.08,
+            "missedCounter": 0.2,
+            "slashPreference": 0.2
+          },
+          "interventions": {
+            "optimistic range/stamina judgement": 6,
+            "prefers simple slash": 1,
+            "wrong directional guard": 1
+          },
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "loss",
+        "finalHealth": [
+          0,
+          92
+        ],
+        "damageTaken": 166,
+        "damageDealt": 68,
+        "attackMix": {
+          "attacks": 6,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        },
+        "emptySwings": 0,
+        "blocks": 1,
+        "parries": 1,
+        "artifact": "executioner-intermediate-2026100521.json"
+      },
+      {
+        "opponent": "executioner",
+        "seed": 778372108,
+        "playerProfile": {
+          "name": "intermediate",
+          "seed": 778372108,
+          "reactionMs": 280,
+          "settings": {
+            "reactionMs": 280,
+            "jitterMs": 40,
+            "gapBias": -0.1,
+            "staminaBias": 5,
+            "wrongGuard": 0.08,
+            "missedCounter": 0.2,
+            "slashPreference": 0.2
+          },
+          "interventions": {
+            "optimistic range/stamina judgement": 16,
+            "wrong directional guard": 3,
+            "prefers simple slash": 1,
+            "missed punish opportunity": 1
+          },
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "loss",
+        "finalHealth": [
+          0,
+          1
+        ],
+        "damageTaken": 161,
+        "damageDealt": 159,
+        "attackMix": {
+          "attacks": 16,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        },
+        "emptySwings": 1,
+        "blocks": 2,
+        "parries": 0,
+        "artifact": "executioner-intermediate-778372108.json"
+      },
+      {
+        "opponent": "executioner",
+        "seed": 4060022796,
+        "playerProfile": {
+          "name": "intermediate",
+          "seed": 4060022796,
+          "reactionMs": 320,
+          "settings": {
+            "reactionMs": 280,
+            "jitterMs": 40,
+            "gapBias": -0.1,
+            "staminaBias": 5,
+            "wrongGuard": 0.08,
+            "missedCounter": 0.2,
+            "slashPreference": 0.2
+          },
+          "interventions": {
+            "optimistic range/stamina judgement": 16,
+            "wrong directional guard": 2,
+            "prefers simple slash": 3
+          },
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          36,
+          0
+        ],
+        "damageTaken": 114,
+        "damageDealt": 167,
+        "attackMix": {
+          "attacks": 16,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        },
+        "emptySwings": 3,
+        "blocks": 5,
+        "parries": 2,
+        "artifact": "executioner-intermediate-4060022796.json"
+      },
+      {
+        "opponent": "executioner",
+        "seed": 2026100521,
+        "playerProfile": {
+          "name": "advanced",
+          "seed": 2026100521,
+          "reactionMs": 180,
+          "settings": {
+            "reactionMs": 180,
+            "jitterMs": 0,
+            "gapBias": 0,
+            "staminaBias": 0,
+            "wrongGuard": 0,
+            "missedCounter": 0,
+            "slashPreference": 0
+          },
+          "interventions": {},
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          139,
+          0
+        ],
+        "damageTaken": 11,
+        "damageDealt": 169,
+        "attackMix": {
+          "attacks": 10,
+          "heavies": 1,
+          "heavyPercent": 10,
+          "passed": true
+        },
+        "emptySwings": 0,
+        "blocks": 1,
+        "parries": 3,
+        "artifact": "executioner-advanced-2026100521.json"
+      },
+      {
+        "opponent": "executioner",
+        "seed": 778372108,
+        "playerProfile": {
+          "name": "advanced",
+          "seed": 778372108,
+          "reactionMs": 180,
+          "settings": {
+            "reactionMs": 180,
+            "jitterMs": 0,
+            "gapBias": 0,
+            "staminaBias": 0,
+            "wrongGuard": 0,
+            "missedCounter": 0,
+            "slashPreference": 0
+          },
+          "interventions": {},
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "loss",
+        "finalHealth": [
+          0,
+          138
+        ],
+        "damageTaken": 181,
+        "damageDealt": 22,
+        "attackMix": {
+          "attacks": 3,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        },
+        "emptySwings": 0,
+        "blocks": 1,
+        "parries": 1,
+        "artifact": "executioner-advanced-778372108.json"
+      },
+      {
+        "opponent": "executioner",
+        "seed": 4060022796,
+        "playerProfile": {
+          "name": "advanced",
+          "seed": 4060022796,
+          "reactionMs": 180,
+          "settings": {
+            "reactionMs": 180,
+            "jitterMs": 0,
+            "gapBias": 0,
+            "staminaBias": 0,
+            "wrongGuard": 0,
+            "missedCounter": 0,
+            "slashPreference": 0
+          },
+          "interventions": {},
+          "model": "seeded synthetic persona; not a validated human skill distribution",
+          "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+        },
+        "outcome": "win",
+        "finalHealth": [
+          103,
+          0
+        ],
+        "damageTaken": 47,
+        "damageDealt": 163,
+        "attackMix": {
+          "attacks": 12,
+          "heavies": 0,
+          "heavyPercent": 0,
+          "passed": true
+        },
+        "emptySwings": 0,
+        "blocks": 2,
+        "parries": 2,
+        "artifact": "executioner-advanced-4060022796.json"
+      }
+    ]
+  }
+]

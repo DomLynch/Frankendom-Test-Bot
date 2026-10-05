@@ -1,0 +1,13 @@
+{
+  "job": "recovery-charge-media-stage-20fbe31a52a4",
+  "hostname": "Brain",
+  "source_files_verified": 5,
+  "command": [
+    "python3",
+    "audit.py"
+  ],
+  "exit_code": 0,
+  "stopped_for_disk_reserve": false,
+  "elapsed_seconds": 14.02,
+  "finished_epoch": 1791200275.2784674
+}
