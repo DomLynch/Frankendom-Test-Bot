@@ -1,0 +1,498 @@
+{
+  "botRevision": "bc33fea2bfd1761e880512d1a04876830c713934",
+  "botContentSha256": "b1133ca5a730eae23becc95ac90765fe7d53ed283f2f2fae4a47a2eb4b129559",
+  "gameRevision": "4056467af826b03166a575002f7a4f4b04f9dfe7",
+  "method": "fresh real headless Mac Metal rendered keyboard fights; videos disabled for competence gate; visual-frame captures separate",
+  "seeds": [
+    2026100504,
+    2574430427,
+    2096410118
+  ],
+  "wins": 29,
+  "fights": 30,
+  "actualAttacks": 439,
+  "actualHeavyStarts": 20,
+  "passed": true,
+  "rows": [
+    {
+      "opponent": "dwarf",
+      "seed": 2026100504,
+      "outcome": "win",
+      "health": {
+        "player": 107,
+        "opponent": 0
+      },
+      "attacks": 13,
+      "heavies": 0,
+      "blocks": 1,
+      "parries": 1,
+      "rolls": 3,
+      "rawFile": "artifacts/combat/learning-fix-20261005/gate-roster-rest/dwarf/dwarf-2026100504.json",
+      "sha256": "b8cefff731aba39f8a5d1bd755f6ba31987ba0cd9e9855ccc9ed826a1c68ee56"
+    },
+    {
+      "opponent": "dwarf",
+      "seed": 2096410118,
+      "outcome": "win",
+      "health": {
+        "player": 10,
+        "opponent": 0
+      },
+      "attacks": 21,
+      "heavies": 1,
+      "blocks": 3,
+      "parries": 2,
+      "rolls": 2,
+      "rawFile": "artifacts/combat/learning-fix-20261005/gate-roster-rest/dwarf/dwarf-2096410118.json",
+      "sha256": "f2ef22f364de7bb376d5ce9513130674419a699e414eaca27f4272ff4e813c98"
+    },
+    {
+      "opponent": "dwarf",
+      "seed": 2574430427,
+      "outcome": "win",
+      "health": {
+        "player": 111,
+        "opponent": 0
+      },
+      "attacks": 16,
+      "heavies": 0,
+      "blocks": 2,
+      "parries": 2,
+      "rolls": 1,
+      "rawFile": "artifacts/combat/learning-fix-20261005/gate-roster-rest/dwarf/dwarf-2574430427.json",
+      "sha256": "dfea80fc1d8ade6769722a2575c35749512fc0d023486996871fdb8cd3e8521b"
+    },
+    {
+      "opponent": "executioner",
+      "seed": 2026100504,
+      "outcome": "win",
+      "health": {
+        "player": 125,
+        "opponent": 0
+      },
+      "attacks": 13,
+      "heavies": 0,
+      "blocks": 1,
+      "parries": 0,
+      "rolls": 0,
+      "rawFile": "artifacts/combat/learning-fix-20261005/gate-roster-rest/executioner/executioner-2026100504.json",
+      "sha256": "ce562e92f933df72de8ab21a8321626f3c9a35941f68e443ddc833e9c2d71a6f"
+    },
+    {
+      "opponent": "executioner",
+      "seed": 2096410118,
+      "outcome": "win",
+      "health": {
+        "player": 150,
+        "opponent": 0
+      },
+      "attacks": 10,
+      "heavies": 0,
+      "blocks": 1,
+      "parries": 1,
+      "rolls": 0,
+      "rawFile": "artifacts/combat/learning-fix-20261005/gate-roster-rest/executioner/executioner-2096410118.json",
+      "sha256": "6a941b597d08c272c113fa0fdba09e3e7dce1e1de519e16c75c8929c4a1ca4b3"
+    },
+    {
+      "opponent": "executioner",
+      "seed": 2574430427,
+      "outcome": "win",
+      "health": {
+        "player": 125,
+        "opponent": 0
+      },
+      "attacks": 11,
+      "heavies": 0,
+      "blocks": 1,
+      "parries": 0,
+      "rolls": 0,
+      "rawFile": "artifacts/combat/learning-fix-20261005/gate-roster-rest/executioner/executioner-2574430427.json",
+      "sha256": "af78a5881fb5c688cd86e62294c50fcd3a6e604ca14650c994ef8ead22e7e853"
+    },
+    {
+      "opponent": "goblin",
+      "seed": 2026100504,
+      "outcome": "win",
+      "health": {
+        "player": 69,
+        "opponent": 0
+      },
+      "attacks": 14,
+      "heavies": 0,
+      "blocks": 0,
+      "parries": 0,
+      "rolls": 3,
+      "rawFile": "artifacts/combat/learning-fix-20261005/gate-roster-rest/goblin/goblin-2026100504.json",
+      "sha256": "0c1178b2c5da7ba54171fbf9851080981e07b025428b069a9fabb4f5cca47d88"
+    },
+    {
+      "opponent": "goblin",
+      "seed": 2096410118,
+      "outcome": "win",
+      "health": {
+        "player": 91,
+        "opponent": 0
+      },
+      "attacks": 12,
+      "heavies": 0,
+      "blocks": 0,
+      "parries": 2,
+      "rolls": 2,
+      "rawFile": "artifacts/combat/learning-fix-20261005/gate-roster-rest/goblin/goblin-2096410118.json",
+      "sha256": "dc1c0d51d8a0d90b607a26f2004b9572334de3127568fe5268a9d3626d9a4243"
+    },
+    {
+      "opponent": "goblin",
+      "seed": 2574430427,
+      "outcome": "win",
+      "health": {
+        "player": 136,
+        "opponent": 0
+      },
+      "attacks": 10,
+      "heavies": 0,
+      "blocks": 0,
+      "parries": 1,
+      "rolls": 1,
+      "rawFile": "artifacts/combat/learning-fix-20261005/gate-roster-rest/goblin/goblin-2574430427.json",
+      "sha256": "417c25c2d704518e8875aee995d6bef2c782f0c0459e0c7b18f8629419acbd64"
+    },
+    {
+      "opponent": "knight",
+      "seed": 2026100504,
+      "outcome": "win",
+      "health": {
+        "player": 5,
+        "opponent": 0
+      },
+      "attacks": 25,
+      "heavies": 1,
+      "blocks": 2,
+      "parries": 1,
+      "rolls": 1,
+      "rawFile": "artifacts/combat/learning-fix-20261005/gate-roster-rest/knight/knight-2026100504.json",
+      "sha256": "ac4e858ffdec9e37c1a0779830538d35b9300e287641a6f17ac856745b10e7f6"
+    },
+    {
+      "opponent": "knight",
+      "seed": 2096410118,
+      "outcome": "win",
+      "health": {
+        "player": 122,
+        "opponent": 0
+      },
+      "attacks": 13,
+      "heavies": 0,
+      "blocks": 1,
+      "parries": 1,
+      "rolls": 2,
+      "rawFile": "artifacts/combat/learning-fix-20261005/gate-roster-rest/knight/knight-2096410118.json",
+      "sha256": "f1cdc0ffc1c94d4d077c9060b6db04aee9d739ea10e9c318222c9d6c2a54d147"
+    },
+    {
+      "opponent": "knight",
+      "seed": 2574430427,
+      "outcome": "win",
+      "health": {
+        "player": 5,
+        "opponent": 0
+      },
+      "attacks": 22,
+      "heavies": 0,
+      "blocks": 3,
+      "parries": 0,
+      "rolls": 1,
+      "rawFile": "artifacts/combat/learning-fix-20261005/gate-roster-rest/knight/knight-2574430427.json",
+      "sha256": "27c7c5256e9b4d97cdbc4af7642e60eefa6f89f3308683b579d6d496a84848e6"
+    },
+    {
+      "opponent": "nightborn",
+      "seed": 2026100504,
+      "outcome": "win",
+      "health": {
+        "player": 125,
+        "opponent": 0
+      },
+      "attacks": 10,
+      "heavies": 0,
+      "blocks": 0,
+      "parries": 1,
+      "rolls": 0,
+      "rawFile": "artifacts/combat/learning-fix-20261005/gate-roster-rest/nightborn/nightborn-2026100504.json",
+      "sha256": "e0aee1e7f6dd519c3b0106cc5e5253fe22e9e059353d5795b52fa41f59f4bde8"
+    },
+    {
+      "opponent": "nightborn",
+      "seed": 2096410118,
+      "outcome": "win",
+      "health": {
+        "player": 125,
+        "opponent": 0
+      },
+      "attacks": 13,
+      "heavies": 1,
+      "blocks": 0,
+      "parries": 1,
+      "rolls": 0,
+      "rawFile": "artifacts/combat/learning-fix-20261005/gate-roster-rest/nightborn/nightborn-2096410118.json",
+      "sha256": "241def1ab000ace42f5dc813461bf9c6e7d8a456a6cfa427c5f2abf1f491012c"
+    },
+    {
+      "opponent": "nightborn",
+      "seed": 2574430427,
+      "outcome": "win",
+      "health": {
+        "player": 125,
+        "opponent": 0
+      },
+      "attacks": 10,
+      "heavies": 0,
+      "blocks": 0,
+      "parries": 1,
+      "rolls": 0,
+      "rawFile": "artifacts/combat/learning-fix-20261005/gate-roster-rest/nightborn/nightborn-2574430427.json",
+      "sha256": "88f785a00ff1fc396871494f99d2e7a528ba61175e9b4d6a971571f2b1708a60"
+    },
+    {
+      "opponent": "pitborn",
+      "seed": 2026100504,
+      "outcome": "win",
+      "health": {
+        "player": 99,
+        "opponent": 0
+      },
+      "attacks": 17,
+      "heavies": 0,
+      "blocks": 0,
+      "parries": 1,
+      "rolls": 0,
+      "rawFile": "artifacts/combat/learning-fix-20261005/gate-pit-vet/pitborn-2026100504.json",
+      "sha256": "a57498a9c0d82afa19b05740ca217803646e82abd9c312afe4e841b9b3300fd2"
+    },
+    {
+      "opponent": "pitborn",
+      "seed": 2096410118,
+      "outcome": "win",
+      "health": {
+        "player": 110,
+        "opponent": 0
+      },
+      "attacks": 16,
+      "heavies": 1,
+      "blocks": 0,
+      "parries": 1,
+      "rolls": 0,
+      "rawFile": "artifacts/combat/learning-fix-20261005/gate-pit-vet/pitborn-2096410118.json",
+      "sha256": "f046b00293338ab7b5b0cd64949268a231d243a06eb089bbf6f2744617ef2ec5"
+    },
+    {
+      "opponent": "pitborn",
+      "seed": 2574430427,
+      "outcome": "win",
+      "health": {
+        "player": 15,
+        "opponent": 0
+      },
+      "attacks": 22,
+      "heavies": 1,
+      "blocks": 0,
+      "parries": 2,
+      "rolls": 0,
+      "rawFile": "artifacts/combat/learning-fix-20261005/gate-pit-vet/pitborn-2574430427.json",
+      "sha256": "47d876077389ca18d37cfcd5796e236632c793fa85d2a1193a0be2379318fdc5"
+    },
+    {
+      "opponent": "plaguedoctor",
+      "seed": 2026100504,
+      "outcome": "win",
+      "health": {
+        "player": 105,
+        "opponent": 0
+      },
+      "attacks": 15,
+      "heavies": 1,
+      "blocks": 0,
+      "parries": 1,
+      "rolls": 0,
+      "rawFile": "artifacts/combat/learning-fix-20261005/gate-roster-rest/plaguedoctor/plaguedoctor-2026100504.json",
+      "sha256": "421ebe3407202433d5f390afe599b20fd201078643efc1de5875c92eef1a54c1"
+    },
+    {
+      "opponent": "plaguedoctor",
+      "seed": 2096410118,
+      "outcome": "win",
+      "health": {
+        "player": 120,
+        "opponent": 0
+      },
+      "attacks": 11,
+      "heavies": 1,
+      "blocks": 0,
+      "parries": 2,
+      "rolls": 0,
+      "rawFile": "artifacts/combat/learning-fix-20261005/gate-roster-rest/plaguedoctor/plaguedoctor-2096410118.json",
+      "sha256": "c437d9225af06bb58958af2c30e6ce12968f917de0bfe6e208b1c0af9eec4a57"
+    },
+    {
+      "opponent": "plaguedoctor",
+      "seed": 2574430427,
+      "outcome": "win",
+      "health": {
+        "player": 110,
+        "opponent": 0
+      },
+      "attacks": 11,
+      "heavies": 1,
+      "blocks": 0,
+      "parries": 3,
+      "rolls": 0,
+      "rawFile": "artifacts/combat/learning-fix-20261005/gate-roster-rest/plaguedoctor/plaguedoctor-2574430427.json",
+      "sha256": "59419d26cf20c42df55ff1710138e85ad1e273db422e254db133fcc542a07512"
+    },
+    {
+      "opponent": "shieldmaiden",
+      "seed": 2026100504,
+      "outcome": "win",
+      "health": {
+        "player": 80,
+        "opponent": 0
+      },
+      "attacks": 15,
+      "heavies": 1,
+      "blocks": 0,
+      "parries": 3,
+      "rolls": 0,
+      "rawFile": "artifacts/combat/learning-fix-20261005/gate-roster-rest/shieldmaiden/shieldmaiden-2026100504.json",
+      "sha256": "3bdb7e3302edd10d729e8a2a9214f44e5969488f1bccfbf9909504868fcb9a47"
+    },
+    {
+      "opponent": "shieldmaiden",
+      "seed": 2096410118,
+      "outcome": "win",
+      "health": {
+        "player": 4,
+        "opponent": 0
+      },
+      "attacks": 22,
+      "heavies": 2,
+      "blocks": 1,
+      "parries": 2,
+      "rolls": 0,
+      "rawFile": "artifacts/combat/learning-fix-20261005/gate-roster-rest/shieldmaiden/shieldmaiden-2096410118.json",
+      "sha256": "83ecc34b533e5bd9718a389f32ba928229cd2e3d54690c2f5840588a2ee5f24c"
+    },
+    {
+      "opponent": "shieldmaiden",
+      "seed": 2574430427,
+      "outcome": "win",
+      "health": {
+        "player": 36,
+        "opponent": 0
+      },
+      "attacks": 18,
+      "heavies": 3,
+      "blocks": 0,
+      "parries": 5,
+      "rolls": 0,
+      "rawFile": "artifacts/combat/learning-fix-20261005/gate-roster-rest/shieldmaiden/shieldmaiden-2574430427.json",
+      "sha256": "bb510102c51492ca2c33f579a6f421a9b2e22f645a097b04ddaae56a555f411c"
+    },
+    {
+      "opponent": "veteran",
+      "seed": 2026100504,
+      "outcome": "win",
+      "health": {
+        "player": 125,
+        "opponent": 0
+      },
+      "attacks": 11,
+      "heavies": 1,
+      "blocks": 0,
+      "parries": 1,
+      "rolls": 0,
+      "rawFile": "artifacts/combat/learning-fix-20261005/gate-pit-vet/veteran-2026100504.json",
+      "sha256": "d16814d11975324f54ea4bf060155334325469a9599e0e499b877bcb68f6418e"
+    },
+    {
+      "opponent": "veteran",
+      "seed": 2096410118,
+      "outcome": "loss",
+      "health": {
+        "player": 0,
+        "opponent": 46
+      },
+      "attacks": 13,
+      "heavies": 1,
+      "blocks": 0,
+      "parries": 2,
+      "rolls": 6,
+      "rawFile": "artifacts/combat/learning-fix-20261005/gate-pit-vet/veteran-2096410118.json",
+      "sha256": "1aebd3b899e3dbaf737522e49cf26b7ed13c99b023db36105161345345bafbb0"
+    },
+    {
+      "opponent": "veteran",
+      "seed": 2574430427,
+      "outcome": "win",
+      "health": {
+        "player": 125,
+        "opponent": 0
+      },
+      "attacks": 11,
+      "heavies": 1,
+      "blocks": 0,
+      "parries": 1,
+      "rolls": 0,
+      "rawFile": "artifacts/combat/learning-fix-20261005/gate-pit-vet/veteran-2574430427.json",
+      "sha256": "822de518902a2a3667854910a86dcec25095ca3299bc40d7b79019097341bde1"
+    },
+    {
+      "opponent": "witch",
+      "seed": 2026100504,
+      "outcome": "win",
+      "health": {
+        "player": 140,
+        "opponent": 0
+      },
+      "attacks": 12,
+      "heavies": 1,
+      "blocks": 0,
+      "parries": 0,
+      "rolls": 0,
+      "rawFile": "artifacts/combat/learning-fix-20261005/gate-roster-rest/witch/witch-2026100504.json",
+      "sha256": "c4c588db49e8285194ab04df0fced39486da4f3a3b98d25c41219585a0e26e5e"
+    },
+    {
+      "opponent": "witch",
+      "seed": 2096410118,
+      "outcome": "win",
+      "health": {
+        "player": 76,
+        "opponent": 0
+      },
+      "attacks": 14,
+      "heavies": 1,
+      "blocks": 1,
+      "parries": 2,
+      "rolls": 0,
+      "rawFile": "artifacts/combat/learning-fix-20261005/gate-roster-rest/witch/witch-2096410118.json",
+      "sha256": "c5fd1fce933c85dd45db5572fbd5beac248a6b1a06e6ace11cb6b2edb4d59ac6"
+    },
+    {
+      "opponent": "witch",
+      "seed": 2574430427,
+      "outcome": "win",
+      "health": {
+        "player": 80,
+        "opponent": 0
+      },
+      "attacks": 18,
+      "heavies": 1,
+      "blocks": 0,
+      "parries": 0,
+      "rolls": 0,
+      "rawFile": "artifacts/combat/learning-fix-20261005/gate-roster-rest/witch/witch-2574430427.json",
+      "sha256": "a9095599fcb2d2babab4a24183bb4c34fb8c72f3496de72323aefc5e0041602f"
+    }
+  ]
+}

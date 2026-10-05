@@ -16,7 +16,7 @@ First use downloads the pinned game, installs dependencies and Playwright Chromi
 - All **ten** playable Easy opponents: `./run-latest.sh --opponents=all --fights=3`
 - Exact-state diagnostic: add `--observation=debug`; the default is limited observation.
 - Faster measurement without videos: add `--no-video`.
-- Results: `artifacts/combat/player-bot/` contains summary/per-fight JSON and, by default, full WebM recordings. Full WebMs are wall-time recordings, not verified event-aligned clips. Add `--review-frames` (or `--clips`) for tick-verified rendered JPEGs; export normal simulation-speed videos/clips with `python3 scripts/render-review.py <fight-frames-directory>` on the VPS. No ffmpeg processing runs inside the browser bot. Retain losses/timeouts and send the seed, JSON and matching video with a finding.
+- Results: `artifacts/combat/player-bot/<timestamp>/` contains summary/per-fight JSON and, by default, full WebM recordings. Full WebMs are wall-time recordings, not verified event-aligned clips. Add `--review-frames` (or `--clips`) for tick-verified rendered JPEGs; export normal simulation-speed videos/clips with `python3 scripts/render-review.py <fight-frames-directory>` on the VPS. No ffmpeg processing runs inside the browser bot. Retain losses/timeouts and send the seed, JSON and matching video with a finding.
 
 ## Current version and evidence
 

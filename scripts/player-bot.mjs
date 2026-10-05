@@ -66,7 +66,7 @@ assert.ok(opponents.length && opponents.every(id => playable.includes(id)), 'cho
 const seedList = option('seeds', null);
 const seeds = seedList ? seedList.split(',').map(Number) : fightSeeds(first, count);
 assert.ok(seeds.length === count && new Set(seeds).size === count && seeds.every(s => Number.isSafeInteger(s) && s >= 0 && s <= 0xffffffff), 'seeds must contain exactly fights unique unsigned integers');
-const dir = option('out', 'artifacts/combat/player-bot');
+const dir = option('out', `artifacts/combat/player-bot/${new Date().toISOString().replaceAll(':', '-')}`);
 await fs.mkdir(dir, { recursive: true });
 assert.ok(!(await fs.readdir(dir)).some(name => name === 'summary.json' || /^[a-z]+-\d+\.json$/.test(name)), 'Output contains fight receipts; choose a new --out to retain all outcomes');
 const servedUrl = option('url', null);
@@ -90,8 +90,8 @@ hashBotTree(join(botRoot, 'scripts'));
 for (const file of ['current-game.sha', 'package-lock.json']) digest.update(file).update('\0').update(readFileSync(join(botRoot, file)));
 const botContentSha256 = digest.digest('hex');
 const identity = probe ? `EXPERIMENT ${probe} (coverage only)` : strategy === 'tactical' ? `CURRENT tactical · ${player} persona${research ? ' RESEARCH' : ''}` : 'ARCHIVED diagnostic';
-console.log(JSON.stringify({ identity, botRevision, botContentSha256, revision: `${revision}${dirty ? '-dirty' : ''}`, strategy, difficulty: 'easy', observation, headed }));
-const receipt = { identity, botRevision, botContentSha256, revision: `${revision}${dirty ? '-dirty' : ''}`, opponents, difficulty: 'easy', strategy, reactionMs, stepMs, headed, video: recordVideo, clips: recordClips, observation, observationAccess: observation === 'debug' ? 'exact current debug gap/position/stamina/phase and combat events' : 'player view: stamina/health meters, perceivable events only (a swing seen starting and ending, its side; the charge sound without whose it is; contact sounds, whiffs, rolls), all opponent-side information delayed; charge inferred from the sound or the windup hold time; distance rounded to half-metres; current own phase', playerProfile: player, profileModel: 'synthetic seeded persona; not human skill validation', fights: [] };
+console.log(JSON.stringify({ outputDirectory:dir, identity, botRevision, botContentSha256, revision: `${revision}${dirty ? '-dirty' : ''}`, strategy, difficulty: 'easy', observation, headed }));
+const receipt = { outputDirectory:dir, identity, botRevision, botContentSha256, revision: `${revision}${dirty ? '-dirty' : ''}`, opponents, difficulty: 'easy', strategy, reactionMs, stepMs, headed, video: recordVideo, clips: recordClips, observation, observationAccess: observation === 'debug' ? 'exact current debug gap/position/stamina/phase and combat events' : 'player view: stamina/health meters, perceivable events only (a swing seen starting and ending, its side; the charge sound without whose it is; contact sounds, whiffs, rolls), all opponent-side information delayed; charge inferred from the sound or the windup hold time; distance rounded to half-metres; current own phase', playerProfile: player, profileModel: 'synthetic seeded persona; not human skill validation', fights: [] };
 try {
   for (const opponent of opponents) for (const seed of seeds) {
     const playerState = createPlayerProfile(player, seed, reactionOverride === null ? undefined : reactionMs);
