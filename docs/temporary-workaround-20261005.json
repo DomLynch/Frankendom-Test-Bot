@@ -1,0 +1,256 @@
+{
+  "engineRevision": "4056467af826b03166a575002f7a4f4b04f9dfe7",
+  "helperSha256": "2746f7676526e7d52b303950c9ab566370103b549295f0554723a31b2edd3066",
+  "evidenceTier": "direct-engine-no-browser",
+  "temporary": true,
+  "acceptanceEligible": false,
+  "conditions": "Veteran; standard kit; no specials; perfect-state; same initial config/seeds, subsequent enemy sequences can diverge",
+  "rows": [
+    {
+      "opponent": "veteran",
+      "level": 11,
+      "weapon": "longsword",
+      "seed": 274629183,
+      "baselineOutcome": "win",
+      "variantOutcome": "win",
+      "baselineDamageTaken": 111,
+      "variantDamageTaken": 111,
+      "baselineActual": {
+        "starts": 20,
+        "damagingHits": 11
+      },
+      "variantActual": {
+        "starts": 20,
+        "damagingHits": 11
+      },
+      "receipt": "artifacts/temporary-workaround-20261005/current/paired/longsword-L11-274629183.json",
+      "rawSha256": "8afc79cc106015947a367734655d53709421caddc6e810c354f3f24506086316"
+    },
+    {
+      "opponent": "veteran",
+      "level": 11,
+      "weapon": "longsword",
+      "seed": 3901284756,
+      "baselineOutcome": "loss",
+      "variantOutcome": "loss",
+      "baselineDamageTaken": 153,
+      "variantDamageTaken": 153,
+      "baselineActual": {
+        "starts": 25,
+        "damagingHits": 9
+      },
+      "variantActual": {
+        "starts": 25,
+        "damagingHits": 9
+      },
+      "receipt": "artifacts/temporary-workaround-20261005/current/paired/longsword-L11-3901284756.json",
+      "rawSha256": "b6d48ab097c30c87656df32f52643544cab423140b0e6fb422a5cfef57b68b43"
+    },
+    {
+      "opponent": "veteran",
+      "level": 11,
+      "weapon": "longsword",
+      "seed": 918273645,
+      "baselineOutcome": "win",
+      "variantOutcome": "win",
+      "baselineDamageTaken": 50,
+      "variantDamageTaken": 50,
+      "baselineActual": {
+        "starts": 17,
+        "damagingHits": 11
+      },
+      "variantActual": {
+        "starts": 17,
+        "damagingHits": 11
+      },
+      "receipt": "artifacts/temporary-workaround-20261005/current/paired/longsword-L11-918273645.json",
+      "rawSha256": "25142442bbed93e60d9b8855cc6fdfe9ce29e6d69964d522b48d78b25ede7ff4"
+    },
+    {
+      "opponent": "veteran",
+      "level": 12,
+      "weapon": "longsword",
+      "seed": 274629183,
+      "baselineOutcome": "loss",
+      "variantOutcome": "loss",
+      "baselineDamageTaken": 164,
+      "variantDamageTaken": 159,
+      "baselineActual": {
+        "starts": 8,
+        "damagingHits": 0
+      },
+      "variantActual": {
+        "starts": 9,
+        "damagingHits": 1
+      },
+      "receipt": "artifacts/temporary-workaround-20261005/current/paired/longsword-L12-274629183.json",
+      "rawSha256": "767e8dcfa3eb000f47bff1f7352dea5d12a711468789675dd0c41d620af3e087"
+    },
+    {
+      "opponent": "veteran",
+      "level": 12,
+      "weapon": "longsword",
+      "seed": 3901284756,
+      "baselineOutcome": "loss",
+      "variantOutcome": "win",
+      "baselineDamageTaken": 153,
+      "variantDamageTaken": 37,
+      "baselineActual": {
+        "starts": 9,
+        "damagingHits": 3
+      },
+      "variantActual": {
+        "starts": 13,
+        "damagingHits": 12
+      },
+      "receipt": "artifacts/temporary-workaround-20261005/current/paired/longsword-L12-3901284756.json",
+      "rawSha256": "3c0ae02d3e0ff9038a6275bd3c1b9ee59f3f822b920ed9491e298b43bdf89bae"
+    },
+    {
+      "opponent": "veteran",
+      "level": 12,
+      "weapon": "longsword",
+      "seed": 918273645,
+      "baselineOutcome": "loss",
+      "variantOutcome": "loss",
+      "baselineDamageTaken": 152,
+      "variantDamageTaken": 173,
+      "baselineActual": {
+        "starts": 7,
+        "damagingHits": 0
+      },
+      "variantActual": {
+        "starts": 13,
+        "damagingHits": 5
+      },
+      "receipt": "artifacts/temporary-workaround-20261005/current/paired/longsword-L12-918273645.json",
+      "rawSha256": "f3a61eb0036e4da1f6f4a4005219fd5ae464eede7a1ea0ae9126ab5d89c1ee07"
+    },
+    {
+      "opponent": "veteran",
+      "level": 1,
+      "weapon": "scythe",
+      "seed": 274629183,
+      "baselineOutcome": "win",
+      "variantOutcome": "win",
+      "baselineDamageTaken": 83,
+      "variantDamageTaken": 0,
+      "baselineActual": {
+        "starts": 15,
+        "damagingHits": 7
+      },
+      "variantActual": {
+        "starts": 6,
+        "damagingHits": 6
+      },
+      "receipt": "artifacts/temporary-workaround-20261005/current/paired/scythe-L1-274629183.json",
+      "rawSha256": "01f95e3881ee2e30a45bec9a1ba56aa1bdd48b961975ff1bdff9ca6957164f6e"
+    },
+    {
+      "opponent": "veteran",
+      "level": 1,
+      "weapon": "scythe",
+      "seed": 3901284756,
+      "baselineOutcome": "win",
+      "variantOutcome": "win",
+      "baselineDamageTaken": 113,
+      "variantDamageTaken": 0,
+      "baselineActual": {
+        "starts": 15,
+        "damagingHits": 7
+      },
+      "variantActual": {
+        "starts": 6,
+        "damagingHits": 6
+      },
+      "receipt": "artifacts/temporary-workaround-20261005/current/paired/scythe-L1-3901284756.json",
+      "rawSha256": "9854b82633f19015d0e8bc7ca0477f26358a5a551c1f4cb87120e1c0f506e73d"
+    },
+    {
+      "opponent": "veteran",
+      "level": 1,
+      "weapon": "scythe",
+      "seed": 918273645,
+      "baselineOutcome": "win",
+      "variantOutcome": "win",
+      "baselineDamageTaken": 140,
+      "variantDamageTaken": 0,
+      "baselineActual": {
+        "starts": 15,
+        "damagingHits": 7
+      },
+      "variantActual": {
+        "starts": 6,
+        "damagingHits": 6
+      },
+      "receipt": "artifacts/temporary-workaround-20261005/current/paired/scythe-L1-918273645.json",
+      "rawSha256": "69c785bf43d1ad0806e374263062261a266e419d6d35a50200529ed2f019dd9e"
+    },
+    {
+      "opponent": "veteran",
+      "level": 12,
+      "weapon": "scythe",
+      "seed": 274629183,
+      "baselineOutcome": "loss",
+      "variantOutcome": "win",
+      "baselineDamageTaken": 151,
+      "variantDamageTaken": 118,
+      "baselineActual": {
+        "starts": 10,
+        "damagingHits": 0
+      },
+      "variantActual": {
+        "starts": 28,
+        "damagingHits": 17
+      },
+      "receipt": "artifacts/temporary-workaround-20261005/current/paired/scythe-L12-274629183.json",
+      "rawSha256": "d930574766d17a719a7bdc2184953ced87035bb7e28f633326340814f2ba0ecb"
+    },
+    {
+      "opponent": "veteran",
+      "level": 12,
+      "weapon": "scythe",
+      "seed": 3901284756,
+      "baselineOutcome": "loss",
+      "variantOutcome": "win",
+      "baselineDamageTaken": 155,
+      "variantDamageTaken": 45,
+      "baselineActual": {
+        "starts": 10,
+        "damagingHits": 2
+      },
+      "variantActual": {
+        "starts": 22,
+        "damagingHits": 18
+      },
+      "receipt": "artifacts/temporary-workaround-20261005/current/paired/scythe-L12-3901284756.json",
+      "rawSha256": "ad404a730c8c05e1b0b11e64e740f006ff0c468e6f0233b2ef1759f804ffa9d9"
+    },
+    {
+      "opponent": "veteran",
+      "level": 12,
+      "weapon": "scythe",
+      "seed": 918273645,
+      "baselineOutcome": "loss",
+      "variantOutcome": "win",
+      "baselineDamageTaken": 161,
+      "variantDamageTaken": 48,
+      "baselineActual": {
+        "starts": 7,
+        "damagingHits": 0
+      },
+      "variantActual": {
+        "starts": 23,
+        "damagingHits": 17
+      },
+      "receipt": "artifacts/temporary-workaround-20261005/current/paired/scythe-L12-918273645.json",
+      "rawSha256": "0403f717baf37b18a0bd45a43beb86385645afd40eb29b0bb262bec8a3007b8a"
+    }
+  ],
+  "tests": {
+    "vpsJob": "cpu-input-d6d39c857315",
+    "passed": 66,
+    "failed": 0
+  },
+  "rejectedPrototype": "defensive version: scytheL1 dropped3/3 to0/3; retained under artifacts/temporary-workaround-20261005/rejected-defensive-prototype/"
+}
