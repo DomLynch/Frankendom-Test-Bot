@@ -5,6 +5,13 @@ export const CAMERA_PRESETS = {
   shoulder: { label: 'EXPERIMENT offset tracking', offset: 0.28, height: 3.15, back: 4.8 },
 };
 
+// Optical axes, not the orbital target angle. Pitch, residual shake and arena clamp matter.
+export function horizontalBasis([x,y,z,w]) {
+  const unit=(a,b)=>{const n=Math.hypot(a,b);return n>1e-8?[a/n,b/n]:null;};
+  return {forward:unit(-2*(x*z+w*y),-1+2*(x*x+y*y)),
+    right:unit(1-2*(y*y+z*z),2*(x*z-w*y))};
+}
+
 export function cameraTarget(p, e, preset, previous = null, dt = 1 / 60) {
   const settings = CAMERA_PRESETS[preset];
   if (!settings || preset === 'current') throw new Error('Choose an experimental camera');
@@ -60,7 +67,8 @@ export function installCameraLab(preset) {
         return { x:(point.x+1)/2, y:(1-point.y)/2, inFrustum:point.z>=-1&&point.z<=1&&Math.abs(point.x)<=1&&Math.abs(point.y)<=1 };
       };
       const sample = { tick: practice.duel.tick, eye:camera.position.toArray(), quaternion:camera.quaternion.toArray(),
-        yaw:lab.pose?.yaw ?? view.yaw, playerFeet:project(p.body,0), opponentFeet:project(e.body,0),
+        yaw:lab.pose?.yaw ?? view.yaw, rigYaw:view.yaw, opticalBasis:horizontalBasis(camera.quaternion.toArray()),
+        playerFeet:project(p.body,0), opponentFeet:project(e.body,0),
         playerChest:project(p.body,1), opponentChest:project(e.body,1),
         fighters:structuredClone(practice.duel.fighters), events:structuredClone(practice.events) };
       const result = draw.call(this,scene,camera);

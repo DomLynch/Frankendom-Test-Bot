@@ -1,6 +1,16 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { cameraTarget, installCameraLab } from '../scripts/lib/camera-lab.mjs';
+import { cameraTarget, installCameraLab, horizontalBasis } from '../scripts/lib/camera-lab.mjs';
+
+test('optical basis follows actual quaternion rather than orbital yaw',()=>{
+ assert.deepEqual(horizontalBasis([0,0,0,1]),{forward:[-0,-1],right:[1,0]});
+ const {forward,right}=horizontalBasis([0,Math.sin(Math.PI/4),0,Math.cos(Math.PI/4)]);
+ assert.ok(Math.abs(forward[0]+1)<1e-9&&Math.abs(forward[1])<1e-9);
+ assert.ok(Math.abs(right[0])<1e-9&&Math.abs(right[1]+1)<1e-9);
+});
+test('vertical optical direction cannot masquerade as a usable movement axis',()=>{
+ assert.equal(horizontalBasis([Math.sin(Math.PI/4),0,0,Math.cos(Math.PI/4)]).forward,null);
+});
 
 test('tracking takes short arc across angle wrap and obeys turn speed',()=>{
  const old={x:0,y:4,z:0,yaw:Math.PI-.01};
