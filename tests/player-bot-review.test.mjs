@@ -2,6 +2,74 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { damageSources, defenceExchanges, explainDecisions, intentFor, selectMoments, videoSecondAt } from '../scripts/lib/player-bot-review.mjs';
 
+test('accepted specials and feints are not labelled as movement or credited with later hits', () => {
+  const decisions = [{ tick: 192, intent: 'level-matched special', press: 'Skill' },
+    { tick: 1543, intent: 'EXPERIMENT feint a close slash', keys: ['KeyQ'] }];
+  const events = [{ tick: 193, type: 'SpecialStarted', actor: 0, move: 'skill_shove' },
+    { tick: 312, type: 'SpecialLanded', actor: 0, target: 1, move: 'skill_shove', damage: 38 },
+    { tick: 1540, type: 'AttackStarted', actor: 0, move: 'heavy_overhead' },
+    { tick: 1544, type: 'ActionStarted', actor: 0, action: 'feint' },
+    { tick: 1580, type: 'Hit', actor: 0, target: 1, move: 'thrust', damage: 11 }];
+  const rows = explainDecisions(decisions, events);
+  assert.equal(rows[0].outcome, 'special landed');
+  assert.equal(rows[0].evidence, 312);
+  assert.equal(rows[1].outcome, 'feint accepted');
+  assert.equal(rows[1].canceledMove, 'heavy_overhead');
+  assert.equal(rows[1].evidence, 1544);
+});
+
+test('two rolls against one held overhead count one avoided threat (real probe537..608)', async () => {
+  const { defenceEarned, summarizeDefences } = await import('../scripts/lib/player-bot-review.mjs');
+  const events = [{ tick: 537, type: 'AttackStarted', actor: 1, move: 'heavy_overhead' },
+    { tick: 567, type: 'ActionStarted', actor: 0, action: 'roll' },
+    { tick: 579, type: 'Charged', actor: 1, move: 'heavy_overhead' },
+    { tick: 606, type: 'ActionStarted', actor: 0, action: 'roll' },
+    { tick: 608, type: 'AttackMissed', actor: 1, move: 'heavy_overhead' }];
+  const rows = defenceEarned(events, [], { heavy_overhead: 26 });
+  assert.deepEqual(rows.map(r => r.avoided), [0, 39]);
+  assert.deepEqual(rows.map(r => r.attackTick), [537, 537]);
+  assert.equal(summarizeDefences(rows).roll.avoided, 39);
+  assert.equal(summarizeDefences(rows).roll.count, 2);
+  assert.equal(summarizeDefences(rows).roll.windowsOpened, 1);
+});
+
+test('a blocked slash is not credited with the later thrust hit (real veteran1258 sequence)', () => {
+  const decisions = [{ tick: 1257, intent: 'quick slash', press: 'KeyF', phase: 'ready' }];
+  const events = [
+    { tick: 1258, type: 'AttackStarted', actor: 0, move: 'light_right' },
+    { tick: 1278, type: 'Blocked', actor: 1, move: 'light_right' },
+    { tick: 1346, type: 'AttackStarted', actor: 0, move: 'thrust' },
+    { tick: 1362, type: 'Hit', actor: 0, move: 'thrust' },
+  ];
+  assert.equal(explainDecisions(decisions, events)[0].outcome, 'blocked');
+  assert.equal(explainDecisions(decisions, events)[0].evidence, 1278);
+});
+
+test('a stopped attack is interrupted, never credited with the next slash miss', () => {
+  const events = [
+    { tick: 870, type: 'AttackStarted', actor: 0, move: 'light_right' },
+    { tick: 889, type: 'Hit', actor: 1, target: 0, move: 'light_right', damage: 21, counter: true },
+    { tick: 889, type: 'Staggered', actor: 0, ticks: 36 },
+    { tick: 944, type: 'AttackStarted', actor: 0, move: 'light_left' },
+    { tick: 971, type: 'AttackMissed', actor: 0, move: 'light_left' },
+  ];
+  assert.equal(explainDecisions([{ tick: 869, intent: 'slash', press: 'KeyF' }], events)[0].outcome, 'interrupted');
+});
+
+test('a thrust input can legitimately become a posture-earned riposte', () => {
+  const events = [{ tick:1391,type:'AttackStarted',actor:0,move:'riposte' },{ tick:1403,type:'Hit',actor:0,target:1,move:'riposte',damage:24 }];
+  assert.equal(explainDecisions([{tick:1390,intent:'thrust',press:'KeyT'}],events)[0].outcome,'hit');
+});
+
+test('result matching stops at the next own attack even if both attacks use the same move', () => {
+  const events = [
+    { tick: 101, type: 'AttackStarted', actor: 0, move: 'thrust' },
+    { tick: 145, type: 'AttackStarted', actor: 0, move: 'thrust' },
+    { tick: 160, type: 'Hit', actor: 0, move: 'thrust' },
+  ];
+  assert.equal(explainDecisions([{ tick: 100, intent: 'thrust', press: 'KeyT' }], events)[0].outcome, 'unresolved');
+});
+
 test('the receipt separates attempted inputs from accepted attacks and results', () => {
   const decisions = [
     { tick: 100, intent: 'punish missed swing with thrust', press: 'KeyT', phase: 'recovery' },

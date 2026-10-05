@@ -1,0 +1,1199 @@
+{
+  "date": "2026-10-05",
+  "engineRevision": "4056467af826b03166a575002f7a4f4b04f9dfe7",
+  "settings": {
+    "level": 6,
+    "weapon": "longsword",
+    "observation": "limited semantic events",
+    "reactionMs": 180,
+    "stepMs": 64,
+    "viewport": [
+      390,
+      844
+    ]
+  },
+  "seeds": [
+    918273645,
+    274629183,
+    3901284756
+  ],
+  "perOpponent": {
+    "dwarf": {
+      "wins": 3,
+      "fights": 3
+    },
+    "executioner": {
+      "wins": 3,
+      "fights": 3
+    },
+    "goblin": {
+      "wins": 3,
+      "fights": 3
+    },
+    "knight": {
+      "wins": 3,
+      "fights": 3
+    },
+    "nightborn": {
+      "wins": 3,
+      "fights": 3
+    },
+    "pitborn": {
+      "wins": 3,
+      "fights": 3
+    },
+    "plaguedoctor": {
+      "wins": 3,
+      "fights": 3
+    },
+    "shieldmaiden": {
+      "wins": 3,
+      "fights": 3
+    },
+    "veteran": {
+      "wins": 2,
+      "fights": 3
+    },
+    "witch": {
+      "wins": 3,
+      "fights": 3
+    }
+  },
+  "rows": [
+    {
+      "opponent": "dwarf",
+      "seed": 274629183,
+      "outcome": "win",
+      "health": {
+        "player": 22,
+        "opponent": 0
+      },
+      "attackStarts": 20,
+      "heavyIncludingCritical": 4,
+      "heavyCapPass": true,
+      "originalPrefixHeavy": 4,
+      "emptySwings": 2,
+      "blocks": 2,
+      "parries": 3,
+      "rolls": 4,
+      "released": true,
+      "errors": [],
+      "videoBytes": 6795378,
+      "geometry": true,
+      "rawSha256": "488af9fa9887d715b221c35cc460f15cf65163601ab0f6344bfe84ca08266e5b",
+      "receipt": "artifacts/evaluation-20261005/roster-heldout/dwarf-274629183.json"
+    },
+    {
+      "opponent": "dwarf",
+      "seed": 3901284756,
+      "outcome": "win",
+      "health": {
+        "player": 118,
+        "opponent": 0
+      },
+      "attackStarts": 13,
+      "heavyIncludingCritical": 0,
+      "heavyCapPass": true,
+      "originalPrefixHeavy": 0,
+      "emptySwings": 0,
+      "blocks": 1,
+      "parries": 1,
+      "rolls": 2,
+      "released": true,
+      "errors": [],
+      "videoBytes": 3261452,
+      "geometry": true,
+      "rawSha256": "381b61a06058e593391717c7ac1fe6437dd096171f69387e634cd7258f59ac17",
+      "receipt": "artifacts/evaluation-20261005/roster-heldout/dwarf-3901284756.json"
+    },
+    {
+      "opponent": "dwarf",
+      "seed": 918273645,
+      "outcome": "win",
+      "health": {
+        "player": 88,
+        "opponent": 0
+      },
+      "attackStarts": 15,
+      "heavyIncludingCritical": 2,
+      "heavyCapPass": true,
+      "originalPrefixHeavy": 2,
+      "emptySwings": 0,
+      "blocks": 3,
+      "parries": 2,
+      "rolls": 1,
+      "released": true,
+      "errors": [],
+      "videoBytes": 4277025,
+      "geometry": true,
+      "rawSha256": "7bfa8ceb01cce73789349a1a6cc209feda283417a8a2d238617081dc488d7215",
+      "receipt": "artifacts/evaluation-20261005/roster-heldout/dwarf-918273645.json"
+    },
+    {
+      "opponent": "executioner",
+      "seed": 274629183,
+      "outcome": "win",
+      "health": {
+        "player": 125,
+        "opponent": 0
+      },
+      "attackStarts": 13,
+      "heavyIncludingCritical": 0,
+      "heavyCapPass": true,
+      "originalPrefixHeavy": 0,
+      "emptySwings": 1,
+      "blocks": 1,
+      "parries": 0,
+      "rolls": 0,
+      "released": true,
+      "errors": [],
+      "videoBytes": 3286929,
+      "geometry": true,
+      "rawSha256": "7c2ea81bf07044ddf8162c2d1a998bd1c8418ff436c7179499ba58167792a7cb",
+      "receipt": "artifacts/evaluation-20261005/roster-heldout/executioner-274629183.json"
+    },
+    {
+      "opponent": "executioner",
+      "seed": 3901284756,
+      "outcome": "win",
+      "health": {
+        "player": 125,
+        "opponent": 0
+      },
+      "attackStarts": 12,
+      "heavyIncludingCritical": 0,
+      "heavyCapPass": true,
+      "originalPrefixHeavy": 0,
+      "emptySwings": 1,
+      "blocks": 1,
+      "parries": 1,
+      "rolls": 1,
+      "released": true,
+      "errors": [],
+      "videoBytes": 3575890,
+      "geometry": true,
+      "rawSha256": "7bed16dd14ce28d16cbcc6b122ffdd6b9f89d34b912fb636a328e2e0b035bad8",
+      "receipt": "artifacts/evaluation-20261005/roster-heldout/executioner-3901284756.json"
+    },
+    {
+      "opponent": "executioner",
+      "seed": 918273645,
+      "outcome": "win",
+      "health": {
+        "player": 109,
+        "opponent": 0
+      },
+      "attackStarts": 15,
+      "heavyIncludingCritical": 1,
+      "heavyCapPass": true,
+      "originalPrefixHeavy": 1,
+      "emptySwings": 0,
+      "blocks": 2,
+      "parries": 0,
+      "rolls": 11,
+      "released": true,
+      "errors": [],
+      "videoBytes": 5800534,
+      "geometry": true,
+      "rawSha256": "d72982347379039b7d6e526623c78a10bef27317ff2b90807d6d64fec3867c2a",
+      "receipt": "artifacts/evaluation-20261005/roster-heldout/executioner-918273645.json"
+    },
+    {
+      "opponent": "goblin",
+      "seed": 274629183,
+      "outcome": "win",
+      "health": {
+        "player": 73,
+        "opponent": 0
+      },
+      "attackStarts": 14,
+      "heavyIncludingCritical": 0,
+      "heavyCapPass": true,
+      "originalPrefixHeavy": 0,
+      "emptySwings": 1,
+      "blocks": 0,
+      "parries": 1,
+      "rolls": 2,
+      "released": true,
+      "errors": [],
+      "videoBytes": 4141535,
+      "geometry": true,
+      "rawSha256": "1c7bd9ea0226757c6271d69abc4975845582aba632e4013c17f1b2300e2fb4de",
+      "receipt": "artifacts/evaluation-20261005/roster-heldout/goblin-274629183.json"
+    },
+    {
+      "opponent": "goblin",
+      "seed": 3901284756,
+      "outcome": "win",
+      "health": {
+        "player": 113,
+        "opponent": 0
+      },
+      "attackStarts": 11,
+      "heavyIncludingCritical": 0,
+      "heavyCapPass": true,
+      "originalPrefixHeavy": 0,
+      "emptySwings": 0,
+      "blocks": 0,
+      "parries": 0,
+      "rolls": 0,
+      "released": true,
+      "errors": [],
+      "videoBytes": 2787356,
+      "geometry": true,
+      "rawSha256": "96cd4bebcfeff464846ad93df7f0dc2ecc70c786dbc4d3844f3f81f29a993f24",
+      "receipt": "artifacts/evaluation-20261005/roster-heldout/goblin-3901284756.json"
+    },
+    {
+      "opponent": "goblin",
+      "seed": 918273645,
+      "outcome": "win",
+      "health": {
+        "player": 118,
+        "opponent": 0
+      },
+      "attackStarts": 12,
+      "heavyIncludingCritical": 0,
+      "heavyCapPass": true,
+      "originalPrefixHeavy": 0,
+      "emptySwings": 1,
+      "blocks": 0,
+      "parries": 0,
+      "rolls": 0,
+      "released": true,
+      "errors": [],
+      "videoBytes": 2733528,
+      "geometry": true,
+      "rawSha256": "096e57ad1451298935817efa05c3b738b316300a2e35b457dd13597ffaf63276",
+      "receipt": "artifacts/evaluation-20261005/roster-heldout/goblin-918273645.json"
+    },
+    {
+      "opponent": "knight",
+      "seed": 274629183,
+      "outcome": "win",
+      "health": {
+        "player": 122,
+        "opponent": 0
+      },
+      "attackStarts": 14,
+      "heavyIncludingCritical": 0,
+      "heavyCapPass": true,
+      "originalPrefixHeavy": 0,
+      "emptySwings": 0,
+      "blocks": 2,
+      "parries": 0,
+      "rolls": 1,
+      "released": true,
+      "errors": [],
+      "videoBytes": 3529034,
+      "geometry": true,
+      "rawSha256": "7ee77cb590f209897d8fe89b12b3acf6cedb616c00a8a8b6202c0ad36e91b9aa",
+      "receipt": "artifacts/evaluation-20261005/roster-heldout/knight-274629183.json"
+    },
+    {
+      "opponent": "knight",
+      "seed": 3901284756,
+      "outcome": "win",
+      "health": {
+        "player": 66,
+        "opponent": 0
+      },
+      "attackStarts": 14,
+      "heavyIncludingCritical": 0,
+      "heavyCapPass": true,
+      "originalPrefixHeavy": 0,
+      "emptySwings": 0,
+      "blocks": 1,
+      "parries": 1,
+      "rolls": 1,
+      "released": true,
+      "errors": [],
+      "videoBytes": 3600696,
+      "geometry": true,
+      "rawSha256": "280c646b2787e9b8d30faed97361eb73fb35d6dfb8c31a1a3a657821d323e1a0",
+      "receipt": "artifacts/evaluation-20261005/roster-heldout/knight-3901284756.json"
+    },
+    {
+      "opponent": "knight",
+      "seed": 918273645,
+      "outcome": "win",
+      "health": {
+        "player": 82,
+        "opponent": 0
+      },
+      "attackStarts": 18,
+      "heavyIncludingCritical": 1,
+      "heavyCapPass": true,
+      "originalPrefixHeavy": 1,
+      "emptySwings": 0,
+      "blocks": 2,
+      "parries": 1,
+      "rolls": 4,
+      "released": true,
+      "errors": [],
+      "videoBytes": 4914924,
+      "geometry": true,
+      "rawSha256": "5475305ce1ecd2845ae0a2f3e3353ec9d0c15cfd4970d1004051925ca76168e6",
+      "receipt": "artifacts/evaluation-20261005/roster-heldout/knight-918273645.json"
+    },
+    {
+      "opponent": "nightborn",
+      "seed": 274629183,
+      "outcome": "win",
+      "health": {
+        "player": 68,
+        "opponent": 0
+      },
+      "attackStarts": 16,
+      "heavyIncludingCritical": 1,
+      "heavyCapPass": true,
+      "originalPrefixHeavy": 1,
+      "emptySwings": 1,
+      "blocks": 0,
+      "parries": 1,
+      "rolls": 0,
+      "released": true,
+      "errors": [],
+      "videoBytes": 4195592,
+      "geometry": true,
+      "rawSha256": "f5cb816b3be780299e5d81aa5d53dc01024a7fcad99f4e8ab6c1b92c8ee2ce1d",
+      "receipt": "artifacts/evaluation-20261005/roster-heldout/nightborn-274629183.json"
+    },
+    {
+      "opponent": "nightborn",
+      "seed": 3901284756,
+      "outcome": "win",
+      "health": {
+        "player": 114,
+        "opponent": 0
+      },
+      "attackStarts": 15,
+      "heavyIncludingCritical": 1,
+      "heavyCapPass": true,
+      "originalPrefixHeavy": 1,
+      "emptySwings": 0,
+      "blocks": 0,
+      "parries": 1,
+      "rolls": 0,
+      "released": true,
+      "errors": [],
+      "videoBytes": 3525320,
+      "geometry": true,
+      "rawSha256": "d8b9a23e1af0d8b964de8812916fc03b5d097bed41c8956ee8830a11ecb027ed",
+      "receipt": "artifacts/evaluation-20261005/roster-heldout/nightborn-3901284756.json"
+    },
+    {
+      "opponent": "nightborn",
+      "seed": 918273645,
+      "outcome": "win",
+      "health": {
+        "player": 114,
+        "opponent": 0
+      },
+      "attackStarts": 13,
+      "heavyIncludingCritical": 2,
+      "heavyCapPass": true,
+      "originalPrefixHeavy": 2,
+      "emptySwings": 0,
+      "blocks": 0,
+      "parries": 2,
+      "rolls": 0,
+      "released": true,
+      "errors": [],
+      "videoBytes": 2867003,
+      "geometry": true,
+      "rawSha256": "9a5550daad99ab53ca7432d6741dd539862ed8aa101703bba17b1d68e197fd4b",
+      "receipt": "artifacts/evaluation-20261005/roster-heldout/nightborn-918273645.json"
+    },
+    {
+      "opponent": "pitborn",
+      "seed": 274629183,
+      "outcome": "win",
+      "health": {
+        "player": 120,
+        "opponent": 0
+      },
+      "attackStarts": 16,
+      "heavyIncludingCritical": 1,
+      "heavyCapPass": true,
+      "originalPrefixHeavy": 1,
+      "emptySwings": 0,
+      "blocks": 0,
+      "parries": 1,
+      "rolls": 0,
+      "released": true,
+      "errors": [],
+      "videoBytes": 5070516,
+      "geometry": true,
+      "rawSha256": "8fabd2f08812163c8c3ac9b47983cd2c2653fa76b20d9fda4c6fc1a1160bfd37",
+      "receipt": "artifacts/evaluation-20261005/roster-heldout/pitborn-274629183.json"
+    },
+    {
+      "opponent": "pitborn",
+      "seed": 3901284756,
+      "outcome": "win",
+      "health": {
+        "player": 82,
+        "opponent": 0
+      },
+      "attackStarts": 20,
+      "heavyIncludingCritical": 1,
+      "heavyCapPass": true,
+      "originalPrefixHeavy": 0,
+      "emptySwings": 0,
+      "blocks": 0,
+      "parries": 1,
+      "rolls": 0,
+      "released": true,
+      "errors": [],
+      "videoBytes": 6547992,
+      "geometry": true,
+      "rawSha256": "1cc9c35abf02c3fe4269b32acdfb9b4e9f829560e5888c99013a67793cd51f0d",
+      "receipt": "artifacts/evaluation-20261005/critical-recheck/pitborn-3901284756.json",
+      "originalReceiptSha256": "1a82603bc8c3d041b03c34f794bb2b9d5e26c7861fc77b8708de8228bbc48cfc",
+      "replayBotContentSha256": "d75d49a1aa2e40ebda42a5c2bda0fc55cb1f7f08c17ff68c4cd520b068776011"
+    },
+    {
+      "opponent": "pitborn",
+      "seed": 918273645,
+      "outcome": "win",
+      "health": {
+        "player": 58,
+        "opponent": 0
+      },
+      "attackStarts": 19,
+      "heavyIncludingCritical": 0,
+      "heavyCapPass": true,
+      "originalPrefixHeavy": 0,
+      "emptySwings": 1,
+      "blocks": 0,
+      "parries": 0,
+      "rolls": 0,
+      "released": true,
+      "errors": [],
+      "videoBytes": 6909775,
+      "geometry": true,
+      "rawSha256": "6cd2b525d797e3c8594283e77f65dcdc8f2ecd975a184aacbdf469da05fc0720",
+      "receipt": "artifacts/evaluation-20261005/roster-heldout/pitborn-918273645.json"
+    },
+    {
+      "opponent": "plaguedoctor",
+      "seed": 274629183,
+      "outcome": "win",
+      "health": {
+        "player": 115,
+        "opponent": 0
+      },
+      "attackStarts": 12,
+      "heavyIncludingCritical": 1,
+      "heavyCapPass": true,
+      "originalPrefixHeavy": 1,
+      "emptySwings": 0,
+      "blocks": 0,
+      "parries": 2,
+      "rolls": 0,
+      "released": true,
+      "errors": [],
+      "videoBytes": 3315998,
+      "geometry": true,
+      "rawSha256": "040b0249bd30aaa5e4cd273a8ef70fe65ee7b879039ee0e42c84658fd2ab580d",
+      "receipt": "artifacts/evaluation-20261005/roster-heldout/plaguedoctor-274629183.json"
+    },
+    {
+      "opponent": "plaguedoctor",
+      "seed": 3901284756,
+      "outcome": "win",
+      "health": {
+        "player": 111,
+        "opponent": 0
+      },
+      "attackStarts": 12,
+      "heavyIncludingCritical": 2,
+      "heavyCapPass": true,
+      "originalPrefixHeavy": 2,
+      "emptySwings": 0,
+      "blocks": 0,
+      "parries": 4,
+      "rolls": 0,
+      "released": true,
+      "errors": [],
+      "videoBytes": 3903429,
+      "geometry": true,
+      "rawSha256": "98cba274b29b16910b5c7968a51faace7787bf773b5f57c5cc262c72a2699e59",
+      "receipt": "artifacts/evaluation-20261005/roster-heldout/plaguedoctor-3901284756.json"
+    },
+    {
+      "opponent": "plaguedoctor",
+      "seed": 918273645,
+      "outcome": "win",
+      "health": {
+        "player": 75,
+        "opponent": 0
+      },
+      "attackStarts": 14,
+      "heavyIncludingCritical": 1,
+      "heavyCapPass": true,
+      "originalPrefixHeavy": 1,
+      "emptySwings": 1,
+      "blocks": 0,
+      "parries": 2,
+      "rolls": 0,
+      "released": true,
+      "errors": [],
+      "videoBytes": 4431778,
+      "geometry": true,
+      "rawSha256": "533a16464f44ddd38ccc322e6813d547267f808007e5b6482bba73a6addc3652",
+      "receipt": "artifacts/evaluation-20261005/roster-heldout/plaguedoctor-918273645.json"
+    },
+    {
+      "opponent": "shieldmaiden",
+      "seed": 274629183,
+      "outcome": "win",
+      "health": {
+        "player": 105,
+        "opponent": 0
+      },
+      "attackStarts": 18,
+      "heavyIncludingCritical": 0,
+      "heavyCapPass": true,
+      "originalPrefixHeavy": 0,
+      "emptySwings": 0,
+      "blocks": 0,
+      "parries": 0,
+      "rolls": 0,
+      "released": true,
+      "errors": [],
+      "videoBytes": 5654283,
+      "geometry": true,
+      "rawSha256": "9605d70fb4de21f3962f3564c46857b12bf4293b5d3a7eaafc5e425c38419a76",
+      "receipt": "artifacts/evaluation-20261005/roster-heldout/shieldmaiden-274629183.json"
+    },
+    {
+      "opponent": "shieldmaiden",
+      "seed": 3901284756,
+      "outcome": "win",
+      "health": {
+        "player": 85,
+        "opponent": 0
+      },
+      "attackStarts": 20,
+      "heavyIncludingCritical": 0,
+      "heavyCapPass": true,
+      "originalPrefixHeavy": 0,
+      "emptySwings": 0,
+      "blocks": 0,
+      "parries": 0,
+      "rolls": 0,
+      "released": true,
+      "errors": [],
+      "videoBytes": 6526458,
+      "geometry": true,
+      "rawSha256": "e4a6d7c492d8baa96a7f39116bc0fe6656bd6a2e656cfa3fe5b633bc5d915333",
+      "receipt": "artifacts/evaluation-20261005/roster-heldout/shieldmaiden-3901284756.json"
+    },
+    {
+      "opponent": "shieldmaiden",
+      "seed": 918273645,
+      "outcome": "win",
+      "health": {
+        "player": 110,
+        "opponent": 0
+      },
+      "attackStarts": 18,
+      "heavyIncludingCritical": 1,
+      "heavyCapPass": true,
+      "originalPrefixHeavy": 1,
+      "emptySwings": 0,
+      "blocks": 0,
+      "parries": 1,
+      "rolls": 0,
+      "released": true,
+      "errors": [],
+      "videoBytes": 5373481,
+      "geometry": true,
+      "rawSha256": "1fe8e94e42d100e69962dd63913cd7df49b0fdd574bcf43beed9327a0bf06d53",
+      "receipt": "artifacts/evaluation-20261005/roster-heldout/shieldmaiden-918273645.json"
+    },
+    {
+      "opponent": "veteran",
+      "seed": 274629183,
+      "outcome": "win",
+      "health": {
+        "player": 71,
+        "opponent": 0
+      },
+      "attackStarts": 13,
+      "heavyIncludingCritical": 2,
+      "heavyCapPass": true,
+      "originalPrefixHeavy": 2,
+      "emptySwings": 1,
+      "blocks": 0,
+      "parries": 3,
+      "rolls": 0,
+      "released": true,
+      "errors": [],
+      "videoBytes": 2635407,
+      "geometry": true,
+      "rawSha256": "626b5ed568e65540342064a0fc7051f5597527810a273a29fcd303b3e5610855",
+      "receipt": "artifacts/evaluation-20261005/roster-heldout/veteran-274629183.json"
+    },
+    {
+      "opponent": "veteran",
+      "seed": 3901284756,
+      "outcome": "loss",
+      "health": {
+        "player": 0,
+        "opponent": 9
+      },
+      "attackStarts": 22,
+      "heavyIncludingCritical": 0,
+      "heavyCapPass": true,
+      "originalPrefixHeavy": 0,
+      "emptySwings": 0,
+      "blocks": 0,
+      "parries": 1,
+      "rolls": 0,
+      "released": true,
+      "errors": [],
+      "videoBytes": 3382735,
+      "geometry": true,
+      "rawSha256": "1dc70e69eca0fbb1b417ac821f92cdfdca8701724284cbaefc124eb1be0a3f28",
+      "receipt": "artifacts/evaluation-20261005/roster-heldout/veteran-3901284756.json"
+    },
+    {
+      "opponent": "veteran",
+      "seed": 918273645,
+      "outcome": "win",
+      "health": {
+        "player": 50,
+        "opponent": 0
+      },
+      "attackStarts": 20,
+      "heavyIncludingCritical": 0,
+      "heavyCapPass": true,
+      "originalPrefixHeavy": 0,
+      "emptySwings": 0,
+      "blocks": 0,
+      "parries": 0,
+      "rolls": 0,
+      "released": true,
+      "errors": [],
+      "videoBytes": 3310762,
+      "geometry": true,
+      "rawSha256": "fcb6c1a6266d2c13026260df0253f52ed476d3e898831700333b2d831a3555a5",
+      "receipt": "artifacts/evaluation-20261005/roster-heldout/veteran-918273645.json"
+    },
+    {
+      "opponent": "witch",
+      "seed": 274629183,
+      "outcome": "win",
+      "health": {
+        "player": 140,
+        "opponent": 0
+      },
+      "attackStarts": 11,
+      "heavyIncludingCritical": 1,
+      "heavyCapPass": true,
+      "originalPrefixHeavy": 1,
+      "emptySwings": 1,
+      "blocks": 0,
+      "parries": 1,
+      "rolls": 0,
+      "released": true,
+      "errors": [],
+      "videoBytes": 2764091,
+      "geometry": true,
+      "rawSha256": "9befcd919c2b8138c5fca5ed0f9f3a828f77b077165a00044e010caae9c838b7",
+      "receipt": "artifacts/evaluation-20261005/roster-heldout/witch-274629183.json"
+    },
+    {
+      "opponent": "witch",
+      "seed": 3901284756,
+      "outcome": "win",
+      "health": {
+        "player": 140,
+        "opponent": 0
+      },
+      "attackStarts": 13,
+      "heavyIncludingCritical": 0,
+      "heavyCapPass": true,
+      "originalPrefixHeavy": 0,
+      "emptySwings": 1,
+      "blocks": 1,
+      "parries": 0,
+      "rolls": 0,
+      "released": true,
+      "errors": [],
+      "videoBytes": 3284092,
+      "geometry": true,
+      "rawSha256": "7c5c498ebe5faae8107bbee6e62c813ee86ea4161fe29c3d509357c7fd1380a5",
+      "receipt": "artifacts/evaluation-20261005/roster-heldout/witch-3901284756.json"
+    },
+    {
+      "opponent": "witch",
+      "seed": 918273645,
+      "outcome": "win",
+      "health": {
+        "player": 125,
+        "opponent": 0
+      },
+      "attackStarts": 11,
+      "heavyIncludingCritical": 0,
+      "heavyCapPass": true,
+      "originalPrefixHeavy": 0,
+      "emptySwings": 0,
+      "blocks": 0,
+      "parries": 1,
+      "rolls": 0,
+      "released": true,
+      "errors": [],
+      "videoBytes": 3016453,
+      "geometry": true,
+      "rawSha256": "01dca6d940e0344376f25556d54ca094801f0b18dec7cd9b330506fef0b870be",
+      "receipt": "artifacts/evaluation-20261005/roster-heldout/witch-918273645.json"
+    }
+  ],
+  "totalWins": 29,
+  "heavyCapPass": true,
+  "headlessComparedWithHeaded": [
+    {
+      "opponent": "pitborn",
+      "seed": 20261005,
+      "visible": "win",
+      "headless": "win",
+      "sameHealth": true,
+      "health": {
+        "player": 99,
+        "opponent": 0
+      },
+      "visibleSeconds": 24.68,
+      "headlessSeconds": 24.32,
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+      "mix": {
+        "attacks": 15,
+        "heavies": 0,
+        "heavyPercent": 0,
+        "passed": true
+      },
+      "error": null
+    },
+    {
+      "opponent": "pitborn",
+      "seed": 731,
+      "visible": "win",
+      "headless": "win",
+      "sameHealth": true,
+      "health": {
+        "player": 33,
+        "opponent": 0
+      },
+      "visibleSeconds": 38.32,
+      "headlessSeconds": 38.18,
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+      "mix": {
+        "attacks": 23,
+        "heavies": 1,
+        "heavyPercent": 4.3,
+        "passed": true
+      },
+      "error": null
+    },
+    {
+      "opponent": "pitborn",
+      "seed": 732,
+      "visible": "win",
+      "headless": "win",
+      "sameHealth": true,
+      "health": {
+        "player": 143,
+        "opponent": 0
+      },
+      "visibleSeconds": 24.2,
+      "headlessSeconds": 24.35,
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+      "mix": {
+        "attacks": 15,
+        "heavies": 1,
+        "heavyPercent": 6.7,
+        "passed": true
+      },
+      "error": null
+    },
+    {
+      "opponent": "veteran",
+      "seed": 20261005,
+      "visible": "win",
+      "headless": "win",
+      "sameHealth": true,
+      "health": {
+        "player": 150,
+        "opponent": 0
+      },
+      "visibleSeconds": 18.7,
+      "headlessSeconds": 18.83,
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+      "mix": {
+        "attacks": 11,
+        "heavies": 0,
+        "heavyPercent": 0,
+        "passed": true
+      },
+      "error": null
+    },
+    {
+      "opponent": "veteran",
+      "seed": 731,
+      "visible": "win",
+      "headless": "win",
+      "sameHealth": true,
+      "health": {
+        "player": 150,
+        "opponent": 0
+      },
+      "visibleSeconds": 21,
+      "headlessSeconds": 21.02,
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+      "mix": {
+        "attacks": 12,
+        "heavies": 1,
+        "heavyPercent": 8.3,
+        "passed": true
+      },
+      "error": null
+    },
+    {
+      "opponent": "veteran",
+      "seed": 732,
+      "visible": "win",
+      "headless": "win",
+      "sameHealth": true,
+      "health": {
+        "player": 150,
+        "opponent": 0
+      },
+      "visibleSeconds": 18.97,
+      "headlessSeconds": 18.88,
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+      "mix": {
+        "attacks": 11,
+        "heavies": 0,
+        "heavyPercent": 0,
+        "passed": true
+      },
+      "error": null
+    }
+  ],
+  "videoChecks": [
+    {
+      "fight": "pitborn-20261005",
+      "outcome": "win",
+      "health": {
+        "player": 99,
+        "opponent": 0
+      },
+      "codec": "vp8",
+      "size": [
+        390,
+        844
+      ],
+      "recordingFps": "25/1",
+      "videoSeconds": 40.08,
+      "lastCombatVideoSecond": 31.627802374999998,
+      "coversFinish": true,
+      "fullDecodePassed": true,
+      "decodeErrors": "",
+      "differentFrames": true,
+      "audioTracks": 0,
+      "renderer": {
+        "name": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "canvas": [
+          390,
+          844
+        ],
+        "dpr": 1
+      },
+      "geometry": {
+        "initial": {
+          "layout": [
+            390,
+            844
+          ],
+          "canvas": [
+            0,
+            0,
+            390,
+            844
+          ]
+        },
+        "checks": 22,
+        "changes": [],
+        "suitableForReview": true
+      }
+    },
+    {
+      "fight": "pitborn-731",
+      "outcome": "win",
+      "health": {
+        "player": 33,
+        "opponent": 0
+      },
+      "codec": "vp8",
+      "size": [
+        390,
+        844
+      ],
+      "recordingFps": "25/1",
+      "videoSeconds": 81.84,
+      "lastCombatVideoSecond": 69.558439917,
+      "coversFinish": true,
+      "fullDecodePassed": true,
+      "decodeErrors": "",
+      "differentFrames": true,
+      "audioTracks": 0,
+      "renderer": {
+        "name": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "canvas": [
+          390,
+          844
+        ],
+        "dpr": 1
+      },
+      "geometry": {
+        "initial": {
+          "layout": [
+            390,
+            844
+          ],
+          "canvas": [
+            0,
+            0,
+            390,
+            844
+          ]
+        },
+        "checks": 36,
+        "changes": [],
+        "suitableForReview": true
+      }
+    },
+    {
+      "fight": "pitborn-732",
+      "outcome": "win",
+      "health": {
+        "player": 143,
+        "opponent": 0
+      },
+      "codec": "vp8",
+      "size": [
+        390,
+        844
+      ],
+      "recordingFps": "25/1",
+      "videoSeconds": 41.2,
+      "lastCombatVideoSecond": 32.588401042000015,
+      "coversFinish": true,
+      "fullDecodePassed": true,
+      "decodeErrors": "",
+      "differentFrames": true,
+      "audioTracks": 0,
+      "renderer": {
+        "name": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "canvas": [
+          390,
+          844
+        ],
+        "dpr": 1
+      },
+      "geometry": {
+        "initial": {
+          "layout": [
+            390,
+            844
+          ],
+          "canvas": [
+            0,
+            0,
+            390,
+            844
+          ]
+        },
+        "checks": 22,
+        "changes": [],
+        "suitableForReview": true
+      }
+    },
+    {
+      "fight": "veteran-20261005",
+      "outcome": "win",
+      "health": {
+        "player": 150,
+        "opponent": 0
+      },
+      "codec": "vp8",
+      "size": [
+        390,
+        844
+      ],
+      "recordingFps": "25/1",
+      "videoSeconds": 16.2,
+      "lastCombatVideoSecond": 13.041524834000011,
+      "coversFinish": true,
+      "fullDecodePassed": true,
+      "decodeErrors": "",
+      "differentFrames": true,
+      "audioTracks": 0,
+      "renderer": {
+        "name": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "canvas": [
+          390,
+          844
+        ],
+        "dpr": 1
+      },
+      "geometry": {
+        "initial": {
+          "layout": [
+            390,
+            844
+          ],
+          "canvas": [
+            0,
+            0,
+            390,
+            844
+          ]
+        },
+        "checks": 17,
+        "changes": [],
+        "suitableForReview": true
+      }
+    },
+    {
+      "fight": "veteran-731",
+      "outcome": "win",
+      "health": {
+        "player": 150,
+        "opponent": 0
+      },
+      "codec": "vp8",
+      "size": [
+        390,
+        844
+      ],
+      "recordingFps": "25/1",
+      "videoSeconds": 17.96,
+      "lastCombatVideoSecond": 13.696463707999996,
+      "coversFinish": true,
+      "fullDecodePassed": true,
+      "decodeErrors": "",
+      "differentFrames": true,
+      "audioTracks": 0,
+      "renderer": {
+        "name": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "canvas": [
+          390,
+          844
+        ],
+        "dpr": 1
+      },
+      "geometry": {
+        "initial": {
+          "layout": [
+            390,
+            844
+          ],
+          "canvas": [
+            0,
+            0,
+            390,
+            844
+          ]
+        },
+        "checks": 19,
+        "changes": [],
+        "suitableForReview": true
+      }
+    },
+    {
+      "fight": "veteran-732",
+      "outcome": "win",
+      "health": {
+        "player": 150,
+        "opponent": 0
+      },
+      "codec": "vp8",
+      "size": [
+        390,
+        844
+      ],
+      "recordingFps": "25/1",
+      "videoSeconds": 16.2,
+      "lastCombatVideoSecond": 13.066442165999993,
+      "coversFinish": true,
+      "fullDecodePassed": true,
+      "decodeErrors": "",
+      "differentFrames": true,
+      "audioTracks": 0,
+      "renderer": {
+        "name": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "canvas": [
+          390,
+          844
+        ],
+        "dpr": 1
+      },
+      "geometry": {
+        "initial": {
+          "layout": [
+            390,
+            844
+          ],
+          "canvas": [
+            0,
+            0,
+            390,
+            844
+          ]
+        },
+        "checks": 17,
+        "changes": [],
+        "suitableForReview": true
+      }
+    }
+  ],
+  "notes": [
+    "Headed/headless comparison: six matched fights before spacing change, identical outcome and final HP; capture-route evidence, not final policy acceptance.",
+    "All 30 original roster videos and the affected-case replay saved. Six matched headless recordings fully decoded and visually checked.",
+    "Conservative heavy accounting includes critical. Original Pitborn critical was NOT terminal: nine later thrusts followed it.",
+    "Critical accounting changes future budget decisions. Original critical recovery pause preserved; affected seed freshly replayed and passes 1/20 heavy and win82HP.",
+    "Reporting corrections reanalysed separately without rewriting raw events.",
+    "Silent recordings; controlled clock and 25fps recording rate do not measure real gameplay FPS or phone feel.",
+    "Thrust dominant; accepted kicks and useful feints remain unproven. Limited mode uses semantic events, not vision, and omits special tell events."
+  ],
+  "acceptanceScope": "29 unaffected original roster fights plus one final-source affected-case replay; original 30 retained separately",
+  "compositeRawCounts": {
+    "wins": 29,
+    "fights": 30,
+    "attackStarts": 454,
+    "heavyIncludingCritical": 22,
+    "allPerFightCapsPass": true
+  },
+  "originalRosterBotContentSha256": "5e5462d2259a87091df3cb17092773f4a7902feb8ccb272f230fbbf1eb5ca148",
+  "affectedReplay": {
+    "receipt": "artifacts/evaluation-20261005/critical-recheck/pitborn-3901284756.json",
+    "rawSha256": "1cc9c35abf02c3fe4269b32acdfb9b4e9f829560e5888c99013a67793cd51f0d",
+    "botContentSha256": "d75d49a1aa2e40ebda42a5c2bda0fc55cb1f7f08c17ff68c4cd520b068776011",
+    "engineRevision": "4056467af826b03166a575002f7a4f4b04f9dfe7",
+    "opponent": "pitborn",
+    "seed": 3901284756,
+    "attackStarts": 20,
+    "heavyIncludingCritical": 1,
+    "outcome": "win",
+    "finalHealth": {
+      "player": 82,
+      "opponent": 0
+    },
+    "inputsReleased": true,
+    "errors": []
+  }
+}

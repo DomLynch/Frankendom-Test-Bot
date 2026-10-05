@@ -1,6 +1,33 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { limitedObservation, perceivable } from '../scripts/lib/player-bot-observation.mjs';
+import { chooseTacticalAttack } from '../scripts/lib/player-bot-policy.mjs';
+
+test('a delayed closing-range reading does not justify a swing at a retreating opponent', () => {
+  const memory = {}, raw = { hp: 150, enemyHp: 190, phase: 'ready', ownState: 'ready', stamina: 100,
+    radius: 3, events: [], light: true, thrust: true, heavy: true };
+  limitedObservation({ ...raw, tick: 100, gap: 1 }, memory, 12);
+  limitedObservation({ ...raw, tick: 112, gap: 1.5 }, memory, 12);
+  const seen = limitedObservation({ ...raw, tick: 124, gap: 2.15 }, memory, 12);
+  assert.equal(seen.gap, 1.5);
+  assert.equal(seen.gapObservedTick, 112);
+  assert.equal(seen.gapUpper, 2.25);
+  const config = { thrustRange: 1.9, wallRadius: 7.15 };
+  assert.equal(chooseTacticalAttack(seen, {}, 12, config).press, null);
+  assert.deepEqual(chooseTacticalAttack(seen, {}, 12, config).keys, ['KeyW']);
+  assert.equal(chooseTacticalAttack({ ...seen, gapUpper: undefined }, {}, 12, config).press, 'KeyF', 'old point estimate would swing');
+});
+
+test('spacing forecast never uses an undelayed exact gap or assumes a closing trend continues', () => {
+  const observe = current => {
+    const memory = {}, raw = { radius: 3, events: [] };
+    limitedObservation({ ...raw, tick: 100, gap: 2 }, memory, 12);
+    limitedObservation({ ...raw, tick: 112, gap: 1.5 }, memory, 12);
+    return limitedObservation({ ...raw, tick: 124, gap: current }, memory, 12);
+  };
+  assert.equal(observe(.9).gapUpper, 1.75);
+  assert.equal(observe(9).gapUpper, 1.75);
+});
 
 test('limited observations see a swing from its seen start to its seen end, delayed, and stop immediately on death', () => {
   const memory = {};

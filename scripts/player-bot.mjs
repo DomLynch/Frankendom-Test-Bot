@@ -10,28 +10,41 @@ const gameRoot = fileURLToPath(new URL('../game/', import.meta.url));
 import { chromium } from 'playwright';
 import { preview } from 'vite';
 import { harnessClock } from './lib/harness-clock.mjs';
-import { BOT_CONFIG as CONFIG, chooseChargedAttack, chooseGuardCounter, chooseTacticalAttack, fightSeeds } from './lib/player-bot-policy.mjs';
+import { BOT_CONFIG as CONFIG, chooseChargedAttack, chooseGuardCounter, chooseTacticalAttack, fightSeeds, isHeavyMove } from './lib/player-bot-policy.mjs';
 import { chargedAnswers, damageSources, defenceEarned, defenceExchanges, explainDecisions, intentFor, selectMoments, summarizeDefences, videoSecondAt } from './lib/player-bot-review.mjs';
 import { limitedObservation } from './lib/player-bot-observation.mjs';
+import { chooseProbe, probeNames } from './lib/player-bot-probes.mjs';
+import { createSparring } from './lib/sim-bot.mjs';
+import { optionValue } from './lib/cli-option.mjs';
 import { ENCOUNTERS } from '../game/src/roster.ts';
 import { LEVEL_ANCHORS, LONGSWORD, OPPONENTS, RULES, WEAPONS, opponentAt } from '../game/src/moves.ts';
 import { RADIUS } from '../game/src/sim.ts';
 
 const LEVEL = LEVEL_ANCHORS.easy;   // the one level the bot fights: the seed, the pick, the assert and his weapon tables all read it
 
-const option = (name, fallback) => process.argv.find(a => a.startsWith(`--${name}=`))?.split('=')[1] ?? fallback;
+const option = (name, fallback) => optionValue(process.argv, name, fallback);
 const seedArg = Number(option('seed', '731'));
 assert.ok(Number.isSafeInteger(seedArg) && seedArg >= 0 && seedArg <= 0xffffffff, 'seed must be an unsigned 32-bit integer');
 const first = seedArg >>> 0;
 const count = Number(option('fights', process.argv.includes('--smoke') ? '1' : '3'));
 const reactionMs = Number(option('reaction-ms', '180'));
-const stepMs = Number(option('step-ms', '32'));
+const stepMs = Number(option('step-ms', '64'));
 const recordVideo = !process.argv.includes('--no-video');
 const headed = process.argv.includes('--headed');
-const recordClips = recordVideo && !process.argv.includes('--no-clips');
+const browserKind = option('browser', 'chromium');
+assert.ok(['chromium', 'chrome'].includes(browserKind), 'browser must be chromium or chrome');
+const recordClips = recordVideo && process.argv.includes('--clips') && !process.argv.includes('--no-clips');
 const showDebugVideo = process.argv.includes('--show-debug-video');
 const strategy = option('strategy', 'tactical');
 const observation = option('observation', 'limited');
+const probe = option('probe', null);
+assert.ok(probe === null || probeNames.includes(probe), 'unknown experimental probe');
+const sparringSearch = option('sparring-url', null);
+if (sparringSearch) {
+  const { config } = createSparring(sparringSearch, first);
+  assert.equal(config.engineLevel, LEVEL, 'browser policy currently supports Easy level6 only');
+  assert.equal(config.weapon, 'longsword', 'browser reach policy currently supports longsword only');
+}
 const requested = option('opponents', option('opponent', 'pitborn'));
 const playable = ENCOUNTERS.filter(entry => !entry.hold).map(entry => entry.id);
 const opponents = requested === 'all' ? playable : requested.split(',');
@@ -41,13 +54,18 @@ assert.ok([16, 32, 64].includes(stepMs));
 assert.ok(['charged', 'counter', 'tactical'].includes(strategy));
 assert.ok(['debug', 'limited'].includes(observation));
 assert.ok(opponents.length && opponents.every(id => playable.includes(id)), 'choose a playable opponent or --opponents=all');
-const seeds = fightSeeds(first, count);
+const seedList = option('seeds', null);
+const seeds = seedList ? seedList.split(',').map(Number) : fightSeeds(first, count);
+assert.ok(seeds.length === count && new Set(seeds).size === count && seeds.every(s => Number.isSafeInteger(s) && s >= 0 && s <= 0xffffffff), 'seeds must contain exactly fights unique unsigned integers');
 const dir = option('out', 'artifacts/combat/player-bot');
 await fs.mkdir(dir, { recursive: true });
-const server = await preview({ root: gameRoot, preview: { host: '127.0.0.1', port: 0 } });
-const origin = `http://127.0.0.1:${server.httpServer.address().port}`;
-const browser = await chromium.launch({ headless: !headed, executablePath: chromium.executablePath() });
+const servedUrl = option('url', null);
+if (servedUrl) assert.ok(new URL(servedUrl).hostname === '127.0.0.1', 'external preview must use a loopback URL');
+const server = servedUrl ? null : await preview({ root: gameRoot, preview: { host: '127.0.0.1', port: 0 } });
+const origin = servedUrl ?? `http://127.0.0.1:${server.httpServer.address().port}`;
+const browser = await chromium.launch({ headless: !headed, ...(browserKind === 'chrome' ? { channel: 'chrome' } : { executablePath: chromium.executablePath() }) });
 const revision = execFileSync('git', ['rev-parse', 'HEAD'], { cwd: gameRoot, encoding: 'utf8', timeout: 20_000 }).trim();
+if (servedUrl) assert.equal((await (await fetch(new URL('/.bot-revision', origin))).text()).trim(), revision, 'served build does not match imported engine');
 const dirty = execFileSync('git', ['status', '--porcelain'], { cwd: gameRoot, encoding: 'utf8', timeout: 20_000 }).trim() !== '';
 const botRoot = fileURLToPath(new URL('../', import.meta.url));
 let botRevision = null;
@@ -61,7 +79,7 @@ const hashBotTree = dir => { for (const entry of readdirSync(dir, { withFileType
 hashBotTree(join(botRoot, 'scripts'));
 for (const file of ['current-game.sha', 'package-lock.json']) digest.update(file).update('\0').update(readFileSync(join(botRoot, file)));
 const botContentSha256 = digest.digest('hex');
-const identity = strategy === 'tactical' ? 'CURRENT TEST tactical (rendered acceptance pending)' : 'ARCHIVED diagnostic';
+const identity = probe ? `EXPERIMENT ${probe} (coverage only)` : strategy === 'tactical' ? 'CURRENT tactical test bot' : 'ARCHIVED diagnostic';
 console.log(JSON.stringify({ identity, botRevision, botContentSha256, revision: `${revision}${dirty ? '-dirty' : ''}`, strategy, difficulty: 'easy', observation, headed }));
 const receipt = { identity, botRevision, botContentSha256, revision: `${revision}${dirty ? '-dirty' : ''}`, opponents, difficulty: 'easy', strategy, reactionMs, stepMs, headed, video: recordVideo, clips: recordClips, observation, observationAccess: observation === 'debug' ? 'exact current debug gap/position/stamina/phase and combat events' : 'player view: stamina/health meters, perceivable events only (a swing seen starting and ending, its side; the charge sound without whose it is; contact sounds, whiffs, rolls), all opponent-side information delayed; charge inferred from the sound or the windup hold time; distance rounded to half-metres; current own phase', fights: [] };
 try {
@@ -83,9 +101,19 @@ try {
       page.on('pageerror', e => fight.errors.push(String(e)));
       await page.route('**/*sentry.io/**', route => route.abort());
       await page.addInitScript((level) => { try { if (!sessionStorage.getItem('frankendom.dev-kit')) sessionStorage.setItem('frankendom.dev-kit', JSON.stringify({ level })); } catch {} }, LEVEL);   // the Dev kit's level, seeded before boot: a live pick that moves the Centurion's loadout reloads the page (main.ts loadoutMoved)
-      await page.goto(`${origin}/?opponent=${opponent}&debug=1&botSeed=${seed}`);
+      const search = sparringSearch ? new URL(sparringSearch, origin).searchParams : new URLSearchParams();
+      search.set('opponent', opponent); search.set('debug', '1'); search.set('botSeed', String(seed));
+      if (sparringSearch) createSparring(`?${search}`, seed); // reject class/level mismatches before input
+      await page.goto(`${origin}/?${search}`);
       await page.evaluate(({ identity, revision, opponent, seed }) => { document.title = `${identity} · ${revision.slice(0, 8)} · ${opponent} ${seed}`; }, { identity, revision, opponent, seed });
       await page.waitForFunction(() => document.querySelector('#attack-button')?.getAttribute('aria-disabled') === 'false', null, { timeout: 90000 });
+      fight.renderer = await page.evaluate(() => {
+        const canvas = document.querySelector('#world');
+        const gl = canvas?.getContext('webgl2') ?? canvas?.getContext('webgl');
+        const info = gl?.getExtension('WEBGL_debug_renderer_info');
+        return { name: info ? gl.getParameter(info.UNMASKED_RENDERER_WEBGL) : 'unavailable', canvas: [canvas?.width, canvas?.height], dpr: devicePixelRatio };
+      });
+      console.log(JSON.stringify({ opponent, seed, browser: browserKind, renderer: fight.renderer, stage: 'ready', origin }));
       assert.equal(await page.locator('#difficulty-select').inputValue(), String(LEVEL));
       const { run, until } = await harnessClock(page);
       { const enter = page.getByRole('button', { name: 'Enter the arena' }); if (await enter.isVisible().catch(() => false)) await enter.tap(); }
@@ -103,6 +131,8 @@ try {
       fight.inputs.push({ tick: 0, key: 'KeyF', edge: 'press' });
       await page.keyboard.press('KeyF');
       await until(() => document.querySelector('#guard-button').getAttribute('aria-disabled') === 'false', 20000);
+      fight.openingScreenshot = `${dir}/${opponent}-${seed}-opening.png`;
+      await page.screenshot({ path: fight.openingScreenshot });
       let cursor = 0, memory = { tell: null, counterUntil: 0 }, perception = {}, perceivedEvents = [], lastInput = '', seenEligible = new Set();
       for (let steps = 0; steps < 3000; steps++) {
         const obs = await page.evaluate(cursor => {
@@ -122,6 +152,7 @@ try {
             thrust: document.querySelector('#thrust-button').getAttribute('aria-disabled') === 'false',
             kick: document.querySelector('#kick-button').getAttribute('aria-disabled') === 'false',
             dodge: document.querySelector('#dodge-button').getAttribute('aria-disabled') === 'false',
+            skill: document.querySelector('#skill-button').getAttribute('aria-disabled') === 'false',
             meterStamina: Number(document.querySelector('#stamina').value),
             posture: Number(document.querySelector('#posture').value),   // the player's own posture meter (on screen)
             events: window.__botEvents.slice(cursor), count: window.__botEvents.length };
@@ -150,24 +181,31 @@ try {
         const seen = observation === 'limited' ? limitedObservation(obs, perception, Math.ceil(reactionMs / 1000 * 60)) : obs;
         perceivedEvents.push(...seen.events);
         const choose = strategy === 'counter' ? chooseGuardCounter : strategy === 'tactical' ? chooseTacticalAttack : chooseChargedAttack;
-        const decision = choose(seen, memory, Math.ceil(reactionMs / 1000 * 60), config);
+        const decision = probe ? chooseProbe(seen, memory, Math.ceil(reactionMs / 1000 * 60), config, probe)
+          : choose(seen, memory, Math.ceil(reactionMs / 1000 * 60), config);
         for (const opportunity of decision.eligible ?? []) {
           const id = `${opportunity.kind}/${opportunity.tick}`;
           if (!seenEligible.has(id)) { seenEligible.add(id); fight.eligibleOpportunities.push({ observedTick: obs.tick, ...opportunity }); }
         }
         const input = `${decision.keys.join(',')}/${decision.press ?? ''}`;
-        if (input !== lastInput || decision.press) fight.decisions.push({ tick: obs.tick, intent: intentFor(decision, seen, strategy, perceivedEvents.slice(-8)), reason: decision.reason, keys: decision.keys, press: decision.press, phase: seen.phase, gap: seen.gap, actualGap: obs.gap, stamina: seen.stamina, radius: seen.radius });
+        if (input !== lastInput || decision.press) fight.decisions.push({ tick: obs.tick, intent: intentFor(decision, seen, strategy, perceivedEvents.slice(-8)), reason: decision.reason, keys: decision.keys, press: decision.press, phase: seen.phase, gap: seen.gap, gapUpper: seen.gapUpper, gapObservedTick: seen.gapObservedTick, actualGap: obs.gap, stamina: seen.stamina, radius: seen.radius });
         lastInput = input;
         await keys(decision.keys, obs.tick);
-        if (decision.press) { await page.keyboard.press(decision.press); fight.inputs.push({ tick: obs.tick, key: decision.press, edge: 'press' }); }
+        if (decision.press) {
+          if (decision.press === 'Skill') await page.locator('#skill-button').click();
+          else await page.keyboard.press(decision.press);
+          fight.inputs.push({ tick: obs.tick, key: decision.press, edge: decision.press === 'Skill' ? 'click' : 'press' });
+        }
         if (recordVideo) await page.evaluate(({ tick, seed, opponent }) => { document.querySelector('#bot-receipt').textContent = `${opponent} ${seed} · tick ${tick}`; }, { tick: obs.tick, seed, opponent });
         await run(stepMs);
       }
       const end = await page.evaluate(() => ({ tick: Number(document.querySelector('#debug').dataset.tick), hp: Number(document.querySelector('#player-health').value), enemyHp: Number(document.querySelector('#target-health').value), events: window.__botEvents }));
       fight.endTick = end.tick;
       fight.events = end.events;
-      if (fight.samples.at(-1)?.tick < end.tick) fight.samples.push({ ...fight.samples.at(-1), tick: end.tick, videoSeconds: (performance.now() - videoStart) / 1000 });
+      if (fight.samples.at(-1)?.tick < end.tick) fight.samples.push({ ...fight.samples.at(-1), hp: end.hp, enemyHp: end.enemyHp, tick: end.tick, videoSeconds: (performance.now() - videoStart) / 1000 });
       fight.finalHealth = { player: end.hp, opponent: end.enemyHp };
+      fight.finishScreenshot = `${dir}/${opponent}-${seed}-finish.png`;
+      await page.screenshot({ path: fight.finishScreenshot });
       fight.outcome = end.enemyHp === 0 ? 'win' : end.hp === 0 ? 'loss' : 'timeout';
       fight.durationSeconds = +(end.tick / 60).toFixed(2);
       fight.damageSources = damageSources(fight.events);
@@ -185,7 +223,7 @@ try {
         guardBreakDamage: fight.events.filter(e => e.type === 'GuardBroken' && e.actor === 0 && e.move === move).reduce((n, e) => n + (e.damage ?? 0), 0),
       }]));
       const ownStarts = fight.events.filter(e => e.type === 'AttackStarted' && e.actor === 0);
-      const heavyStarts = ownStarts.filter(e => e.move?.startsWith('heavy')).length;
+      const heavyStarts = ownStarts.filter(e => isHeavyMove(e.move)).length;
       fight.attackMix = { attacks: ownStarts.length, heavies: heavyStarts, heavyPercent: ownStarts.length ? +(100 * heavyStarts / ownStarts.length).toFixed(1) : null,
         passed: ownStarts.length > 0 && 5 * heavyStarts <= ownStarts.length };
       fight.defenceExchanges = defenceExchanges(fight.events, fight.decisions, fight.samples, end.tick);
@@ -214,7 +252,7 @@ try {
       fight.defenceSummary = summarizeDefences(fight.defences);
       fight.chargedHeavies = chargedAnswers(fight.events, fight.decisions);
       fight.moments = selectMoments(fight.events, fight.decisions, end.tick);
-      fight.videoTailSeconds = recordVideo ? 5 : 0;
+      fight.videoTailSeconds = null; // capture tail is not separately measured
       if (fight.outcome === 'loss') {
         await page.evaluate(() => document.querySelector('#reset-button').click());
         await run(50);
@@ -222,10 +260,13 @@ try {
         assert.ok(fight.resetCheck.inputsReleased && fight.resetCheck.health > 0, 'rematch starts without held inputs');
       }
       assert.deepEqual(fight.errors, []);
-    } catch (error) { fight.error = String(error); }
+    } catch (error) {
+      fight.error = String(error); fight.errorStack = error.stack;
+      fight.browserFailure = { pageClosed: page.isClosed(), browserConnected: browser.isConnected(), lastObservedTick: fight.samples.at(-1)?.tick ?? null };
+    }
     finally {
       await release();
-      fight.inputsReleased = held.size === 0;
+      fight.inputsReleased = held.size === 0 && !fight.errors.some(e => e.startsWith('release '));
       await context.close();
       if (video) {
         fight.video = `${dir}/${opponent}-${seed}.webm`;
@@ -262,9 +303,15 @@ try {
   }));
   receipt.rates = Object.fromEntries(opponents.map(id => [id, receipt.fights.filter(f => f.opponent === id && f.outcome === 'win').length / count]));
   receipt.passed = opponents.every(id => receipt.rates[id] >= 2 / 3) && receipt.fights.every(f => !f.error && !f.errors.length && f.inputsReleased && (strategy !== 'tactical' || f.attackMix.passed));
-  assert.ok(receipt.passed, 'at least two-thirds real Easy wins per selected opponent; no run errors');
+  receipt.experimental = probe !== null;
+  receipt.probe = probe; receipt.sparringSearch = sparringSearch;
+  receipt.browserKind = browserKind; receipt.drawsSuppressed = false;
+  receipt.clock = 'controlled fixed-step; not realtime FPS';
+  receipt.defenceMetricNotes = { avoided: 'Nominal move damage estimate; not a measured counterfactual', distance: 'Before/after gap sampled at observed ticks', wall: 'Radial movement; positive is toward boundary' };
+  if (!probe) assert.ok(receipt.passed, 'at least two-thirds real Easy wins per selected opponent; no run errors');
+  else assert.ok(receipt.fights.every(f => !f.error && !f.errors.length && f.inputsReleased), 'experimental run must retain every outcome and release inputs');
 } finally {
   await fs.writeFile(`${dir}/summary.json`, JSON.stringify(receipt, null, 2));
   await browser.close();
-  await new Promise(resolve => server.httpServer.close(resolve));
+  if (server) await new Promise(resolve => server.httpServer.close(resolve));
 }
