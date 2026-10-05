@@ -1,6 +1,6 @@
 # Frankendom Test Bot
 
-**Purpose:** autonomous combat research—fight, review, reproduce findings and help improve the game. Competent play supports this; win rate is one measure. See the [research objective and planned player-skill profiles](docs/testing-objective.md).
+**Purpose:** autonomous combat research—fight, review, reproduce findings and help improve the game. Competent play supports this; win rate is one measure. See the [research objective and player-skill profiles](docs/testing-objective.md).
 
 **This is the canonical bot entry repo.** Git and Node.js **22.18+** are required. Clone it, then run the current tactical browser bot:
 
@@ -29,6 +29,19 @@ The launcher fetches the explicit game branch and verifies the exact commit, inc
 The default is headless with full video and64ms controlled input cadence. No ordinary Chrome pop-ups are needed. Videos are silent and their25fps capture rate is not gameplay FPS. Useful defence is evidenced; kicks and offensive feint benefit remain unproven. This policy remains thrust dominant. It is not a validated human player or phone comfort test.
 
 The browser runner enforces at least two wins out of three per requested opponent and at most 20% heavy attack starts in each fight. A one-fight smoke checks that individual fight; it is not a three-fight acceptance batch. Limited observation still reads delayed semantic events and own telemetry; it is not vision/audio perception or proof of phone control comfort. The current browser policy is fixed to Easy (engine L6), longsword and its own scripted configuration; use the engine runner for explicitly selected configurations.
+
+## Player-experience pilot
+
+Three reproducible **synthetic** personas now use the same tactical controller: `advanced` (unchanged default), `intermediate`, and `beginner`. They vary reaction delay, spacing/stamina judgement, directional mistakes and missed punish opportunities. They are experimental test conditions, not validated human populations.
+
+```sh
+./run-profile-pilot.sh
+./run-latest.sh --player=beginner --research --opponents=pitborn,veteran --fights=3 --out=artifacts/combat/beginner
+```
+
+The first command runs18 fast production-engine cases: three personas × two enemies × three matched seeds. It does **not render**. The second uses actual headless browser keyboard input and saves full video. Replace `beginner` with `intermediate` or `advanced`; keep the same `--seed=` to compare initial conditions. `--headed` is optional. The pilot is scoped to engineL6/longsword with no equipped specials; it does not cover progression or every weapon.
+
+`--research` retains losses without applying the advanced win-rate gate; runtime errors, input release and the per-fight <=20% heavy cap still must pass. Actual wins/rates and `competencePassed` remain in the summary. Beginner/intermediate are exploratory even without this flag. Default advanced runs retain the original win gate. Persona interventions count applied judgement biases, not proof that every application changed the action. See [fresh pilot evidence and findings](docs/profile-pilot-20261005.md).
 
 ## Direct-engine diagnostics
 

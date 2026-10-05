@@ -4,17 +4,19 @@ Build an autonomous combat research harness: **fight → watch → explain → r
 
 ## Two independent axes
 
-**Player skill profile** describes the bot, not the enemy. The following are the next implementation requirements; these named presets are not implemented yet.
+**Player skill profile** describes the bot, not the enemy. The following seeded prototype presets are implemented in the shared engine/browser controller. They are experimental test personas, not calibrated human skill levels.
 
-| Proposed profile | Decision behaviour to exercise | Player-experience question |
+| Player profile | Decision behaviour to exercise | Player-experience question |
 | --- | --- | --- |
 | Beginner | Slower, variable reactions; occasional wrong defence or range judgement; simple attacks; limited resource planning | Can a new player understand failure, recover and discover a useful answer? |
 | Intermediate | Usually correct defence; spacing and stamina management; some counters; occasional mistiming | Does better judgement improve results and open useful tactical choices? |
 | Advanced | Fast but bounded reactions; purposeful guard/parry/evasion; punish windows, positioning and situational kick/feint/special use | Is there counterplay and depth beyond a repetitive winning sequence? |
 
+The table describes target coverage. The [first pilot](profile-pilot-20261005.md) demonstrates only a subset; useful kicks/feints/specials and human calibration remain unproven.
+
 **Enemy difficulty** is the game's actual level/settings. Cross each player profile with low, middle and high enemy settings, keeping loadout and specials level appropriate. Do not silently tie advanced players to hard enemies or beginner players to easy enemies. Do not confuse display ranks with engine levels.
 
-Use seeded mistakes and bounded reaction variation for reproducibility. The profiles are test personas, not proven human skill distributions. Reaction delay alone is not a complete skill model. Existing `--reaction-ms` is available today; it does not implement all three personas.
+Use seeded mistakes and bounded reaction variation for reproducibility. The profiles are test personas, not proven human skill distributions. Reaction delay alone is not a complete skill model. Use `--player=beginner|intermediate|advanced`; `--reaction-ms` is an explicit override of the persona reaction delay. The advanced default is unchanged.
 
 ## What to measure
 
@@ -28,7 +30,7 @@ The existing >=2/3 Easy win benchmark remains evidence of **advanced/current-pol
 
 ## Efficient next experiment
 
-Implement the three reproducible profiles using the existing observation/input runner, without changing the game. Pilot Pitborn and Veteran using matched initial seeds/settings; verify actual decisions and contributions, not preset labels. Use fast production-engine diagnostics to narrow cases, then rendered browser fights for representative wins, losses and surprising exchanges. Keep the canonical advanced policy stable until any changed policy earns its own relevant validation. Broaden the matrix only when the pilot distinguishes the intended behaviours.
+The first implementation pilots Pitborn and Veteran atL6 using matched initial seeds/settings. Verify actual decisions and contributions, not preset labels. Keep direct-engine results separate from rendered browser outcomes. Use fast production-engine diagnostics to narrow cases, then rendered browser fights for representative wins, losses and surprising exchanges. Keep the canonical advanced policy stable until any changed policy earns its own relevant validation. Broaden the matrix only when the pilot distinguishes the intended behaviours.
 
 Each finding needs: engine/bot revision, level/weapon/special/profile, seed, expected and observed behaviour, frequency/sample size, decisive events and a fresh clip where visuals matter. Add it to the [bug register](combat-bug-register.md), separating game defects, bot coverage gaps and design proposals. Claude owns game implementation; verify the fix against the retained case plus unseen seeds after the pin changes.
 

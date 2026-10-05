@@ -43,3 +43,7 @@ All intervention counts are **decision ticks**, not accepted attack counts. Rece
 - Limited observation omits special tell events: a bot tooling gap, not evidence that players cannot see specials.
 - Accepted kicks and offensive feint benefits remain unproven: coverage gaps, not grounds for buffs.
 - Silent controlled-clock recordings do not establish sound, real-time input feel or physical-phone comfort.
+
+## Player-profile pilot, 5 October 2026 — design proposals, not confirmed game bugs
+
+[Fresh18engine/6browser pilot](profile-pilot-20261005.md): beginner spacing mistakes and post-parry roll forfeited a punish; intermediate evade gained space but delayed the next useful hit; advanced parries earned riposte damage. Raw counts/ticks and clips are retained. Teach defend→punish and dodge→re-enter; audit miss/contact feedback and camera emphasis. Synthetic biases contribute, so do not buff weapon reach or blame collision/balance from these examples. No exhaustion/missed-counter stochastic interventions or charged browser attacks were demonstrated; target them separately. Easy and all game code remain unchanged.
