@@ -47,3 +47,11 @@ All intervention counts are **decision ticks**, not accepted attack counts. Rece
 ## Player-profile pilot, 5 October 2026 — design proposals, not confirmed game bugs
 
 [Fresh18engine/6browser pilot](profile-pilot-20261005.md): beginner spacing mistakes and post-parry roll forfeited a punish; intermediate evade gained space but delayed the next useful hit; advanced parries earned riposte damage. Raw counts/ticks and clips are retained. Teach defend→punish and dodge→re-enter; audit miss/contact feedback and camera emphasis. Synthetic biases contribute, so do not buff weapon reach or blame collision/balance from these examples. No exhaustion/missed-counter stochastic interventions or charged browser attacks were demonstrated; target them separately. Easy and all game code remain unchanged.
+
+## BOT-003 — stale charge and false evade attribution (tooling)
+
+Confirmed in fresh beginnerPitborn seed2026100502: heavy193; light_right775 hits797; decision823 calls a charged-overhead roll824; a different light_left832 misses857. Source reproduced stale threat memory. Correction binds charge to the active observed swing and reports between-attack positioning separately from avoidance. No game fix inferred. See [learning evidence](learning-evidence-20261005.md) for validation.
+
+## BOT-004 — misaligned exchange clips (measurement)
+
+Fresh beginnerVeteran clip estimated231/261/291/326 showed actual469/485/492/519. Raw event case remains valid; this clip is not visual proof. Wall-time interpolation is retired for automated clips. Optional paused rendered-frame capture records actual tick/hash continuity and exports proof/clean clips on the VPS. Verify the visible proof ticks before any camera/readability proposal. Silent rendered evidence cannot assess sound or physical comfort.

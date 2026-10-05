@@ -11,7 +11,9 @@ import { chromium } from 'playwright';
 import { preview } from 'vite';
 import { harnessClock } from './lib/harness-clock.mjs';
 import { BOT_CONFIG as CONFIG, chooseChargedAttack, chooseGuardCounter, chooseTacticalAttack, fightSeeds, isHeavyMove } from './lib/player-bot-policy.mjs';
-import { chargedAnswers, damageSources, defenceEarned, defenceExchanges, explainDecisions, intentFor, selectMoments, summarizeDefences, videoSecondAt } from './lib/player-bot-review.mjs';
+import { chargedAnswers, damageSources, defenceEarned, defenceExchanges, explainDecisions, intentFor, selectMoments, summarizeDefences } from './lib/player-bot-review.mjs';
+import { combatLearning } from './lib/combat-learning.mjs';
+import { reviewFrameCapture } from './lib/review-frames.mjs';
 import { limitedObservation } from './lib/player-bot-observation.mjs';
 import { chooseProbe, probeNames } from './lib/player-bot-probes.mjs';
 import { PLAYER_PROFILES, createPlayerProfile, chooseProfiledAttack, profileReceipt } from './lib/player-profiles.mjs';
@@ -39,6 +41,7 @@ const headed = process.argv.includes('--headed');
 const browserKind = option('browser', 'chromium');
 assert.ok(['chromium', 'chrome'].includes(browserKind), 'browser must be chromium or chrome');
 const recordClips = recordVideo && process.argv.includes('--clips') && !process.argv.includes('--no-clips');
+const captureReviewFrames = recordClips || process.argv.includes('--review-frames');
 const showDebugVideo = process.argv.includes('--show-debug-video');
 const strategy = option('strategy', 'tactical');
 const observation = option('observation', 'limited');
@@ -65,6 +68,7 @@ const seeds = seedList ? seedList.split(',').map(Number) : fightSeeds(first, cou
 assert.ok(seeds.length === count && new Set(seeds).size === count && seeds.every(s => Number.isSafeInteger(s) && s >= 0 && s <= 0xffffffff), 'seeds must contain exactly fights unique unsigned integers');
 const dir = option('out', 'artifacts/combat/player-bot');
 await fs.mkdir(dir, { recursive: true });
+assert.ok(!(await fs.readdir(dir)).some(name => name === 'summary.json' || /^[a-z]+-\d+\.json$/.test(name)), 'Output contains fight receipts; choose a new --out to retain all outcomes');
 const servedUrl = option('url', null);
 if (servedUrl) assert.ok(new URL(servedUrl).hostname === '127.0.0.1', 'external preview must use a loopback URL');
 const server = servedUrl ? null : await preview({ root: gameRoot, preview: { host: '127.0.0.1', port: 0 } });
@@ -100,6 +104,7 @@ try {
     const context = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, deviceScaleFactor: 1, ...(recordVideo ? { recordVideo: { dir, size: { width: 390, height: 844 } } } : {}) });
     const page = await context.newPage(), video = page.video(), held = new Set(), fight = { opponent, seed, inputs: [], decisions: [], eligibleOpportunities: [], events: [], samples: [], track: [], errors: [], playerProfile: profileReceipt(playerState) };
     const videoStart = performance.now();
+    let reviewCapture = null;
     const release = async () => { for (const key of [...held]) { try { await page.keyboard.up(key); fight.inputs.push({ tick: fight.durationSeconds == null ? null : Math.round(fight.durationSeconds * 60), key, edge: 'up', reason: 'end/reset/error' }); } catch (error) { fight.errors.push(`release ${key}: ${error}`); } finally { held.delete(key); } } };
     const keys = async (wanted, tick) => {
       for (const key of [...held]) if (!wanted.includes(key)) { await page.keyboard.up(key); held.delete(key); fight.inputs.push({ tick, key, edge: 'up' }); }
@@ -134,13 +139,21 @@ try {
         const label = document.createElement('div'); label.id = 'bot-receipt';
         Object.assign(label.style, { position: 'fixed', top: '2px', left: '2px', zIndex: '9999', background: '#111d', color: 'white', font: '12px monospace', padding: '3px' });
         document.body.append(label);
-      }, { showLabel: recordVideo, showDebug: showDebugVideo });
+      }, { showLabel: recordVideo || captureReviewFrames, showDebug: showDebugVideo });
       if (recordVideo && showDebugVideo) fight.debugRect = await page.locator('#debug').boundingBox();
       fight.inputs.push({ tick: 0, key: 'KeyF', edge: 'press' });
       await page.keyboard.press('KeyF');
       await until(() => document.querySelector('#guard-button').getAttribute('aria-disabled') === 'false', 20000);
       fight.openingScreenshot = `${dir}/${opponent}-${seed}-opening.png`;
       await page.screenshot({ path: fight.openingScreenshot });
+      if (captureReviewFrames) {
+        reviewCapture = await reviewFrameCapture(page, `${dir}/${opponent}-${seed}-frames`, `${player} ${opponent} ${seed}`);
+        await reviewCapture.capture();
+      }
+      const advance = async ms => {
+        if (!reviewCapture) return run(ms);
+        for (let advanced=0; advanced<ms; advanced+=16) { await run(Math.min(16,ms-advanced)); await reviewCapture.capture(); }
+      };
       let cursor = 0, memory = { tell: null, counterUntil: 0 }, perception = {}, perceivedEvents = [], lastInput = '', seenEligible = new Set();
       for (let steps = 0; steps < 3000; steps++) {
         const obs = await page.evaluate(cursor => {
@@ -167,7 +180,7 @@ try {
         }, cursor);
         cursor = obs.count;
         fight.events.push(...obs.events);
-        if (fight.track.at(-1)?.tick !== obs.tick) fight.track.push({ tick: obs.tick, gap: obs.gap, radius: +obs.radius.toFixed(2) });
+        if (fight.track.at(-1)?.tick !== obs.tick) fight.track.push({ tick: obs.tick, gap: obs.gap, radius: +obs.radius.toFixed(2), hp:obs.hp, enemyHp:obs.enemyHp, stamina:obs.meterStamina, posture:obs.posture, ownState:obs.ownState, enemyState:obs.enemyState });
         if (!fight.samples.length || obs.tick - fight.samples.at(-1).tick >= 60) {
           fight.samples.push({ tick: obs.tick, videoSeconds: (performance.now() - videoStart) / 1000, hp: obs.hp, enemyHp: obs.enemyHp, stamina: obs.stamina, gap: obs.gap, radius: obs.radius });
           if (recordVideo) {
@@ -206,7 +219,7 @@ try {
           fight.inputs.push({ tick: obs.tick, key: decision.press, edge: decision.press === 'Skill' ? 'click' : 'press' });
         }
         if (recordVideo) await page.evaluate(({ tick, seed, opponent, player }) => { document.querySelector('#bot-receipt').textContent = `${player} · ${opponent} ${seed} · tick ${tick}`; }, { tick: obs.tick, seed, opponent, player });
-        await run(stepMs);
+        await advance(stepMs);
       }
       const end = await page.evaluate(() => ({ tick: Number(document.querySelector('#debug').dataset.tick), hp: Number(document.querySelector('#player-health').value), enemyHp: Number(document.querySelector('#target-health').value), events: window.__botEvents }));
       fight.endTick = end.tick;
@@ -259,6 +272,8 @@ try {
       const moveDamage = Object.fromEntries(Object.entries(fought.moves).map(([move, def]) => [move, def.damage]));
       fight.defences = defenceEarned(fight.events, fight.track, moveDamage, RULES.charge.damage);
       fight.defenceSummary = summarizeDefences(fight.defences);
+      fight.learning = combatLearning(fight.events, fight.decisions, fight.track, fight.defences,
+        Object.fromEntries(Object.entries(LONGSWORD.moves).map(([id,move]) => [id,move.reach])));
       fight.chargedHeavies = chargedAnswers(fight.events, fight.decisions);
       fight.moments = selectMoments(fight.events, fight.decisions, end.tick);
       fight.videoTailSeconds = null; // capture tail is not separately measured
@@ -280,22 +295,14 @@ try {
       if (video) {
         fight.video = `${dir}/${opponent}-${seed}.webm`;
         await fs.rename(await video.path(), fight.video);
-        if (recordClips && fight.moments) for (const [index, moment] of fight.moments.entries()) {
-          const fromTick = Math.max(0, moment.tick - 180), toTick = Math.min(fight.endTick, moment.tick + 180);
-          if (toTick <= fromTick) continue;
-          const from = videoSecondAt(fromTick, fight.samples), to = videoSecondAt(toTick, fight.samples);
-          if (!Number.isFinite(from) || !Number.isFinite(to) || to - from < .2) continue;
-          const speed = (to - from) / ((toTick - fromTick) / 60);
-          if (!Number.isFinite(speed) || speed <= 0) continue;
-          const path = `${dir}/${opponent}-${seed}-${index + 1}.mp4`;
-          const box = fight.debugRect;
-          const mask = box ? `drawbox=x=0:y=0:w=iw:h=${Math.ceil(box.y + box.height + 12)}:color=black:t=fill,` : '';
-          try {
-            execFileSync('ffmpeg', ['-y', '-hide_banner', '-loglevel', 'error', '-ss', String(from), '-t', String(to - from), '-i', fight.video, '-vf', `${mask}setpts=(PTS-STARTPTS)/${speed},fps=30`, '-fps_mode', 'vfr', '-an', '-c:v', 'libx264', '-preset', 'ultrafast', '-crf', '28', path], { timeout: 60000, stdio: 'pipe' });
-            moment.clip = path; moment.simSeconds = +((toTick - fromTick) / 60).toFixed(2); moment.audio = false; moment.debugMasked = !!box;
-          } catch (error) { moment.clipError = String(error); }
-        }
+        fight.videoAlignment = { verified:false, reason:'Wall-clock WebM timestamps cannot establish exact combat ticks; use reviewFrames for event-aligned visual evidence.' };
+
       }
+      if (reviewCapture) fight.reviewFrames = await reviewCapture.finish({
+        botRevision, botContentSha256, revision, opponent, seed, player, endTick:fight.endTick ?? null,
+        cases:fight.learning?.visualCases ?? [], moments:fight.moments ?? [],
+      });
+      if (recordClips) fight.clipExport = 'Run python3 scripts/render-review.py <fight-frames-directory> on the VPS; no unverified wall-time clips are generated.';
       fight.playerProfile = profileReceipt(playerState);
       await fs.writeFile(`${dir}/${opponent}-${seed}.json`, JSON.stringify(fight, null, 2));
       const { inputs, decisions, events, samples, track, defences, ...summary } = fight;

@@ -4,6 +4,7 @@ import { createSparring, eventDamage } from './sim-bot.mjs';
 import { limitedObservation } from './player-bot-observation.mjs';
 import { BOT_CONFIG, isHeavyMove } from './player-bot-policy.mjs';
 import { createPlayerProfile, chooseProfiledAttack, profileReceipt } from './player-profiles.mjs';
+import { combatLearning } from './combat-learning.mjs';
 import { defenceEarned, summarizeDefences } from './player-bot-review.mjs';
 import { accepts } from '../../game/src/combat.ts';
 import { LONGSWORD, WEAPONS, RULES } from '../../game/src/moves.ts';
@@ -39,7 +40,7 @@ export function runProfileFight(search, seed, player, ticks = 5400) {
   let cursor = 0, previous = [], intent = idleIntent();
   for (let i = 0; i < ticks; i++) {
     const duel = match.practice.duel, [p,e] = duel.fighters;
-    track.push({ tick: duel.tick, gap: Math.hypot(e.body.x-p.body.x,e.body.z-p.body.z), radius: Math.hypot(p.body.x,p.body.z) });
+    track.push({ tick: duel.tick, gap: Math.hypot(e.body.x-p.body.x,e.body.z-p.body.z), radius: Math.hypot(p.body.x,p.body.z), hp:p.health,enemyHp:e.health,stamina:p.stamina,posture:p.posture,ownState:p.phase,enemyState:e.phase });
     if (p.phase === 'sheathed') intent = { ...idleIntent(), action: 'light' };
     else if (duel.tick % 4 === 0) {
       const raw = { ...track.at(-1), hp: p.health, enemyHp: e.health, stamina: p.stamina, meterStamina: p.stamina, posture: p.posture,
@@ -71,5 +72,6 @@ export function runProfileFight(search, seed, player, ticks = 5400) {
     emptySwings: events.filter(e => e.type === 'AttackMissed' && e.actor === 0).length,
     blocks: events.filter(e => e.type === 'Blocked' && e.actor === 0).length, parries: events.filter(e => e.type === 'Parried' && e.actor === 0).length,
     exhaustions: events.filter(e => e.type === 'StaminaExhausted' && e.actor === 0).length,
+    learning:combatLearning(events,decisions,track,defences,Object.fromEntries(Object.entries(LONGSWORD.moves).map(([id,m])=>[id,m.reach]))),
     defences, defenceSummary: summarizeDefences(defences), inputReleaseEvidence: 'not-applicable-direct-engine; no browser keys', events, decisions, track, intents };
 }
