@@ -60,7 +60,7 @@ test('only perceivable events and fields reach the bot', () => {
     { tick: 7, type: 'StaminaExhausted', actor: 1 },
   ]);
   assert.deepEqual(seen, [
-    { tick: 2, type: 'ChargeCue' },
+    { tick: 1, type: 'ChargeCue', actor: 1, cue: 'charge_foe' },
     { tick: 4, type: 'Hit', actor: 1, target: 0, move: 'heavy_overhead' },
     { tick: 6, type: 'ActionStarted', actor: 0, action: 'roll' },
   ]);
@@ -74,7 +74,7 @@ test('limited observation preserves a charge across own contact until the enemy 
   const step=(tick,events=[])=>chooseProfiledAttack(limitedObservation({...raw,tick,events},memory,11),state,profile,config);
   step(1241,[{tick:1230,type:'AttackStarted',actor:1,move:'heavy_overhead',direction:'overhead'}]);
   step(1269,[{tick:1258,type:'Hit',actor:0,target:1,move:'thrust',damage:17,stop:true}]);
-  assert.match(step(1284,[{tick:1273,type:'Charged',actor:1,move:'heavy_overhead'}]).reason,/charged overhead/);
+  assert.match(step(1284,[{tick:1273,type:'Charging',actor:1,move:'heavy_overhead'}]).reason,/charged overhead/);
   assert.equal(memory.swing,1230);
   step(1306,[{tick:1295,type:'Hit',actor:1,target:0,move:'heavy_overhead',damage:24}]);
   assert.equal(memory.swing,null);

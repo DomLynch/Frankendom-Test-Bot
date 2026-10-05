@@ -60,7 +60,7 @@ export function chooseGuardCounter(obs, state, reactionTicks, config) {
 export function chooseChargedAttack(obs, state, reactionTicks, config) {
   for (const e of obs.events) {
     if (e.type === 'AttackStarted' && e.actor === 1) state.tell = { tick: e.tick, move: e.move, direction: e.direction };
-    if (e.type === 'Charged' && e.actor === 0 || e.type === 'ChargeCue' && state.charging) state.charged = true;
+    if (e.type === 'Charged' && e.actor === 0 || e.type === 'ChargeCue' && e.actor === 0 && e.cue === 'charge' && state.charging) state.charged = true;
     if ((e.type === 'Blocked' || e.type === 'Parried') && e.actor === 0) { state.counterReady = e.tick + reactionTicks; state.counterUntil = e.tick + 20; }
   }
   if (!obs.hp || !obs.enemyHp) return { keys: [], press: null };
@@ -106,10 +106,10 @@ export function chooseTacticalAttack(obs, state, reactionTicks, config) {
       || e.type === 'Staggered' && e.actor === 1 || e.type === 'Killed'
       || e.type === 'ActionStarted' && e.actor === 1 && e.action === 'feint';
     if (ended) { state.tell = null; delete state.chargedThreat; }
-    // A charge is known from the debug event, or (limited) the charge sound while a seen heavy is winding up and we are not holding
-    // our own: the cue is one sound for either fighter, so on our own hold it is ours.
+    // Debug knows completed charge. Limited mode receives a delayed, enemy-specific semantic sound onset;
+    // our own completed-charge cue is separate, including when both fighters hold at once.
     if (e.type === 'Charged' && e.actor === 1 && e.move === 'heavy_overhead' && state.tell?.move === 'heavy_overhead') state.chargedThreat = { swingTick: state.tell.tick, tick: e.tick, ready: e.tick + reactionTicks, cue: 'event' };
-    if (e.type === 'ChargeCue' && !state.charging && state.tell?.move === 'heavy_overhead' && obs.enemyPhase === 'attack')
+    if (e.type === 'ChargeCue' && e.actor === 1 && e.cue === 'charge_foe' && state.tell?.move === 'heavy_overhead' && obs.enemyPhase === 'attack')
       state.chargedThreat = { swingTick: state.tell.tick, tick: e.tick, ready: e.tick + reactionTicks, cue: 'sound' };
     if (e.type === 'AttackMissed' && e.actor === 1) state.miss = { tick: e.tick, ready: e.tick + reactionTicks, until: e.tick + 30 };
     if ((e.type === 'Blocked' || e.type === 'Parried') && e.actor === 0) state.defence = { tick: e.tick, ready: e.tick + reactionTicks, until: e.tick + 20 };
@@ -120,7 +120,7 @@ export function chooseTacticalAttack(obs, state, reactionTicks, config) {
       if (!e.move?.startsWith('heavy')) state.quickRestUntil = e.tick + 70; // retain the critical finisher's existing recovery pause
       state.heavyPending = 0;
     }
-    if (e.type === 'Charged' && e.actor === 0 || e.type === 'ChargeCue' && state.charging) state.charged = true;
+    if (e.type === 'Charged' && e.actor === 0 || e.type === 'ChargeCue' && e.actor === 0 && e.cue === 'charge' && state.charging) state.charged = true;
   }
   // Hold time: a seen heavy still winding up well past its plain windup is being held for the charge.
   const heldFor = config.windup?.heavy_overhead + (config.holdMargin ?? 8);
@@ -165,10 +165,12 @@ export function chooseTacticalAttack(obs, state, reactionTicks, config) {
   // row flag, the Shieldmaiden's only) it stays set until the posture meter has drained: clearing at stamina 50 re-entered one
   // attack from worn onto her gladius thrust (3024046025: 15 back-offs, a loss). Not global: posture < 25 flipped Goblin
   // 3024046025 and Nightborn 1637974753 to losses and < 40 was worse (timeouts), so the tool keeps 03234673 everywhere else.
-  const wornNow = obs.posture >= (config.postureOut ?? 50) && obs.stamina < 50;
+  // The visible shaded bar is the reachable ceiling. Preserve the 50-point reserve for an unwounded fighter.
+  const recoveryTarget = Math.min(50, obs.maxStamina ?? 100);
+  const wornNow = obs.posture >= (config.postureOut ?? 50) && obs.stamina < recoveryTarget;
   if (!config.holdWorn) state.worn = wornNow;
   else if (wornNow) state.worn = true;
-  else if (obs.posture < 25 && obs.stamina >= 50) state.worn = false;
+  else if (obs.posture < 25 && obs.stamina >= recoveryTarget) state.worn = false;
   const worn = state.worn, away = nearWall ? 'KeyA' : 'KeyS';
   const tell = state.tell, age = tell ? obs.tick - tell.tick : 0;
   if (tell && obs.enemyPhase === 'attack' && age >= reactionTicks && (own === 'ready' || own === 'guard')) {
@@ -184,7 +186,7 @@ export function chooseTacticalAttack(obs, state, reactionTicks, config) {
   if (obs.enemyPhase === 'attack') return choice([], null, 'wait for attack tell');
   if (worn && (config.holdWorn || obs.gap < (config.disengageGap ?? 3))) return choice(obs.gap < (config.disengageGap ?? 3) ? [away] : [], null, 'back off: posture high, stamina low');
   if (state.quickRestUntil > obs.tick) return choice(obs.gap < 1.25 && !nearWall ? ['KeyS'] : [], null, 'recover after quick attack');
-  if (obs.stamina < 50) return choice(nearWall && obs.gap > 1.2 ? ['KeyW'] : [], null, 'recover defensive stamina');
+  if (obs.stamina < recoveryTarget) return choice(nearWall && obs.gap > 1.2 ? ['KeyW'] : [], null, 'recover defensive stamina');
   if (attackGap > config.thrustRange) return choice(['KeyW'], null, 'close to thrust range');
   if (heavyAllowed && obs.heavy && state.enemyBlock && obs.tick - state.enemyBlock <= 60 && attackGap <= 1.9) {
     state.heavyPending = obs.tick; state.charging = true;
