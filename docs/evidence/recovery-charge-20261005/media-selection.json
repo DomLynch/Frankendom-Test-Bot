@@ -1,0 +1,37 @@
+[
+  {
+    "name": "goblin-2026100507",
+    "group": "browser-matched",
+    "sourceSha256": "0a6b508a500b97668d0dbb32d737b59ca6c55e74c94dc21af68ce5086786e14f",
+    "begin": 0,
+    "length": null,
+    "anchor": null,
+    "scope": "Actual controlled-clock browser recording, source-wall-time playback; sample seeking approximate, not native game-speed or exact event-frame alignment"
+  },
+  {
+    "name": "executioner-2026100507",
+    "group": "browser-matched",
+    "sourceSha256": "07d82546b7fbf39d704e0aeac6ed2795ebf018424e6761fe4e0c7a2d25251e6c",
+    "begin": 0,
+    "length": null,
+    "anchor": null,
+    "scope": "Actual controlled-clock browser recording, source-wall-time playback; sample seeking approximate, not native game-speed or exact event-frame alignment"
+  },
+  {
+    "name": "goblin-778372108",
+    "group": "browser-unseen",
+    "sourceSha256": "4379a02e26daa08b4628a1f01b8b1231c376b5b1e11d667f1f1247ada8f0c975",
+    "begin": 27.291184416000004,
+    "length": 10,
+    "anchor": {
+      "tick": 1635,
+      "videoSeconds": 30.291184416000004,
+      "hp": 62,
+      "enemyHp": 7,
+      "stamina": 24,
+      "gap": 1.5,
+      "radius": 2.6877685912295353
+    },
+    "scope": "Actual controlled-clock browser recording, source-wall-time playback; sample seeking approximate, not native game-speed or exact event-frame alignment"
+  }
+]

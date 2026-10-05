@@ -22,6 +22,8 @@ First use downloads the pinned game, installs dependencies and Playwright Chromi
 
 ## Current version and evidence
 
+Latest [recovery and charge-cue repair](docs/recovery-charge-20261005.md): 102 tests, 54 engine diagnostics and 38 real browser fights. Normal-kit Easy roster passed **29/30 across all ten opponents**, with every actual heavy share <=20%. Wounded-ceiling stalls are fixed; semantic charge onset remains an assumed sound signal, not AI hearing. The report retains two browser losses and fresh clips.
+
 Bot runners, policies, observation filters, damage reporting, scripted probes and their tests now live **in this repo** under `scripts/` and `tests/`. `current-game.sha` pins the imported game engine to **[4056467a](https://github.com/DomLynch/RPG-game/commit/4056467af826b03166a575002f7a4f4b04f9dfe7)**, the source checked against live on October 5. No game code is changed. The earlier game-repo draft PR #1374 is the provenance for the tooling now owned here; it is not needed to launch this bot.
 
 The launcher fetches the explicit game branch and verifies the exact commit, including when upgrading an older single-branch clone. Dirty game checkouts are refused; no local edits are reset. Bot and engine revisions are recorded separately. Updating this repo never deploys frankendom.com.
