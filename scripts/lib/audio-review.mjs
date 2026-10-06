@@ -1,7 +1,8 @@
 // Browser-only tap of the real final WebAudio output. No synthetic sounds or game-state writes.
 export function installAudioReview() {
-  const lab = globalThis.__audioReview = { contexts: [], starts: [], stops: [], frames: [], events: [], levels: [], decoded: [], visualSamples: [], visualErrors: [], frameProofs: [], active: false, combatTick: -1 };
-  const combat = e => { lab.combatTick = e.detail.events.at(-1)?.tick ?? lab.combatTick;lab.events.push(...structuredClone(e.detail.events)); };
+  const lab = globalThis.__audioReview = { contexts: [], starts: [], stops: [], frames: [], events: [], eventTimeline: [], keyboard: [], levels: [], decoded: [], visualSamples: [], visualErrors: [], frameProofs: [], active: false, combatTick: -1 };
+  const combat = e => { lab.combatTick = e.detail.events.at(-1)?.tick ?? lab.combatTick;lab.events.push(...structuredClone(e.detail.events));
+    if(lab.active){const time=performance.now();lab.eventTimeline.push(...e.detail.events.map(event=>({event:structuredClone(event),dispatchPerformanceMs:time})));} };
   window.addEventListener('frankendom:combat', combat);
   const decode = BaseAudioContext.prototype.decodeAudioData;
   BaseAudioContext.prototype.decodeAudioData = function(...args) {
@@ -13,6 +14,8 @@ export function installAudioReview() {
   const start = AudioBufferSourceNode.prototype.start, stop = AudioBufferSourceNode.prototype.stop;
   const stamp = context => ({ performanceMs: performance.now(), audioSeconds: context.currentTime,
     tick: lab.combatTick, lastDrawnTick: Number(document.querySelector('#debug')?.dataset.tick ?? -1) });
+  const keyboard = e => {if(lab.active)lab.keyboard.push({...stamp(lab.contexts[0].context),type:e.type,code:e.code,repeat:e.repeat,isTrusted:e.isTrusted});};
+  window.addEventListener('keydown',keyboard,true);window.addEventListener('keyup',keyboard,true);
   AudioNode.prototype.connect = function(destination, ...args) {
     if (!(destination instanceof AudioDestinationNode)) return connect.call(this, destination, ...args);
     const context = this.context;
@@ -113,11 +116,12 @@ export function installAudioReview() {
       let binary='';for(let n=0;n<data.length;n+=32768)binary+=String.fromCharCode(...data.subarray(n,n+32768));
       return {base64:btoa(binary),type,begin:lab.beginStamp,end:lab.endStamp,starts:lab.starts,stops:lab.stops,
         frames:lab.frames.filter(f=>f.performanceMs>=lab.beginStamp.performanceMs&&f.performanceMs<=lab.endStamp.performanceMs),events:lab.events,
-        levels:lab.levels,decoded:lab.decoded,visualSamples:lab.visualSamples,visualErrors:lab.visualErrors,frameProofs:lab.frameProofs,sampleRate:context.sampleRate,audioTracks:stream.getAudioTracks().length,
+        levels:lab.levels,decoded:lab.decoded,keyboard:lab.keyboard,eventTimeline:lab.eventTimeline,visualSamples:lab.visualSamples,visualErrors:lab.visualErrors,frameProofs:lab.frameProofs,sampleRate:context.sampleRate,audioTracks:stream.getAudioTracks().length,
         method:'native canvas captureStream plus actual final game WebAudio bus in one MediaRecorder; native clocks; silent speaker sink'};
     };
   };
   lab.uninstall = () => {lab.restoreView?.();window.removeEventListener('frankendom:combat',combat);
+    window.removeEventListener('keydown',keyboard,true);window.removeEventListener('keyup',keyboard,true);
     BaseAudioContext.prototype.decodeAudioData=decode;
     for(const {source,tap,analyser,mute,destination} of lab.contexts){source.disconnect(tap);source.disconnect(analyser);source.disconnect(mute);mute.disconnect();connect.call(source,destination);}
     AudioNode.prototype.connect=connect;

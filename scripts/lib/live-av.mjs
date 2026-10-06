@@ -5,6 +5,7 @@ import { createHash } from 'node:crypto';
 import { MANIFEST } from '../../game/src/audio/manifest.ts';
 import { installAudioReview, identifySpriteCue } from './audio-review.mjs';
 import { visualPixelStats, audioSpectrumStats, approximateImpact, sensesMetrics } from './player-senses-metrics.mjs';
+import { inputActionMetrics } from './input-action-metrics.mjs';
 
 export function liveAVMode({nativeAV=false,research,recordVideo=true,reviewFrames=false}) {
   if (!nativeAV) return 'controlled fixed-step; not realtime FPS';
@@ -58,7 +59,7 @@ export async function finishLiveAV(page, directory, identity, fight) {
     limits:'Canvas only; DOM HUD absent. Instrumented capture, not unmodified FPS or input-to-photon measurement. Semantic policy is not AI vision/hearing. Warmup may be cropped; event/source clocks are not perceptual sync acceptance.'};
   // Save recordings even if a validation fails; never discard a failed native capture.
   await fs.writeFile(`${directory}/audio.json`,JSON.stringify(complete,null,2),{flag:'wx'});
-  await fs.writeFile(`${directory}/metrics.json`,JSON.stringify(sensesMetrics(complete),null,2),{flag:'wx'});
+  await fs.writeFile(`${directory}/metrics.json`,JSON.stringify({...sensesMetrics(complete),input:inputActionMetrics(complete,fight.learning)},null,2),{flag:'wx'});
   const coverage=liveAVCoverage(complete,fight.events,fight.endTick);
   await page.evaluate(async()=>{await __audioReview.contexts[0].context.suspend();__audioReview.uninstall();});
   return {directory,video,clipSha256:complete.clipSha256,coverage};
