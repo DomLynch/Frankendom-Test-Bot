@@ -63,3 +63,30 @@ test('missing, future-only and out-of-recording state stay unknown; stale state 
  r.frames.push({performanceMs:1,tick:1,fighters:[{phase:'ready'}]});
  assert.equal(inputActionMetrics(r).unmatched[0].priorOwnSample.ageMs,999);
 });
+test('late request after recorded kill is retained separately from in-fight unmatched requests',()=>{
+ const r=receipt([key('KeyQ',100),key('KeyQ',300)],
+  [{dispatchPerformanceMs:250,event:{tick:50,type:'Killed',actor:1,target:0}}]);
+ const result=inputActionMetrics(r);
+ assert.equal(result.requests,2);assert.equal(result.unmatched.length,2);
+ assert.equal(result.unmatchedBeforeRecordedEnd,1);assert.equal(result.postFightEndRequests.length,1);
+ assert.equal(result.unmatched[0].afterFightEnd,false);assert.equal(result.unmatched[1].afterFightEnd,true);
+ assert.equal(result.postFightEndRequests[0].performanceMs,300);
+ assert.equal(result.recordedFightEnd.tick,50);
+});
+test('a future kill, stagger or out-of-capture kill cannot relabel an earlier command as post-fight',()=>{
+ const r=receipt([key('KeyT',100)],
+  [{dispatchPerformanceMs:200,event:{tick:20,type:'Killed',actor:0,target:1}},
+   {dispatchPerformanceMs:80,event:{tick:8,type:'Staggered',actor:0}},
+   {dispatchPerformanceMs:-1,event:{tick:0,type:'Killed',actor:1,target:0}}]);
+ const result=inputActionMetrics(r);
+ assert.equal(result.unmatchedBeforeRecordedEnd,1);assert.deepEqual(result.postFightEndRequests,[]);
+ assert.equal(result.unmatched[0].afterFightEnd,false);
+});
+test('winning also ends the fight; an unconfirmed dead sample alone does not invent a kill timestamp',()=>{
+ const r=receipt([key('KeyF',300)],
+  [{dispatchPerformanceMs:200,event:{tick:20,type:'Killed',actor:0,target:1}}]);
+ assert.equal(inputActionMetrics(r).unmatchedBeforeRecordedEnd,0);
+ r.eventTimeline=[];r.frames=[{performanceMs:290,tick:19,fighters:[{phase:'dead',health:0}]}];
+ assert.equal(inputActionMetrics(r).unmatchedBeforeRecordedEnd,1);
+ assert.deepEqual(inputActionMetrics(r).postFightEndRequests,[]);
+});

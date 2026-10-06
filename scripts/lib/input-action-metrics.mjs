@@ -9,6 +9,13 @@ export function inputActionMetrics(receipt, learning={}, windowMs=750) {
   if(!Array.isArray(receipt.keyboard)||!Array.isArray(receipt.eventTimeline))return {
     available:false,reason:'No actual browser key/event receipt; do not infer from planned input ticks.'};
   const begin=receipt.begin.performanceMs,end=receipt.end.performanceMs;
+  const terminal=receipt.eventTimeline.filter(row=>Number.isFinite(row.dispatchPerformanceMs)
+    &&row.dispatchPerformanceMs>=begin&&row.dispatchPerformanceMs<=end
+    &&row.event.type==='Killed'&&[0,1].includes(row.event.target))
+    .sort((a,b)=>a.dispatchPerformanceMs-b.dispatchPerformanceMs)[0];
+  const recordedFightEnd=terminal?{tick:terminal.event.tick,target:terminal.event.target,
+    dispatchPerformanceMs:terminal.dispatchPerformanceMs}:null;
+  const afterFightEnd=time=>recordedFightEnd!==null&&time>=recordedFightEnd.dispatchPerformanceMs;
   const frames=(receipt.frames??[]).filter(f=>Number.isFinite(f.performanceMs)
     &&f.performanceMs>=begin&&f.performanceMs<=end&&f.fighters?.[0])
     .sort((a,b)=>a.performanceMs-b.performanceMs);
@@ -39,15 +46,19 @@ export function inputActionMetrics(receipt, learning={}, windowMs=750) {
       association:index>=0?'compatible keydown candidate':heldGuard?'held guard without a new keydown':'unattributed',
       code:index>=0?requests[index].code:heldGuard?'KeyQ':null,
       keyReceivedPerformanceMs:index>=0?requests[index].performanceMs:null,
+      afterFightEnd:index>=0?afterFightEnd(requests[index].performanceMs):null,
       receivedToDispatchMs:index>=0?+(time-requests[index].performanceMs).toFixed(3):null,
       priorOwnSample:index>=0?priorOwnSample(requests[index].performanceMs):null,
       attackResult:attack?.result??null,attackTermination:attack?.termination??null});
   }
   const unmatched=requests.flatMap((k,i)=>used.has(i)?[]:[{code:k.code,performanceMs:k.performanceMs,
+    afterFightEnd:afterFightEnd(k.performanceMs),
     priorOwnSample:priorOwnSample(k.performanceMs),
     status:end-k.performanceMs<windowMs?'capture ends before matching window completes':'no matching accepted action observed'}]);
   const delays=actions.map(a=>a.receivedToDispatchMs).filter(Number.isFinite);
   return {available:true,windowMs,requests:requests.length,acceptedActions:actions.length,
     candidateLinkedActions:delays.length,medianReceivedToDispatchMs:median(delays),actions,unmatched,
-    limits:'Compatible temporal association, not proof of intent or causality. Prior own-state samples precede key receipt and include their age; they are retrospective telemetry, not exact refusal reasons or information given to the policy. Dispatch batches simulation ticks; held guard is not a fresh command. Unmatched keys may be refused, buffered, superseded or outside this matcher. Not physical input-to-photon, touch comfort or human reaction time.'};
+    recordedFightEnd,unmatchedBeforeRecordedEnd:unmatched.filter(k=>!k.afterFightEnd).length,
+    postFightEndRequests:requests.filter(k=>afterFightEnd(k.performanceMs)).map(k=>({code:k.code,performanceMs:k.performanceMs})),
+    limits:'Compatible temporal association, not proof of intent or causality. Post-fight requests are retained separately using a recorded Killed dispatch; preceding commands are not assumed actionable, and sampled death alone does not invent an end timestamp. Prior own-state samples precede key receipt and include their age; they are retrospective telemetry, not exact refusal reasons or information given to the policy. Dispatch batches simulation ticks; held guard is not a fresh command. Unmatched keys may be refused, buffered, superseded or outside this matcher. Not physical input-to-photon, touch comfort or human reaction time.'};
 }
