@@ -1,0 +1,13 @@
+{
+  "jobId": "6ac51deb404719ba37661aa7",
+  "url": "https://huggingface.co/jobs/Domlynch/6ac51deb404719ba37661aa7",
+  "status": "COMPLETED",
+  "botRevision": "7b381e5ddca803b316a86ff6575764c5f4d81920",
+  "gameRevision": "6fb21b3437a6e794e47dc5a91141b67df7d69162",
+  "tests": 118,
+  "pass": 118,
+  "fail": 0,
+  "testLogSha256": "606cdc7ce9674776a79b8b7a9bd6b5c94c8a809655df1a2c5eb73a13b2bde1ff",
+  "logRetention": "Tool final20lines retained, full log not recovered",
+  "postTestChanges": "Docs/evidence only"
+}

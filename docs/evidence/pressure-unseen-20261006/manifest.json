@@ -1,0 +1,17 @@
+[
+  {
+    "file": "tests-receipt.json",
+    "sha256": "c02209bee7ee0244d3c3a66c7a3e5cc7047417a6a03feedbd2db4dfb39d2017e",
+    "bytes": 509
+  },
+  {
+    "file": "advanced-ten.json",
+    "sha256": "543791c717652169e9198bff340250d83512fba3b92afc70051f779a6028d749",
+    "bytes": 14591
+  },
+  {
+    "file": "profile-matrix.json",
+    "sha256": "ea9a5084b2d0ddd9d71b955b5704816fa299243d5695b1c14e0a21eda4ef1993",
+    "bytes": 51281
+  }
+]

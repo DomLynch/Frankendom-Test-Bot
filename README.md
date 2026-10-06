@@ -6,6 +6,8 @@ Latest [five-part player-experience pilot](docs/player-senses-20261005.md): 27 e
 
 **October 6 experimental retest:** [fresh report and real AV evidence](docs/live-retest-20261006.md). Nine fresh rendered profile fights produced seven wins and two losses. Five native captures verify actual game audio, rendered contact images and camera measurements. The red-coverage proxy proved confounded; it is not blood/readability acceptance. This branch pins game6fb21b3 and remains a candidate until its own full-roster acceptance; main retains the previous approved pin.
 
+Continued [pressure/defence study](docs/pressure-unseen-20261006.md):19 additional rendered fights,16 wins/3 losses; matched Veteran profiles produced beginner0/3, intermediate3/3, advanced3/3. Post-fight learning now distinguishes recorded interruption/feint/fight-end from misses and records the first accepted action after defence.118 tests pass; no tactic or game rule changes. These synthetic cases remain research evidence, not human calibration.
+
 **This is the canonical bot entry repo.** Git and Node.js **22.18+** are required. Clone it, then run the current tactical browser bot:
 
 ```sh
