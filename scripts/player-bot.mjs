@@ -21,7 +21,7 @@ import { createSparring } from './lib/sim-bot.mjs';
 import { optionValue } from './lib/cli-option.mjs';
 import { ENCOUNTERS } from '../game/src/roster.ts';
 import { LEVEL_ANCHORS, LONGSWORD, OPPONENTS, RULES, WEAPONS, opponentAt } from '../game/src/moves.ts';
-import { RADIUS } from '../game/src/sim.ts';
+import { arenaPolicyGeometry } from './lib/arena-policy-geometry.mjs';
 
 const LEVEL = LEVEL_ANCHORS.easy;   // the one level the bot fights: the seed, the pick, the assert and his weapon tables all read it
 
@@ -99,10 +99,11 @@ try {
     const [range, defense, extra] = CONFIG[opponent];
     const fought = WEAPONS[opponentAt(OPPONENTS[opponent], LEVEL).weapon];   // what he fights with at the seeded LEVEL (the Centurion: the gladius, not his roster trident)
     const windup = Object.fromEntries(Object.entries(fought.moves).map(([move, timing]) => [move, timing.windup]));
-    const config = { range, defense, windup, parryTicks: RULES.parry, thrustRange: LONGSWORD.moves.thrust.reach - .1, wallRadius: RADIUS - RULES.wall.loiter.band - .4,
+    const geometry = arenaPolicyGeometry(opponent);
+    const config = { range, defense, windup, parryTicks: RULES.parry, thrustRange: LONGSWORD.moves.thrust.reach - .1, ...geometry,
       heavyBlockCost: fought.moves.heavy_overhead.staminaDamage, ...extra };   // a block of his heavy costs this much stamina (the player's guard costScale is 1)
     const context = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, deviceScaleFactor: 1, ...(recordVideo ? { recordVideo: { dir, size: { width: 390, height: 844 } } } : {}) });
-    const page = await context.newPage(), video = page.video(), held = new Set(), fight = { opponent, seed, inputs: [], decisions: [], eligibleOpportunities: [], events: [], samples: [], track: [], errors: [], playerProfile: profileReceipt(playerState) };
+    const page = await context.newPage(), video = page.video(), held = new Set(), fight = { opponent, seed, inputs: [], decisions: [], eligibleOpportunities: [], events: [], samples: [], track: [], errors: [], playerProfile: profileReceipt(playerState), geometry };
     const videoStart = performance.now();
     let reviewCapture = null;
     const release = async () => { for (const key of [...held]) { try { await page.keyboard.up(key); fight.inputs.push({ tick: fight.durationSeconds == null ? null : Math.round(fight.durationSeconds * 60), key, edge: 'up', reason: 'end/reset/error' }); } catch (error) { fight.errors.push(`release ${key}: ${error}`); } finally { held.delete(key); } } };
