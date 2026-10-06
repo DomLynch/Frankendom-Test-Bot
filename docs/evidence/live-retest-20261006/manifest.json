@@ -1,0 +1,127 @@
+[
+  {
+    "file": "advanced-executioner.json",
+    "bytes": 159197,
+    "sha256": "85c9dc211bc5e947f67b6c48967ec261ba5a5c1e2397038c4dd91ae914983bba"
+  },
+  {
+    "file": "advanced-goblin.json",
+    "bytes": 162703,
+    "sha256": "01781508247c8403b03e5a02ace8140183fd9968454aa027a5109b698aa33122"
+  },
+  {
+    "file": "advanced-veteran.json",
+    "bytes": 171820,
+    "sha256": "6767256c98ebee7dd198fc715c0990cc94a4031259b2846cbe5c12ccfd968aa9"
+  },
+  {
+    "file": "beginner-executioner.json",
+    "bytes": 528711,
+    "sha256": "ae7d438d7245fce949ebfba51dd7c411d20adedb91948d3a2ba66bce492b5bdb"
+  },
+  {
+    "file": "beginner-goblin.json",
+    "bytes": 242268,
+    "sha256": "bee41088581558713ab9554bf402ec2a0c9d12c827eef0e833f832880ef01151"
+  },
+  {
+    "file": "beginner-veteran.json",
+    "bytes": 127093,
+    "sha256": "e00947c10e61401614301dca645701066d052a5bc3c9bea21f55eae8024f84d4"
+  },
+  {
+    "file": "capture-audit.json",
+    "bytes": 2768,
+    "sha256": "2cc95f5c66567e1131a0361203f8342b951550978fd62d61fe5848cccd12f6ac"
+  },
+  {
+    "file": "fight-recount.json",
+    "bytes": 39455,
+    "sha256": "9157e76d29091e6a4306290836371ed4f684d99b5104f4c36aa9f48f5170cc74"
+  },
+  {
+    "file": "goblin-finishing-hit.png",
+    "bytes": 441005,
+    "sha256": "a5b677ad5965756c749b442464607f20223621050c9a71ee1ef1743260d8eb94"
+  },
+  {
+    "file": "intermediate-executioner.json",
+    "bytes": 172190,
+    "sha256": "406fe7ee0f42aefda03ffe6aa4b7ca4b115c5156b88aaa3b10b7ff3d866c3dea"
+  },
+  {
+    "file": "intermediate-goblin.json",
+    "bytes": 229108,
+    "sha256": "c45aae9050eda616d5d33175366c5504d17dfb1e83c93075236e9d08172217e0"
+  },
+  {
+    "file": "intermediate-veteran.json",
+    "bytes": 297307,
+    "sha256": "fe6939b89d8e7a0f91b3db5e0a6f41d1c89cce4bd5184cf12d63394207278a6e"
+  },
+  {
+    "file": "media-metadata.json",
+    "bytes": 2921,
+    "sha256": "3e6473375978b19aa295c9dd8c31eec7a62db9fb64dd68ede08eabd5e3f2693e"
+  },
+  {
+    "file": "senses-high-impact-audio.json",
+    "bytes": 1741028,
+    "sha256": "69cb9070d6dee070a4e0b7e8d3a84db87fe0c29deef768c65a08d2c0dde360e2"
+  },
+  {
+    "file": "senses-high-impact-contact-0-1025.jpg",
+    "bytes": 63342,
+    "sha256": "98ab9556a5c042b85d74b3d0d3a6409301ee443743c7b0731382ea085fa0bd09"
+  },
+  {
+    "file": "senses-high-impact-metrics.json",
+    "bytes": 5864,
+    "sha256": "ba8541c03c1460002a094faf5ddf4f5c6ca6ae301331fd151164a4b4b460dba3"
+  },
+  {
+    "file": "senses-high-impact.webm",
+    "bytes": 2927113,
+    "sha256": "868419b822ddfc575a7aa60790a00349b5f0abdedd30216394400b2dce456412"
+  },
+  {
+    "file": "senses-high-metrics.json",
+    "bytes": 5795,
+    "sha256": "ad3e915a458dd21d7ae3d59e9b27a5e10a015364e259a1229fea2f23c5acd8ae"
+  },
+  {
+    "file": "senses-low-metrics.json",
+    "bytes": 5740,
+    "sha256": "88aa8d5691ee61302919bd363d050c5ddc4845495c51c5b3015cb2acadb53e6a"
+  },
+  {
+    "file": "senses-off-impact-audio.json",
+    "bytes": 1741327,
+    "sha256": "a433c05a52b89c45dc542eca71f50304db7bfbb9d6762ab838076612be147c2c"
+  },
+  {
+    "file": "senses-off-impact-contact-0-1025.jpg",
+    "bytes": 63201,
+    "sha256": "41008520f7f1f97ded2daccdc693651dd09a0b2277041da20d616307f24237d8"
+  },
+  {
+    "file": "senses-off-impact-metrics.json",
+    "bytes": 5705,
+    "sha256": "693a3f0ebab49a0c863c556920b7928d1b98dd1b6597ecbef506e1323903a794"
+  },
+  {
+    "file": "senses-off-impact.webm",
+    "bytes": 2894963,
+    "sha256": "ac5b141acc0ddabdd8972ca53679edd654a734c81e58f5234cf15384d0cd180a"
+  },
+  {
+    "file": "senses-off-metrics.json",
+    "bytes": 5642,
+    "sha256": "388901ec6373596aeb268aaaa89f8bb2788b6935cbb3cd3e6ad59f27837463fa"
+  },
+  {
+    "file": "tests-receipt.json",
+    "bytes": 1481,
+    "sha256": "6a6e98f898a2b9afa2bacb566b7cda7c3f8a2d3754ccf153fbba43d6a701bbbb"
+  }
+]

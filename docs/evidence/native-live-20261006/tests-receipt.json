@@ -1,0 +1,10 @@
+{
+  "source": "86fa975f2805a6da42d7ad16cce9a3badafd1897",
+  "game": "6fb21b3437a6e794e47dc5a91141b67df7d69162",
+  "job": "6ac5254d404719ba37661cc1",
+  "status": "COMPLETED",
+  "pass": 122,
+  "fail": 0,
+  "testLogSha256": "9023ed50aa1f86845c1ff03f2e2d7a8d71ebe1e3cfe55681079ebb3000a29be0",
+  "scope": "fullsuite; retainedtooltail; subsequentdocs-onlychange"
+}

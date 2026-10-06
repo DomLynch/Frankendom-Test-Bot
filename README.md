@@ -4,6 +4,14 @@
 
 Latest [five-part player-experience pilot](docs/player-senses-20261005.md): 27 engine fights, nine rendered browser fights, masked visual review, native game audio and trusted touch coverage. Includes short AV clips, measured results and game-team proposals. These research tools do not replace the normal policy; physical-phone comfort and perceptual sound judgment remain untested.
 
+**October 6 experimental retest:** [fresh report and real AV evidence](docs/live-retest-20261006.md). Nine fresh rendered profile fights produced seven wins and two losses. Five native captures verify actual game audio, rendered contact images and camera measurements. The red-coverage proxy proved confounded; it is not blood/readability acceptance. This branch pins game6fb21b3 and remains a candidate until its own full-roster acceptance; main retains the previous approved pin.
+
+Continued [pressure/defence study](docs/pressure-unseen-20261006.md):19 additional rendered fights,16 wins/3 losses; matched Veteran profiles produced beginner0/3, intermediate3/3, advanced3/3. Post-fight learning now distinguishes recorded interruption/feint/fight-end from misses and records the first accepted action after defence.118 tests pass; no tactic or game rule changes. These synthetic cases remain research evidence, not human calibration.
+
+The new [real-time keyboard AV study](docs/native-live-20261006.md) captures fresh live fights with actual game audio, headlessly and quietly on Mac Metal. Opt in with `--research --native-av --fights=1`; no controlled clock or engine replay. Four native cases passed recording/input checks, including a retained loss.122 tests pass. Fast controlled recordings and native timing are separate evidence; neither proves hearing quality or touch comfort.
+
+The [input-to-action study](docs/input-action-20261006.md) now distinguishes actual browser key receipt, accepted combat action and recorded consequence. Eight fresh native cases validate the tracker and its saved prior own-state context;131 tests pass. Accepted attacks can still miss or be interrupted; unmatched commands remain uncertain, not automatic control bugs.
+
 **This is the canonical bot entry repo.** Git and Node.js **22.18+** are required. Clone it, then run the current tactical browser bot:
 
 ```sh
@@ -24,7 +32,7 @@ First use downloads the pinned game, installs dependencies and Playwright Chromi
 
 Latest [recovery and charge-cue repair](docs/recovery-charge-20261005.md): 102 tests, 54 engine diagnostics and 38 real browser fights. Normal-kit Easy roster passed **29/30 across all ten opponents**, with every actual heavy share <=20%. Wounded-ceiling stalls are fixed; semantic charge onset remains an assumed sound signal, not AI hearing. The report retains two browser losses and fresh clips.
 
-Bot runners, policies, observation filters, damage reporting, scripted probes and their tests now live **in this repo** under `scripts/` and `tests/`. `current-game.sha` pins the imported game engine to **[4056467a](https://github.com/DomLynch/RPG-game/commit/4056467af826b03166a575002f7a4f4b04f9dfe7)**, the source checked against live on October 5. No game code is changed. The earlier game-repo draft PR #1374 is the provenance for the tooling now owned here; it is not needed to launch this bot.
+Bot runners, policies, observation filters, damage reporting, scripted probes and their tests now live **in this repo** under `scripts/` and `tests/`. This experimental branch's `current-game.sha` pins the imported engine to **[6fb21b3](https://github.com/DomLynch/RPG-game/commit/6fb21b3437a6e794e47dc5a91141b67df7d69162)**, frozen from the published October6 release. Prior approved main used4056467a. No game code is changed. The earlier game-repo draft PR #1374 is the provenance for the tooling now owned here; it is not needed to launch this bot.
 
 The launcher fetches the explicit game branch and verifies the exact commit, including when upgrading an older single-branch clone. Dirty game checkouts are refused; no local edits are reset. Bot and engine revisions are recorded separately. Updating this repo never deploys frankendom.com.
 

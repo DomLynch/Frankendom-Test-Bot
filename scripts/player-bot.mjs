@@ -21,7 +21,8 @@ import { createSparring } from './lib/sim-bot.mjs';
 import { optionValue } from './lib/cli-option.mjs';
 import { ENCOUNTERS } from '../game/src/roster.ts';
 import { LEVEL_ANCHORS, LONGSWORD, OPPONENTS, RULES, WEAPONS, opponentAt } from '../game/src/moves.ts';
-import { RADIUS } from '../game/src/sim.ts';
+import { arenaPolicyGeometry } from './lib/arena-policy-geometry.mjs';
+import { liveAVMode, prepareLiveAV, beginLiveAV, finishLiveAV } from './lib/live-av.mjs';
 
 const LEVEL = LEVEL_ANCHORS.easy;   // the one level the bot fights: the seed, the pick, the assert and his weapon tables all read it
 
@@ -42,6 +43,9 @@ const browserKind = option('browser', 'chromium');
 assert.ok(['chromium', 'chrome'].includes(browserKind), 'browser must be chromium or chrome');
 const recordClips = recordVideo && process.argv.includes('--clips') && !process.argv.includes('--no-clips');
 const captureReviewFrames = recordClips || process.argv.includes('--review-frames');
+const nativeAV = process.argv.includes('--native-av');
+const clockMode = liveAVMode({nativeAV,research,recordVideo,reviewFrames:captureReviewFrames});
+assert.ok(!nativeAV || count===1,'Start native AV with one explicitly bounded --fights=1');
 const showDebugVideo = process.argv.includes('--show-debug-video');
 const strategy = option('strategy', 'tactical');
 const observation = option('observation', 'limited');
@@ -73,7 +77,7 @@ const servedUrl = option('url', null);
 if (servedUrl) assert.ok(new URL(servedUrl).hostname === '127.0.0.1', 'external preview must use a loopback URL');
 const server = servedUrl ? null : await preview({ root: gameRoot, preview: { host: '127.0.0.1', port: 0 } });
 const origin = servedUrl ?? `http://127.0.0.1:${server.httpServer.address().port}`;
-const browser = await chromium.launch({ headless: !headed, ...(browserKind === 'chrome' ? { channel: 'chrome' } : { executablePath: chromium.executablePath() }) });
+const browser = await chromium.launch({ headless: !headed, ...(nativeAV ? {args:['--autoplay-policy=no-user-gesture-required']} : {}), ...(browserKind === 'chrome' ? { channel: 'chrome' } : { executablePath: chromium.executablePath() }) });
 const revision = execFileSync('git', ['rev-parse', 'HEAD'], { cwd: gameRoot, encoding: 'utf8', timeout: 20_000 }).trim();
 if (servedUrl) assert.equal((await (await fetch(new URL('/.bot-revision', origin))).text()).trim(), revision, 'served build does not match imported engine');
 const dirty = execFileSync('git', ['status', '--porcelain'], { cwd: gameRoot, encoding: 'utf8', timeout: 20_000 }).trim() !== '';
@@ -90,7 +94,7 @@ hashBotTree(join(botRoot, 'scripts'));
 for (const file of ['current-game.sha', 'package-lock.json']) digest.update(file).update('\0').update(readFileSync(join(botRoot, file)));
 const botContentSha256 = digest.digest('hex');
 const identity = probe ? `EXPERIMENT ${probe} (coverage only)` : strategy === 'tactical' ? `${research ? 'EXPERIMENTAL research' : 'CURRENT'} tactical · ${player} persona` : 'ARCHIVED diagnostic';
-console.log(JSON.stringify({ outputDirectory:dir, identity, botRevision, botContentSha256, revision: `${revision}${dirty ? '-dirty' : ''}`, strategy, difficulty: 'easy', observation, headed }));
+console.log(JSON.stringify({ outputDirectory:dir, identity, botRevision, botContentSha256, revision: `${revision}${dirty ? '-dirty' : ''}`, strategy, difficulty: 'easy', observation, headed, nativeAV, clock:clockMode }));
 const receipt = { outputDirectory:dir, identity, botRevision, botContentSha256, revision: `${revision}${dirty ? '-dirty' : ''}`, opponents, difficulty: 'easy', strategy, research, reactionMs, stepMs, headed, video: recordVideo, clips: recordClips, observation, observationAccess: observation === 'debug' ? 'exact current debug gap/position/stamina/phase and combat events' : 'player view: stamina/health meters, perceivable events only (a swing seen starting and ending, its side; simulated semantic enemy-charge onset and own completed-charge signals (assumes audible cues; not AI hearing); contact sounds, whiffs, rolls), all opponent-side information delayed; charge inferred from the sound or the windup hold time; distance rounded to half-metres; current own phase and visible shaded stamina ceiling', playerProfile: player, profileModel: 'synthetic seeded persona; not human skill validation', fights: [] };
 try {
   for (const opponent of opponents) for (const seed of seeds) {
@@ -99,12 +103,20 @@ try {
     const [range, defense, extra] = CONFIG[opponent];
     const fought = WEAPONS[opponentAt(OPPONENTS[opponent], LEVEL).weapon];   // what he fights with at the seeded LEVEL (the Centurion: the gladius, not his roster trident)
     const windup = Object.fromEntries(Object.entries(fought.moves).map(([move, timing]) => [move, timing.windup]));
-    const config = { range, defense, windup, parryTicks: RULES.parry, thrustRange: LONGSWORD.moves.thrust.reach - .1, wallRadius: RADIUS - RULES.wall.loiter.band - .4,
+    const geometry = arenaPolicyGeometry(opponent);
+    const config = { range, defense, windup, parryTicks: RULES.parry, thrustRange: LONGSWORD.moves.thrust.reach - .1, ...geometry,
       heavyBlockCost: fought.moves.heavy_overhead.staminaDamage, ...extra };   // a block of his heavy costs this much stamina (the player's guard costScale is 1)
-    const context = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, deviceScaleFactor: 1, ...(recordVideo ? { recordVideo: { dir, size: { width: 390, height: 844 } } } : {}) });
-    const page = await context.newPage(), video = page.video(), held = new Set(), fight = { opponent, seed, inputs: [], decisions: [], eligibleOpportunities: [], events: [], samples: [], track: [], errors: [], playerProfile: profileReceipt(playerState) };
-    const videoStart = performance.now();
-    let reviewCapture = null;
+    const context = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, deviceScaleFactor: 1, ...(recordVideo && !nativeAV ? { recordVideo: { dir, size: { width: 390, height: 844 } } } : {}) });
+    const page = await context.newPage(), video = page.video(), held = new Set(), fight = { opponent, seed, inputs: [], decisions: [], eligibleOpportunities: [], events: [], samples: [], track: [], errors: [], playerProfile: profileReceipt(playerState), geometry };
+    let videoStart = performance.now(), reviewCapture = null, nativeStarted=false, nativeFinished=false;
+    const saveNative = async () => {
+      if (!nativeStarted || nativeFinished) return;
+      nativeFinished=true;
+      fight.nativeAV = await finishLiveAV(page,`${dir}/${opponent}-${seed}-av`,
+        {botRevision,botContentSha256,revision,opponent,seed,player,clock:clockMode,renderer:fight.renderer},fight);
+      fight.video=fight.nativeAV.video;
+      fight.videoAlignment={verified:false,reason:'Native canvas/audio and event/frame stamps retained; no perceptual sync or DOM HUD acceptance.'};
+    };
     const release = async () => { for (const key of [...held]) { try { await page.keyboard.up(key); fight.inputs.push({ tick: fight.durationSeconds == null ? null : Math.round(fight.durationSeconds * 60), key, edge: 'up', reason: 'end/reset/error' }); } catch (error) { fight.errors.push(`release ${key}: ${error}`); } finally { held.delete(key); } } };
     const keys = async (wanted, tick) => {
       for (const key of [...held]) if (!wanted.includes(key)) { await page.keyboard.up(key); held.delete(key); fight.inputs.push({ tick, key, edge: 'up' }); }
@@ -113,6 +125,7 @@ try {
     try {
       page.on('pageerror', e => fight.errors.push(String(e)));
       await page.route('**/*sentry.io/**', route => route.abort());
+      if (nativeAV) await prepareLiveAV(page);
       await page.addInitScript((level) => { try { if (!sessionStorage.getItem('frankendom.dev-kit')) sessionStorage.setItem('frankendom.dev-kit', JSON.stringify({ level })); } catch {} }, LEVEL);   // the Dev kit's level, seeded before boot: a live pick that moves the Centurion's loadout reloads the page (main.ts loadoutMoved)
       const search = sparringSearch ? new URL(sparringSearch, origin).searchParams : new URLSearchParams();
       search.set('opponent', opponent); search.set('debug', '1'); search.set('botSeed', String(seed));
@@ -128,7 +141,11 @@ try {
       });
       console.log(JSON.stringify({ opponent, seed, browser: browserKind, renderer: fight.renderer, stage: 'ready', origin }));
       assert.equal(await page.locator('#difficulty-select').inputValue(), String(LEVEL));
-      const { run, until } = await harnessClock(page);
+      if (nativeAV) assert.match(fight.renderer.name,/Metal/,'Native AV requires the authorized Mac hardware renderer');
+      const { run, until } = nativeAV ? {
+        run:ms=>page.waitForTimeout(ms),
+        until:(predicate,ms=5000,arg)=>page.waitForFunction(predicate,arg,{timeout:ms})
+      } : await harnessClock(page);
       { const enter = page.getByRole('button', { name: 'Enter the arena' }); if (await enter.isVisible().catch(() => false)) await enter.tap(); }
       await until(() => document.querySelector('#welcome').hidden && document.querySelector('#art-status').textContent === '', 20000);
       await page.evaluate(({ showLabel, showDebug }) => {
@@ -141,7 +158,8 @@ try {
         document.body.append(label);
       }, { showLabel: recordVideo || captureReviewFrames, showDebug: showDebugVideo });
       if (recordVideo && showDebugVideo) fight.debugRect = await page.locator('#debug').boundingBox();
-      fight.inputs.push({ tick: 0, key: 'KeyF', edge: 'press' });
+      if (nativeAV) { await beginLiveAV(page);videoStart=performance.now();nativeStarted=true; }
+      fight.inputs.push({ tick: nativeAV ? await page.evaluate(()=>Number(document.querySelector('#debug').dataset.tick)) : 0, key: 'KeyF', edge: 'press' });
       await page.keyboard.press('KeyF');
       await until(() => document.querySelector('#guard-button').getAttribute('aria-disabled') === 'false', 20000);
       fight.openingScreenshot = `${dir}/${opponent}-${seed}-opening.png`;
@@ -278,6 +296,7 @@ try {
       fight.chargedHeavies = chargedAnswers(fight.events, fight.decisions);
       fight.moments = selectMoments(fight.events, fight.decisions, end.tick);
       fight.videoTailSeconds = null; // capture tail is not separately measured
+      await saveNative(); // Complete native capture before a loss navigates to Rematch.
       if (fight.outcome === 'loss') {
         await page.evaluate(() => document.querySelector('#reset-button').click());
         await run(50);
@@ -291,6 +310,7 @@ try {
     }
     finally {
       await release();
+      try { await saveNative(); } catch(error) { fight.errors.push(`native AV: ${error}`); }
       fight.inputsReleased = held.size === 0 && !fight.errors.some(e => e.startsWith('release '));
       await context.close();
       if (video) {
@@ -327,7 +347,7 @@ try {
   receipt.experimental = probe !== null || player !== 'advanced' || research;
   receipt.probe = probe; receipt.sparringSearch = sparringSearch;
   receipt.browserKind = browserKind; receipt.drawsSuppressed = false;
-  receipt.clock = 'controlled fixed-step; not realtime FPS';
+  receipt.clock = clockMode; receipt.nativeAV=nativeAV;
   receipt.defenceMetricNotes = { avoided: 'Nominal move damage estimate; not a measured counterfactual', distance: 'Before/after gap sampled at observed ticks', wall: 'Radial movement; positive is toward boundary' };
   if (!probe) assert.ok(receipt.passed, 'runtime/input/heavy-cap checks; advanced benchmark additionally requires two-thirds wins per selected opponent');
   else assert.ok(receipt.fights.every(f => !f.error && !f.errors.length && f.inputsReleased), 'experimental run must retain every outcome and release inputs');

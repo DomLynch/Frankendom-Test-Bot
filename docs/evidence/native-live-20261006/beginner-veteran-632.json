@@ -1,0 +1,904 @@
+{
+  "name": "beginner-veteran-632",
+  "runSource": "b00b2519c490c5e9a872668f51c1b5fa3a2e0448",
+  "gameSource": "6fb21b3437a6e794e47dc5a91141b67df7d69162",
+  "runScriptSha256": "ebea7f387426dd84b8558755409f4e43c298feb4162d29ee1c16fd65a288b229",
+  "analysisSource": "86fa975f2805a6da42d7ad16cce9a3badafd1897",
+  "outcome": "loss",
+  "seconds": 36.03,
+  "health": {
+    "player": 0,
+    "opponent": 44
+  },
+  "rawDamageTaken": 161,
+  "starts": 22,
+  "heavyStarts": 1,
+  "coverage": {
+    "firstRecordedTick": 25,
+    "lastRecordedTick": 2474,
+    "finalTickCovered": true,
+    "eventsMatched": 128,
+    "fightEventsBeforeCapture": 0,
+    "nonSilent": true,
+    "note": "Native canvas/audio timeline; bootstrap before recording may be cropped. Not replay determinism, human hearing or perceptual sync acceptance."
+  },
+  "ignoredPostStopFrames": 1,
+  "videoSha256": "4e2b6492e7f891cec4399a6708db133769aa2c47fc3ee4f2ca58680b4d10e77a",
+  "inputAudioJsonSha256": "2669dcb027e7f6b7115ff9d91ed4912faadd3deb02aa5b73eedaa85b94e03b83",
+  "nativeDirectory": "/Users/domininclynch/Developer/frankendom-test-bot-launcher-20261005/artifacts/combat/native-live-20261006/veteran-beginner-632/veteran-2026100632-av",
+  "metrics": {
+    "schemaVersion": 1,
+    "audio": {
+      "available": true,
+      "samples": 1778,
+      "maxPeak": 0.4333123564720154,
+      "medianRmsDbfs": -44.0855915795301,
+      "nearFullScaleSampleFraction": 0,
+      "nearSilentSampleFraction": 0.07255343082114736,
+      "medianSpectralCentroidHz": 472.5199329096431,
+      "medianTreblePowerFraction": 0.0009306296658047435,
+      "unclassifiedSources": 49,
+      "note": "sampled analyser waveform; downmixed levels, not LUFS, guaranteed clipping, hearing or sound taste"
+    },
+    "visual": {
+      "available": true,
+      "samples": 362,
+      "maxRedDominantFraction": 0.04855401876390367,
+      "maxApproxEnemyHeadRedFraction": 0.10606060606060606,
+      "maxApproxImpactRedFraction": 0.15527065527065528,
+      "sampleCostMedianMs": 4.599999999627471,
+      "note": "rendered pixels, not an engine blood flag; approximate ROI/red mask cannot establish weapon occlusion"
+    },
+    "capture": {
+      "medianFrameGapMs": 25.59999999962747,
+      "maxFrameGapMs": 210.5,
+      "note": "instrumented native capture cadence, not uninstrumented gameplay performance"
+    },
+    "rolls": [],
+    "eventWindows": [
+      {
+        "tick": 141,
+        "type": "Hit",
+        "actor": 0,
+        "move": "light_right",
+        "action": null,
+        "renderedTick": 141,
+        "renderPerformanceMs": 4408.699999999255,
+        "audioBefore": {
+          "samples": 3,
+          "medianRmsDbfs": -23.310898991405658,
+          "maxPeak": 0.1288837194442749,
+          "medianSpectralCentroidHz": 289.4978250696853
+        },
+        "audioAfter": {
+          "samples": 14,
+          "medianRmsDbfs": -27.14908531767147,
+          "maxPeak": 0.15352222323417664,
+          "medianSpectralCentroidHz": 363.74540243225545
+        },
+        "soundSources": [
+          {
+            "id": 4,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": -94.5
+          },
+          {
+            "id": 5,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": -133.40000000037253
+          },
+          {
+            "id": 6,
+            "cue": "hit_flesh",
+            "sourceScheduledAfterFrameMs": -133.30000000074506
+          }
+        ],
+        "sourceNote": "decoded source scheduling vs nearest rendered tick; event-local levels include other sounds, not isolated cue audibility or acoustic-device latency"
+      },
+      {
+        "tick": 289,
+        "type": "Hit",
+        "actor": 0,
+        "move": "light_right",
+        "action": null,
+        "renderedTick": 289,
+        "renderPerformanceMs": 6958.5999999996275,
+        "audioBefore": {
+          "samples": 7,
+          "medianRmsDbfs": -48.119688551188574,
+          "maxPeak": 0.017939792945981026,
+          "medianSpectralCentroidHz": 309.3284152834007
+        },
+        "audioAfter": {
+          "samples": 13,
+          "medianRmsDbfs": -26.95990966100787,
+          "maxPeak": 0.126421719789505,
+          "medianSpectralCentroidHz": 973.3731846709697
+        },
+        "soundSources": [
+          {
+            "id": 9,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": -29.09999999962747
+          },
+          {
+            "id": 10,
+            "cue": "hit_flesh",
+            "sourceScheduledAfterFrameMs": -68.80000000074506
+          },
+          {
+            "id": 11,
+            "cue": "block",
+            "sourceScheduledAfterFrameMs": -68.70000000111759
+          },
+          {
+            "id": 12,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": 564.9000000003725
+          }
+        ],
+        "sourceNote": "decoded source scheduling vs nearest rendered tick; event-local levels include other sounds, not isolated cue audibility or acoustic-device latency"
+      },
+      {
+        "tick": 376,
+        "type": "Hit",
+        "actor": 0,
+        "move": "light_left",
+        "action": null,
+        "renderedTick": 376,
+        "renderPerformanceMs": 8580.099999999627,
+        "audioBefore": {
+          "samples": 4,
+          "medianRmsDbfs": -44.5417864155946,
+          "maxPeak": 0.024005454033613205,
+          "medianSpectralCentroidHz": 1162.6078395756012
+        },
+        "audioAfter": {
+          "samples": 13,
+          "medianRmsDbfs": -36.5531803786562,
+          "maxPeak": 0.10040247440338135,
+          "medianSpectralCentroidHz": 782.0116893111282
+        },
+        "soundSources": [
+          {
+            "id": 14,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": -83.30000000074506
+          },
+          {
+            "id": 15,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": -123.30000000074506
+          },
+          {
+            "id": 16,
+            "cue": "hit_flesh",
+            "sourceScheduledAfterFrameMs": -123.20000000111759
+          }
+        ],
+        "sourceNote": "decoded source scheduling vs nearest rendered tick; event-local levels include other sounds, not isolated cue audibility or acoustic-device latency"
+      },
+      {
+        "tick": 511,
+        "type": "Hit",
+        "actor": 1,
+        "move": "heavy_overhead",
+        "action": null,
+        "renderedTick": 511,
+        "renderPerformanceMs": 10973.199999999255,
+        "audioBefore": {
+          "samples": 4,
+          "medianRmsDbfs": -47.097230030222725,
+          "maxPeak": 0.02004082128405571,
+          "medianSpectralCentroidHz": 440.216135742199
+        },
+        "audioAfter": {
+          "samples": 12,
+          "medianRmsDbfs": -31.781092815681248,
+          "maxPeak": 0.106551393866539,
+          "medianSpectralCentroidHz": 1610.129640576677
+        },
+        "soundSources": [
+          {
+            "id": 20,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": -109.5
+          },
+          {
+            "id": 21,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": 30.5
+          },
+          {
+            "id": 22,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": -149.40000000037253
+          },
+          {
+            "id": 23,
+            "cue": "hit_heavy",
+            "sourceScheduledAfterFrameMs": -149.40000000037253
+          }
+        ],
+        "sourceNote": "decoded source scheduling vs nearest rendered tick; event-local levels include other sounds, not isolated cue audibility or acoustic-device latency"
+      },
+      {
+        "tick": 678,
+        "type": "Hit",
+        "actor": 1,
+        "move": "thrust",
+        "action": null,
+        "renderedTick": 678,
+        "renderPerformanceMs": 13854,
+        "audioBefore": {
+          "samples": 7,
+          "medianRmsDbfs": -41.51178324503963,
+          "maxPeak": 0.055819831788539886,
+          "medianSpectralCentroidHz": 583.5421365263804
+        },
+        "audioAfter": {
+          "samples": 8,
+          "medianRmsDbfs": -30.80795657002247,
+          "maxPeak": 0.10561955720186234,
+          "medianSpectralCentroidHz": 1989.314929412934
+        },
+        "soundSources": [
+          {
+            "id": 30,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": -23.700000001117587
+          },
+          {
+            "id": 31,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": -63.5
+          },
+          {
+            "id": 32,
+            "cue": "hit_flesh",
+            "sourceScheduledAfterFrameMs": -63.5
+          }
+        ],
+        "sourceNote": "decoded source scheduling vs nearest rendered tick; event-local levels include other sounds, not isolated cue audibility or acoustic-device latency"
+      },
+      {
+        "tick": 725,
+        "type": "Hit",
+        "actor": 1,
+        "move": "light_right",
+        "action": null,
+        "renderedTick": 725,
+        "renderPerformanceMs": 14869.099999999627,
+        "audioBefore": {
+          "samples": 1,
+          "medianRmsDbfs": -33.07257964121435,
+          "maxPeak": 0.05763731151819229,
+          "medianSpectralCentroidHz": 1076.052679860085
+        },
+        "audioAfter": {
+          "samples": 9,
+          "medianRmsDbfs": -33.6364842180904,
+          "maxPeak": 0.09848852455615997,
+          "medianSpectralCentroidHz": 4634.092068120437
+        },
+        "soundSources": [
+          {
+            "id": 35,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": -132.30000000074506
+          },
+          {
+            "id": 36,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": -172.2000000011176
+          },
+          {
+            "id": 37,
+            "cue": "hit_flesh",
+            "sourceScheduledAfterFrameMs": -172.2000000011176
+          },
+          {
+            "id": 38,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": 728.0999999996275
+          }
+        ],
+        "sourceNote": "decoded source scheduling vs nearest rendered tick; event-local levels include other sounds, not isolated cue audibility or acoustic-device latency"
+      },
+      {
+        "tick": 860,
+        "type": "Hit",
+        "actor": 1,
+        "move": "heavy_overhead",
+        "action": null,
+        "renderedTick": 860,
+        "renderPerformanceMs": 17320.299999998882,
+        "audioBefore": {
+          "samples": 0,
+          "medianRmsDbfs": null,
+          "maxPeak": null,
+          "medianSpectralCentroidHz": null
+        },
+        "audioAfter": {
+          "samples": 8,
+          "medianRmsDbfs": -32.672848919176495,
+          "maxPeak": 0.10133177042007446,
+          "medianSpectralCentroidHz": 3927.135730555129
+        },
+        "soundSources": [
+          {
+            "id": 41,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": -156.90000000037253
+          },
+          {
+            "id": 42,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": -16.799999998882413
+          },
+          {
+            "id": 43,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": -196.69999999925494
+          },
+          {
+            "id": 44,
+            "cue": "hit_heavy",
+            "sourceScheduledAfterFrameMs": -196.59999999962747
+          },
+          {
+            "id": 45,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": 569.0999999996275
+          }
+        ],
+        "sourceNote": "decoded source scheduling vs nearest rendered tick; event-local levels include other sounds, not isolated cue audibility or acoustic-device latency"
+      },
+      {
+        "tick": 914,
+        "type": "Hit",
+        "actor": 0,
+        "move": "light_left",
+        "action": null,
+        "renderedTick": 914,
+        "renderPerformanceMs": 18323.799999998882,
+        "audioBefore": {
+          "samples": 5,
+          "medianRmsDbfs": -48.36919072957051,
+          "maxPeak": 0.016208238899707794,
+          "medianSpectralCentroidHz": 493.5724409758962
+        },
+        "audioAfter": {
+          "samples": 7,
+          "medianRmsDbfs": -29.709994608223127,
+          "maxPeak": 0.09487177431583405,
+          "medianSpectralCentroidHz": 1045.30125993084
+        },
+        "soundSources": [
+          {
+            "id": 47,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": -45.5
+          },
+          {
+            "id": 48,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": -85.5
+          },
+          {
+            "id": 49,
+            "cue": "hit_flesh",
+            "sourceScheduledAfterFrameMs": -85.40000000037253
+          },
+          {
+            "id": 50,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": 944.2000000011176
+          }
+        ],
+        "sourceNote": "decoded source scheduling vs nearest rendered tick; event-local levels include other sounds, not isolated cue audibility or acoustic-device latency"
+      },
+      {
+        "tick": 1005,
+        "type": "Hit",
+        "actor": 0,
+        "move": "thrust",
+        "action": null,
+        "renderedTick": 1005,
+        "renderPerformanceMs": 20024.199999999255,
+        "audioBefore": {
+          "samples": 2,
+          "medianRmsDbfs": -44.47840823488428,
+          "maxPeak": 0.015394870191812515,
+          "medianSpectralCentroidHz": 309.02124059491405
+        },
+        "audioAfter": {
+          "samples": 6,
+          "medianRmsDbfs": -34.65230917822118,
+          "maxPeak": 0.10259054601192474,
+          "medianSpectralCentroidHz": 4673.001092690778
+        },
+        "soundSources": [
+          {
+            "id": 52,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": -106.80000000074506
+          },
+          {
+            "id": 53,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": -146.69999999925494
+          },
+          {
+            "id": 54,
+            "cue": "hit_flesh",
+            "sourceScheduledAfterFrameMs": -146.59999999962747
+          }
+        ],
+        "sourceNote": "decoded source scheduling vs nearest rendered tick; event-local levels include other sounds, not isolated cue audibility or acoustic-device latency"
+      },
+      {
+        "tick": 1092,
+        "type": "Hit",
+        "actor": 0,
+        "move": "light_right",
+        "action": null,
+        "renderedTick": 1092,
+        "renderPerformanceMs": 21611.89999999851,
+        "audioBefore": {
+          "samples": 3,
+          "medianRmsDbfs": -47.96783520307475,
+          "maxPeak": 0.014670783653855324,
+          "medianSpectralCentroidHz": 315.94737900885235
+        },
+        "audioAfter": {
+          "samples": 7,
+          "medianRmsDbfs": -27.04526587059589,
+          "maxPeak": 0.12161103636026382,
+          "medianSpectralCentroidHz": 411.23961334780074
+        },
+        "soundSources": [
+          {
+            "id": 56,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": -78.69999999925494
+          },
+          {
+            "id": 57,
+            "cue": "hit_flesh",
+            "sourceScheduledAfterFrameMs": -118.59999999962747
+          },
+          {
+            "id": 58,
+            "cue": "block",
+            "sourceScheduledAfterFrameMs": -118.59999999962747
+          }
+        ],
+        "sourceNote": "decoded source scheduling vs nearest rendered tick; event-local levels include other sounds, not isolated cue audibility or acoustic-device latency"
+      },
+      {
+        "tick": 1213,
+        "type": "Blocked",
+        "actor": 1,
+        "move": "light_left",
+        "action": null,
+        "renderedTick": 1213,
+        "renderPerformanceMs": 23674.5,
+        "audioBefore": {
+          "samples": 5,
+          "medianRmsDbfs": -46.661097622840366,
+          "maxPeak": 0.056639768183231354,
+          "medianSpectralCentroidHz": 499.56479544494346
+        },
+        "audioAfter": {
+          "samples": 6,
+          "medianRmsDbfs": -23.294720050284536,
+          "maxPeak": 0.1195836141705513,
+          "medianSpectralCentroidHz": 394.9139514835145
+        },
+        "soundSources": [
+          {
+            "id": 62,
+            "cue": "block",
+            "sourceScheduledAfterFrameMs": -15
+          }
+        ],
+        "sourceNote": "decoded source scheduling vs nearest rendered tick; event-local levels include other sounds, not isolated cue audibility or acoustic-device latency"
+      },
+      {
+        "tick": 1234,
+        "type": "Hit",
+        "actor": 1,
+        "move": "heavy_counter",
+        "action": null,
+        "renderedTick": 1234,
+        "renderPerformanceMs": 24196.799999998882,
+        "audioBefore": {
+          "samples": 4,
+          "medianRmsDbfs": -32.09409865491185,
+          "maxPeak": 0.0945960283279419,
+          "medianSpectralCentroidHz": 684.9415262075983
+        },
+        "audioAfter": {
+          "samples": 6,
+          "medianRmsDbfs": -28.619824079481873,
+          "maxPeak": 0.1370868682861328,
+          "medianSpectralCentroidHz": 303.91082570723603
+        },
+        "soundSources": [
+          {
+            "id": 64,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": -53.59999999962747
+          },
+          {
+            "id": 65,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": -93.40000000037253
+          },
+          {
+            "id": 66,
+            "cue": "hit_heavy",
+            "sourceScheduledAfterFrameMs": -93.40000000037253
+          }
+        ],
+        "sourceNote": "decoded source scheduling vs nearest rendered tick; event-local levels include other sounds, not isolated cue audibility or acoustic-device latency"
+      },
+      {
+        "tick": 1303,
+        "type": "Hit",
+        "actor": 0,
+        "move": "thrust",
+        "action": null,
+        "renderedTick": 1303,
+        "renderPerformanceMs": 25621.39999999851,
+        "audioBefore": {
+          "samples": 1,
+          "medianRmsDbfs": -47.39437957612061,
+          "maxPeak": 0.011042909696698189,
+          "medianSpectralCentroidHz": 420.1616480654354
+        },
+        "audioAfter": {
+          "samples": 6,
+          "medianRmsDbfs": -38.0337085295401,
+          "maxPeak": 0.09728087484836578,
+          "medianSpectralCentroidHz": 797.0461296692605
+        },
+        "soundSources": [
+          {
+            "id": 68,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": -142.19999999925494
+          },
+          {
+            "id": 69,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": -182.09999999962747
+          },
+          {
+            "id": 70,
+            "cue": "hit_flesh",
+            "sourceScheduledAfterFrameMs": -182
+          }
+        ],
+        "sourceNote": "decoded source scheduling vs nearest rendered tick; event-local levels include other sounds, not isolated cue audibility or acoustic-device latency"
+      },
+      {
+        "tick": 1482,
+        "type": "Hit",
+        "actor": 0,
+        "move": "light_left",
+        "action": null,
+        "renderedTick": 1482,
+        "renderPerformanceMs": 28660.699999999255,
+        "audioBefore": {
+          "samples": 5,
+          "medianRmsDbfs": -49.18050223478418,
+          "maxPeak": 0.02260644920170307,
+          "medianSpectralCentroidHz": 494.8901828546467
+        },
+        "audioAfter": {
+          "samples": 7,
+          "medianRmsDbfs": -25.882156544033997,
+          "maxPeak": 0.1094115823507309,
+          "medianSpectralCentroidHz": 1030.6903894231361
+        },
+        "soundSources": [
+          {
+            "id": 74,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": 6.5
+          },
+          {
+            "id": 75,
+            "cue": "hit_flesh",
+            "sourceScheduledAfterFrameMs": -33.5
+          },
+          {
+            "id": 76,
+            "cue": "block",
+            "sourceScheduledAfterFrameMs": -33.40000000037253
+          }
+        ],
+        "sourceNote": "decoded source scheduling vs nearest rendered tick; event-local levels include other sounds, not isolated cue audibility or acoustic-device latency"
+      },
+      {
+        "tick": 1560,
+        "type": "ActionStarted",
+        "actor": 1,
+        "move": null,
+        "action": "roll",
+        "renderedTick": 1561,
+        "renderPerformanceMs": 30068.5,
+        "audioBefore": {
+          "samples": 5,
+          "medianRmsDbfs": -37.531835428460354,
+          "maxPeak": 0.06368494033813477,
+          "medianSpectralCentroidHz": 745.1851255235562
+        },
+        "audioAfter": {
+          "samples": 8,
+          "medianRmsDbfs": -40.53944814186548,
+          "maxPeak": 0.05447683855891228,
+          "medianSpectralCentroidHz": 706.7823611803738
+        },
+        "soundSources": [
+          {
+            "id": 78,
+            "cue": "roll",
+            "sourceScheduledAfterFrameMs": -26.600000001490116
+          }
+        ],
+        "sourceNote": "decoded source scheduling vs nearest rendered tick; event-local levels include other sounds, not isolated cue audibility or acoustic-device latency"
+      },
+      {
+        "tick": 1670,
+        "type": "Hit",
+        "actor": 1,
+        "move": "thrust",
+        "action": null,
+        "renderedTick": 1670,
+        "renderPerformanceMs": 31977.199999999255,
+        "audioBefore": {
+          "samples": 4,
+          "medianRmsDbfs": -43.38192242833664,
+          "maxPeak": 0.03348982334136963,
+          "medianSpectralCentroidHz": 466.20098107610437
+        },
+        "audioAfter": {
+          "samples": 7,
+          "medianRmsDbfs": -28.64535475298357,
+          "maxPeak": 0.0942784920334816,
+          "medianSpectralCentroidHz": 2582.0265943016516
+        },
+        "soundSources": [
+          {
+            "id": 81,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": -52.19999999925494
+          },
+          {
+            "id": 82,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": -92.19999999925494
+          },
+          {
+            "id": 83,
+            "cue": "hit_flesh",
+            "sourceScheduledAfterFrameMs": -92
+          }
+        ],
+        "sourceNote": "decoded source scheduling vs nearest rendered tick; event-local levels include other sounds, not isolated cue audibility or acoustic-device latency"
+      },
+      {
+        "tick": 1735,
+        "type": "Blocked",
+        "actor": 1,
+        "move": "light_left",
+        "action": null,
+        "renderedTick": 1735,
+        "renderPerformanceMs": 33109.39999999851,
+        "audioBefore": {
+          "samples": 6,
+          "medianRmsDbfs": -48.083059644563505,
+          "maxPeak": 0.02811591699719429,
+          "medianSpectralCentroidHz": 453.26512706002467
+        },
+        "audioAfter": {
+          "samples": 8,
+          "medianRmsDbfs": -23.132263085196037,
+          "maxPeak": 0.11465130001306534,
+          "medianSpectralCentroidHz": 312.02365637584415
+        },
+        "soundSources": [
+          {
+            "id": 85,
+            "cue": "block",
+            "sourceScheduledAfterFrameMs": -39.69999999925494
+          },
+          {
+            "id": 86,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": 58.70000000111759
+          },
+          {
+            "id": 87,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": 402.40000000037253
+          }
+        ],
+        "sourceNote": "decoded source scheduling vs nearest rendered tick; event-local levels include other sounds, not isolated cue audibility or acoustic-device latency"
+      },
+      {
+        "tick": 1801,
+        "type": "Charging",
+        "actor": 0,
+        "move": "heavy_overhead",
+        "action": null,
+        "renderedTick": 1801,
+        "renderPerformanceMs": 34256.699999999255,
+        "audioBefore": {
+          "samples": 7,
+          "medianRmsDbfs": -37.97925140351554,
+          "maxPeak": 0.07451562583446503,
+          "medianSpectralCentroidHz": 570.8577652725193
+        },
+        "audioAfter": {
+          "samples": 8,
+          "medianRmsDbfs": -48.37049219897076,
+          "maxPeak": 0.07743485271930695,
+          "medianSpectralCentroidHz": 541.2566452982555
+        },
+        "soundSources": [
+          {
+            "id": 89,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": 195.09999999962747
+          }
+        ],
+        "sourceNote": "decoded source scheduling vs nearest rendered tick; event-local levels include other sounds, not isolated cue audibility or acoustic-device latency"
+      },
+      {
+        "tick": 1974,
+        "type": "Hit",
+        "actor": 1,
+        "move": "thrust",
+        "action": null,
+        "renderedTick": 1974,
+        "renderPerformanceMs": 37195.699999999255,
+        "audioBefore": {
+          "samples": 5,
+          "medianRmsDbfs": -34.680900263781496,
+          "maxPeak": 0.07149489223957062,
+          "medianSpectralCentroidHz": 893.4185824564079
+        },
+        "audioAfter": {
+          "samples": 8,
+          "medianRmsDbfs": -33.623354096264876,
+          "maxPeak": 0.10620705783367157,
+          "medianSpectralCentroidHz": 1771.3754294121577
+        },
+        "soundSources": [
+          {
+            "id": 94,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": -35
+          },
+          {
+            "id": 95,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": -74.90000000037253
+          },
+          {
+            "id": 96,
+            "cue": "hit_flesh",
+            "sourceScheduledAfterFrameMs": -74.90000000037253
+          },
+          {
+            "id": 97,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": 600.9000000003725
+          }
+        ],
+        "sourceNote": "decoded source scheduling vs nearest rendered tick; event-local levels include other sounds, not isolated cue audibility or acoustic-device latency"
+      },
+      {
+        "tick": 2141,
+        "type": "Blocked",
+        "actor": 1,
+        "move": "thrust",
+        "action": null,
+        "renderedTick": 2141,
+        "renderPerformanceMs": 40033.39999999851,
+        "audioBefore": {
+          "samples": 5,
+          "medianRmsDbfs": -37.83767854472516,
+          "maxPeak": 0.06175900995731354,
+          "medianSpectralCentroidHz": 785.5020300895007
+        },
+        "audioAfter": {
+          "samples": 8,
+          "medianRmsDbfs": -25.762219271751846,
+          "maxPeak": 0.12020371109247208,
+          "medianSpectralCentroidHz": 1162.1686668595617
+        },
+        "soundSources": [
+          {
+            "id": 102,
+            "cue": "block_perfect",
+            "sourceScheduledAfterFrameMs": -31.09999999962747
+          }
+        ],
+        "sourceNote": "decoded source scheduling vs nearest rendered tick; event-local levels include other sounds, not isolated cue audibility or acoustic-device latency"
+      },
+      {
+        "tick": 2162,
+        "type": "Hit",
+        "actor": 1,
+        "move": "heavy_counter",
+        "action": null,
+        "renderedTick": 2162,
+        "renderPerformanceMs": 40605.29999999888,
+        "audioBefore": {
+          "samples": 1,
+          "medianRmsDbfs": -42.58883362142123,
+          "maxPeak": 0.023371461778879166,
+          "medianSpectralCentroidHz": 1179.735292235993
+        },
+        "audioAfter": {
+          "samples": 8,
+          "medianRmsDbfs": -15.884737992206512,
+          "maxPeak": 0.43227818608283997,
+          "medianSpectralCentroidHz": 1241.1567368305837
+        },
+        "soundSources": [
+          {
+            "id": 104,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": -174.90000000037253
+          },
+          {
+            "id": 105,
+            "cue": "flesh_cut",
+            "sourceScheduledAfterFrameMs": -174.7999999988824
+          },
+          {
+            "id": 106,
+            "cue": "hit_heavy",
+            "sourceScheduledAfterFrameMs": -174.7999999988824
+          },
+          {
+            "id": 107,
+            "cue": "death_voice",
+            "sourceScheduledAfterFrameMs": -144.7999999988824
+          },
+          {
+            "id": 108,
+            "cue": "crowd_cheer",
+            "sourceScheduledAfterFrameMs": 175.2000000011176
+          },
+          {
+            "id": 109,
+            "cue": "kill",
+            "sourceScheduledAfterFrameMs": 475.2000000011176
+          }
+        ],
+        "sourceNote": "decoded source scheduling vs nearest rendered tick; event-local levels include other sounds, not isolated cue audibility or acoustic-device latency"
+      }
+    ],
+    "limits": [
+      "No overall combat/fun score",
+      "No AI hearing or human motion-comfort claim",
+      "No causal attribution from one matched seed"
+    ]
+  },
+  "events": {
+    "blocks": 0,
+    "parries": 0,
+    "misses": 8,
+    "interruptions": 3,
+    "enemyCharges": 0
+  },
+  "frameCount": 1778,
+  "limits": "Original b00 captures preserved; retrospective analysis excludes post-stop metadata frames. Not hearing, uninstrumented performance, comfort or policy promotion."
+}

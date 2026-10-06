@@ -1,0 +1,160 @@
+{
+  "analysisRevision": "0536608a4491b4885cda9f0fde53f92c07c7fc49",
+  "analysisModuleSha256": "00627c367c642122bad9ec478126e228d483c448d571712b34ead9c67269f28c",
+  "inputAudioJsonSha256": "69cb9070d6dee070a4e0b7e8d3a84db87fe0c29deef768c65a08d2c0dde360e2",
+  "inputClipSha256": "868419b822ddfc575a7aa60790a00349b5f0abdedd30216394400b2dce456412",
+  "captureIdentity": {
+    "revision": "6fb21b3437a6e794e47dc5a91141b67df7d69162",
+    "botRevision": "215a8e4d8ca0994f980d282cf2d4b6e6c15ce78f",
+    "probeSha256": "b844326e28bb0e571af610a41b168b3dea9b3a286619039500848ae923da862a",
+    "moduleSha256": "45c3f0a254fe7a10fb768d18515eedfac538f5a186f695de19a6285b1f6dbaa0",
+    "metricsSourceSha256": "d684d0f2d1a7f0a30fc926010173a0e449e67156166d9ccbdac4458fc530867f",
+    "feel": "high"
+  },
+  "metrics": {
+    "schemaVersion": 1,
+    "audio": {
+      "available": true,
+      "samples": 427,
+      "maxPeak": 0.1334751844406128,
+      "medianRmsDbfs": -40.73667311456787,
+      "nearFullScaleSampleFraction": 0,
+      "nearSilentSampleFraction": 0.0117096018735363,
+      "medianSpectralCentroidHz": 1009.0395910397107,
+      "medianTreblePowerFraction": 0.033611551055049774,
+      "unclassifiedSources": 7,
+      "note": "sampled analyser waveform; downmixed levels, not LUFS, guaranteed clipping, hearing or sound taste"
+    },
+    "visual": {
+      "available": true,
+      "samples": 62,
+      "maxRedDominantFraction": 0.01653931714866041,
+      "maxApproxEnemyHeadRedFraction": 0.11490683229813664,
+      "maxApproxImpactRedFraction": 0.0761904761904762,
+      "sampleCostMedianMs": 5.349999999627471,
+      "note": "rendered pixels, not an engine blood flag; approximate ROI/red mask cannot establish weapon occlusion"
+    },
+    "capture": {
+      "medianFrameGapMs": 16.59999999962747,
+      "maxFrameGapMs": 81.09999999962747,
+      "note": "instrumented native capture cadence, not uninstrumented gameplay performance"
+    },
+    "rolls": [
+      {
+        "tick": 829,
+        "baselineTiltDeg": 0,
+        "sampledPeakDeltaDeg": 7.270600691437587,
+        "firstSustainedWithinOneDegreeTick": 856,
+        "note": "sampled horizon only; not enemy reacquisition, continuous vision or human comfort"
+      }
+    ],
+    "eventWindows": [
+      {
+        "tick": 786,
+        "type": "Charging",
+        "actor": 1,
+        "move": "light_left",
+        "action": null,
+        "renderedTick": 786,
+        "renderPerformanceMs": 3011.4000000003725,
+        "audioBefore": {
+          "samples": 12,
+          "medianRmsDbfs": -28.431632456438205,
+          "maxPeak": 0.1243847981095314,
+          "medianSpectralCentroidHz": 3419.939255997504
+        },
+        "audioAfter": {
+          "samples": 13,
+          "medianRmsDbfs": -41.4695602719301,
+          "maxPeak": 0.1127016544342041,
+          "medianSpectralCentroidHz": 1016.3838664433584
+        },
+        "soundSources": [],
+        "sourceNote": "decoded source scheduling vs nearest rendered tick; event-local levels include other sounds, not isolated cue audibility or acoustic-device latency"
+      },
+      {
+        "tick": 829,
+        "type": "ActionStarted",
+        "actor": 0,
+        "move": null,
+        "action": "roll",
+        "renderedTick": 830,
+        "renderPerformanceMs": 3727.199999999255,
+        "audioBefore": {
+          "samples": 11,
+          "medianRmsDbfs": -36.17721306485748,
+          "maxPeak": 0.054321229457855225,
+          "medianSpectralCentroidHz": 1683.7111988253143
+        },
+        "audioAfter": {
+          "samples": 13,
+          "medianRmsDbfs": -33.160423942709365,
+          "maxPeak": 0.12714236974716187,
+          "medianSpectralCentroidHz": 2873.1582381654084
+        },
+        "soundSources": [
+          {
+            "id": 9,
+            "cue": "roll",
+            "sourceScheduledAfterFrameMs": -1.099999999627471
+          }
+        ],
+        "sourceNote": "decoded source scheduling vs nearest rendered tick; event-local levels include other sounds, not isolated cue audibility or acoustic-device latency"
+      },
+      {
+        "tick": 1025,
+        "type": "Hit",
+        "actor": 0,
+        "move": "thrust",
+        "action": null,
+        "renderedTick": 1025,
+        "renderPerformanceMs": 7192.0999999996275,
+        "audioBefore": {
+          "samples": 8,
+          "medianRmsDbfs": -38.99482302734053,
+          "maxPeak": 0.08247938007116318,
+          "medianSpectralCentroidHz": 1349.7825588601293
+        },
+        "audioAfter": {
+          "samples": 13,
+          "medianRmsDbfs": -37.10138803423652,
+          "maxPeak": 0.1257326602935791,
+          "medianSpectralCentroidHz": 901.8561924068805
+        },
+        "soundSources": [
+          {
+            "id": 21,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": -27.40000000037253
+          },
+          {
+            "id": 22,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": -66.79999999888241
+          },
+          {
+            "id": 23,
+            "cue": "hit_flesh",
+            "sourceScheduledAfterFrameMs": -66.69999999925494
+          },
+          {
+            "id": 24,
+            "cue": null,
+            "sourceScheduledAfterFrameMs": 115.80000000074506
+          }
+        ],
+        "sourceNote": "decoded source scheduling vs nearest rendered tick; event-local levels include other sounds, not isolated cue audibility or acoustic-device latency"
+      }
+    ],
+    "limits": [
+      "No overall combat/fun score",
+      "No AI hearing or human motion-comfort claim",
+      "No causal attribution from one matched seed"
+    ]
+  },
+  "reviewStatus": {
+    "redCoverage": "Confounded by clothing/background/pose; not blood or occlusion acceptance",
+    "audio": "Measured final bus, not hearing or cue taste",
+    "visual": "Contact images reviewed; continuous motion/human comfort unassessed"
+  }
+}

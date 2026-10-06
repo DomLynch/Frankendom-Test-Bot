@@ -1,0 +1,171 @@
+{
+  "botRevision": "7009a205f58ebd6ffa966a5da7e71e97febcebd0",
+  "gameRevision": "6fb21b3437a6e794e47dc5a91141b67df7d69162",
+  "outcome": "loss",
+  "damageTaken": 161,
+  "damageDealt": 134,
+  "attackMix": {
+    "attacks": 22,
+    "heavies": 0,
+    "heavyPercent": 0,
+    "passed": true
+  },
+  "defenceOutcomes": [
+    {
+      "tick": 1364,
+      "type": "parry",
+      "attackTick": 1332,
+      "resolutionTick": 1364,
+      "against": "heavy_overhead",
+      "charged": false,
+      "result": "parried",
+      "avoided": 16,
+      "windowOpened": true,
+      "windowUsed": false,
+      "answer": null,
+      "counterMove": false,
+      "landed": false,
+      "distance": 0.29,
+      "wall": -0.72,
+      "avoidanceCredited": true,
+      "windowCredited": true,
+      "positionBefore": {
+        "tick": 1364,
+        "gap": 0.85,
+        "radius": 1.43,
+        "hp": 70,
+        "enemyHp": 44,
+        "stamina": 49.13333333333331,
+        "maxStamina": 68,
+        "posture": 4.400000000000025,
+        "ownState": "guard",
+        "enemyState": "hurt",
+        "sampleAgeTicks": 0
+      },
+      "positionAfter": {
+        "tick": 1389,
+        "gap": 1.14,
+        "radius": 0.71,
+        "hp": 70,
+        "enemyHp": 44,
+        "stamina": 25.266666666666623,
+        "maxStamina": 68,
+        "posture": 0.6000000000000234,
+        "ownState": "roll",
+        "enemyState": "hurt",
+        "sampleAgeTicks": 5
+      },
+      "firstOwnAction": {
+        "tick": 1382,
+        "action": "roll",
+        "secondsAfterResolution": 0.3,
+        "beforeNextEnemyAttackStart": true
+      },
+      "nextUsefulHit": {
+        "tick": 1516,
+        "move": "light_left",
+        "damage": 14,
+        "secondsAfterAction": 2.533,
+        "secondsAfterResolution": 2.533,
+        "beforeNextThreat": true
+      },
+      "damageReceivedBeforeNextHit": 0,
+      "observation": "Recorded sequence, not proof the defence caused subsequent damage or a miss."
+    },
+    {
+      "tick": 1382,
+      "type": "roll",
+      "attackTick": null,
+      "resolutionTick": null,
+      "against": null,
+      "charged": false,
+      "result": "no attack in flight",
+      "avoided": 0,
+      "windowOpened": false,
+      "windowUsed": false,
+      "answer": null,
+      "counterMove": false,
+      "landed": false,
+      "distance": 1.87,
+      "wall": -0.11,
+      "positionBefore": {
+        "tick": 1373,
+        "gap": 0.85,
+        "radius": 1.43,
+        "hp": 70,
+        "enemyHp": 44,
+        "stamina": 51.5333333333333,
+        "maxStamina": 68,
+        "posture": 2.6000000000000236,
+        "ownState": "guard",
+        "enemyState": "hurt",
+        "sampleAgeTicks": 9
+      },
+      "positionAfter": {
+        "tick": 1418,
+        "gap": 3.3,
+        "radius": 1.91,
+        "hp": 70,
+        "enemyHp": 44,
+        "stamina": 25.266666666666623,
+        "maxStamina": 68,
+        "posture": 0,
+        "ownState": "ready",
+        "enemyState": "hurt",
+        "sampleAgeTicks": 0
+      },
+      "firstOwnAction": {
+        "tick": 1496,
+        "action": "light_left",
+        "secondsAfterResolution": 1.9,
+        "beforeNextEnemyAttackStart": true
+      },
+      "nextUsefulHit": {
+        "tick": 1516,
+        "move": "light_left",
+        "damage": 14,
+        "secondsAfterAction": 2.233,
+        "secondsAfterResolution": 2.233,
+        "beforeNextThreat": true
+      },
+      "damageReceivedBeforeNextHit": 0,
+      "observation": "Recorded sequence, not proof the defence caused subsequent damage or a miss."
+    }
+  ],
+  "input": {
+    "available": true,
+    "windowMs": 750,
+    "requests": 27,
+    "acceptedActions": 26,
+    "candidateLinkedActions": 26,
+    "medianReceivedToDispatchMs": 1.25,
+    "unmatched": [
+      {
+        "code": "KeyQ",
+        "performanceMs": 34046.699999999255,
+        "priorOwnSample": {
+          "performanceMs": 34042,
+          "ageMs": 4.7,
+          "tick": 1641,
+          "lastDrawnTick": 1640,
+          "state": {
+            "phase": "hurt",
+            "phaseAge": 0,
+            "stamina": 42.73333333333309,
+            "maxStamina": 60,
+            "health": 54,
+            "stun": 24,
+            "parryCooldown": 0,
+            "lastMove": "light_right",
+            "buffer": null
+          }
+        },
+        "status": "no matching accepted action observed"
+      }
+    ],
+    "limits": "Compatible temporal association, not proof of intent or causality. Prior own-state samples precede key receipt and include their age; they are retrospective telemetry, not exact refusal reasons or information given to the policy. Dispatch batches simulation ticks; held guard is not a fresh command. Unmatched keys may be refused, buffered, superseded or outside this matcher. Not physical input-to-photon, touch comfort or human reaction time."
+  },
+  "rawAudioSha256": "d4742a2266742c97942b603bfeb77b9652b154f7c7e61fb5a35f5f0cdb741886",
+  "clipSha256": "2fa1f4e8f9e32fa6276bbb044987c71817eb614c63ca8e7d4065d264f364ff30",
+  "checks": "metrics independently recomputed; preceding contexts, raw events, media hash, frame bounds, final tick, audio, releases and actual heavy starts pass"
+}

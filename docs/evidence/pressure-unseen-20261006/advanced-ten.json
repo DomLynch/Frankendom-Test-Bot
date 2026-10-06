@@ -1,0 +1,421 @@
+{
+  "schemaVersion": 1,
+  "gameRevision": "6fb21b3437a6e794e47dc5a91141b67df7d69162",
+  "runBotRevision": "0c0a118af87a768a77369ff0be20e7f07b0b41be",
+  "analysisModuleSha256": "76cce1c321aeb3193b40ec355972de1ff34db314ad3c199271e6d8c2b959ef23",
+  "rows": [
+    {
+      "opponent": "executioner",
+      "seed": 153612530,
+      "outcome": "win",
+      "seconds": 22.13,
+      "health": {
+        "player": 131,
+        "opponent": 0
+      },
+      "damageTaken": 19,
+      "actualStarts": 10,
+      "heavyStarts": 0,
+      "actualMisses": 0,
+      "attackTerminations": {
+        "resolved": 10,
+        "interrupted": 0,
+        "feinted": 0,
+        "fight ended": 0,
+        "unknown": 0
+      },
+      "blocks": 4,
+      "parries": 0,
+      "nearWallSeconds": 0,
+      "firstRollAfterDefence": [
+        {
+          "tick": 403,
+          "type": "block",
+          "firstOwnAction": {
+            "tick": 413,
+            "action": "roll",
+            "secondsAfterResolution": 0.167,
+            "beforeNextEnemyAttackStart": true
+          },
+          "nextUsefulHit": {
+            "tick": 789,
+            "move": "light_right",
+            "damage": 18,
+            "secondsAfterAction": 6.433,
+            "secondsAfterResolution": 6.433,
+            "beforeNextThreat": false
+          },
+          "received": 19
+        },
+        {
+          "tick": 609,
+          "type": "block",
+          "firstOwnAction": {
+            "tick": 610,
+            "action": "roll",
+            "secondsAfterResolution": 0.017,
+            "beforeNextEnemyAttackStart": true
+          },
+          "nextUsefulHit": {
+            "tick": 789,
+            "move": "light_right",
+            "damage": 18,
+            "secondsAfterAction": 3,
+            "secondsAfterResolution": 3,
+            "beforeNextThreat": false
+          },
+          "received": 4
+        }
+      ],
+      "rawPath": "/Users/domininclynch/Developer/frankendom-test-bot-launcher-20261005/artifacts/combat/pressure-unseen-20261006/browser-nine/executioner-153612530.json",
+      "rawSha256": "3150c4251de38144c6f9b73d1d1dfc2d8b463b78b1346d5536e7ceeb81212f30",
+      "videoPath": "/Users/domininclynch/Developer/frankendom-test-bot-launcher-20261005/artifacts/combat/pressure-unseen-20261006/browser-nine/executioner-153612530.webm",
+      "videoSha256": "6effbaeba5dcbec3b93fd45fdb5e78b300cfb97329212ceb404fed241f9e91b1",
+      "analysisOnlyNotPolicyInput": true
+    },
+    {
+      "opponent": "executioner",
+      "seed": 2026100601,
+      "outcome": "win",
+      "seconds": 17.1,
+      "health": {
+        "player": 150,
+        "opponent": 0
+      },
+      "damageTaken": 0,
+      "actualStarts": 11,
+      "heavyStarts": 1,
+      "actualMisses": 0,
+      "attackTerminations": {
+        "resolved": 11,
+        "interrupted": 0,
+        "feinted": 0,
+        "fight ended": 0,
+        "unknown": 0
+      },
+      "blocks": 0,
+      "parries": 2,
+      "nearWallSeconds": 0,
+      "firstRollAfterDefence": [
+        {
+          "tick": 266,
+          "type": "parry",
+          "firstOwnAction": {
+            "tick": 276,
+            "action": "roll",
+            "secondsAfterResolution": 0.167,
+            "beforeNextEnemyAttackStart": true
+          },
+          "nextUsefulHit": {
+            "tick": 373,
+            "move": "thrust",
+            "damage": 11,
+            "secondsAfterAction": 1.783,
+            "secondsAfterResolution": 1.783,
+            "beforeNextThreat": true
+          },
+          "received": 0
+        }
+      ],
+      "rawPath": "/Users/domininclynch/Developer/frankendom-test-bot-launcher-20261005/artifacts/combat/pressure-unseen-20261006/browser-nine/executioner-2026100601.json",
+      "rawSha256": "3143107c212c4de98cb75d441b4542b35baba43eb695150570c28b6d4ed5db91",
+      "videoPath": "/Users/domininclynch/Developer/frankendom-test-bot-launcher-20261005/artifacts/combat/pressure-unseen-20261006/browser-nine/executioner-2026100601.webm",
+      "videoSha256": "081c041876b1d1f3ff566189d55f4a7e50b510671842f32be71f4a2609605a95",
+      "analysisOnlyNotPolicyInput": true
+    },
+    {
+      "opponent": "executioner",
+      "seed": 898582598,
+      "outcome": "win",
+      "seconds": 19.43,
+      "health": {
+        "player": 139,
+        "opponent": 0
+      },
+      "damageTaken": 11,
+      "actualStarts": 11,
+      "heavyStarts": 0,
+      "actualMisses": 0,
+      "attackTerminations": {
+        "resolved": 11,
+        "interrupted": 0,
+        "feinted": 0,
+        "fight ended": 0,
+        "unknown": 0
+      },
+      "blocks": 2,
+      "parries": 0,
+      "nearWallSeconds": 0,
+      "firstRollAfterDefence": [
+        {
+          "tick": 380,
+          "type": "block",
+          "firstOwnAction": {
+            "tick": 390,
+            "action": "roll",
+            "secondsAfterResolution": 0.167,
+            "beforeNextEnemyAttackStart": true
+          },
+          "nextUsefulHit": {
+            "tick": 536,
+            "move": "thrust",
+            "damage": 17,
+            "secondsAfterAction": 2.6,
+            "secondsAfterResolution": 2.6,
+            "beforeNextThreat": false
+          },
+          "received": 11
+        }
+      ],
+      "rawPath": "/Users/domininclynch/Developer/frankendom-test-bot-launcher-20261005/artifacts/combat/pressure-unseen-20261006/browser-nine/executioner-898582598.json",
+      "rawSha256": "d5d164074973bfc99189fba7da9dae74062c6013b390d10306456c92506fe25e",
+      "videoPath": "/Users/domininclynch/Developer/frankendom-test-bot-launcher-20261005/artifacts/combat/pressure-unseen-20261006/browser-nine/executioner-898582598.webm",
+      "videoSha256": "a771ceb2745a5579e808163af21c34a0175cf73107bad5e818520bc6e9f37537",
+      "analysisOnlyNotPolicyInput": true
+    },
+    {
+      "opponent": "goblin",
+      "seed": 153612530,
+      "outcome": "win",
+      "seconds": 19.73,
+      "health": {
+        "player": 122,
+        "opponent": 0
+      },
+      "damageTaken": 28,
+      "actualStarts": 12,
+      "heavyStarts": 0,
+      "actualMisses": 0,
+      "attackTerminations": {
+        "resolved": 10,
+        "interrupted": 2,
+        "feinted": 0,
+        "fight ended": 0,
+        "unknown": 0
+      },
+      "blocks": 0,
+      "parries": 1,
+      "nearWallSeconds": 0,
+      "firstRollAfterDefence": [
+        {
+          "tick": 1049,
+          "type": "parry",
+          "firstOwnAction": {
+            "tick": 1060,
+            "action": "roll",
+            "secondsAfterResolution": 0.183,
+            "beforeNextEnemyAttackStart": true
+          },
+          "nextUsefulHit": {
+            "tick": 1184,
+            "move": "thrust",
+            "damage": 17,
+            "secondsAfterAction": 2.25,
+            "secondsAfterResolution": 2.25,
+            "beforeNextThreat": false
+          },
+          "received": 0
+        }
+      ],
+      "rawPath": "/Users/domininclynch/Developer/frankendom-test-bot-launcher-20261005/artifacts/combat/pressure-unseen-20261006/browser-nine/goblin-153612530.json",
+      "rawSha256": "fd3a29eb76ed1748d042afc3c6d173af28857aaf6be24a05e6af7baf12d2315e",
+      "videoPath": "/Users/domininclynch/Developer/frankendom-test-bot-launcher-20261005/artifacts/combat/pressure-unseen-20261006/browser-nine/goblin-153612530.webm",
+      "videoSha256": "7a784050e44f3b4dbbfe91c9e584fefc8dfbdecf3d30b4da0dcab3c92c2374e0",
+      "analysisOnlyNotPolicyInput": true
+    },
+    {
+      "opponent": "goblin",
+      "seed": 2026100601,
+      "outcome": "win",
+      "seconds": 15.65,
+      "health": {
+        "player": 136,
+        "opponent": 0
+      },
+      "damageTaken": 14,
+      "actualStarts": 10,
+      "heavyStarts": 0,
+      "actualMisses": 0,
+      "attackTerminations": {
+        "resolved": 9,
+        "interrupted": 1,
+        "feinted": 0,
+        "fight ended": 0,
+        "unknown": 0
+      },
+      "blocks": 0,
+      "parries": 0,
+      "nearWallSeconds": 0,
+      "firstRollAfterDefence": [],
+      "rawPath": "/Users/domininclynch/Developer/frankendom-test-bot-launcher-20261005/artifacts/combat/pressure-unseen-20261006/browser-nine/goblin-2026100601.json",
+      "rawSha256": "b25919a5b165b81e68a1141d19a3167c2650c38251b14bd71c9b74f006fa5308",
+      "videoPath": "/Users/domininclynch/Developer/frankendom-test-bot-launcher-20261005/artifacts/combat/pressure-unseen-20261006/browser-nine/goblin-2026100601.webm",
+      "videoSha256": "4805befced027f1879ab81637821c0dcce00d2d421e7a103e74ba045555ae4f3",
+      "analysisOnlyNotPolicyInput": true
+    },
+    {
+      "opponent": "goblin",
+      "seed": 898582598,
+      "outcome": "win",
+      "seconds": 21.13,
+      "health": {
+        "player": 86,
+        "opponent": 0
+      },
+      "damageTaken": 64,
+      "actualStarts": 13,
+      "heavyStarts": 0,
+      "actualMisses": 0,
+      "attackTerminations": {
+        "resolved": 10,
+        "interrupted": 3,
+        "feinted": 0,
+        "fight ended": 0,
+        "unknown": 0
+      },
+      "blocks": 0,
+      "parries": 0,
+      "nearWallSeconds": 0,
+      "firstRollAfterDefence": [],
+      "rawPath": "/Users/domininclynch/Developer/frankendom-test-bot-launcher-20261005/artifacts/combat/pressure-unseen-20261006/browser-nine/goblin-898582598.json",
+      "rawSha256": "27265c914bc8c569c4382601ae28aa834ea12d51eecea63f801fca7d41184740",
+      "videoPath": "/Users/domininclynch/Developer/frankendom-test-bot-launcher-20261005/artifacts/combat/pressure-unseen-20261006/browser-nine/goblin-898582598.webm",
+      "videoSha256": "ea1bef16b23150749ac54d4de7abfdf60c26973fd6a87368b0b97da0e35884a1",
+      "analysisOnlyNotPolicyInput": true
+    },
+    {
+      "opponent": "veteran",
+      "seed": 153612530,
+      "outcome": "win",
+      "seconds": 16.43,
+      "health": {
+        "player": 115,
+        "opponent": 0
+      },
+      "damageTaken": 35,
+      "actualStarts": 11,
+      "heavyStarts": 1,
+      "actualMisses": 0,
+      "attackTerminations": {
+        "resolved": 9,
+        "interrupted": 2,
+        "feinted": 0,
+        "fight ended": 0,
+        "unknown": 0
+      },
+      "blocks": 0,
+      "parries": 2,
+      "nearWallSeconds": 0,
+      "firstRollAfterDefence": [],
+      "rawPath": "/Users/domininclynch/Developer/frankendom-test-bot-launcher-20261005/artifacts/combat/pressure-unseen-20261006/browser-nine/veteran-153612530.json",
+      "rawSha256": "1d2179da9eb6b8568ec5b8c71a4c203d1049fd6175161528f664c1637790382f",
+      "videoPath": "/Users/domininclynch/Developer/frankendom-test-bot-launcher-20261005/artifacts/combat/pressure-unseen-20261006/browser-nine/veteran-153612530.webm",
+      "videoSha256": "4264e535200a23d9baf1ae3cba974ac7cb28b04306c189a21ca4a085759b30cc",
+      "analysisOnlyNotPolicyInput": true
+    },
+    {
+      "opponent": "veteran",
+      "seed": 2026100601,
+      "outcome": "win",
+      "seconds": 26.12,
+      "health": {
+        "player": 80,
+        "opponent": 0
+      },
+      "damageTaken": 70,
+      "actualStarts": 16,
+      "heavyStarts": 2,
+      "actualMisses": 0,
+      "attackTerminations": {
+        "resolved": 10,
+        "interrupted": 6,
+        "feinted": 0,
+        "fight ended": 0,
+        "unknown": 0
+      },
+      "blocks": 0,
+      "parries": 3,
+      "nearWallSeconds": 2.08,
+      "firstRollAfterDefence": [],
+      "rawPath": "/Users/domininclynch/Developer/frankendom-test-bot-launcher-20261005/artifacts/combat/pressure-unseen-20261006/browser-nine/veteran-2026100601.json",
+      "rawSha256": "3d439e1b633885c70bcd707e1e5903ec76de2423135df72064a9aa650e766e8a",
+      "videoPath": "/Users/domininclynch/Developer/frankendom-test-bot-launcher-20261005/artifacts/combat/pressure-unseen-20261006/browser-nine/veteran-2026100601.webm",
+      "videoSha256": "8cd7fe00088fc9eea27a15fe65e13bad4a2c925bdf421ff7a42a3a0269aee287",
+      "analysisOnlyNotPolicyInput": true
+    },
+    {
+      "opponent": "veteran",
+      "seed": 898582598,
+      "outcome": "win",
+      "seconds": 15.18,
+      "health": {
+        "player": 120,
+        "opponent": 0
+      },
+      "damageTaken": 30,
+      "actualStarts": 10,
+      "heavyStarts": 1,
+      "actualMisses": 0,
+      "attackTerminations": {
+        "resolved": 9,
+        "interrupted": 1,
+        "feinted": 0,
+        "fight ended": 0,
+        "unknown": 0
+      },
+      "blocks": 0,
+      "parries": 2,
+      "nearWallSeconds": 0,
+      "firstRollAfterDefence": [],
+      "rawPath": "/Users/domininclynch/Developer/frankendom-test-bot-launcher-20261005/artifacts/combat/pressure-unseen-20261006/browser-nine/veteran-898582598.json",
+      "rawSha256": "94a5fe1edac566b9470bb6b15bccd940546c3774569ab643459f90a36e716f53",
+      "videoPath": "/Users/domininclynch/Developer/frankendom-test-bot-launcher-20261005/artifacts/combat/pressure-unseen-20261006/browser-nine/veteran-898582598.webm",
+      "videoSha256": "a0e11e037da05ccaada04b40c4d5cbe269f9c8d25eca94f87b04c02ffdd582fc",
+      "analysisOnlyNotPolicyInput": true
+    },
+    {
+      "opponent": "veteran",
+      "seed": 2026100611,
+      "outcome": "win",
+      "seconds": 19.57,
+      "health": {
+        "player": 115,
+        "opponent": 0
+      },
+      "damageTaken": 35,
+      "actualStarts": 13,
+      "heavyStarts": 0,
+      "actualMisses": 0,
+      "attackTerminations": {
+        "resolved": 11,
+        "interrupted": 2,
+        "feinted": 0,
+        "fight ended": 0,
+        "unknown": 0
+      },
+      "blocks": 0,
+      "parries": 1,
+      "nearWallSeconds": 0,
+      "firstRollAfterDefence": [],
+      "rawPath": "/Users/domininclynch/Developer/frankendom-test-bot-launcher-20261005/artifacts/combat/pressure-unseen-20261006/browser-tenth/veteran-2026100611.json",
+      "rawSha256": "d4dbf64b853c18db21dce3e6fdb57d951d3382ccf3b186272c7f801d30e7437b",
+      "videoPath": "/Users/domininclynch/Developer/frankendom-test-bot-launcher-20261005/artifacts/combat/pressure-unseen-20261006/browser-tenth/veteran-2026100611.webm",
+      "videoSha256": "31ce9f7f74946cfac22e80a6a19487e1f0a1fe21f1c000a622449e1694a742a2",
+      "analysisOnlyNotPolicyInput": true
+    }
+  ],
+  "note": "Retrospective new analysis, original receipts unchanged;10advanced fights across3enemies, not profile/fullroster acceptance.",
+  "sparringSearch": "/?spar=1&opponent=veteran&difficulty=6&weapon=longsword&skill=none&special=none&yourSpecial=none",
+  "settings": {
+    "difficulty": "easy",
+    "strategy": "tactical",
+    "research": true,
+    "reactionMs": 180,
+    "stepMs": 64,
+    "observation": "limited",
+    "playerProfile": "advanced",
+    "clock": "controlled fixed-step; not realtime FPS",
+    "drawsSuppressed": false
+  },
+  "analysisRevision": "7b381e5ddca803b316a86ff6575764c5f4d81920"
+}

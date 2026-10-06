@@ -1,0 +1,125 @@
+{
+  "method": "ffprobe metadata only; not full decode, hearing, perceptual sync or continuous motion acceptance",
+  "rows": [
+    {
+      "capture": "senses-high",
+      "durationSeconds": null,
+      "streams": [
+        {
+          "codecType": "video",
+          "codec": "vp9",
+          "sampleRate": null,
+          "width": 390,
+          "height": 844,
+          "startTime": "0.000000",
+          "timeBase": "1/1000"
+        },
+        {
+          "codecType": "audio",
+          "codec": "opus",
+          "sampleRate": "48000",
+          "width": null,
+          "height": null,
+          "startTime": "0.020000",
+          "timeBase": "1/1000"
+        }
+      ]
+    },
+    {
+      "capture": "senses-low",
+      "durationSeconds": null,
+      "streams": [
+        {
+          "codecType": "video",
+          "codec": "vp9",
+          "sampleRate": null,
+          "width": 390,
+          "height": 844,
+          "startTime": "0.000000",
+          "timeBase": "1/1000"
+        },
+        {
+          "codecType": "audio",
+          "codec": "opus",
+          "sampleRate": "48000",
+          "width": null,
+          "height": null,
+          "startTime": "0.020000",
+          "timeBase": "1/1000"
+        }
+      ]
+    },
+    {
+      "capture": "senses-off",
+      "durationSeconds": null,
+      "streams": [
+        {
+          "codecType": "video",
+          "codec": "vp9",
+          "sampleRate": null,
+          "width": 390,
+          "height": 844,
+          "startTime": "0.000000",
+          "timeBase": "1/1000"
+        },
+        {
+          "codecType": "audio",
+          "codec": "opus",
+          "sampleRate": "48000",
+          "width": null,
+          "height": null,
+          "startTime": "0.019000",
+          "timeBase": "1/1000"
+        }
+      ]
+    },
+    {
+      "capture": "senses-high-impact",
+      "durationSeconds": null,
+      "streams": [
+        {
+          "codecType": "video",
+          "codec": "vp9",
+          "sampleRate": null,
+          "width": 390,
+          "height": 844,
+          "startTime": "0.000000",
+          "timeBase": "1/1000"
+        },
+        {
+          "codecType": "audio",
+          "codec": "opus",
+          "sampleRate": "48000",
+          "width": null,
+          "height": null,
+          "startTime": "0.005000",
+          "timeBase": "1/1000"
+        }
+      ]
+    },
+    {
+      "capture": "senses-off-impact",
+      "durationSeconds": null,
+      "streams": [
+        {
+          "codecType": "video",
+          "codec": "vp9",
+          "sampleRate": null,
+          "width": 390,
+          "height": 844,
+          "startTime": "0.000000",
+          "timeBase": "1/1000"
+        },
+        {
+          "codecType": "audio",
+          "codec": "opus",
+          "sampleRate": "48000",
+          "width": null,
+          "height": null,
+          "startTime": "0.014000",
+          "timeBase": "1/1000"
+        }
+      ]
+    }
+  ]
+}

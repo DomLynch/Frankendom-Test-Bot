@@ -1,0 +1,123 @@
+[
+  {
+    "profile": "advanced",
+    "botRevision": "7998cccc655e79702b0d05216da1ce0fff5b74dc",
+    "gameRevision": "6fb21b3437a6e794e47dc5a91141b67df7d69162",
+    "outcome": "win",
+    "durationSeconds": 27,
+    "damageTaken": 73,
+    "damageDealt": 161,
+    "attackMix": {
+      "attacks": 15,
+      "heavies": 1,
+      "heavyPercent": 6.7,
+      "passed": true
+    },
+    "keyboardRecords": 102,
+    "eventTimelineRecords": 109,
+    "input": {
+      "available": true,
+      "windowMs": 750,
+      "requests": 21,
+      "acceptedActions": 21,
+      "candidateLinkedActions": 21,
+      "medianReceivedToDispatchMs": 2.7,
+      "unmatched": [],
+      "limits": "Compatible temporal association, not proof of intent or causality. Dispatch batches simulation ticks; held guard is not a fresh command. Unmatched keys may be refused, buffered, superseded or outside this matcher. Not physical input-to-photon, touch comfort or human reaction time."
+    },
+    "unmatchedContexts": [],
+    "rawAudioSha256": "de6204411b5147cdf7ce813ab793197dd8a6eaeecf504e2eac7860caae55991b",
+    "clipSha256": "9dc7feb3399dc432248d5545e1f32b91b7dba1a575af58d1b8f947deafd3e7c7",
+    "checks": "stored metrics independently recomputed; raw events, media hash, frame bounds, source, release, errors and actual heavy starts pass"
+  },
+  {
+    "profile": "beginner",
+    "botRevision": "7998cccc655e79702b0d05216da1ce0fff5b74dc",
+    "gameRevision": "6fb21b3437a6e794e47dc5a91141b67df7d69162",
+    "outcome": "loss",
+    "durationSeconds": 38.35,
+    "damageTaken": 155,
+    "damageDealt": 123,
+    "attackMix": {
+      "attacks": 23,
+      "heavies": 1,
+      "heavyPercent": 4.3,
+      "passed": true
+    },
+    "keyboardRecords": 102,
+    "eventTimelineRecords": 137,
+    "input": {
+      "available": true,
+      "windowMs": 750,
+      "requests": 28,
+      "acceptedActions": 25,
+      "candidateLinkedActions": 25,
+      "medianReceivedToDispatchMs": 2.1,
+      "unmatched": [
+        {
+          "code": "KeyE",
+          "performanceMs": 15902.599999999627,
+          "status": "no matching accepted action observed"
+        },
+        {
+          "code": "KeyQ",
+          "performanceMs": 26537,
+          "status": "no matching accepted action observed"
+        },
+        {
+          "code": "KeyE",
+          "performanceMs": 27125,
+          "status": "no matching accepted action observed"
+        }
+      ],
+      "limits": "Compatible temporal association, not proof of intent or causality. Dispatch batches simulation ticks; held guard is not a fresh command. Unmatched keys may be refused, buffered, superseded or outside this matcher. Not physical input-to-photon, touch comfort or human reaction time."
+    },
+    "unmatchedContexts": [
+      {
+        "code": "KeyE",
+        "performanceMs": 15902.599999999627,
+        "status": "no matching accepted action observed",
+        "nearestPriorSample": {
+          "ageMs": 14.1,
+          "tick": 832,
+          "phase": "ready",
+          "phaseAge": 4,
+          "stamina": 20.533333333333488,
+          "maxStamina": 84,
+          "health": 113
+        }
+      },
+      {
+        "code": "KeyQ",
+        "performanceMs": 26537,
+        "status": "no matching accepted action observed",
+        "nearestPriorSample": {
+          "ageMs": 1.2,
+          "tick": 1442,
+          "phase": "hurt",
+          "phaseAge": 0,
+          "stamina": 20.533333333333257,
+          "maxStamina": 60,
+          "health": 62
+        }
+      },
+      {
+        "code": "KeyE",
+        "performanceMs": 27125,
+        "status": "no matching accepted action observed",
+        "nearestPriorSample": {
+          "ageMs": 1.1,
+          "tick": 1469,
+          "phase": "ready",
+          "phaseAge": 3,
+          "stamina": 22.666666666666597,
+          "maxStamina": 60,
+          "health": 62
+        }
+      }
+    ],
+    "rawAudioSha256": "a76bdf84c8eb8205e6fde538a3b42220c4fcca12859395c7b1a592446c731c66",
+    "clipSha256": "53282e5493a3ea56c48a16b0055248b1a97cc6b6fac5f2cba20b9a6027ed44c0",
+    "checks": "stored metrics independently recomputed; raw events, media hash, frame bounds, source, release, errors and actual heavy starts pass"
+  }
+]
