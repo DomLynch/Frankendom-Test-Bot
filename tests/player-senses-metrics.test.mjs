@@ -54,3 +54,10 @@ test('impact ROI follows actual struck side and location, not a fixed enemy head
   assert.ok(Math.abs(head.x-.3)<1e-9);assert.equal(head.y,1.5);
   assert.equal(approximateImpact({type:'Blocked',actor:0,target:1},fighters),null);
 });
+test('event-local sound levels separate before/after and exclude distant samples',()=>{
+  const m=sensesMetrics({events:[{tick:5,type:'Hit',actor:0}],frames:[{tick:5,performanceMs:1000}],
+    levels:[{performanceMs:0,rms:1,peak:1},{performanceMs:900,rms:.01,peak:.02},{performanceMs:1100,rms:.1,peak:.2},{performanceMs:1200,rms:1,peak:1}]});
+  assert.equal(m.eventWindows[0].audioBefore.samples,1);assert.equal(m.eventWindows[0].audioBefore.medianRmsDbfs,-40);
+  assert.equal(m.eventWindows[0].audioAfter.samples,1);assert.equal(m.eventWindows[0].audioAfter.medianRmsDbfs,-20);
+  assert.equal(m.eventWindows[0].audioAfter.maxPeak,.2);
+});

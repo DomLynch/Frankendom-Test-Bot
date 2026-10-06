@@ -43,16 +43,23 @@ export function sensesMetrics(receipt) {
   const headRed = pixels.map(p=>p.regions?.enemyHeadApprox?.redDominantFraction).filter(Number.isFinite);
   const impactRed = pixels.map(p=>p.regions?.impactApprox?.redDominantFraction).filter(Number.isFinite);
   const gaps = frames.slice(1).map((f,i) => f.performanceMs-frames[i].performanceMs).filter(x => x>0);
+  const audioWindow = (from,to) => {
+    const selected=levels.filter(s=>s.performanceMs>=from&&s.performanceMs<to),p=finite(selected,'peak');
+    return {samples:selected.length,medianRmsDbfs:db(median(finite(selected,'rms'))),maxPeak:p.length?Math.max(...p):null,
+      medianSpectralCentroidHz:median(finite(selected,'spectralCentroidHz'))};
+  };
   const windows = (receipt.events ?? []).filter(e => ['Hit','Blocked','Parried','GuardBroken','Charging','ActionStarted'].includes(e.type))
     .filter(e => e.type !== 'ActionStarted' || ['roll','backstep'].includes(e.action)).map(e => {
       const frame = frames.find(f => f.tick >= e.tick && f.tick-e.tick <= 4);
       const sources = starts.filter(s => s.tick === e.tick);
       return { tick:e.tick, type:e.type, actor:e.actor, move:e.move ?? null, action:e.action ?? null,
         renderedTick:frame?.tick ?? null, renderPerformanceMs:frame?.performanceMs ?? null,
+        audioBefore:frame?audioWindow(frame.performanceMs-200,frame.performanceMs):null,
+        audioAfter:frame?audioWindow(frame.performanceMs,frame.performanceMs+200):null,
         soundSources:sources.map(s => ({id:s.id,cue:s.cue ?? null,
           sourceScheduledAfterFrameMs:frame && Number.isFinite(s.audioSeconds) && Number.isFinite(s.performanceMs)
             ? s.performanceMs + Math.max(0,(s.scheduledSeconds ?? 0)-s.audioSeconds)*1000-frame.performanceMs : null})),
-        sourceNote:'decoded source scheduling vs nearest rendered tick; not audible recognition or acoustic-device latency' };
+        sourceNote:'decoded source scheduling vs nearest rendered tick; event-local levels include other sounds, not isolated cue audibility or acoustic-device latency' };
     });
   const rolls = (receipt.events ?? []).filter(e => e.type==='ActionStarted' && e.actor===0 && e.action==='roll').map(e => {
     const before = frames.filter(f => f.tick<e.tick && f.tick>=e.tick-12);
