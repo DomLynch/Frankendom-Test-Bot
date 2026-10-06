@@ -1,0 +1,37 @@
+[
+  {
+    "file": "audit.json",
+    "bytes": 104507,
+    "sha256": "a4f5aa627fd1703051bc00e9837c4b48a41e174fd76a8ec5fadd6b3c84bb016f"
+  },
+  {
+    "file": "tests-receipt.json",
+    "bytes": 358,
+    "sha256": "44ada433396453940a84387c79930d75791e713f73d1b2cab4995ce52c2a4ab0"
+  },
+  {
+    "file": "advanced-executioner-633.json",
+    "bytes": 34064,
+    "sha256": "a945fe65a5683cd7f34ee692d659cd361e41184b9171cd85cd99e3b4ce1cd096"
+  },
+  {
+    "file": "advanced-veteran-631.json",
+    "bytes": 29415,
+    "sha256": "b917ffde83637a6d725c7cd9d6ead65bd27165b53aafe9661af5bde287d6fa09"
+  },
+  {
+    "file": "pitborn-634.json",
+    "bytes": 10638,
+    "sha256": "59b5592b8aefb4baf326e1b4450b67988b170b4393d5def5826caab30f0edf9c"
+  },
+  {
+    "file": "move-audit.json",
+    "bytes": 55333,
+    "sha256": "b4a675fd68cba331109d5b5876fd9df682ff698e803f1ced3208c659b546c0d8"
+  },
+  {
+    "file": "beginner-veteran-632.json",
+    "bytes": 29044,
+    "sha256": "c207cfb4bdf4b786b54e4a636900106b7737b10bbfe421b1f3bbea022b93811d"
+  }
+]

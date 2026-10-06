@@ -8,6 +8,8 @@ Latest [five-part player-experience pilot](docs/player-senses-20261005.md): 27 e
 
 Continued [pressure/defence study](docs/pressure-unseen-20261006.md):19 additional rendered fights,16 wins/3 losses; matched Veteran profiles produced beginner0/3, intermediate3/3, advanced3/3. Post-fight learning now distinguishes recorded interruption/feint/fight-end from misses and records the first accepted action after defence.118 tests pass; no tactic or game rule changes. These synthetic cases remain research evidence, not human calibration.
 
+The new [real-time keyboard AV study](docs/native-live-20261006.md) captures fresh live fights with actual game audio, headlessly and quietly on Mac Metal. Opt in with `--research --native-av --fights=1`; no controlled clock or engine replay. Four native cases passed recording/input checks, including a retained loss.122 tests pass. Fast controlled recordings and native timing are separate evidence; neither proves hearing quality or touch comfort.
+
 **This is the canonical bot entry repo.** Git and Node.js **22.18+** are required. Clone it, then run the current tactical browser bot:
 
 ```sh
