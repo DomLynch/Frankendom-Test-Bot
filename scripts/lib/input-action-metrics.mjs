@@ -9,6 +9,20 @@ export function inputActionMetrics(receipt, learning={}, windowMs=750) {
   if(!Array.isArray(receipt.keyboard)||!Array.isArray(receipt.eventTimeline))return {
     available:false,reason:'No actual browser key/event receipt; do not infer from planned input ticks.'};
   const begin=receipt.begin.performanceMs,end=receipt.end.performanceMs;
+  const frames=(receipt.frames??[]).filter(f=>Number.isFinite(f.performanceMs)
+    &&f.performanceMs>=begin&&f.performanceMs<=end&&f.fighters?.[0])
+    .sort((a,b)=>a.performanceMs-b.performanceMs);
+  const priorOwnSample=time=>{
+    let low=0,high=frames.length;
+    while(low<high){const mid=(low+high)>>>1;if(frames[mid].performanceMs<=time)low=mid+1;else high=mid;}
+    const frame=frames[low-1];if(!frame)return null;
+    const p=frame.fighters[0];
+    return {performanceMs:frame.performanceMs,ageMs:+(time-frame.performanceMs).toFixed(3),
+      tick:frame.tick??null,lastDrawnTick:frame.lastDrawnTick??null,
+      state:{phase:p.phase??null,phaseAge:p.age??null,stamina:p.stamina??null,
+        maxStamina:p.maxStamina??null,health:p.health??null,stun:p.stun??null,
+        parryCooldown:p.parryCooldown??null,lastMove:p.lastMove??null,buffer:p.buffer??null}};
+  };
   const keys=receipt.keyboard.filter(k=>k.performanceMs>=begin&&k.performanceMs<=end&&k.isTrusted);
   const requests=keys.filter(k=>k.type==='keydown'&&!k.repeat&&actionKeys.has(k.code));
   const used=new Set(),actions=[];
@@ -26,12 +40,14 @@ export function inputActionMetrics(receipt, learning={}, windowMs=750) {
       code:index>=0?requests[index].code:heldGuard?'KeyQ':null,
       keyReceivedPerformanceMs:index>=0?requests[index].performanceMs:null,
       receivedToDispatchMs:index>=0?+(time-requests[index].performanceMs).toFixed(3):null,
+      priorOwnSample:index>=0?priorOwnSample(requests[index].performanceMs):null,
       attackResult:attack?.result??null,attackTermination:attack?.termination??null});
   }
   const unmatched=requests.flatMap((k,i)=>used.has(i)?[]:[{code:k.code,performanceMs:k.performanceMs,
+    priorOwnSample:priorOwnSample(k.performanceMs),
     status:end-k.performanceMs<windowMs?'capture ends before matching window completes':'no matching accepted action observed'}]);
   const delays=actions.map(a=>a.receivedToDispatchMs).filter(Number.isFinite);
   return {available:true,windowMs,requests:requests.length,acceptedActions:actions.length,
     candidateLinkedActions:delays.length,medianReceivedToDispatchMs:median(delays),actions,unmatched,
-    limits:'Compatible temporal association, not proof of intent or causality. Dispatch batches simulation ticks; held guard is not a fresh command. Unmatched keys may be refused, buffered, superseded or outside this matcher. Not physical input-to-photon, touch comfort or human reaction time.'};
+    limits:'Compatible temporal association, not proof of intent or causality. Prior own-state samples precede key receipt and include their age; they are retrospective telemetry, not exact refusal reasons or information given to the policy. Dispatch batches simulation ticks; held guard is not a fresh command. Unmatched keys may be refused, buffered, superseded or outside this matcher. Not physical input-to-photon, touch comfort or human reaction time.'};
 }
