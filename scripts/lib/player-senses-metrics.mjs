@@ -27,11 +27,21 @@ export function audioSpectrumStats(bins, sampleRate) {
   }
   return { spectralCentroidHz:power?weighted/power:null,treblePowerFraction:power?treble/power:null };
 }
+export function approximateImpact(event, fighters) {
+  if (!['Hit','GuardBroken'].includes(event?.type) || ![0,1].includes(event.target) || !fighters[event.actor] || !fighters[event.target]) return null;
+  const from=fighters[event.actor].body,to=fighters[event.target].body,scale=fighters[event.target].scale;
+  const gap=Math.hypot(to.x-from.x,to.z-from.z),k=gap>.0001?.3/gap:0;
+  // Approximation follows the reviewed scene's burst anchor, not an observed pixel segmentation.
+  const y=(event.location==='head'?1.5:event.location==='legs'?.55:1.15)*scale;
+  return {x:to.x-(to.x-from.x)*k,z:to.z-(to.z-from.z)*k,y,radius:.35*scale,eventTick:event.tick,
+    location:event.location??'unknown',note:'approximate reviewed-game effect anchor; not rig/collision truth'};
+}
 export function sensesMetrics(receipt) {
   const frames = receipt.frames ?? [], levels = receipt.levels ?? [], pixels = receipt.visualSamples ?? [], starts = receipt.starts ?? [];
   const finite = (list, key) => list.map(x => x[key]).filter(Number.isFinite);
   const peaks = finite(levels,'peak'), rms = finite(levels,'rms');
   const headRed = pixels.map(p=>p.regions?.enemyHeadApprox?.redDominantFraction).filter(Number.isFinite);
+  const impactRed = pixels.map(p=>p.regions?.impactApprox?.redDominantFraction).filter(Number.isFinite);
   const gaps = frames.slice(1).map((f,i) => f.performanceMs-frames[i].performanceMs).filter(x => x>0);
   const windows = (receipt.events ?? []).filter(e => ['Hit','Blocked','Parried','GuardBroken','Charging','ActionStarted'].includes(e.type))
     .filter(e => e.type !== 'ActionStarted' || ['roll','backstep'].includes(e.action)).map(e => {
@@ -67,6 +77,7 @@ export function sensesMetrics(receipt) {
     visual:{ available:pixels.length>0, samples:pixels.length,
       maxRedDominantFraction:pixels.length?Math.max(...pixels.map(p=>p.redDominantFraction)):null,
       maxApproxEnemyHeadRedFraction:headRed.length?Math.max(...headRed):null,
+      maxApproxImpactRedFraction:impactRed.length?Math.max(...impactRed):null,
       sampleCostMedianMs:median(finite(pixels,'sampleCostMs')),
       note:'rendered pixels, not an engine blood flag; approximate ROI/red mask cannot establish weapon occlusion' },
     capture:{ medianFrameGapMs:median(gaps), maxFrameGapMs:gaps.length?Math.max(...gaps):null,

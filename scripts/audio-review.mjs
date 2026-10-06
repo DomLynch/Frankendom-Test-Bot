@@ -10,7 +10,7 @@ import {verifyRecord} from '../game/src/replay.ts';
 import {MANIFEST} from '../game/src/audio/manifest.ts';
 import {perceivable} from './lib/player-bot-observation.mjs';
 import {installAudioReview,identifySpriteCue,chargeObservationAudit} from './lib/audio-review.mjs';
-import {visualPixelStats,audioSpectrumStats,sensesMetrics} from './lib/player-senses-metrics.mjs';
+import {visualPixelStats,audioSpectrumStats,approximateImpact,sensesMetrics} from './lib/player-senses-metrics.mjs';
 const {values}=parseArgs({options:{fight:{type:'string'},to:{type:'string'},out:{type:'string'},feel:{type:'string'},url:{type:'string',default:'http://127.0.0.1:8781'}}});
 assert.ok(values.feel===undefined||['high','low','off'].includes(values.feel),'feel must be high, low or off');
 assert.ok(values.fight&&values.to&&values.out);assert.equal(new URL(values.url).hostname,'127.0.0.1');
@@ -30,6 +30,7 @@ for(const {tick,...intent} of fight.intents.slice(0,to))recorder.push(intent);
 const record=recorder.finish('abandoned'),verified=verifyRecord(record);assert.equal(verified.ok,true);
 const identity={revision,botRevision:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),
   probeSha256:hash(await fs.readFile('scripts/audio-review.mjs')),moduleSha256:hash(await fs.readFile('scripts/lib/audio-review.mjs')),
+  metricsSha256:hash(await fs.readFile('scripts/lib/player-senses-metrics.mjs')),
   dirty:execFileSync('git',['status','--porcelain'],{encoding:'utf8'}).trim(),feel:values.feel??'game default',
   observationSha256:hash(await fs.readFile('scripts/lib/player-bot-observation.mjs')),fixtureSha256:hash(bytes),recordSha256:hash(JSON.stringify(record))};
 await fs.mkdir(values.out,{recursive:false});await fs.writeFile(`${values.out}/record.json`,JSON.stringify(record),{flag:'wx'});
@@ -41,7 +42,7 @@ try {
  let releaseModels; const modelsReady=new Promise(resolve=>{releaseModels=resolve;});
  let gatedModels=0;
  await page.route(/\.glb(?:\?|$)/,async route=>{gatedModels++;await modelsReady;await route.continue();});
- await page.addInitScript({content:`globalThis.__visualPixelStats=(${visualPixelStats.toString()});globalThis.__audioSpectrumStats=(${audioSpectrumStats.toString()});`});
+ await page.addInitScript({content:`globalThis.__visualPixelStats=(${visualPixelStats.toString()});globalThis.__audioSpectrumStats=(${audioSpectrumStats.toString()});globalThis.__approximateImpact=(${approximateImpact.toString()});`});
  await page.addInitScript(installAudioReview);
  const feelQuery=values.feel?`&feel=${values.feel}`:'';
  await page.goto(`${values.url}/?debug=1&dpr=1&opponent=${fight.config.opponent}&replay=${await encodeRecord(record)}${feelQuery}`,{waitUntil:'domcontentloaded'});

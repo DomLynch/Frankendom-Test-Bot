@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {visualPixelStats,audioSpectrumStats,sensesMetrics} from '../scripts/lib/player-senses-metrics.mjs';
+import {visualPixelStats,audioSpectrumStats,approximateImpact,sensesMetrics} from '../scripts/lib/player-senses-metrics.mjs';
 
 test('rendered red coverage uses pixel centres and correct bottom-up orientation',()=>{
   const pixels=Uint8Array.from([0,0,0,255,0,0,0,255,255,0,0,255,0,0,0,255]);
@@ -45,4 +45,12 @@ test('audio full-scale excursions and sampled region peaks are measurements, not
   assert.equal(stats.audio.medianRmsDbfs,-20);assert.equal(stats.audio.nearFullScaleSampleFraction,.5);
   assert.equal(stats.visual.maxApproxEnemyHeadRedFraction,.6);assert.equal(stats.visual.sampleCostMedianMs,2);
   assert.ok(stats.limits.includes('No overall combat/fun score'));
+});
+test('impact ROI follows actual struck side and location, not a fixed enemy head',()=>{
+  const fighters=[{body:{x:0,z:0},scale:1},{body:{x:2,z:0},scale:1.2}];
+  const torso=approximateImpact({tick:25,type:'Hit',actor:0,target:1,location:'torso'},fighters);
+  assert.ok(Math.abs(torso.x-1.7)<1e-9);assert.equal(torso.y,1.15*1.2);
+  const head=approximateImpact({tick:25,type:'Hit',actor:1,target:0,location:'head'},fighters);
+  assert.ok(Math.abs(head.x-.3)<1e-9);assert.equal(head.y,1.5);
+  assert.equal(approximateImpact({type:'Blocked',actor:0,target:1},fighters),null);
 });

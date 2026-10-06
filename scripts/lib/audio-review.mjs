@@ -38,7 +38,7 @@ export function installAudioReview() {
   };
   lab.attachView = () => {
     const view = globalThis.__view, render = view.render,draw=view.renderer.render;
-    let optical=null, practiceNow=null, nextVisualMs=0, lastVisualContact=-1, pixels=null;
+    let optical=null, practiceNow=null, nextVisualMs=0, lastVisualContact=-1, pixels=null, impact=null;
     view.renderer.render=function(scene,camera){
       const [x,y,z,w]=camera.quaternion.toArray();
       optical={position:camera.position.toArray(),quaternion:[x,y,z,w],rigYaw:view.yaw,
@@ -47,6 +47,7 @@ export function installAudioReview() {
       if(lab.active&&practiceNow&&globalThis.__visualPixelStats){
         const contact=practiceNow.events.findLast(e=>['Hit','GuardBroken','Blocked','Parried'].includes(e.type));
         const newContact=contact&&contact.tick!==lastVisualContact;
+        if(newContact)impact=globalThis.__approximateImpact?.(contact,practiceNow.duel.fighters)??null;
         if(performance.now()>=nextVisualMs||newContact)try{
           const began=performance.now(),gl=view.renderer.getContext(),canvas=view.renderer.domElement,w=canvas.width,h=canvas.height;
           if(gl.getParameter(gl.FRAMEBUFFER_BINDING)===null){
@@ -57,8 +58,14 @@ export function installAudioReview() {
             const project=(height,side)=>camera.position.clone().set(body.x+right.x*side,height,body.z+right.z*side).project(camera);
             const a=project(1.8*scale,-.28*scale),b=project(1.35*scale,.28*scale);
             const roi={left:(Math.min(a.x,b.x)+1)/2,right:(Math.max(a.x,b.x)+1)/2,top:(1-Math.max(a.y,b.y))/2,bottom:(1-Math.min(a.y,b.y))/2};
-            const stats=globalThis.__visualPixelStats(pixels,w,h,{enemyHeadApprox:roi});
-            lab.visualSamples.push({...stamp(lab.contexts[0].context),tick:practiceNow.duel.tick,...stats,approxHeadRoi:roi,sampleCostMs:performance.now()-began});
+            const regions={enemyHeadApprox:roi};
+            if(impact&&practiceNow.duel.tick-impact.eventTick<=12){
+              const projected=(dy,side)=>camera.position.clone().set(impact.x+right.x*side,impact.y+dy,impact.z+right.z*side).project(camera);
+              const c=projected(impact.radius,-impact.radius),d=projected(-impact.radius,impact.radius);
+              regions.impactApprox={left:(Math.min(c.x,d.x)+1)/2,right:(Math.max(c.x,d.x)+1)/2,top:(1-Math.max(c.y,d.y))/2,bottom:(1-Math.min(c.y,d.y))/2};
+            }
+            const stats=globalThis.__visualPixelStats(pixels,w,h,regions);
+            lab.visualSamples.push({...stamp(lab.contexts[0].context),tick:practiceNow.duel.tick,...stats,approxHeadRoi:roi,impactApprox:impact,sampleCostMs:performance.now()-began});
             if(newContact&&lab.frameProofs.length<24)lab.frameProofs.push({tick:practiceNow.duel.tick,eventTick:contact.tick,performanceMs:performance.now(),jpeg:canvas.toDataURL('image/jpeg',.85).split(',')[1]});
             if(newContact)lastVisualContact=contact.tick;
           }
