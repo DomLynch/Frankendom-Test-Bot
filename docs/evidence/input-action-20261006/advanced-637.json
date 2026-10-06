@@ -1,0 +1,24 @@
+{
+  "botRevision": "7998cccc655e79702b0d05216da1ce0fff5b74dc",
+  "gameRevision": "6fb21b3437a6e794e47dc5a91141b67df7d69162",
+  "rawAudioSha256": "3ca248962aa604f3629e453a02c33028358b5f0773b137d3b9761f5df9b5a5fb",
+  "clipSha256": "fc560a0475c5f12546cd23cfc4389179e1519222e5ffbb2a0220233b83d7a5e6",
+  "input": {
+    "available": true,
+    "windowMs": 750,
+    "requests": 22,
+    "acceptedActions": 22,
+    "candidateLinkedActions": 22,
+    "medianReceivedToDispatchMs": 3.1,
+    "unmatched": [],
+    "limits": "Compatible temporal association, not proof of intent or causality. Dispatch batches simulation ticks; held guard is not a fresh command. Unmatched keys may be refused, buffered, superseded or outside this matcher. Not physical input-to-photon, touch comfort or human reaction time."
+  },
+  "outcome": "win",
+  "attackMix": {
+    "attacks": 12,
+    "heavies": 2,
+    "heavyPercent": 16.7,
+    "passed": true
+  },
+  "limits": "Actualbrowserreceipt/dispatchcandidate association, notphysicalphoneinput latency orcausality."
+}
