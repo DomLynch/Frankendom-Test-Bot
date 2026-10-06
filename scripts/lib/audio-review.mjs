@@ -1,6 +1,6 @@
 // Browser-only tap of the real final WebAudio output. No synthetic sounds or game-state writes.
 export function installAudioReview() {
-  const lab = globalThis.__audioReview = { contexts: [], starts: [], stops: [], frames: [], events: [], levels: [], decoded: [], active: false, combatTick: -1 };
+  const lab = globalThis.__audioReview = { contexts: [], starts: [], stops: [], frames: [], events: [], levels: [], decoded: [], visualSamples: [], visualErrors: [], frameProofs: [], active: false, combatTick: -1 };
   const combat = e => { lab.combatTick = e.detail.events.at(-1)?.tick ?? lab.combatTick;lab.events.push(...structuredClone(e.detail.events)); };
   window.addEventListener('frankendom:combat', combat);
   const decode = BaseAudioContext.prototype.decodeAudioData;
@@ -18,7 +18,7 @@ export function installAudioReview() {
     const context = this.context;
     if (lab.contexts.some(x => x.context === context)) throw new Error('Multiple final outputs require an explicit mixer');
     const tap = context.createMediaStreamDestination(), analyser = context.createAnalyser(), mute = context.createGain();
-    analyser.fftSize = 2048; mute.gain.value = 0;
+    analyser.fftSize = 2048; analyser.smoothingTimeConstant = 0; mute.gain.value = 0;
     connect.call(this, tap); connect.call(this, analyser); connect.call(this, mute);
     connect.call(mute, destination); // Keep the original audio clock live; speakers are silent, recorded bus is untouched.
     lab.contexts.push({context, tap, analyser, source:this, mute, destination});
@@ -38,14 +38,37 @@ export function installAudioReview() {
   };
   lab.attachView = () => {
     const view = globalThis.__view, render = view.render,draw=view.renderer.render;
-    let optical=null;
+    let optical=null, practiceNow=null, nextVisualMs=0, lastVisualContact=-1, pixels=null;
     view.renderer.render=function(scene,camera){
       const [x,y,z,w]=camera.quaternion.toArray();
       optical={position:camera.position.toArray(),quaternion:[x,y,z,w],rigYaw:view.yaw,
         horizonTiltDeg:Math.asin(Math.max(-1,Math.min(1,2*(x*y+w*z))))*180/Math.PI};
-      return draw.call(this,scene,camera);
+      const result=draw.call(this,scene,camera);
+      if(lab.active&&practiceNow&&globalThis.__visualPixelStats){
+        const contact=practiceNow.events.findLast(e=>['Hit','GuardBroken','Blocked','Parried'].includes(e.type));
+        const newContact=contact&&contact.tick!==lastVisualContact;
+        if(performance.now()>=nextVisualMs||newContact)try{
+          const began=performance.now(),gl=view.renderer.getContext(),canvas=view.renderer.domElement,w=canvas.width,h=canvas.height;
+          if(gl.getParameter(gl.FRAMEBUFFER_BINDING)===null){
+            if(!pixels||pixels.length!==w*h*4)pixels=new Uint8Array(w*h*4);
+            gl.readPixels(0,0,w,h,gl.RGBA,gl.UNSIGNED_BYTE,pixels);
+            const foe=practiceNow.duel.fighters[1],body=foe.body,scale=foe.scale;
+            const right=camera.position.clone().setFromMatrixColumn(camera.matrixWorld,0);
+            const project=(height,side)=>camera.position.clone().set(body.x+right.x*side,height,body.z+right.z*side).project(camera);
+            const a=project(1.8*scale,-.28*scale),b=project(1.35*scale,.28*scale);
+            const roi={left:(Math.min(a.x,b.x)+1)/2,right:(Math.max(a.x,b.x)+1)/2,top:(1-Math.max(a.y,b.y))/2,bottom:(1-Math.min(a.y,b.y))/2};
+            const stats=globalThis.__visualPixelStats(pixels,w,h,{enemyHeadApprox:roi});
+            lab.visualSamples.push({...stamp(lab.contexts[0].context),tick:practiceNow.duel.tick,...stats,approxHeadRoi:roi,sampleCostMs:performance.now()-began});
+            if(newContact&&lab.frameProofs.length<24)lab.frameProofs.push({tick:practiceNow.duel.tick,eventTick:contact.tick,performanceMs:performance.now(),jpeg:canvas.toDataURL('image/jpeg',.85).split(',')[1]});
+            if(newContact)lastVisualContact=contact.tick;
+          }
+          nextVisualMs=performance.now()+100;
+        }catch(error){lab.visualErrors.push(String(error));nextVisualMs=performance.now()+100;}
+      }
+      return result;
     };
     view.render = function(state, locked, dt, practice, ...rest) {
+      practiceNow=practice;
       const result = render.call(this, state, locked, dt, practice, ...rest);
       const audio = lab.contexts[0];
       if (audio) {
@@ -53,7 +76,9 @@ export function installAudioReview() {
           fighters: structuredClone(practice.duel.fighters), events: structuredClone(practice.events)});
         if (lab.active) {
           const data = new Float32Array(audio.analyser.fftSize); audio.analyser.getFloatTimeDomainData(data);
-          lab.levels.push({...stamp(audio.context), rms: Math.sqrt(data.reduce((n,x)=>n+x*x,0)/data.length), peak: Math.max(...data.map(Math.abs))});
+          const bins=new Float32Array(audio.analyser.frequencyBinCount);audio.analyser.getFloatFrequencyData(bins);
+          const spectrum=globalThis.__audioSpectrumStats?.(bins,audio.context.sampleRate)??{};
+          lab.levels.push({...stamp(audio.context), rms: Math.sqrt(data.reduce((n,x)=>n+x*x,0)/data.length), peak: Math.max(...data.map(Math.abs)),...spectrum});
         }
       }
       return result;
@@ -81,7 +106,7 @@ export function installAudioReview() {
       let binary='';for(let n=0;n<data.length;n+=32768)binary+=String.fromCharCode(...data.subarray(n,n+32768));
       return {base64:btoa(binary),type,begin:lab.beginStamp,end:lab.endStamp,starts:lab.starts,stops:lab.stops,
         frames:lab.frames.filter(f=>f.performanceMs>=lab.beginStamp.performanceMs),events:lab.events,
-        levels:lab.levels,decoded:lab.decoded,sampleRate:context.sampleRate,audioTracks:stream.getAudioTracks().length,
+        levels:lab.levels,decoded:lab.decoded,visualSamples:lab.visualSamples,visualErrors:lab.visualErrors,frameProofs:lab.frameProofs,sampleRate:context.sampleRate,audioTracks:stream.getAudioTracks().length,
         method:'native canvas captureStream plus actual final game WebAudio bus in one MediaRecorder; native clocks; silent speaker sink'};
     };
   };
