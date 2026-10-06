@@ -10,7 +10,7 @@ Continued [pressure/defence study](docs/pressure-unseen-20261006.md):19 addition
 
 The new [real-time keyboard AV study](docs/native-live-20261006.md) captures fresh live fights with actual game audio, headlessly and quietly on Mac Metal. Opt in with `--research --native-av --fights=1`; no controlled clock or engine replay. Four native cases passed recording/input checks, including a retained loss.122 tests pass. Fast controlled recordings and native timing are separate evidence; neither proves hearing quality or touch comfort.
 
-The [input-to-action study](docs/input-action-20261006.md) now distinguishes actual browser key receipt, accepted combat action and recorded consequence. Three fresh native cases validate the tracker;127 tests pass. Accepted attacks can still miss or be interrupted; unmatched commands remain uncertain, not automatic control bugs.
+The [input-to-action study](docs/input-action-20261006.md) now distinguishes actual browser key receipt, accepted combat action and recorded consequence. Eight fresh native cases validate the tracker and its saved prior own-state context;131 tests pass. Accepted attacks can still miss or be interrupted; unmatched commands remain uncertain, not automatic control bugs.
 
 **This is the canonical bot entry repo.** Git and Node.js **22.18+** are required. Clone it, then run the current tactical browser bot:
 

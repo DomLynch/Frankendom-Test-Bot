@@ -1,0 +1,79 @@
+[
+  {
+    "profile": "beginner",
+    "rawBotRevision": "7998cccc655e79702b0d05216da1ce0fff5b74dc",
+    "gameRevision": "6fb21b3437a6e794e47dc5a91141b67df7d69162",
+    "outcome": "loss",
+    "attackMix": {
+      "attacks": 18,
+      "heavies": 0,
+      "heavyPercent": 0,
+      "passed": true
+    },
+    "damageTaken": 154,
+    "damageDealt": 129,
+    "input": {
+      "available": true,
+      "windowMs": 750,
+      "requests": 20,
+      "acceptedActions": 19,
+      "candidateLinkedActions": 19,
+      "medianReceivedToDispatchMs": 0.5,
+      "unmatched": [
+        {
+          "code": "KeyQ",
+          "performanceMs": 24090.099999999627,
+          "priorOwnSample": {
+            "performanceMs": 24085.699999999255,
+            "ageMs": 4.4,
+            "tick": 1004,
+            "lastDrawnTick": 1002,
+            "state": {
+              "phase": "hurt",
+              "phaseAge": 0,
+              "stamina": 23.40000000000013,
+              "maxStamina": 68,
+              "health": 77,
+              "stun": 24,
+              "parryCooldown": 0,
+              "lastMove": "light_right",
+              "buffer": null
+            }
+          },
+          "status": "no matching accepted action observed"
+        }
+      ],
+      "limits": "Compatible temporal association, not proof of intent or causality. Prior own-state samples precede key receipt and include their age; they are retrospective telemetry, not exact refusal reasons or information given to the policy. Dispatch batches simulation ticks; held guard is not a fresh command. Unmatched keys may be refused, buffered, superseded or outside this matcher. Not physical input-to-photon, touch comfort or human reaction time."
+    },
+    "rawAudioSha256": "5ecdf0e6f872c70841459696cdca2fb7da1deec80d8e99fd5626f9f4e751167e",
+    "clipSha256": "d1a93e1ac63b4626698d8709cc1c719dc09ee86374d379171064f8441ee9b29a",
+    "checks": "original matches unchanged; derived prior own-state sample checked; source, raw events, media, bounded frames, input release and actual heavy cap pass"
+  },
+  {
+    "profile": "advanced",
+    "rawBotRevision": "7998cccc655e79702b0d05216da1ce0fff5b74dc",
+    "gameRevision": "6fb21b3437a6e794e47dc5a91141b67df7d69162",
+    "outcome": "win",
+    "attackMix": {
+      "attacks": 14,
+      "heavies": 2,
+      "heavyPercent": 14.3,
+      "passed": true
+    },
+    "damageTaken": 59,
+    "damageDealt": 155,
+    "input": {
+      "available": true,
+      "windowMs": 750,
+      "requests": 17,
+      "acceptedActions": 17,
+      "candidateLinkedActions": 17,
+      "medianReceivedToDispatchMs": 4.9,
+      "unmatched": [],
+      "limits": "Compatible temporal association, not proof of intent or causality. Prior own-state samples precede key receipt and include their age; they are retrospective telemetry, not exact refusal reasons or information given to the policy. Dispatch batches simulation ticks; held guard is not a fresh command. Unmatched keys may be refused, buffered, superseded or outside this matcher. Not physical input-to-photon, touch comfort or human reaction time."
+    },
+    "rawAudioSha256": "e70960a04a4c1e38041e09cc326979fe455102c026151427af50008fd3cb81e3",
+    "clipSha256": "af9e6d8446c7938736159ad90e709a5ff99518910edd0d1d08b5e958fbd696f9",
+    "checks": "original matches unchanged; derived prior own-state sample checked; source, raw events, media, bounded frames, input release and actual heavy cap pass"
+  }
+]

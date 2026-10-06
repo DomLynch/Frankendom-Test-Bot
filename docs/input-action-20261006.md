@@ -13,6 +13,11 @@ Frozen bot7998cccc655e79702b0d05216da1ce0fff5b74dc; game6fb21b3437a6e794e47dc5a9
 | Advanced637 | Win | 12 / 2 | 22 / 22 | 0 | 3.1ms |
 | Advanced638 | Win | 15 / 1 | 21 / 21 | 0 | 2.7ms |
 | Beginner638 | Loss | 23 / 1 | 28 / 25 | 3 | 2.1ms |
+| Advanced639 | Win | 14 / 2 | 17 / 17 | 0 | 4.9ms |
+| Beginner639 | Loss | 18 / 0 | 20 / 19 | 1 | 0.5ms |
+| Beginner640 | Loss | 22 / 0 | 27 / 26 | 1 | 1.25ms |
+| Advanced Executioner641 | Win,6HP | 20 / 1 | 30 / 29 | 1 | 0.9ms |
+| Beginner Executioner641 | Loss | 18 / 1 | 21 / 19 | 2 | 0.5ms |
 
 Every fight meets the20% actual-heavy cap. Advanced637 had three interrupted attacks and one miss. A thrust accepted at tick931 was stagger-interrupted at940; a slash accepted at566 missed at593. Advanced638 had four interrupted attacks and one miss. Beginner638 had two interrupted attacks and nine misses. **Accepted input is not successful combat.**
 
@@ -35,3 +40,19 @@ The750ms matcher establishes compatible temporal association, not causality. Bat
 5. **Audio and visual agreement:** timestamp captured impact sounds against contact/defence/effects, flag missing or overlapping cues for listening review. Semantic event labels are not AI hearing.
 
 Current lesson for the game team: inspect whether players can distinguish an unavailable command, an out-of-range miss and an interrupted committed attack. Preserve commitment costs; these cases do not justify buffs, new buttons or easier opponents. The unseen639 pair tests recurrence without changing the policy. Candidate remains draft PR12, not full-roster accepted or promoted.
+
+## Unseen repeats and saved own-state context
+
+The639 pair repeated the pattern: beginner's unmatched guard/parry key had a preceding hurt sample; advanced converted two parries into30-damage hits in0.600s and0.633s. Both raw receipts and candidate matches were independently audited. No policy changes.
+
+Bot7009a205f58ebd6ffa966a5da7e71e97febcebd0 adds `priorOwnSample` automatically beside candidate-linked actions and unmatched requests. It selects the nearest earlier recording sample, retaining timestamp, age, tick, phase, stamina/ceiling, health, stun, cooldown and buffer. Future/out-of-recording frames cannot explain an earlier command; absent state stays null and stale state keeps its age. Analysis only: no new policy information or inferred refusal reasons. Four regression cases failed before this addition, then passed; thirteen affected checks passed locally.
+
+**131/131 tests passed** on exact7009/game6fb, [finite CPU job6ac530bc404719ba37661ffa](https://huggingface.co/jobs/Domlynch/6ac530bc404719ba37661ffa), independently COMPLETED. Test-log SHA256:98e6d546d092252af6aa9340e8dfc4e3b22e34ab0f1f52154e2496a3cc0eca01.
+
+Fresh native beginner640 lost with ten accepted misses and one interruption. Its unmatched parry key had a4.7ms-old hurt sample with42.73 stamina,60 ceiling and54HP. **Low stamina alone is an incomplete explanation.** A successful heavy parry at1364 was followed by roll1382; next hit1516 arrived2.533s after parry, with no intervening damage. The roll had no incoming attack, and sampled separation reached3.3m. This is an opening/reset choice to review, not proof the roll was wrong. Root recomputed saved new metrics and checked raw events, source, media hashes, recording bounds, final coverage, audio, release and actual0/22 heavy starts. Original files and losses are retained; no continuous visual/hearing judgment was claimed.
+
+The Executioner641 pair added a beginner loss and an advanced win ending at6HP. Advanced had an unmatched thrust beside a5.4ms-old hurt sample with77 stamina. Beginner's first unmatched parry had a4.5ms-old hurt sample with52 stamina; a later parry request had a17.6ms-old dead/0HP sample. That last request is a bot lifecycle-timing issue to investigate, not evidence of a game control defect. Input release passed. Root independently recomputed both metrics and checked sources, raw events, media hashes, recording bounds, final coverage, audio and actual heavy caps.
+
+Advanced641 captured a genuine enemy heavy-overhead Charging event at1027 and actual `charge_foe` source at matching recorded tick; light Charging events823/1734 were classified separately. This validates a source/timestamp review fixture, not audible recognition or perceived sync. Roll1061 preceded enemy miss1085; next17-damage thrust1192 arrived1.783s after resolution, after the next threat began, without intervening damage. Chip block1759 preceded the next useful hit2025 by4.433s and48 damage received. Later chip-block follow-through also varied. Winning therefore still hides costly defence/re-entry choices.
+
+As of this checkpoint: initial nine browser fights plus45 completed follow-ups =54 real browser fights across separate scopes; five fixture replay captures and one pre-fight loading failure are separate. Current game pin remains experimental until its own full-roster acceptance.
