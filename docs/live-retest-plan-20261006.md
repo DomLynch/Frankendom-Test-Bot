@@ -14,7 +14,7 @@ Operator smoke: three new advanced/tactical/limited L6 longsword no-special figh
 
 Four focused direct-engine light-only spotchecks (<0.7s): Veteran11/12 both win134HP, Goblin18/19 both lose (foe61/64HP), seed918273645. Live LATE_NOTICE/STAB flags true; radii3.787/8.55. These are one-seed diagnostics, not win rates, render acceptance or isolation of the ramp from the arena changes. Broad adjacent-level/profile matrix remains pending CPU capacity.
 
-## Owner-authorized visual/audio upgrade — active
+## Owner-authorized visual/audio upgrade — completed bounded study
 
 Timer `frankendom-bot-learning-progress` checks this chat and Bot Combat every5minutes, notifying meaningful changes only. Root codes; operator captures. Nine fresh fights complete7wins/2losses; full raw recount151starts/2heavies, all <=20% each/released/error-free/Metal. Snapshot6fb preserved; later1f only adds experimental arena backgrounds/picker, not exercised here.
 
@@ -23,3 +23,6 @@ Use the existing native AV path, not a new fighting-bot framework. Add actual re
 Nine focused audio/metric checks pass (<0.2s); game source/policy untouched after nine-fight freeze. Native high capture in Bot Combat uses new Executioner fixture (engine6fb, recordv25, replay verifies) to1100. Validate this before low/off or other captures. Full suite remains pending remote compute; no broad local fallback.
 
 Open-source primary sources reviewed: PyAV (BSD3, media frames/PTS), librosa (ISC, audio features), CoTracker3 (2024 point tracking, model/licence/compute fit unresolved); use existing FFmpeg/WebAudio first. No new packages/model installed. VMAF is compression/reference quality, not combat readability/fun; not selected.
+
+
+Final checkpoint: all nine fresh profile fights and five native AV views audited. Event-local audio windows added;112/112 remote tests passed at0536608, job6ac51250404719ba37661317 COMPLETED. Results and negative red-proxy finding are in [the final report](live-retest-20261006.md). Earlier unrun CPU notes above describe those checkpoints; they are superseded for the full suite, not for the still-unrun broad adjacent-level matrix/full candidate roster. Candidate remains experimental.

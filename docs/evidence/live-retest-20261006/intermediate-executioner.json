@@ -1,0 +1,7825 @@
+{
+  "opponent": "executioner",
+  "seed": 2026100507,
+  "inputs": [
+    {
+      "tick": 0,
+      "key": "KeyF",
+      "edge": "press"
+    },
+    {
+      "tick": 38,
+      "key": "KeyW",
+      "edge": "down"
+    },
+    {
+      "tick": 126,
+      "key": "KeyW",
+      "edge": "up"
+    },
+    {
+      "tick": 126,
+      "key": "KeyT",
+      "edge": "press"
+    },
+    {
+      "tick": 170,
+      "key": "KeyQ",
+      "edge": "down"
+    },
+    {
+      "tick": 170,
+      "key": "ArrowUp",
+      "edge": "down"
+    },
+    {
+      "tick": 189,
+      "key": "KeyQ",
+      "edge": "up"
+    },
+    {
+      "tick": 189,
+      "key": "ArrowUp",
+      "edge": "up"
+    },
+    {
+      "tick": 189,
+      "key": "KeyA",
+      "edge": "down"
+    },
+    {
+      "tick": 189,
+      "key": "KeyE",
+      "edge": "press"
+    },
+    {
+      "tick": 193,
+      "key": "KeyA",
+      "edge": "up"
+    },
+    {
+      "tick": 228,
+      "key": "KeyW",
+      "edge": "down"
+    },
+    {
+      "tick": 274,
+      "key": "KeyW",
+      "edge": "up"
+    },
+    {
+      "tick": 274,
+      "key": "KeyF",
+      "edge": "press"
+    },
+    {
+      "tick": 348,
+      "key": "KeyT",
+      "edge": "press"
+    },
+    {
+      "tick": 422,
+      "key": "KeyT",
+      "edge": "press"
+    },
+    {
+      "tick": 507,
+      "key": "KeyF",
+      "edge": "press"
+    },
+    {
+      "tick": 589,
+      "key": "KeyW",
+      "edge": "down"
+    },
+    {
+      "tick": 616,
+      "key": "KeyW",
+      "edge": "up"
+    },
+    {
+      "tick": 616,
+      "key": "KeyT",
+      "edge": "press"
+    },
+    {
+      "tick": 659,
+      "key": "KeyS",
+      "edge": "down"
+    },
+    {
+      "tick": 682,
+      "key": "KeyS",
+      "edge": "up"
+    },
+    {
+      "tick": 690,
+      "key": "KeyW",
+      "edge": "down"
+    },
+    {
+      "tick": 721,
+      "key": "KeyW",
+      "edge": "up"
+    },
+    {
+      "tick": 721,
+      "key": "KeyT",
+      "edge": "press"
+    },
+    {
+      "tick": 764,
+      "key": "KeyS",
+      "edge": "down"
+    },
+    {
+      "tick": 787,
+      "key": "KeyS",
+      "edge": "up"
+    },
+    {
+      "tick": 795,
+      "key": "KeyW",
+      "edge": "down"
+    },
+    {
+      "tick": 818,
+      "key": "KeyW",
+      "edge": "up"
+    },
+    {
+      "tick": 818,
+      "key": "KeyT",
+      "edge": "press"
+    },
+    {
+      "tick": 857,
+      "key": "KeyS",
+      "edge": "down"
+    },
+    {
+      "tick": 880,
+      "key": "KeyS",
+      "edge": "up"
+    },
+    {
+      "tick": 892,
+      "key": "KeyW",
+      "edge": "down"
+    },
+    {
+      "tick": 919,
+      "key": "KeyW",
+      "edge": "up"
+    },
+    {
+      "tick": 919,
+      "key": "KeyT",
+      "edge": "press"
+    },
+    {
+      "tick": 962,
+      "key": "KeyS",
+      "edge": "down"
+    },
+    {
+      "tick": 985,
+      "key": "KeyS",
+      "edge": "up"
+    },
+    {
+      "tick": 993,
+      "key": "KeyW",
+      "edge": "down"
+    },
+    {
+      "tick": 1020,
+      "key": "KeyW",
+      "edge": "up"
+    },
+    {
+      "tick": 1020,
+      "key": "KeyF",
+      "edge": "press"
+    },
+    {
+      "tick": 1067,
+      "key": "KeyS",
+      "edge": "down"
+    },
+    {
+      "tick": 1086,
+      "key": "KeyS",
+      "edge": "up"
+    },
+    {
+      "tick": 1094,
+      "key": "KeyW",
+      "edge": "down"
+    },
+    {
+      "tick": 1121,
+      "key": "KeyW",
+      "edge": "up"
+    },
+    {
+      "tick": 1121,
+      "key": "KeyT",
+      "edge": "press"
+    },
+    {
+      "tick": 1164,
+      "key": "KeyS",
+      "edge": "down"
+    },
+    {
+      "tick": 1183,
+      "key": "KeyS",
+      "edge": "up"
+    },
+    {
+      "tick": 1195,
+      "key": "KeyW",
+      "edge": "down"
+    },
+    {
+      "tick": 1218,
+      "key": "KeyW",
+      "edge": "up"
+    },
+    {
+      "tick": 1218,
+      "key": "KeyT",
+      "edge": "press"
+    },
+    {
+      "tick": 1261,
+      "key": "KeyS",
+      "edge": "down"
+    },
+    {
+      "tick": 1284,
+      "key": "KeyS",
+      "edge": "up"
+    },
+    {
+      "tick": 1292,
+      "key": "KeyW",
+      "edge": "down"
+    },
+    {
+      "tick": 1315,
+      "key": "KeyW",
+      "edge": "up"
+    },
+    {
+      "tick": 1315,
+      "key": "KeyT",
+      "edge": "press"
+    }
+  ],
+  "decisions": [
+    {
+      "tick": 38,
+      "intent": "close to thrust range",
+      "reason": "close to thrust range",
+      "keys": [
+        "KeyW"
+      ],
+      "press": null,
+      "phase": "draw",
+      "gap": 6.5,
+      "gapUpper": 6.75,
+      "gapObservedTick": 38,
+      "actualGap": 6.5,
+      "stamina": 100,
+      "maxStamina": 100,
+      "radius": 4,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 126,
+      "intent": "range-aware thrust [intermediate: optimistic range/stamina judgement]",
+      "reason": "range-aware thrust [intermediate: optimistic range/stamina judgement]",
+      "keys": [],
+      "press": "KeyT",
+      "phase": "ready",
+      "gap": 1.5,
+      "gapUpper": 1.75,
+      "gapObservedTick": 111,
+      "actualGap": 0.87,
+      "stamina": 100,
+      "maxStamina": 100,
+      "radius": 1,
+      "profileAdjustments": [
+        "optimistic range/stamina judgement"
+      ],
+      "judgement": {
+        "gap": 1.4,
+        "gapUpper": 1.65,
+        "stamina": 100
+      },
+      "outcome": "hit",
+      "attackStart": 127,
+      "move": "thrust",
+      "evidence": 143
+    },
+    {
+      "tick": 130,
+      "intent": "finish committed attack",
+      "reason": "finish committed attack",
+      "keys": [],
+      "press": null,
+      "phase": "attack",
+      "gap": 1.5,
+      "gapUpper": 1.75,
+      "gapObservedTick": 115,
+      "actualGap": 0.87,
+      "stamina": 80,
+      "maxStamina": 100,
+      "radius": 0.5,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 170,
+      "intent": "guard the observed attack",
+      "reason": "guard the observed attack",
+      "keys": [
+        "KeyQ",
+        "ArrowUp"
+      ],
+      "press": null,
+      "phase": "ready",
+      "gap": 1,
+      "gapUpper": 1.25,
+      "gapObservedTick": 155,
+      "actualGap": 0.85,
+      "stamina": 80,
+      "maxStamina": 100,
+      "radius": 0,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "defended",
+      "evidence": 180
+    },
+    {
+      "tick": 189,
+      "intent": "lateral roll clear of charged overhead (hold time) [intermediate: optimistic range/stamina judgement]",
+      "reason": "lateral roll clear of charged overhead (hold time) [intermediate: optimistic range/stamina judgement]",
+      "keys": [
+        "KeyA"
+      ],
+      "press": "KeyE",
+      "phase": "guard",
+      "gap": 1,
+      "gapUpper": 1.25,
+      "gapObservedTick": 174,
+      "actualGap": 0.85,
+      "stamina": 85.33333333333326,
+      "maxStamina": 100,
+      "radius": 0,
+      "profileAdjustments": [
+        "optimistic range/stamina judgement"
+      ],
+      "judgement": {
+        "gap": 0.9,
+        "gapUpper": 1.15,
+        "stamina": 90.33333333333326
+      },
+      "outcome": "positioning between attacks",
+      "evidence": 190,
+      "answeredAttackTick": null
+    },
+    {
+      "tick": 193,
+      "intent": "recover action",
+      "reason": "recover action",
+      "keys": [],
+      "press": null,
+      "phase": "attack",
+      "gap": 1,
+      "gapUpper": 1.25,
+      "gapObservedTick": 178,
+      "actualGap": 0.92,
+      "stamina": 55.999999999999915,
+      "maxStamina": 100,
+      "radius": 0,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 228,
+      "intent": "close to thrust range",
+      "reason": "close to thrust range",
+      "keys": [
+        "KeyW"
+      ],
+      "press": null,
+      "phase": "ready",
+      "gap": 2,
+      "gapUpper": 3.3166666666666664,
+      "gapObservedTick": 212,
+      "actualGap": 3.23,
+      "stamina": 55.999999999999915,
+      "maxStamina": 100,
+      "radius": 2,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 274,
+      "intent": "range-aware thrust [intermediate: prefers simple slash; optimistic range/stamina judgement]",
+      "reason": "range-aware thrust [intermediate: prefers simple slash; optimistic range/stamina judgement]",
+      "keys": [],
+      "press": "KeyF",
+      "phase": "ready",
+      "gap": 1.5,
+      "gapUpper": 1.75,
+      "gapObservedTick": 258,
+      "actualGap": 1.03,
+      "stamina": 82.00000000000001,
+      "maxStamina": 100,
+      "radius": 1.5,
+      "profileAdjustments": [
+        "prefers simple slash",
+        "optimistic range/stamina judgement"
+      ],
+      "judgement": {
+        "gap": 1.4,
+        "gapUpper": 1.65,
+        "stamina": 87.00000000000001
+      },
+      "outcome": "hit",
+      "attackStart": 275,
+      "move": "light_right",
+      "evidence": 295
+    },
+    {
+      "tick": 278,
+      "intent": "finish committed attack",
+      "reason": "finish committed attack",
+      "keys": [],
+      "press": null,
+      "phase": "attack",
+      "gap": 1.5,
+      "gapUpper": 1.75,
+      "gapObservedTick": 262,
+      "actualGap": 1.11,
+      "stamina": 57.666666666666686,
+      "maxStamina": 100,
+      "radius": 1.5,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 348,
+      "intent": "range-aware thrust [intermediate: optimistic range/stamina judgement]",
+      "reason": "range-aware thrust [intermediate: optimistic range/stamina judgement]",
+      "keys": [],
+      "press": "KeyT",
+      "phase": "ready",
+      "gap": 1.5,
+      "gapUpper": 1.75,
+      "gapObservedTick": 333,
+      "actualGap": 1.91,
+      "stamina": 73.00000000000006,
+      "maxStamina": 100,
+      "radius": 1,
+      "profileAdjustments": [
+        "optimistic range/stamina judgement"
+      ],
+      "judgement": {
+        "gap": 1.4,
+        "gapUpper": 1.65,
+        "stamina": 78.00000000000006
+      },
+      "outcome": "hit",
+      "attackStart": 349,
+      "move": "thrust",
+      "evidence": 365
+    },
+    {
+      "tick": 352,
+      "intent": "finish committed attack",
+      "reason": "finish committed attack",
+      "keys": [],
+      "press": null,
+      "phase": "attack",
+      "gap": 1.5,
+      "gapUpper": 1.75,
+      "gapObservedTick": 337,
+      "actualGap": 1.91,
+      "stamina": 53.66666666666673,
+      "maxStamina": 100,
+      "radius": 1,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 422,
+      "intent": "range-aware thrust [intermediate: optimistic range/stamina judgement]",
+      "reason": "range-aware thrust [intermediate: optimistic range/stamina judgement]",
+      "keys": [],
+      "press": "KeyT",
+      "phase": "ready",
+      "gap": 1.5,
+      "gapUpper": 1.75,
+      "gapObservedTick": 407,
+      "actualGap": 1.31,
+      "stamina": 73.00000000000009,
+      "maxStamina": 100,
+      "radius": 1,
+      "profileAdjustments": [
+        "optimistic range/stamina judgement"
+      ],
+      "judgement": {
+        "gap": 1.4,
+        "gapUpper": 1.65,
+        "stamina": 78.00000000000009
+      },
+      "outcome": "blocked",
+      "attackStart": 423,
+      "move": "thrust",
+      "evidence": 439
+    },
+    {
+      "tick": 426,
+      "intent": "finish committed attack",
+      "reason": "finish committed attack",
+      "keys": [],
+      "press": null,
+      "phase": "attack",
+      "gap": 1.5,
+      "gapUpper": 1.75,
+      "gapObservedTick": 410,
+      "actualGap": 1.31,
+      "stamina": 53.000000000000085,
+      "maxStamina": 100,
+      "radius": 1,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 507,
+      "intent": "range-aware quick slash [intermediate: optimistic range/stamina judgement]",
+      "reason": "range-aware quick slash [intermediate: optimistic range/stamina judgement]",
+      "keys": [],
+      "press": "KeyF",
+      "phase": "ready",
+      "gap": 1,
+      "gapUpper": 1.25,
+      "gapObservedTick": 491,
+      "actualGap": 1.41,
+      "stamina": 54.06666666666675,
+      "maxStamina": 92,
+      "radius": 1,
+      "profileAdjustments": [
+        "optimistic range/stamina judgement"
+      ],
+      "judgement": {
+        "gap": 0.9,
+        "gapUpper": 1.15,
+        "stamina": 59.06666666666675
+      },
+      "outcome": "hit",
+      "attackStart": 508,
+      "move": "light_right",
+      "evidence": 528
+    },
+    {
+      "tick": 511,
+      "intent": "finish committed attack",
+      "reason": "finish committed attack",
+      "keys": [],
+      "press": null,
+      "phase": "attack",
+      "gap": 1,
+      "gapUpper": 1.25,
+      "gapObservedTick": 495,
+      "actualGap": 1.49,
+      "stamina": 29.066666666666748,
+      "maxStamina": 92,
+      "radius": 1,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 589,
+      "intent": "close to thrust range",
+      "reason": "close to thrust range",
+      "keys": [
+        "KeyW"
+      ],
+      "press": null,
+      "phase": "ready",
+      "gap": 2,
+      "gapUpper": 2.25,
+      "gapObservedTick": 573,
+      "actualGap": 2.21,
+      "stamina": 46.133333333333375,
+      "maxStamina": 92,
+      "radius": 1,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 616,
+      "intent": "range-aware thrust [intermediate: optimistic range/stamina judgement]",
+      "reason": "range-aware thrust [intermediate: optimistic range/stamina judgement]",
+      "keys": [],
+      "press": "KeyT",
+      "phase": "ready",
+      "gap": 1.5,
+      "gapUpper": 1.75,
+      "gapObservedTick": 600,
+      "actualGap": 1.13,
+      "stamina": 60.533333333333324,
+      "maxStamina": 92,
+      "radius": 1.5,
+      "profileAdjustments": [
+        "optimistic range/stamina judgement"
+      ],
+      "judgement": {
+        "gap": 1.4,
+        "gapUpper": 1.65,
+        "stamina": 65.53333333333333
+      },
+      "outcome": "hit",
+      "attackStart": 617,
+      "move": "thrust",
+      "evidence": 633
+    },
+    {
+      "tick": 619,
+      "intent": "finish committed attack",
+      "reason": "finish committed attack",
+      "keys": [],
+      "press": null,
+      "phase": "attack",
+      "gap": 1.5,
+      "gapUpper": 1.75,
+      "gapObservedTick": 604,
+      "actualGap": 1.19,
+      "stamina": 40.533333333333324,
+      "maxStamina": 92,
+      "radius": 1.5,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 659,
+      "intent": "recover after quick attack",
+      "reason": "recover after quick attack",
+      "keys": [
+        "KeyS"
+      ],
+      "press": null,
+      "phase": "ready",
+      "gap": 1,
+      "gapUpper": 1.25,
+      "gapObservedTick": 644,
+      "actualGap": 1,
+      "stamina": 40.533333333333324,
+      "maxStamina": 92,
+      "radius": 2.5,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 682,
+      "intent": "recover after quick attack",
+      "reason": "recover after quick attack",
+      "keys": [],
+      "press": null,
+      "phase": "ready",
+      "gap": 1.5,
+      "gapUpper": 2.21875,
+      "gapObservedTick": 667,
+      "actualGap": 2.26,
+      "stamina": 51.19999999999995,
+      "maxStamina": 92,
+      "radius": 2,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 690,
+      "intent": "close to thrust range",
+      "reason": "close to thrust range",
+      "keys": [
+        "KeyW"
+      ],
+      "press": null,
+      "phase": "ready",
+      "gap": 2,
+      "gapUpper": 3.1875,
+      "gapObservedTick": 675,
+      "actualGap": 2.26,
+      "stamina": 55.999999999999936,
+      "maxStamina": 92,
+      "radius": 2,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 721,
+      "intent": "range-aware thrust [intermediate: optimistic range/stamina judgement]",
+      "reason": "range-aware thrust [intermediate: optimistic range/stamina judgement]",
+      "keys": [],
+      "press": "KeyT",
+      "phase": "ready",
+      "gap": 1.5,
+      "gapUpper": 1.75,
+      "gapObservedTick": 705,
+      "actualGap": 1.04,
+      "stamina": 75.33333333333331,
+      "maxStamina": 92,
+      "radius": 2,
+      "profileAdjustments": [
+        "optimistic range/stamina judgement"
+      ],
+      "judgement": {
+        "gap": 1.4,
+        "gapUpper": 1.65,
+        "stamina": 80.33333333333331
+      },
+      "outcome": "hit",
+      "attackStart": 722,
+      "move": "thrust",
+      "evidence": 738
+    },
+    {
+      "tick": 724,
+      "intent": "finish committed attack",
+      "reason": "finish committed attack",
+      "keys": [],
+      "press": null,
+      "phase": "attack",
+      "gap": 1.5,
+      "gapUpper": 1.75,
+      "gapObservedTick": 709,
+      "actualGap": 1.04,
+      "stamina": 55.333333333333314,
+      "maxStamina": 92,
+      "radius": 2.5,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 764,
+      "intent": "recover after quick attack",
+      "reason": "recover after quick attack",
+      "keys": [
+        "KeyS"
+      ],
+      "press": null,
+      "phase": "ready",
+      "gap": 1,
+      "gapUpper": 1.25,
+      "gapObservedTick": 748,
+      "actualGap": 1,
+      "stamina": 55.333333333333314,
+      "maxStamina": 92,
+      "radius": 3,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 787,
+      "intent": "recover after quick attack",
+      "reason": "recover after quick attack",
+      "keys": [],
+      "press": null,
+      "phase": "ready",
+      "gap": 1.5,
+      "gapUpper": 2.283333333333333,
+      "gapObservedTick": 771,
+      "actualGap": 1.98,
+      "stamina": 69.33333333333331,
+      "maxStamina": 92,
+      "radius": 2.5,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 795,
+      "intent": "close to thrust range",
+      "reason": "close to thrust range",
+      "keys": [
+        "KeyW"
+      ],
+      "press": null,
+      "phase": "ready",
+      "gap": 1.5,
+      "gapUpper": 2.283333333333333,
+      "gapObservedTick": 779,
+      "actualGap": 1.98,
+      "stamina": 74.00000000000001,
+      "maxStamina": 92,
+      "radius": 2.5,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 818,
+      "intent": "range-aware thrust [intermediate: optimistic range/stamina judgement]",
+      "reason": "range-aware thrust [intermediate: optimistic range/stamina judgement]",
+      "keys": [],
+      "press": "KeyT",
+      "phase": "ready",
+      "gap": 1.5,
+      "gapUpper": 1.75,
+      "gapObservedTick": 802,
+      "actualGap": 1,
+      "stamina": 90.00000000000013,
+      "maxStamina": 92,
+      "radius": 2.5,
+      "profileAdjustments": [
+        "optimistic range/stamina judgement"
+      ],
+      "judgement": {
+        "gap": 1.4,
+        "gapUpper": 1.65,
+        "stamina": 95.00000000000013
+      },
+      "outcome": "hit",
+      "attackStart": 819,
+      "move": "riposte",
+      "evidence": 831
+    },
+    {
+      "tick": 821,
+      "intent": "finish committed attack",
+      "reason": "finish committed attack",
+      "keys": [],
+      "press": null,
+      "phase": "attack",
+      "gap": 1.5,
+      "gapUpper": 1.75,
+      "gapObservedTick": 806,
+      "actualGap": 1,
+      "stamina": 70.00000000000013,
+      "maxStamina": 92,
+      "radius": 2.5,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 857,
+      "intent": "recover after quick attack",
+      "reason": "recover after quick attack",
+      "keys": [
+        "KeyS"
+      ],
+      "press": null,
+      "phase": "ready",
+      "gap": 1,
+      "gapUpper": 1.25,
+      "gapObservedTick": 842,
+      "actualGap": 1.05,
+      "stamina": 70.00000000000013,
+      "maxStamina": 92,
+      "radius": 3,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 880,
+      "intent": "recover after quick attack",
+      "reason": "recover after quick attack",
+      "keys": [],
+      "press": null,
+      "phase": "ready",
+      "gap": 1.5,
+      "gapUpper": 2.21875,
+      "gapObservedTick": 865,
+      "actualGap": 2.19,
+      "stamina": 81.33333333333354,
+      "maxStamina": 92,
+      "radius": 2.5,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 892,
+      "intent": "close to thrust range",
+      "reason": "close to thrust range",
+      "keys": [
+        "KeyW"
+      ],
+      "press": null,
+      "phase": "ready",
+      "gap": 2,
+      "gapUpper": 3.3166666666666664,
+      "gapObservedTick": 876,
+      "actualGap": 2.19,
+      "stamina": 89.3333333333336,
+      "maxStamina": 92,
+      "radius": 2.5,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 919,
+      "intent": "range-aware thrust [intermediate: optimistic range/stamina judgement]",
+      "reason": "range-aware thrust [intermediate: optimistic range/stamina judgement]",
+      "keys": [],
+      "press": "KeyT",
+      "phase": "ready",
+      "gap": 1.5,
+      "gapUpper": 1.75,
+      "gapObservedTick": 903,
+      "actualGap": 1.04,
+      "stamina": 92,
+      "maxStamina": 92,
+      "radius": 2.5,
+      "profileAdjustments": [
+        "optimistic range/stamina judgement"
+      ],
+      "judgement": {
+        "gap": 1.4,
+        "gapUpper": 1.65,
+        "stamina": 97
+      },
+      "outcome": "hit",
+      "attackStart": 920,
+      "move": "thrust",
+      "evidence": 936
+    },
+    {
+      "tick": 922,
+      "intent": "finish committed attack",
+      "reason": "finish committed attack",
+      "keys": [],
+      "press": null,
+      "phase": "attack",
+      "gap": 1.5,
+      "gapUpper": 1.75,
+      "gapObservedTick": 907,
+      "actualGap": 1.04,
+      "stamina": 72,
+      "maxStamina": 92,
+      "radius": 2.5,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 962,
+      "intent": "recover after quick attack",
+      "reason": "recover after quick attack",
+      "keys": [
+        "KeyS"
+      ],
+      "press": null,
+      "phase": "ready",
+      "gap": 1,
+      "gapUpper": 1.25,
+      "gapObservedTick": 947,
+      "actualGap": 1,
+      "stamina": 72,
+      "maxStamina": 92,
+      "radius": 3,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 985,
+      "intent": "recover after quick attack",
+      "reason": "recover after quick attack",
+      "keys": [],
+      "press": null,
+      "phase": "ready",
+      "gap": 1.5,
+      "gapUpper": 2.21875,
+      "gapObservedTick": 970,
+      "actualGap": 2.16,
+      "stamina": 86.0000000000001,
+      "maxStamina": 92,
+      "radius": 3,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 993,
+      "intent": "close to thrust range",
+      "reason": "close to thrust range",
+      "keys": [
+        "KeyW"
+      ],
+      "press": null,
+      "phase": "ready",
+      "gap": 2,
+      "gapUpper": 3.1875,
+      "gapObservedTick": 978,
+      "actualGap": 2.16,
+      "stamina": 91.33333333333347,
+      "maxStamina": 92,
+      "radius": 2.5,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 1020,
+      "intent": "range-aware thrust [intermediate: prefers simple slash; optimistic range/stamina judgement]",
+      "reason": "range-aware thrust [intermediate: prefers simple slash; optimistic range/stamina judgement]",
+      "keys": [],
+      "press": "KeyF",
+      "phase": "ready",
+      "gap": 1.5,
+      "gapUpper": 1.75,
+      "gapObservedTick": 1004,
+      "actualGap": 1.01,
+      "stamina": 92,
+      "maxStamina": 92,
+      "radius": 3,
+      "profileAdjustments": [
+        "prefers simple slash",
+        "optimistic range/stamina judgement"
+      ],
+      "judgement": {
+        "gap": 1.4,
+        "gapUpper": 1.65,
+        "stamina": 97
+      },
+      "outcome": "interrupted",
+      "attackStart": 1021,
+      "move": "light_right",
+      "evidence": 1038
+    },
+    {
+      "tick": 1024,
+      "intent": "finish committed attack",
+      "reason": "finish committed attack",
+      "keys": [],
+      "press": null,
+      "phase": "attack",
+      "gap": 1.5,
+      "gapUpper": 1.75,
+      "gapObservedTick": 1008,
+      "actualGap": 0.99,
+      "stamina": 67,
+      "maxStamina": 92,
+      "radius": 3,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 1067,
+      "intent": "recover after quick attack",
+      "reason": "recover after quick attack",
+      "keys": [
+        "KeyS"
+      ],
+      "press": null,
+      "phase": "ready",
+      "gap": 1,
+      "gapUpper": 1.25,
+      "gapObservedTick": 1051,
+      "actualGap": 1.23,
+      "stamina": 52,
+      "maxStamina": 92,
+      "radius": 3,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 1086,
+      "intent": "recover after quick attack",
+      "reason": "recover after quick attack",
+      "keys": [],
+      "press": null,
+      "phase": "ready",
+      "gap": 1.5,
+      "gapUpper": 2.21875,
+      "gapObservedTick": 1071,
+      "actualGap": 2.26,
+      "stamina": 54.66666666666666,
+      "maxStamina": 92,
+      "radius": 3,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 1094,
+      "intent": "close to thrust range",
+      "reason": "close to thrust range",
+      "keys": [
+        "KeyW"
+      ],
+      "press": null,
+      "phase": "ready",
+      "gap": 2,
+      "gapUpper": 3.3166666666666664,
+      "gapObservedTick": 1078,
+      "actualGap": 2.2,
+      "stamina": 59.99999999999997,
+      "maxStamina": 92,
+      "radius": 2.5,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 1121,
+      "intent": "range-aware thrust [intermediate: optimistic range/stamina judgement]",
+      "reason": "range-aware thrust [intermediate: optimistic range/stamina judgement]",
+      "keys": [],
+      "press": "KeyT",
+      "phase": "ready",
+      "gap": 1.5,
+      "gapUpper": 1.75,
+      "gapObservedTick": 1105,
+      "actualGap": 0.96,
+      "stamina": 78.00000000000006,
+      "maxStamina": 92,
+      "radius": 3,
+      "profileAdjustments": [
+        "optimistic range/stamina judgement"
+      ],
+      "judgement": {
+        "gap": 1.4,
+        "gapUpper": 1.65,
+        "stamina": 83.00000000000006
+      },
+      "outcome": "interrupted",
+      "attackStart": 1122,
+      "move": "thrust",
+      "evidence": 1137
+    },
+    {
+      "tick": 1124,
+      "intent": "finish committed attack",
+      "reason": "finish committed attack",
+      "keys": [],
+      "press": null,
+      "phase": "attack",
+      "gap": 1.5,
+      "gapUpper": 1.75,
+      "gapObservedTick": 1109,
+      "actualGap": 0.91,
+      "stamina": 58.00000000000006,
+      "maxStamina": 92,
+      "radius": 3,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 1164,
+      "intent": "recover after quick attack",
+      "reason": "recover after quick attack",
+      "keys": [
+        "KeyS"
+      ],
+      "press": null,
+      "phase": "ready",
+      "gap": 1,
+      "gapUpper": 1.25,
+      "gapObservedTick": 1149,
+      "actualGap": 1.19,
+      "stamina": 43.00000000000006,
+      "maxStamina": 92,
+      "radius": 3,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 1183,
+      "intent": "recover after quick attack",
+      "reason": "recover after quick attack",
+      "keys": [],
+      "press": null,
+      "phase": "ready",
+      "gap": 1.5,
+      "gapUpper": 2.21875,
+      "gapObservedTick": 1168,
+      "actualGap": 2.21,
+      "stamina": 44.333333333333385,
+      "maxStamina": 92,
+      "radius": 3,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 1195,
+      "intent": "close to thrust range",
+      "reason": "close to thrust range",
+      "keys": [
+        "KeyW"
+      ],
+      "press": null,
+      "phase": "ready",
+      "gap": 2,
+      "gapUpper": 3.3166666666666664,
+      "gapObservedTick": 1179,
+      "actualGap": 2,
+      "stamina": 52.33333333333336,
+      "maxStamina": 92,
+      "radius": 2.5,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 1218,
+      "intent": "range-aware thrust [intermediate: optimistic range/stamina judgement]",
+      "reason": "range-aware thrust [intermediate: optimistic range/stamina judgement]",
+      "keys": [],
+      "press": "KeyT",
+      "phase": "ready",
+      "gap": 1.5,
+      "gapUpper": 1.75,
+      "gapObservedTick": 1202,
+      "actualGap": 1.02,
+      "stamina": 67.66666666666667,
+      "maxStamina": 92,
+      "radius": 3,
+      "profileAdjustments": [
+        "optimistic range/stamina judgement"
+      ],
+      "judgement": {
+        "gap": 1.4,
+        "gapUpper": 1.65,
+        "stamina": 72.66666666666667
+      },
+      "outcome": "hit",
+      "attackStart": 1219,
+      "move": "thrust",
+      "evidence": 1235
+    },
+    {
+      "tick": 1221,
+      "intent": "finish committed attack",
+      "reason": "finish committed attack",
+      "keys": [],
+      "press": null,
+      "phase": "attack",
+      "gap": 1.5,
+      "gapUpper": 1.75,
+      "gapObservedTick": 1206,
+      "actualGap": 1.02,
+      "stamina": 47.66666666666667,
+      "maxStamina": 92,
+      "radius": 3,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 1261,
+      "intent": "recover after quick attack",
+      "reason": "recover after quick attack",
+      "keys": [
+        "KeyS"
+      ],
+      "press": null,
+      "phase": "ready",
+      "gap": 1,
+      "gapUpper": 1.25,
+      "gapObservedTick": 1246,
+      "actualGap": 1,
+      "stamina": 47.66666666666667,
+      "maxStamina": 92,
+      "radius": 3.5,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 1284,
+      "intent": "recover after quick attack",
+      "reason": "recover after quick attack",
+      "keys": [],
+      "press": null,
+      "phase": "ready",
+      "gap": 1.5,
+      "gapUpper": 2.21875,
+      "gapObservedTick": 1269,
+      "actualGap": 2.16,
+      "stamina": 61.66666666666662,
+      "maxStamina": 92,
+      "radius": 3,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 1292,
+      "intent": "close to thrust range",
+      "reason": "close to thrust range",
+      "keys": [
+        "KeyW"
+      ],
+      "press": null,
+      "phase": "ready",
+      "gap": 2,
+      "gapUpper": 3.1875,
+      "gapObservedTick": 1277,
+      "actualGap": 1.98,
+      "stamina": 66.3333333333333,
+      "maxStamina": 92,
+      "radius": 3,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    },
+    {
+      "tick": 1315,
+      "intent": "range-aware thrust [intermediate: optimistic range/stamina judgement]",
+      "reason": "range-aware thrust [intermediate: optimistic range/stamina judgement]",
+      "keys": [],
+      "press": "KeyT",
+      "phase": "ready",
+      "gap": 1.5,
+      "gapUpper": 1.75,
+      "gapObservedTick": 1300,
+      "actualGap": 1,
+      "stamina": 82.33333333333341,
+      "maxStamina": 92,
+      "radius": 3,
+      "profileAdjustments": [
+        "optimistic range/stamina judgement"
+      ],
+      "judgement": {
+        "gap": 1.4,
+        "gapUpper": 1.65,
+        "stamina": 87.33333333333341
+      },
+      "outcome": "hit",
+      "attackStart": 1316,
+      "move": "thrust",
+      "evidence": 1332
+    },
+    {
+      "tick": 1319,
+      "intent": "finish committed attack",
+      "reason": "finish committed attack",
+      "keys": [],
+      "press": null,
+      "phase": "attack",
+      "gap": 1.5,
+      "gapUpper": 1.75,
+      "gapObservedTick": 1303,
+      "actualGap": 0.95,
+      "stamina": 62.333333333333414,
+      "maxStamina": 92,
+      "radius": 3,
+      "profileAdjustments": [],
+      "judgement": null,
+      "outcome": "movement or recovery",
+      "evidence": null
+    }
+  ],
+  "eligibleOpportunities": [
+    {
+      "observedTick": 170,
+      "kind": "guard tell",
+      "tick": 144
+    },
+    {
+      "observedTick": 189,
+      "kind": "evade charged overhead",
+      "tick": 189,
+      "cue": "hold time"
+    }
+  ],
+  "events": [
+    {
+      "tick": 6,
+      "type": "ActionStarted",
+      "actor": 0,
+      "action": "draw"
+    },
+    {
+      "tick": 127,
+      "type": "AttackStarted",
+      "actor": 0,
+      "move": "thrust",
+      "direction": "thrust"
+    },
+    {
+      "tick": 143,
+      "type": "AttackActive",
+      "actor": 0,
+      "move": "thrust"
+    },
+    {
+      "tick": 143,
+      "type": "Hit",
+      "actor": 0,
+      "target": 1,
+      "move": "thrust",
+      "damage": 11,
+      "location": "torso",
+      "heading": -3.141592653589793,
+      "counter": false,
+      "rear": false,
+      "charged": false,
+      "weapon": "longsword",
+      "material": "iron"
+    },
+    {
+      "tick": 144,
+      "type": "AttackStarted",
+      "actor": 1,
+      "move": "heavy_overhead",
+      "direction": "overhead"
+    },
+    {
+      "tick": 171,
+      "type": "ActionStarted",
+      "actor": 0,
+      "action": "parry"
+    },
+    {
+      "tick": 180,
+      "type": "AttackActive",
+      "actor": 1,
+      "move": "heavy_overhead"
+    },
+    {
+      "tick": 180,
+      "type": "Parried",
+      "actor": 0,
+      "target": 1,
+      "move": "heavy_overhead",
+      "weapon": "scythe",
+      "material": "iron"
+    },
+    {
+      "tick": 180,
+      "type": "Staggered",
+      "actor": 1,
+      "ticks": 90
+    },
+    {
+      "tick": 190,
+      "type": "ActionStarted",
+      "actor": 0,
+      "action": "roll"
+    },
+    {
+      "tick": 275,
+      "type": "AttackStarted",
+      "actor": 0,
+      "move": "light_right",
+      "direction": "right"
+    },
+    {
+      "tick": 295,
+      "type": "AttackActive",
+      "actor": 0,
+      "move": "light_right"
+    },
+    {
+      "tick": 295,
+      "type": "Hit",
+      "actor": 0,
+      "target": 1,
+      "move": "light_right",
+      "damage": 14,
+      "location": "torso",
+      "heading": 1.8319805281160448,
+      "counter": false,
+      "rear": false,
+      "charged": false,
+      "weapon": "longsword",
+      "material": "iron"
+    },
+    {
+      "tick": 295,
+      "type": "Staggered",
+      "actor": 1,
+      "ticks": 24
+    },
+    {
+      "tick": 349,
+      "type": "AttackStarted",
+      "actor": 0,
+      "move": "thrust",
+      "direction": "thrust"
+    },
+    {
+      "tick": 365,
+      "type": "AttackActive",
+      "actor": 0,
+      "move": "thrust"
+    },
+    {
+      "tick": 365,
+      "type": "Hit",
+      "actor": 0,
+      "target": 1,
+      "move": "thrust",
+      "damage": 11,
+      "location": "torso",
+      "heading": 1.8319805281160437,
+      "counter": false,
+      "rear": false,
+      "charged": false,
+      "weapon": "longsword",
+      "material": "iron"
+    },
+    {
+      "tick": 367,
+      "type": "ActionStarted",
+      "actor": 1,
+      "action": "guard"
+    },
+    {
+      "tick": 423,
+      "type": "AttackStarted",
+      "actor": 0,
+      "move": "thrust",
+      "direction": "thrust"
+    },
+    {
+      "tick": 439,
+      "type": "AttackActive",
+      "actor": 0,
+      "move": "thrust"
+    },
+    {
+      "tick": 439,
+      "type": "Blocked",
+      "actor": 1,
+      "target": 0,
+      "move": "thrust",
+      "stamina": 23,
+      "perfect": false,
+      "weapon": "longsword",
+      "material": "iron"
+    },
+    {
+      "tick": 440,
+      "type": "AttackStarted",
+      "actor": 1,
+      "move": "heavy_counter",
+      "direction": "overhead"
+    },
+    {
+      "tick": 460,
+      "type": "AttackActive",
+      "actor": 1,
+      "move": "heavy_counter"
+    },
+    {
+      "tick": 461,
+      "type": "Hit",
+      "actor": 1,
+      "target": 0,
+      "move": "heavy_counter",
+      "damage": 25,
+      "location": "legs",
+      "heading": -1.30961212547375,
+      "counter": true,
+      "rear": false,
+      "charged": false,
+      "weapon": "scythe",
+      "material": "iron"
+    },
+    {
+      "tick": 461,
+      "type": "Staggered",
+      "actor": 0,
+      "ticks": 45
+    },
+    {
+      "tick": 508,
+      "type": "AttackStarted",
+      "actor": 0,
+      "move": "light_right",
+      "direction": "right"
+    },
+    {
+      "tick": 528,
+      "type": "AttackActive",
+      "actor": 0,
+      "move": "light_right"
+    },
+    {
+      "tick": 528,
+      "type": "Hit",
+      "actor": 0,
+      "target": 1,
+      "move": "light_right",
+      "damage": 14,
+      "location": "torso",
+      "heading": 1.8319805281160424,
+      "counter": false,
+      "rear": false,
+      "charged": false,
+      "weapon": "longsword",
+      "material": "iron"
+    },
+    {
+      "tick": 528,
+      "type": "Staggered",
+      "actor": 1,
+      "ticks": 24
+    },
+    {
+      "tick": 617,
+      "type": "AttackStarted",
+      "actor": 0,
+      "move": "thrust",
+      "direction": "thrust"
+    },
+    {
+      "tick": 625,
+      "type": "AttackStarted",
+      "actor": 1,
+      "move": "kick"
+    },
+    {
+      "tick": 633,
+      "type": "AttackActive",
+      "actor": 0,
+      "move": "thrust"
+    },
+    {
+      "tick": 633,
+      "type": "Hit",
+      "actor": 0,
+      "target": 1,
+      "move": "thrust",
+      "damage": 17,
+      "location": "torso",
+      "heading": 1.8403715228959652,
+      "counter": true,
+      "rear": false,
+      "charged": false,
+      "weapon": "longsword",
+      "material": "iron",
+      "stop": true
+    },
+    {
+      "tick": 633,
+      "type": "Staggered",
+      "actor": 1,
+      "ticks": 35
+    },
+    {
+      "tick": 721,
+      "type": "AttackStarted",
+      "actor": 1,
+      "move": "kick"
+    },
+    {
+      "tick": 722,
+      "type": "AttackStarted",
+      "actor": 0,
+      "move": "thrust",
+      "direction": "thrust"
+    },
+    {
+      "tick": 738,
+      "type": "AttackActive",
+      "actor": 0,
+      "move": "thrust"
+    },
+    {
+      "tick": 738,
+      "type": "Hit",
+      "actor": 0,
+      "target": 1,
+      "move": "thrust",
+      "damage": 17,
+      "location": "torso",
+      "heading": 1.559413270564429,
+      "counter": true,
+      "rear": false,
+      "charged": false,
+      "weapon": "longsword",
+      "material": "iron",
+      "stop": true
+    },
+    {
+      "tick": 738,
+      "type": "Staggered",
+      "actor": 1,
+      "ticks": 35
+    },
+    {
+      "tick": 738,
+      "type": "PostureBroken",
+      "actor": 0,
+      "target": 1,
+      "ticks": 90
+    },
+    {
+      "tick": 819,
+      "type": "AttackStarted",
+      "actor": 0,
+      "move": "riposte",
+      "direction": "thrust"
+    },
+    {
+      "tick": 829,
+      "type": "AttackStarted",
+      "actor": 1,
+      "move": "kick"
+    },
+    {
+      "tick": 831,
+      "type": "AttackActive",
+      "actor": 0,
+      "move": "riposte"
+    },
+    {
+      "tick": 831,
+      "type": "Hit",
+      "actor": 0,
+      "target": 1,
+      "move": "riposte",
+      "damage": 30,
+      "location": "torso",
+      "heading": 1.5591817004081128,
+      "counter": true,
+      "rear": false,
+      "charged": false,
+      "weapon": "longsword",
+      "material": "iron"
+    },
+    {
+      "tick": 831,
+      "type": "Staggered",
+      "actor": 1,
+      "ticks": 36
+    },
+    {
+      "tick": 915,
+      "type": "ActionStarted",
+      "actor": 1,
+      "action": "guard"
+    },
+    {
+      "tick": 919,
+      "type": "AttackStarted",
+      "actor": 1,
+      "move": "kick"
+    },
+    {
+      "tick": 920,
+      "type": "AttackStarted",
+      "actor": 0,
+      "move": "thrust",
+      "direction": "thrust"
+    },
+    {
+      "tick": 936,
+      "type": "AttackActive",
+      "actor": 0,
+      "move": "thrust"
+    },
+    {
+      "tick": 936,
+      "type": "Hit",
+      "actor": 0,
+      "target": 1,
+      "move": "thrust",
+      "damage": 17,
+      "location": "torso",
+      "heading": 1.2899419202444136,
+      "counter": true,
+      "rear": false,
+      "charged": false,
+      "weapon": "longsword",
+      "material": "iron",
+      "stop": true
+    },
+    {
+      "tick": 936,
+      "type": "Staggered",
+      "actor": 1,
+      "ticks": 35
+    },
+    {
+      "tick": 1019,
+      "type": "ActionStarted",
+      "actor": 1,
+      "action": "guard"
+    },
+    {
+      "tick": 1020,
+      "type": "AttackStarted",
+      "actor": 1,
+      "move": "kick"
+    },
+    {
+      "tick": 1021,
+      "type": "AttackStarted",
+      "actor": 0,
+      "move": "light_right",
+      "direction": "right"
+    },
+    {
+      "tick": 1038,
+      "type": "AttackActive",
+      "actor": 1,
+      "move": "kick"
+    },
+    {
+      "tick": 1038,
+      "type": "Hit",
+      "actor": 1,
+      "target": 0,
+      "move": "kick",
+      "damage": 5,
+      "location": "torso",
+      "heading": -1.5592304131062236,
+      "counter": true,
+      "rear": false,
+      "charged": false,
+      "weapon": "scythe",
+      "material": "iron"
+    },
+    {
+      "tick": 1038,
+      "type": "Staggered",
+      "actor": 0,
+      "ticks": 27
+    },
+    {
+      "tick": 1119,
+      "type": "AttackStarted",
+      "actor": 1,
+      "move": "kick"
+    },
+    {
+      "tick": 1122,
+      "type": "AttackStarted",
+      "actor": 0,
+      "move": "thrust",
+      "direction": "thrust"
+    },
+    {
+      "tick": 1137,
+      "type": "AttackActive",
+      "actor": 1,
+      "move": "kick"
+    },
+    {
+      "tick": 1137,
+      "type": "Hit",
+      "actor": 1,
+      "target": 0,
+      "move": "kick",
+      "damage": 5,
+      "location": "torso",
+      "heading": -1.4693640690643275,
+      "counter": true,
+      "rear": false,
+      "charged": false,
+      "weapon": "scythe",
+      "material": "iron"
+    },
+    {
+      "tick": 1137,
+      "type": "Staggered",
+      "actor": 0,
+      "ticks": 27
+    },
+    {
+      "tick": 1204,
+      "type": "ActionStarted",
+      "actor": 1,
+      "action": "guard"
+    },
+    {
+      "tick": 1218,
+      "type": "AttackStarted",
+      "actor": 1,
+      "move": "kick"
+    },
+    {
+      "tick": 1219,
+      "type": "AttackStarted",
+      "actor": 0,
+      "move": "thrust",
+      "direction": "thrust"
+    },
+    {
+      "tick": 1235,
+      "type": "AttackActive",
+      "actor": 0,
+      "move": "thrust"
+    },
+    {
+      "tick": 1235,
+      "type": "Hit",
+      "actor": 0,
+      "target": 1,
+      "move": "thrust",
+      "damage": 17,
+      "location": "torso",
+      "heading": 1.703234692078807,
+      "counter": true,
+      "rear": false,
+      "charged": false,
+      "weapon": "longsword",
+      "material": "iron",
+      "stop": true
+    },
+    {
+      "tick": 1235,
+      "type": "Staggered",
+      "actor": 1,
+      "ticks": 35
+    },
+    {
+      "tick": 1314,
+      "type": "AttackStarted",
+      "actor": 1,
+      "move": "kick"
+    },
+    {
+      "tick": 1316,
+      "type": "AttackStarted",
+      "actor": 0,
+      "move": "thrust",
+      "direction": "thrust"
+    },
+    {
+      "tick": 1332,
+      "type": "AttackActive",
+      "actor": 0,
+      "move": "thrust"
+    },
+    {
+      "tick": 1332,
+      "type": "Killed",
+      "actor": 0,
+      "target": 1,
+      "move": "thrust",
+      "location": "torso",
+      "heading": 1.6799970436257061
+    },
+    {
+      "tick": 1332,
+      "type": "Hit",
+      "actor": 0,
+      "target": 1,
+      "move": "thrust",
+      "damage": 17,
+      "location": "torso",
+      "heading": 1.6799970436257061,
+      "counter": true,
+      "rear": false,
+      "charged": false,
+      "weapon": "longsword",
+      "material": "iron",
+      "stop": true
+    },
+    {
+      "tick": 1332,
+      "type": "Staggered",
+      "actor": 1,
+      "ticks": 144
+    },
+    {
+      "tick": 1332,
+      "type": "AttackActive",
+      "actor": 1,
+      "move": "kick"
+    },
+    {
+      "tick": 1332,
+      "type": "Hit",
+      "actor": 1,
+      "target": 0,
+      "move": "kick",
+      "damage": 5,
+      "location": "torso",
+      "heading": -1.4600519355204424,
+      "counter": true,
+      "rear": false,
+      "charged": false,
+      "weapon": "scythe",
+      "material": "iron"
+    },
+    {
+      "tick": 1332,
+      "type": "Staggered",
+      "actor": 0,
+      "ticks": 27
+    }
+  ],
+  "samples": [
+    {
+      "tick": 38,
+      "videoSeconds": 2.331951000000001,
+      "hp": 150,
+      "enemyHp": 160,
+      "stamina": 100,
+      "gap": 6.5,
+      "radius": 4
+    },
+    {
+      "tick": 100,
+      "videoSeconds": 2.4314247920000054,
+      "hp": 150,
+      "enemyHp": 160,
+      "stamina": 100,
+      "gap": 2.29,
+      "radius": 1.35
+    },
+    {
+      "tick": 162,
+      "videoSeconds": 2.7223604170000035,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 80,
+      "gap": 0.85,
+      "radius": 0.05
+    },
+    {
+      "tick": 224,
+      "videoSeconds": 3.148112792,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 56,
+      "gap": 3.15,
+      "radius": 3.0304125131737427
+    },
+    {
+      "tick": 285,
+      "videoSeconds": 3.4819218330000004,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 58,
+      "gap": 1.11,
+      "radius": 1.0339245620450266
+    },
+    {
+      "tick": 348,
+      "videoSeconds": 4.246153542,
+      "hp": 150,
+      "enemyHp": 135,
+      "stamina": 74,
+      "gap": 1.91,
+      "radius": 0.9464142856064675
+    },
+    {
+      "tick": 410,
+      "videoSeconds": 5.069747749999995,
+      "hp": 150,
+      "enemyHp": 124,
+      "stamina": 65,
+      "gap": 1.31,
+      "radius": 0.9000555538409837
+    },
+    {
+      "tick": 472,
+      "videoSeconds": 6.1886209999999995,
+      "hp": 125,
+      "enemyHp": 124,
+      "stamina": 53,
+      "gap": 1.05,
+      "radius": 0.9895453501482385
+    },
+    {
+      "tick": 535,
+      "videoSeconds": 7.306984958000001,
+      "hp": 125,
+      "enemyHp": 110,
+      "stamina": 29,
+      "gap": 1.71,
+      "radius": 1.1853269591129698
+    },
+    {
+      "tick": 596,
+      "videoSeconds": 8.268659207999997,
+      "hp": 125,
+      "enemyHp": 110,
+      "stamina": 50,
+      "gap": 1.91,
+      "radius": 1.4101418368376988
+    },
+    {
+      "tick": 659,
+      "videoSeconds": 9.591337,
+      "hp": 125,
+      "enemyHp": 93,
+      "stamina": 41,
+      "gap": 1,
+      "radius": 2.5560125195311545
+    },
+    {
+      "tick": 721,
+      "videoSeconds": 11.279266999999992,
+      "hp": 125,
+      "enemyHp": 93,
+      "stamina": 75,
+      "gap": 1.04,
+      "radius": 2.8164161624305453
+    },
+    {
+      "tick": 783,
+      "videoSeconds": 13.764782749999998,
+      "hp": 125,
+      "enemyHp": 76,
+      "stamina": 67,
+      "gap": 1.81,
+      "radius": 2.253042387528472
+    },
+    {
+      "tick": 846,
+      "videoSeconds": 15.819299125000004,
+      "hp": 125,
+      "enemyHp": 46,
+      "stamina": 70,
+      "gap": 1.05,
+      "radius": 3.040164469235176
+    },
+    {
+      "tick": 907,
+      "videoSeconds": 17.499669125,
+      "hp": 125,
+      "enemyHp": 46,
+      "stamina": 92,
+      "gap": 1.55,
+      "radius": 2.716799587750263
+    },
+    {
+      "tick": 970,
+      "videoSeconds": 19.073671375000007,
+      "hp": 125,
+      "enemyHp": 29,
+      "stamina": 76,
+      "gap": 1.34,
+      "radius": 2.935370504723381
+    },
+    {
+      "tick": 1031,
+      "videoSeconds": 20.653423792,
+      "hp": 125,
+      "enemyHp": 29,
+      "stamina": 67,
+      "gap": 0.85,
+      "radius": 3.435025472976874
+    },
+    {
+      "tick": 1094,
+      "videoSeconds": 22.088707500000005,
+      "hp": 120,
+      "enemyHp": 29,
+      "stamina": 60,
+      "gap": 2.2,
+      "radius": 2.454587541726715
+    },
+    {
+      "tick": 1156,
+      "videoSeconds": 23.466883875,
+      "hp": 115,
+      "enemyHp": 29,
+      "stamina": 43,
+      "gap": 1.15,
+      "radius": 3.233403779301311
+    },
+    {
+      "tick": 1218,
+      "videoSeconds": 25.025641292,
+      "hp": 115,
+      "enemyHp": 29,
+      "stamina": 68,
+      "gap": 1.02,
+      "radius": 3.40812265037513
+    },
+    {
+      "tick": 1280,
+      "videoSeconds": 26.77186079199999,
+      "hp": 115,
+      "enemyHp": 12,
+      "stamina": 59,
+      "gap": 1.99,
+      "radius": 2.7389231460557633
+    },
+    {
+      "tick": 1332,
+      "videoSeconds": 27.871599292,
+      "hp": 110,
+      "enemyHp": 0,
+      "stamina": 59,
+      "gap": 1.99,
+      "radius": 2.7389231460557633
+    }
+  ],
+  "track": [
+    {
+      "tick": 38,
+      "gap": 6.5,
+      "radius": 4,
+      "hp": 150,
+      "enemyHp": 160,
+      "stamina": 100,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "draw",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 42,
+      "gap": 6.5,
+      "radius": 4,
+      "hp": 150,
+      "enemyHp": 160,
+      "stamina": 100,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "draw",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 46,
+      "gap": 6.5,
+      "radius": 4,
+      "hp": 150,
+      "enemyHp": 160,
+      "stamina": 100,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "draw",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 50,
+      "gap": 6.29,
+      "radius": 3.85,
+      "hp": 150,
+      "enemyHp": 160,
+      "stamina": 100,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 53,
+      "gap": 6.05,
+      "radius": 3.7,
+      "hp": 150,
+      "enemyHp": 160,
+      "stamina": 100,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 57,
+      "gap": 5.73,
+      "radius": 3.5,
+      "hp": 150,
+      "enemyHp": 160,
+      "stamina": 100,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 61,
+      "gap": 5.41,
+      "radius": 3.3,
+      "hp": 150,
+      "enemyHp": 160,
+      "stamina": 100,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 65,
+      "gap": 5.09,
+      "radius": 3.1,
+      "hp": 150,
+      "enemyHp": 160,
+      "stamina": 100,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 69,
+      "gap": 4.77,
+      "radius": 2.9,
+      "hp": 150,
+      "enemyHp": 160,
+      "stamina": 100,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 73,
+      "gap": 4.45,
+      "radius": 2.7,
+      "hp": 150,
+      "enemyHp": 160,
+      "stamina": 100,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 77,
+      "gap": 4.13,
+      "radius": 2.5,
+      "hp": 150,
+      "enemyHp": 160,
+      "stamina": 100,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 80,
+      "gap": 3.89,
+      "radius": 2.35,
+      "hp": 150,
+      "enemyHp": 160,
+      "stamina": 100,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 84,
+      "gap": 3.57,
+      "radius": 2.15,
+      "hp": 150,
+      "enemyHp": 160,
+      "stamina": 100,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 88,
+      "gap": 3.25,
+      "radius": 1.95,
+      "hp": 150,
+      "enemyHp": 160,
+      "stamina": 100,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 92,
+      "gap": 2.93,
+      "radius": 1.75,
+      "hp": 150,
+      "enemyHp": 160,
+      "stamina": 100,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 96,
+      "gap": 2.61,
+      "radius": 1.55,
+      "hp": 150,
+      "enemyHp": 160,
+      "stamina": 100,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 100,
+      "gap": 2.29,
+      "radius": 1.35,
+      "hp": 150,
+      "enemyHp": 160,
+      "stamina": 100,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 103,
+      "gap": 2.05,
+      "radius": 1.2,
+      "hp": 150,
+      "enemyHp": 160,
+      "stamina": 100,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 107,
+      "gap": 1.82,
+      "radius": 1,
+      "hp": 150,
+      "enemyHp": 160,
+      "stamina": 100,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 111,
+      "gap": 1.62,
+      "radius": 0.8,
+      "hp": 150,
+      "enemyHp": 160,
+      "stamina": 100,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 115,
+      "gap": 1.42,
+      "radius": 0.6,
+      "hp": 150,
+      "enemyHp": 160,
+      "stamina": 100,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 119,
+      "gap": 1.22,
+      "radius": 0.4,
+      "hp": 150,
+      "enemyHp": 160,
+      "stamina": 100,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 123,
+      "gap": 1.02,
+      "radius": 0.2,
+      "hp": 150,
+      "enemyHp": 160,
+      "stamina": 100,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 126,
+      "gap": 0.87,
+      "radius": 0.05,
+      "hp": 150,
+      "enemyHp": 160,
+      "stamina": 100,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 130,
+      "gap": 0.87,
+      "radius": 0.05,
+      "hp": 150,
+      "enemyHp": 160,
+      "stamina": 80,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 134,
+      "gap": 0.85,
+      "radius": 0.03,
+      "hp": 150,
+      "enemyHp": 160,
+      "stamina": 80,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 138,
+      "gap": 0.87,
+      "radius": 0.03,
+      "hp": 150,
+      "enemyHp": 160,
+      "stamina": 80,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 142,
+      "gap": 0.87,
+      "radius": 0.05,
+      "hp": 150,
+      "enemyHp": 160,
+      "stamina": 80,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 143,
+      "gap": 0.89,
+      "radius": 0.05,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 80,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 147,
+      "gap": 0.89,
+      "radius": 0.05,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 80,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "heavy_overhead"
+    },
+    {
+      "tick": 151,
+      "gap": 0.85,
+      "radius": 0.05,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 80,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "heavy_overhead"
+    },
+    {
+      "tick": 155,
+      "gap": 0.85,
+      "radius": 0.05,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 80,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "heavy_overhead"
+    },
+    {
+      "tick": 159,
+      "gap": 0.85,
+      "radius": 0.05,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 80,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "heavy_overhead"
+    },
+    {
+      "tick": 162,
+      "gap": 0.85,
+      "radius": 0.05,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 80,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "heavy_overhead"
+    },
+    {
+      "tick": 166,
+      "gap": 0.85,
+      "radius": 0.05,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 80,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "heavy_overhead"
+    },
+    {
+      "tick": 170,
+      "gap": 0.85,
+      "radius": 0.05,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 80,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "heavy_overhead"
+    },
+    {
+      "tick": 174,
+      "gap": 0.85,
+      "radius": 0.05,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 80,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "guard",
+      "enemyState": "heavy_overhead"
+    },
+    {
+      "tick": 178,
+      "gap": 0.85,
+      "radius": 0.05,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 82.3333333333333,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "guard",
+      "enemyState": "heavy_overhead"
+    },
+    {
+      "tick": 180,
+      "gap": 0.85,
+      "radius": 0.05,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 82.99999999999996,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "guard",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 182,
+      "gap": 0.85,
+      "radius": 0.05,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 83.33333333333329,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "guard",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 185,
+      "gap": 0.85,
+      "radius": 0.05,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 84.33333333333327,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "guard",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 189,
+      "gap": 0.85,
+      "radius": 0.05,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 85.33333333333326,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "guard",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 193,
+      "gap": 0.92,
+      "radius": 0.35,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 55.999999999999915,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "roll",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 197,
+      "gap": 1.1,
+      "radius": 0.69,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 55.999999999999915,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "roll",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 201,
+      "gap": 1.34,
+      "radius": 1.04,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 55.999999999999915,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "roll",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 205,
+      "gap": 1.63,
+      "radius": 1.39,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 55.999999999999915,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "roll",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 208,
+      "gap": 1.85,
+      "radius": 1.65,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 55.999999999999915,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "roll",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 212,
+      "gap": 2.17,
+      "radius": 1.99,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 55.999999999999915,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "roll",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 216,
+      "gap": 2.49,
+      "radius": 2.34,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 55.999999999999915,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "roll",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 220,
+      "gap": 2.82,
+      "radius": 2.69,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 55.999999999999915,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "roll",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 224,
+      "gap": 3.15,
+      "radius": 3.03,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 55.999999999999915,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "roll",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 228,
+      "gap": 3.23,
+      "radius": 3.12,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 55.999999999999915,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 232,
+      "gap": 3.03,
+      "radius": 2.93,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 55.999999999999915,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 235,
+      "gap": 2.88,
+      "radius": 2.79,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 56.66666666666658,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 239,
+      "gap": 2.68,
+      "radius": 2.6,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 59.333333333333236,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 243,
+      "gap": 2.48,
+      "radius": 2.42,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 61.33333333333323,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 247,
+      "gap": 2.28,
+      "radius": 2.23,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 64.66666666666656,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 251,
+      "gap": 2.08,
+      "radius": 2.05,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 67.33333333333324,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 255,
+      "gap": 1.88,
+      "radius": 1.87,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 69.33333333333326,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 258,
+      "gap": 1.73,
+      "radius": 1.74,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 71.33333333333327,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 262,
+      "gap": 1.53,
+      "radius": 1.57,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 74.66666666666663,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 266,
+      "gap": 1.33,
+      "radius": 1.41,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 77.33333333333331,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 270,
+      "gap": 1.15,
+      "radius": 1.26,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 80,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 274,
+      "gap": 1.03,
+      "radius": 1.12,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 82.00000000000001,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 278,
+      "gap": 1.11,
+      "radius": 1.12,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 57.666666666666686,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "light_right",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 281,
+      "gap": 1.11,
+      "radius": 1.07,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 57.666666666666686,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "light_right",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 285,
+      "gap": 1.11,
+      "radius": 1.03,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 57.666666666666686,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "light_right",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 289,
+      "gap": 1.11,
+      "radius": 1,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 57.666666666666686,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "light_right",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 293,
+      "gap": 1.11,
+      "radius": 0.96,
+      "hp": 150,
+      "enemyHp": 149,
+      "stamina": 57.666666666666686,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "light_right",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 295,
+      "gap": 1.33,
+      "radius": 0.95,
+      "hp": 150,
+      "enemyHp": 135,
+      "stamina": 57.666666666666686,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "light_right",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 298,
+      "gap": 1.33,
+      "radius": 0.95,
+      "hp": 150,
+      "enemyHp": 135,
+      "stamina": 57.666666666666686,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "light_right",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 302,
+      "gap": 1.33,
+      "radius": 0.95,
+      "hp": 150,
+      "enemyHp": 135,
+      "stamina": 57.666666666666686,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "light_right",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 306,
+      "gap": 1.33,
+      "radius": 0.95,
+      "hp": 150,
+      "enemyHp": 135,
+      "stamina": 57.666666666666686,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "light_right",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 310,
+      "gap": 1.33,
+      "radius": 0.95,
+      "hp": 150,
+      "enemyHp": 135,
+      "stamina": 57.666666666666686,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "light_right",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 313,
+      "gap": 1.33,
+      "radius": 0.95,
+      "hp": 150,
+      "enemyHp": 135,
+      "stamina": 57.666666666666686,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "light_right",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 317,
+      "gap": 1.33,
+      "radius": 0.95,
+      "hp": 150,
+      "enemyHp": 135,
+      "stamina": 57.666666666666686,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "light_right",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 321,
+      "gap": 1.39,
+      "radius": 0.95,
+      "hp": 150,
+      "enemyHp": 135,
+      "stamina": 57.666666666666686,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "light_right",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 325,
+      "gap": 1.47,
+      "radius": 0.95,
+      "hp": 150,
+      "enemyHp": 135,
+      "stamina": 58.33333333333335,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 329,
+      "gap": 1.55,
+      "radius": 0.95,
+      "hp": 150,
+      "enemyHp": 135,
+      "stamina": 61.00000000000001,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 333,
+      "gap": 1.63,
+      "radius": 0.95,
+      "hp": 150,
+      "enemyHp": 135,
+      "stamina": 63,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 337,
+      "gap": 1.71,
+      "radius": 0.95,
+      "hp": 150,
+      "enemyHp": 135,
+      "stamina": 66.33333333333334,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 340,
+      "gap": 1.77,
+      "radius": 0.95,
+      "hp": 150,
+      "enemyHp": 135,
+      "stamina": 68.33333333333336,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 344,
+      "gap": 1.85,
+      "radius": 0.95,
+      "hp": 150,
+      "enemyHp": 135,
+      "stamina": 71.00000000000004,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 348,
+      "gap": 1.91,
+      "radius": 0.95,
+      "hp": 150,
+      "enemyHp": 135,
+      "stamina": 73.00000000000006,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 352,
+      "gap": 1.91,
+      "radius": 0.95,
+      "hp": 150,
+      "enemyHp": 135,
+      "stamina": 53.66666666666673,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 356,
+      "gap": 1.71,
+      "radius": 0.89,
+      "hp": 150,
+      "enemyHp": 135,
+      "stamina": 53.66666666666673,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 360,
+      "gap": 1.51,
+      "radius": 0.87,
+      "hp": 150,
+      "enemyHp": 135,
+      "stamina": 53.66666666666673,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 363,
+      "gap": 1.36,
+      "radius": 0.88,
+      "hp": 150,
+      "enemyHp": 135,
+      "stamina": 53.66666666666673,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 365,
+      "gap": 1.31,
+      "radius": 0.9,
+      "hp": 150,
+      "enemyHp": 124,
+      "stamina": 53.66666666666673,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 368,
+      "gap": 1.31,
+      "radius": 0.9,
+      "hp": 150,
+      "enemyHp": 124,
+      "stamina": 53.66666666666673,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "guard"
+    },
+    {
+      "tick": 372,
+      "gap": 1.31,
+      "radius": 0.9,
+      "hp": 150,
+      "enemyHp": 124,
+      "stamina": 53.66666666666673,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "guard"
+    },
+    {
+      "tick": 376,
+      "gap": 1.31,
+      "radius": 0.9,
+      "hp": 150,
+      "enemyHp": 124,
+      "stamina": 53.66666666666673,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "guard"
+    },
+    {
+      "tick": 380,
+      "gap": 1.31,
+      "radius": 0.9,
+      "hp": 150,
+      "enemyHp": 124,
+      "stamina": 53.66666666666673,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "guard"
+    },
+    {
+      "tick": 383,
+      "gap": 1.31,
+      "radius": 0.9,
+      "hp": 150,
+      "enemyHp": 124,
+      "stamina": 53.66666666666673,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "guard"
+    },
+    {
+      "tick": 387,
+      "gap": 1.31,
+      "radius": 0.9,
+      "hp": 150,
+      "enemyHp": 124,
+      "stamina": 53.66666666666673,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "guard"
+    },
+    {
+      "tick": 391,
+      "gap": 1.31,
+      "radius": 0.9,
+      "hp": 150,
+      "enemyHp": 124,
+      "stamina": 53.66666666666673,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "guard"
+    },
+    {
+      "tick": 395,
+      "gap": 1.31,
+      "radius": 0.9,
+      "hp": 150,
+      "enemyHp": 124,
+      "stamina": 55.00000000000006,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "guard"
+    },
+    {
+      "tick": 399,
+      "gap": 1.31,
+      "radius": 0.9,
+      "hp": 150,
+      "enemyHp": 124,
+      "stamina": 57.00000000000005,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "guard"
+    },
+    {
+      "tick": 403,
+      "gap": 1.31,
+      "radius": 0.9,
+      "hp": 150,
+      "enemyHp": 124,
+      "stamina": 60.33333333333337,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "guard"
+    },
+    {
+      "tick": 407,
+      "gap": 1.31,
+      "radius": 0.9,
+      "hp": 150,
+      "enemyHp": 124,
+      "stamina": 63.00000000000003,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "guard"
+    },
+    {
+      "tick": 410,
+      "gap": 1.31,
+      "radius": 0.9,
+      "hp": 150,
+      "enemyHp": 124,
+      "stamina": 65.00000000000003,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "guard"
+    },
+    {
+      "tick": 414,
+      "gap": 1.31,
+      "radius": 0.9,
+      "hp": 150,
+      "enemyHp": 124,
+      "stamina": 67.00000000000004,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "guard"
+    },
+    {
+      "tick": 418,
+      "gap": 1.31,
+      "radius": 0.9,
+      "hp": 150,
+      "enemyHp": 124,
+      "stamina": 70.3333333333334,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "guard"
+    },
+    {
+      "tick": 422,
+      "gap": 1.31,
+      "radius": 0.9,
+      "hp": 150,
+      "enemyHp": 124,
+      "stamina": 73.00000000000009,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "guard"
+    },
+    {
+      "tick": 426,
+      "gap": 1.31,
+      "radius": 0.9,
+      "hp": 150,
+      "enemyHp": 124,
+      "stamina": 53.000000000000085,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "guard"
+    },
+    {
+      "tick": 430,
+      "gap": 1.11,
+      "radius": 0.97,
+      "hp": 150,
+      "enemyHp": 124,
+      "stamina": 53.000000000000085,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "guard"
+    },
+    {
+      "tick": 433,
+      "gap": 0.96,
+      "radius": 1.04,
+      "hp": 150,
+      "enemyHp": 124,
+      "stamina": 53.000000000000085,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "guard"
+    },
+    {
+      "tick": 437,
+      "gap": 0.85,
+      "radius": 1.11,
+      "hp": 150,
+      "enemyHp": 124,
+      "stamina": 53.000000000000085,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "guard"
+    },
+    {
+      "tick": 439,
+      "gap": 0.85,
+      "radius": 1.11,
+      "hp": 150,
+      "enemyHp": 124,
+      "stamina": 53.000000000000085,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "guard"
+    },
+    {
+      "tick": 440,
+      "gap": 0.85,
+      "radius": 1.11,
+      "hp": 150,
+      "enemyHp": 124,
+      "stamina": 53.000000000000085,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "heavy_counter"
+    },
+    {
+      "tick": 444,
+      "gap": 0.85,
+      "radius": 1.11,
+      "hp": 150,
+      "enemyHp": 124,
+      "stamina": 53.000000000000085,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "heavy_counter"
+    },
+    {
+      "tick": 448,
+      "gap": 0.85,
+      "radius": 1.11,
+      "hp": 150,
+      "enemyHp": 124,
+      "stamina": 53.000000000000085,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "heavy_counter"
+    },
+    {
+      "tick": 452,
+      "gap": 0.85,
+      "radius": 1.11,
+      "hp": 150,
+      "enemyHp": 124,
+      "stamina": 53.000000000000085,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "heavy_counter"
+    },
+    {
+      "tick": 456,
+      "gap": 0.85,
+      "radius": 1.11,
+      "hp": 150,
+      "enemyHp": 124,
+      "stamina": 53.000000000000085,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "heavy_counter"
+    },
+    {
+      "tick": 460,
+      "gap": 0.85,
+      "radius": 1.11,
+      "hp": 150,
+      "enemyHp": 124,
+      "stamina": 53.000000000000085,
+      "maxStamina": 100,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "heavy_counter"
+    },
+    {
+      "tick": 461,
+      "gap": 1.05,
+      "radius": 0.99,
+      "hp": 125,
+      "enemyHp": 124,
+      "stamina": 53.000000000000085,
+      "maxStamina": 92,
+      "posture": 37.5,
+      "ownState": "hurt",
+      "enemyState": "heavy_counter"
+    },
+    {
+      "tick": 465,
+      "gap": 1.05,
+      "radius": 0.99,
+      "hp": 125,
+      "enemyHp": 124,
+      "stamina": 53.000000000000085,
+      "maxStamina": 92,
+      "posture": 37.5,
+      "ownState": "hurt",
+      "enemyState": "heavy_counter"
+    },
+    {
+      "tick": 468,
+      "gap": 1.05,
+      "radius": 0.99,
+      "hp": 125,
+      "enemyHp": 124,
+      "stamina": 53.000000000000085,
+      "maxStamina": 92,
+      "posture": 37.5,
+      "ownState": "hurt",
+      "enemyState": "heavy_counter"
+    },
+    {
+      "tick": 472,
+      "gap": 1.05,
+      "radius": 0.99,
+      "hp": 125,
+      "enemyHp": 124,
+      "stamina": 53.000000000000085,
+      "maxStamina": 92,
+      "posture": 37.5,
+      "ownState": "hurt",
+      "enemyState": "heavy_counter"
+    },
+    {
+      "tick": 476,
+      "gap": 1.05,
+      "radius": 0.99,
+      "hp": 125,
+      "enemyHp": 124,
+      "stamina": 53.000000000000085,
+      "maxStamina": 92,
+      "posture": 37.5,
+      "ownState": "hurt",
+      "enemyState": "heavy_counter"
+    },
+    {
+      "tick": 480,
+      "gap": 1.05,
+      "radius": 0.99,
+      "hp": 125,
+      "enemyHp": 124,
+      "stamina": 53.000000000000085,
+      "maxStamina": 92,
+      "posture": 37.5,
+      "ownState": "hurt",
+      "enemyState": "heavy_counter"
+    },
+    {
+      "tick": 484,
+      "gap": 1.05,
+      "radius": 0.99,
+      "hp": 125,
+      "enemyHp": 124,
+      "stamina": 53.000000000000085,
+      "maxStamina": 92,
+      "posture": 37.5,
+      "ownState": "hurt",
+      "enemyState": "heavy_counter"
+    },
+    {
+      "tick": 488,
+      "gap": 1.05,
+      "radius": 0.99,
+      "hp": 125,
+      "enemyHp": 124,
+      "stamina": 53.000000000000085,
+      "maxStamina": 92,
+      "posture": 37.5,
+      "ownState": "hurt",
+      "enemyState": "heavy_counter"
+    },
+    {
+      "tick": 491,
+      "gap": 1.09,
+      "radius": 0.99,
+      "hp": 125,
+      "enemyHp": 124,
+      "stamina": 53.000000000000085,
+      "maxStamina": 92,
+      "posture": 37.5,
+      "ownState": "hurt",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 495,
+      "gap": 1.17,
+      "radius": 0.99,
+      "hp": 125,
+      "enemyHp": 124,
+      "stamina": 53.000000000000085,
+      "maxStamina": 92,
+      "posture": 37.5,
+      "ownState": "hurt",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 499,
+      "gap": 1.25,
+      "radius": 0.99,
+      "hp": 125,
+      "enemyHp": 124,
+      "stamina": 53.000000000000085,
+      "maxStamina": 92,
+      "posture": 37.5,
+      "ownState": "hurt",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 503,
+      "gap": 1.33,
+      "radius": 0.99,
+      "hp": 125,
+      "enemyHp": 124,
+      "stamina": 53.000000000000085,
+      "maxStamina": 92,
+      "posture": 37.5,
+      "ownState": "hurt",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 507,
+      "gap": 1.41,
+      "radius": 0.99,
+      "hp": 125,
+      "enemyHp": 124,
+      "stamina": 54.06666666666675,
+      "maxStamina": 92,
+      "posture": 37.3,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 511,
+      "gap": 1.49,
+      "radius": 0.99,
+      "hp": 125,
+      "enemyHp": 124,
+      "stamina": 29.066666666666748,
+      "maxStamina": 92,
+      "posture": 36.69999999999999,
+      "ownState": "light_right",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 514,
+      "gap": 1.49,
+      "radius": 1.02,
+      "hp": 125,
+      "enemyHp": 124,
+      "stamina": 29.066666666666748,
+      "maxStamina": 92,
+      "posture": 35.89999999999998,
+      "ownState": "light_right",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 518,
+      "gap": 1.49,
+      "radius": 1.07,
+      "hp": 125,
+      "enemyHp": 124,
+      "stamina": 29.066666666666748,
+      "maxStamina": 92,
+      "posture": 35.099999999999966,
+      "ownState": "light_right",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 522,
+      "gap": 1.49,
+      "radius": 1.11,
+      "hp": 125,
+      "enemyHp": 124,
+      "stamina": 29.066666666666748,
+      "maxStamina": 92,
+      "posture": 34.69999999999996,
+      "ownState": "light_right",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 526,
+      "gap": 1.49,
+      "radius": 1.17,
+      "hp": 125,
+      "enemyHp": 124,
+      "stamina": 29.066666666666748,
+      "maxStamina": 92,
+      "posture": 33.699999999999946,
+      "ownState": "light_right",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 528,
+      "gap": 1.71,
+      "radius": 1.19,
+      "hp": 125,
+      "enemyHp": 110,
+      "stamina": 29.066666666666748,
+      "maxStamina": 92,
+      "posture": 33.09999999999994,
+      "ownState": "light_right",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 531,
+      "gap": 1.71,
+      "radius": 1.19,
+      "hp": 125,
+      "enemyHp": 110,
+      "stamina": 29.066666666666748,
+      "maxStamina": 92,
+      "posture": 32.899999999999935,
+      "ownState": "light_right",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 535,
+      "gap": 1.71,
+      "radius": 1.19,
+      "hp": 125,
+      "enemyHp": 110,
+      "stamina": 29.066666666666748,
+      "maxStamina": 92,
+      "posture": 31.899999999999924,
+      "ownState": "light_right",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 539,
+      "gap": 1.71,
+      "radius": 1.19,
+      "hp": 125,
+      "enemyHp": 110,
+      "stamina": 29.066666666666748,
+      "maxStamina": 92,
+      "posture": 30.899999999999928,
+      "ownState": "light_right",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 543,
+      "gap": 1.71,
+      "radius": 1.19,
+      "hp": 125,
+      "enemyHp": 110,
+      "stamina": 29.066666666666748,
+      "maxStamina": 92,
+      "posture": 30.899999999999928,
+      "ownState": "light_right",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 546,
+      "gap": 1.71,
+      "radius": 1.19,
+      "hp": 125,
+      "enemyHp": 110,
+      "stamina": 29.066666666666748,
+      "maxStamina": 92,
+      "posture": 29.89999999999993,
+      "ownState": "light_right",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 550,
+      "gap": 1.71,
+      "radius": 1.19,
+      "hp": 125,
+      "enemyHp": 110,
+      "stamina": 29.066666666666748,
+      "maxStamina": 92,
+      "posture": 28.899999999999935,
+      "ownState": "light_right",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 554,
+      "gap": 1.77,
+      "radius": 1.19,
+      "hp": 125,
+      "enemyHp": 110,
+      "stamina": 29.066666666666748,
+      "maxStamina": 92,
+      "posture": 27.899999999999938,
+      "ownState": "light_right",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 558,
+      "gap": 1.85,
+      "radius": 1.19,
+      "hp": 125,
+      "enemyHp": 110,
+      "stamina": 29.600000000000083,
+      "maxStamina": 92,
+      "posture": 27.09999999999994,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 562,
+      "gap": 1.93,
+      "radius": 1.19,
+      "hp": 125,
+      "enemyHp": 110,
+      "stamina": 31.200000000000088,
+      "maxStamina": 92,
+      "posture": 26.499999999999943,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 566,
+      "gap": 2.01,
+      "radius": 1.19,
+      "hp": 125,
+      "enemyHp": 110,
+      "stamina": 33.33333333333342,
+      "maxStamina": 92,
+      "posture": 25.699999999999946,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 570,
+      "gap": 2.09,
+      "radius": 1.19,
+      "hp": 125,
+      "enemyHp": 110,
+      "stamina": 36.00000000000008,
+      "maxStamina": 92,
+      "posture": 24.69999999999995,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 573,
+      "gap": 2.15,
+      "radius": 1.19,
+      "hp": 125,
+      "enemyHp": 110,
+      "stamina": 37.06666666666674,
+      "maxStamina": 92,
+      "posture": 24.29999999999995,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 577,
+      "gap": 2.21,
+      "radius": 1.19,
+      "hp": 125,
+      "enemyHp": 110,
+      "stamina": 39.20000000000007,
+      "maxStamina": 92,
+      "posture": 23.499999999999954,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 581,
+      "gap": 2.21,
+      "radius": 1.19,
+      "hp": 125,
+      "enemyHp": 110,
+      "stamina": 41.33333333333339,
+      "maxStamina": 92,
+      "posture": 22.699999999999957,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 585,
+      "gap": 2.21,
+      "radius": 1.19,
+      "hp": 125,
+      "enemyHp": 110,
+      "stamina": 44.00000000000005,
+      "maxStamina": 92,
+      "posture": 21.69999999999996,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 589,
+      "gap": 2.21,
+      "radius": 1.19,
+      "hp": 125,
+      "enemyHp": 110,
+      "stamina": 46.133333333333375,
+      "maxStamina": 92,
+      "posture": 20.899999999999963,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 593,
+      "gap": 2.04,
+      "radius": 1.31,
+      "hp": 125,
+      "enemyHp": 110,
+      "stamina": 48.2666666666667,
+      "maxStamina": 92,
+      "posture": 20.099999999999966,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 596,
+      "gap": 1.91,
+      "radius": 1.41,
+      "hp": 125,
+      "enemyHp": 110,
+      "stamina": 49.333333333333364,
+      "maxStamina": 92,
+      "posture": 19.699999999999967,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 600,
+      "gap": 1.74,
+      "radius": 1.56,
+      "hp": 125,
+      "enemyHp": 110,
+      "stamina": 52.00000000000002,
+      "maxStamina": 92,
+      "posture": 18.69999999999997,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 604,
+      "gap": 1.57,
+      "radius": 1.71,
+      "hp": 125,
+      "enemyHp": 110,
+      "stamina": 54.13333333333335,
+      "maxStamina": 92,
+      "posture": 17.899999999999974,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 608,
+      "gap": 1.4,
+      "radius": 1.86,
+      "hp": 125,
+      "enemyHp": 110,
+      "stamina": 56.26666666666667,
+      "maxStamina": 92,
+      "posture": 17.099999999999977,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 612,
+      "gap": 1.23,
+      "radius": 2.02,
+      "hp": 125,
+      "enemyHp": 110,
+      "stamina": 58.4,
+      "maxStamina": 92,
+      "posture": 16.29999999999998,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 616,
+      "gap": 1.13,
+      "radius": 2.17,
+      "hp": 125,
+      "enemyHp": 110,
+      "stamina": 60.533333333333324,
+      "maxStamina": 92,
+      "posture": 15.499999999999982,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 619,
+      "gap": 1.19,
+      "radius": 2.17,
+      "hp": 125,
+      "enemyHp": 110,
+      "stamina": 40.533333333333324,
+      "maxStamina": 92,
+      "posture": 14.899999999999984,
+      "ownState": "thrust",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 623,
+      "gap": 1.12,
+      "radius": 2.31,
+      "hp": 125,
+      "enemyHp": 110,
+      "stamina": 40.533333333333324,
+      "maxStamina": 92,
+      "posture": 14.699999999999985,
+      "ownState": "thrust",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 627,
+      "gap": 0.94,
+      "radius": 2.49,
+      "hp": 125,
+      "enemyHp": 110,
+      "stamina": 40.533333333333324,
+      "maxStamina": 92,
+      "posture": 13.49999999999999,
+      "ownState": "thrust",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 631,
+      "gap": 0.85,
+      "radius": 2.56,
+      "hp": 125,
+      "enemyHp": 110,
+      "stamina": 40.533333333333324,
+      "maxStamina": 92,
+      "posture": 12.699999999999992,
+      "ownState": "thrust",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 633,
+      "gap": 1,
+      "radius": 2.56,
+      "hp": 125,
+      "enemyHp": 93,
+      "stamina": 40.533333333333324,
+      "maxStamina": 92,
+      "posture": 12.099999999999994,
+      "ownState": "thrust",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 636,
+      "gap": 1,
+      "radius": 2.56,
+      "hp": 125,
+      "enemyHp": 93,
+      "stamina": 40.533333333333324,
+      "maxStamina": 92,
+      "posture": 11.899999999999995,
+      "ownState": "thrust",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 640,
+      "gap": 1,
+      "radius": 2.56,
+      "hp": 125,
+      "enemyHp": 93,
+      "stamina": 40.533333333333324,
+      "maxStamina": 92,
+      "posture": 10.899999999999999,
+      "ownState": "thrust",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 644,
+      "gap": 1,
+      "radius": 2.56,
+      "hp": 125,
+      "enemyHp": 93,
+      "stamina": 40.533333333333324,
+      "maxStamina": 92,
+      "posture": 9.900000000000002,
+      "ownState": "thrust",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 648,
+      "gap": 1,
+      "radius": 2.56,
+      "hp": 125,
+      "enemyHp": 93,
+      "stamina": 40.533333333333324,
+      "maxStamina": 92,
+      "posture": 9.900000000000002,
+      "ownState": "thrust",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 651,
+      "gap": 1,
+      "radius": 2.56,
+      "hp": 125,
+      "enemyHp": 93,
+      "stamina": 40.533333333333324,
+      "maxStamina": 92,
+      "posture": 8.900000000000006,
+      "ownState": "thrust",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 655,
+      "gap": 1,
+      "radius": 2.56,
+      "hp": 125,
+      "enemyHp": 93,
+      "stamina": 40.533333333333324,
+      "maxStamina": 92,
+      "posture": 7.900000000000008,
+      "ownState": "thrust",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 659,
+      "gap": 1,
+      "radius": 2.56,
+      "hp": 125,
+      "enemyHp": 93,
+      "stamina": 40.533333333333324,
+      "maxStamina": 92,
+      "posture": 6.9000000000000075,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 663,
+      "gap": 1.17,
+      "radius": 2.4,
+      "hp": 125,
+      "enemyHp": 93,
+      "stamina": 41.066666666666656,
+      "maxStamina": 92,
+      "posture": 6.300000000000007,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 667,
+      "gap": 1.34,
+      "radius": 2.24,
+      "hp": 125,
+      "enemyHp": 93,
+      "stamina": 43.19999999999998,
+      "maxStamina": 92,
+      "posture": 5.500000000000006,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 671,
+      "gap": 1.59,
+      "radius": 2.1,
+      "hp": 125,
+      "enemyHp": 93,
+      "stamina": 45.33333333333331,
+      "maxStamina": 92,
+      "posture": 4.7000000000000055,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 675,
+      "gap": 1.84,
+      "radius": 1.94,
+      "hp": 125,
+      "enemyHp": 93,
+      "stamina": 47.46666666666663,
+      "maxStamina": 92,
+      "posture": 3.900000000000005,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 678,
+      "gap": 2.03,
+      "radius": 1.83,
+      "hp": 125,
+      "enemyHp": 93,
+      "stamina": 49.06666666666663,
+      "maxStamina": 92,
+      "posture": 3.3000000000000043,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 682,
+      "gap": 2.26,
+      "radius": 1.69,
+      "hp": 125,
+      "enemyHp": 93,
+      "stamina": 51.19999999999995,
+      "maxStamina": 92,
+      "posture": 2.5000000000000036,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 686,
+      "gap": 2.26,
+      "radius": 1.69,
+      "hp": 125,
+      "enemyHp": 93,
+      "stamina": 53.33333333333328,
+      "maxStamina": 92,
+      "posture": 1.7000000000000033,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 690,
+      "gap": 2.26,
+      "radius": 1.69,
+      "hp": 125,
+      "enemyHp": 93,
+      "stamina": 55.999999999999936,
+      "maxStamina": 92,
+      "posture": 0.7000000000000035,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 694,
+      "gap": 2.09,
+      "radius": 1.82,
+      "hp": 125,
+      "enemyHp": 93,
+      "stamina": 58.13333333333326,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 698,
+      "gap": 1.92,
+      "radius": 1.97,
+      "hp": 125,
+      "enemyHp": 93,
+      "stamina": 60.26666666666659,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 701,
+      "gap": 1.79,
+      "radius": 2.08,
+      "hp": 125,
+      "enemyHp": 93,
+      "stamina": 61.999999999999915,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 705,
+      "gap": 1.62,
+      "radius": 2.23,
+      "hp": 125,
+      "enemyHp": 93,
+      "stamina": 64.66666666666657,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 709,
+      "gap": 1.45,
+      "radius": 2.38,
+      "hp": 125,
+      "enemyHp": 93,
+      "stamina": 67.33333333333326,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 713,
+      "gap": 1.28,
+      "radius": 2.52,
+      "hp": 125,
+      "enemyHp": 93,
+      "stamina": 69.33333333333327,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 717,
+      "gap": 1.15,
+      "radius": 2.67,
+      "hp": 125,
+      "enemyHp": 93,
+      "stamina": 72.66666666666663,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 721,
+      "gap": 1.04,
+      "radius": 2.82,
+      "hp": 125,
+      "enemyHp": 93,
+      "stamina": 75.33333333333331,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 724,
+      "gap": 1.04,
+      "radius": 2.82,
+      "hp": 125,
+      "enemyHp": 93,
+      "stamina": 55.333333333333314,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 728,
+      "gap": 0.85,
+      "radius": 2.91,
+      "hp": 125,
+      "enemyHp": 93,
+      "stamina": 55.333333333333314,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 732,
+      "gap": 0.85,
+      "radius": 2.91,
+      "hp": 125,
+      "enemyHp": 93,
+      "stamina": 55.333333333333314,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 736,
+      "gap": 0.85,
+      "radius": 2.91,
+      "hp": 125,
+      "enemyHp": 93,
+      "stamina": 55.333333333333314,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 738,
+      "gap": 1,
+      "radius": 2.91,
+      "hp": 125,
+      "enemyHp": 76,
+      "stamina": 55.333333333333314,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 741,
+      "gap": 1,
+      "radius": 2.91,
+      "hp": 125,
+      "enemyHp": 76,
+      "stamina": 55.333333333333314,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 745,
+      "gap": 1,
+      "radius": 2.91,
+      "hp": 125,
+      "enemyHp": 76,
+      "stamina": 55.333333333333314,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 748,
+      "gap": 1,
+      "radius": 2.91,
+      "hp": 125,
+      "enemyHp": 76,
+      "stamina": 55.333333333333314,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 752,
+      "gap": 1,
+      "radius": 2.91,
+      "hp": 125,
+      "enemyHp": 76,
+      "stamina": 55.333333333333314,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 756,
+      "gap": 1,
+      "radius": 2.91,
+      "hp": 125,
+      "enemyHp": 76,
+      "stamina": 55.333333333333314,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 760,
+      "gap": 1,
+      "radius": 2.91,
+      "hp": 125,
+      "enemyHp": 76,
+      "stamina": 55.333333333333314,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 764,
+      "gap": 1,
+      "radius": 2.91,
+      "hp": 125,
+      "enemyHp": 76,
+      "stamina": 55.333333333333314,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 768,
+      "gap": 1.17,
+      "radius": 2.77,
+      "hp": 125,
+      "enemyHp": 76,
+      "stamina": 56.66666666666664,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 771,
+      "gap": 1.3,
+      "radius": 2.66,
+      "hp": 125,
+      "enemyHp": 76,
+      "stamina": 58.666666666666636,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 775,
+      "gap": 1.47,
+      "radius": 2.52,
+      "hp": 125,
+      "enemyHp": 76,
+      "stamina": 61.33333333333329,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 779,
+      "gap": 1.64,
+      "radius": 2.38,
+      "hp": 125,
+      "enemyHp": 76,
+      "stamina": 63.333333333333286,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 783,
+      "gap": 1.81,
+      "radius": 2.25,
+      "hp": 125,
+      "enemyHp": 76,
+      "stamina": 66.66666666666663,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 787,
+      "gap": 1.98,
+      "radius": 2.13,
+      "hp": 125,
+      "enemyHp": 76,
+      "stamina": 69.33333333333331,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 791,
+      "gap": 1.98,
+      "radius": 2.13,
+      "hp": 125,
+      "enemyHp": 76,
+      "stamina": 72,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 795,
+      "gap": 1.98,
+      "radius": 2.13,
+      "hp": 125,
+      "enemyHp": 76,
+      "stamina": 74.00000000000001,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 798,
+      "gap": 1.85,
+      "radius": 2.22,
+      "hp": 125,
+      "enemyHp": 76,
+      "stamina": 76.00000000000003,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 802,
+      "gap": 1.68,
+      "radius": 2.35,
+      "hp": 125,
+      "enemyHp": 76,
+      "stamina": 79.33333333333339,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 806,
+      "gap": 1.51,
+      "radius": 2.49,
+      "hp": 125,
+      "enemyHp": 76,
+      "stamina": 82.00000000000007,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 810,
+      "gap": 1.34,
+      "radius": 2.62,
+      "hp": 125,
+      "enemyHp": 76,
+      "stamina": 84.00000000000009,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 814,
+      "gap": 1.17,
+      "radius": 2.77,
+      "hp": 125,
+      "enemyHp": 76,
+      "stamina": 87.33333333333344,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 818,
+      "gap": 1,
+      "radius": 2.91,
+      "hp": 125,
+      "enemyHp": 76,
+      "stamina": 90.00000000000013,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 821,
+      "gap": 1,
+      "radius": 2.91,
+      "hp": 125,
+      "enemyHp": 76,
+      "stamina": 70.00000000000013,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "riposte",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 825,
+      "gap": 0.92,
+      "radius": 2.98,
+      "hp": 125,
+      "enemyHp": 76,
+      "stamina": 70.00000000000013,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "riposte",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 829,
+      "gap": 0.85,
+      "radius": 3.04,
+      "hp": 125,
+      "enemyHp": 76,
+      "stamina": 70.00000000000013,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "riposte",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 831,
+      "gap": 1.05,
+      "radius": 3.04,
+      "hp": 125,
+      "enemyHp": 46,
+      "stamina": 70.00000000000013,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "riposte",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 834,
+      "gap": 1.05,
+      "radius": 3.04,
+      "hp": 125,
+      "enemyHp": 46,
+      "stamina": 70.00000000000013,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "riposte",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 838,
+      "gap": 1.05,
+      "radius": 3.04,
+      "hp": 125,
+      "enemyHp": 46,
+      "stamina": 70.00000000000013,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "riposte",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 842,
+      "gap": 1.05,
+      "radius": 3.04,
+      "hp": 125,
+      "enemyHp": 46,
+      "stamina": 70.00000000000013,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "riposte",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 846,
+      "gap": 1.05,
+      "radius": 3.04,
+      "hp": 125,
+      "enemyHp": 46,
+      "stamina": 70.00000000000013,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "riposte",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 849,
+      "gap": 1.05,
+      "radius": 3.04,
+      "hp": 125,
+      "enemyHp": 46,
+      "stamina": 70.00000000000013,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "riposte",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 853,
+      "gap": 1.05,
+      "radius": 3.04,
+      "hp": 125,
+      "enemyHp": 46,
+      "stamina": 70.00000000000013,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "riposte",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 857,
+      "gap": 1.05,
+      "radius": 3.04,
+      "hp": 125,
+      "enemyHp": 46,
+      "stamina": 70.00000000000013,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 861,
+      "gap": 1.22,
+      "radius": 2.89,
+      "hp": 125,
+      "enemyHp": 46,
+      "stamina": 70.00000000000013,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 865,
+      "gap": 1.39,
+      "radius": 2.75,
+      "hp": 125,
+      "enemyHp": 46,
+      "stamina": 71.33333333333347,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 869,
+      "gap": 1.62,
+      "radius": 2.61,
+      "hp": 125,
+      "enemyHp": 46,
+      "stamina": 74.00000000000016,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 873,
+      "gap": 1.87,
+      "radius": 2.47,
+      "hp": 125,
+      "enemyHp": 46,
+      "stamina": 76.00000000000017,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 876,
+      "gap": 2.02,
+      "radius": 2.37,
+      "hp": 125,
+      "enemyHp": 46,
+      "stamina": 78.00000000000018,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 880,
+      "gap": 2.19,
+      "radius": 2.24,
+      "hp": 125,
+      "enemyHp": 46,
+      "stamina": 81.33333333333354,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 884,
+      "gap": 2.19,
+      "radius": 2.24,
+      "hp": 125,
+      "enemyHp": 46,
+      "stamina": 84.00000000000023,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 888,
+      "gap": 2.19,
+      "radius": 2.24,
+      "hp": 125,
+      "enemyHp": 46,
+      "stamina": 86.00000000000024,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 892,
+      "gap": 2.19,
+      "radius": 2.24,
+      "hp": 125,
+      "enemyHp": 46,
+      "stamina": 89.3333333333336,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 896,
+      "gap": 2.02,
+      "radius": 2.36,
+      "hp": 125,
+      "enemyHp": 46,
+      "stamina": 92,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 899,
+      "gap": 1.89,
+      "radius": 2.46,
+      "hp": 125,
+      "enemyHp": 46,
+      "stamina": 92,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 903,
+      "gap": 1.72,
+      "radius": 2.58,
+      "hp": 125,
+      "enemyHp": 46,
+      "stamina": 92,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 907,
+      "gap": 1.55,
+      "radius": 2.72,
+      "hp": 125,
+      "enemyHp": 46,
+      "stamina": 92,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 911,
+      "gap": 1.38,
+      "radius": 2.85,
+      "hp": 125,
+      "enemyHp": 46,
+      "stamina": 92,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 915,
+      "gap": 1.21,
+      "radius": 2.98,
+      "hp": 125,
+      "enemyHp": 46,
+      "stamina": 92,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "guard"
+    },
+    {
+      "tick": 919,
+      "gap": 1.04,
+      "radius": 3.11,
+      "hp": 125,
+      "enemyHp": 46,
+      "stamina": 92,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 922,
+      "gap": 1.04,
+      "radius": 3.11,
+      "hp": 125,
+      "enemyHp": 46,
+      "stamina": 72,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 926,
+      "gap": 0.85,
+      "radius": 3.19,
+      "hp": 125,
+      "enemyHp": 46,
+      "stamina": 72,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 930,
+      "gap": 0.85,
+      "radius": 3.19,
+      "hp": 125,
+      "enemyHp": 46,
+      "stamina": 72,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 934,
+      "gap": 0.85,
+      "radius": 3.19,
+      "hp": 125,
+      "enemyHp": 46,
+      "stamina": 72,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 936,
+      "gap": 1,
+      "radius": 3.19,
+      "hp": 125,
+      "enemyHp": 29,
+      "stamina": 72,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 939,
+      "gap": 1,
+      "radius": 3.19,
+      "hp": 125,
+      "enemyHp": 29,
+      "stamina": 72,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 943,
+      "gap": 1,
+      "radius": 3.19,
+      "hp": 125,
+      "enemyHp": 29,
+      "stamina": 72,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 947,
+      "gap": 1,
+      "radius": 3.19,
+      "hp": 125,
+      "enemyHp": 29,
+      "stamina": 72,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 951,
+      "gap": 1,
+      "radius": 3.19,
+      "hp": 125,
+      "enemyHp": 29,
+      "stamina": 72,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 954,
+      "gap": 1,
+      "radius": 3.19,
+      "hp": 125,
+      "enemyHp": 29,
+      "stamina": 72,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 958,
+      "gap": 1,
+      "radius": 3.19,
+      "hp": 125,
+      "enemyHp": 29,
+      "stamina": 72,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "thrust",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 962,
+      "gap": 1,
+      "radius": 3.19,
+      "hp": 125,
+      "enemyHp": 29,
+      "stamina": 72,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 966,
+      "gap": 1.17,
+      "radius": 3.07,
+      "hp": 125,
+      "enemyHp": 29,
+      "stamina": 73.33333333333334,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 970,
+      "gap": 1.34,
+      "radius": 2.94,
+      "hp": 125,
+      "enemyHp": 29,
+      "stamina": 76.00000000000003,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 974,
+      "gap": 1.59,
+      "radius": 2.82,
+      "hp": 125,
+      "enemyHp": 29,
+      "stamina": 78.00000000000004,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 978,
+      "gap": 1.84,
+      "radius": 2.7,
+      "hp": 125,
+      "enemyHp": 29,
+      "stamina": 81.3333333333334,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 981,
+      "gap": 1.99,
+      "radius": 2.62,
+      "hp": 125,
+      "enemyHp": 29,
+      "stamina": 83.33333333333341,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 985,
+      "gap": 2.16,
+      "radius": 2.52,
+      "hp": 125,
+      "enemyHp": 29,
+      "stamina": 86.0000000000001,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 989,
+      "gap": 2.16,
+      "radius": 2.52,
+      "hp": 125,
+      "enemyHp": 29,
+      "stamina": 88.00000000000011,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 993,
+      "gap": 2.16,
+      "radius": 2.52,
+      "hp": 125,
+      "enemyHp": 29,
+      "stamina": 91.33333333333347,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 997,
+      "gap": 1.99,
+      "radius": 2.62,
+      "hp": 125,
+      "enemyHp": 29,
+      "stamina": 92,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1001,
+      "gap": 1.82,
+      "radius": 2.74,
+      "hp": 125,
+      "enemyHp": 29,
+      "stamina": 92,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1004,
+      "gap": 1.69,
+      "radius": 2.83,
+      "hp": 125,
+      "enemyHp": 29,
+      "stamina": 92,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1008,
+      "gap": 1.52,
+      "radius": 2.96,
+      "hp": 125,
+      "enemyHp": 29,
+      "stamina": 92,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1012,
+      "gap": 1.35,
+      "radius": 3.1,
+      "hp": 125,
+      "enemyHp": 29,
+      "stamina": 92,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1016,
+      "gap": 1.18,
+      "radius": 3.24,
+      "hp": 125,
+      "enemyHp": 29,
+      "stamina": 92,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1020,
+      "gap": 1.01,
+      "radius": 3.39,
+      "hp": 125,
+      "enemyHp": 29,
+      "stamina": 92,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "ready",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1024,
+      "gap": 0.99,
+      "radius": 3.39,
+      "hp": 125,
+      "enemyHp": 29,
+      "stamina": 67,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "light_right",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1027,
+      "gap": 0.85,
+      "radius": 3.44,
+      "hp": 125,
+      "enemyHp": 29,
+      "stamina": 67,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "light_right",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1031,
+      "gap": 0.85,
+      "radius": 3.44,
+      "hp": 125,
+      "enemyHp": 29,
+      "stamina": 67,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "light_right",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1035,
+      "gap": 0.85,
+      "radius": 3.44,
+      "hp": 125,
+      "enemyHp": 29,
+      "stamina": 67,
+      "maxStamina": 92,
+      "posture": 0,
+      "ownState": "light_right",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1038,
+      "gap": 1.15,
+      "radius": 3.16,
+      "hp": 120,
+      "enemyHp": 29,
+      "stamina": 52,
+      "maxStamina": 92,
+      "posture": 30,
+      "ownState": "hurt",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1040,
+      "gap": 1.15,
+      "radius": 3.16,
+      "hp": 120,
+      "enemyHp": 29,
+      "stamina": 52,
+      "maxStamina": 92,
+      "posture": 30,
+      "ownState": "hurt",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1044,
+      "gap": 1.15,
+      "radius": 3.16,
+      "hp": 120,
+      "enemyHp": 29,
+      "stamina": 52,
+      "maxStamina": 92,
+      "posture": 30,
+      "ownState": "hurt",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1048,
+      "gap": 1.15,
+      "radius": 3.16,
+      "hp": 120,
+      "enemyHp": 29,
+      "stamina": 52,
+      "maxStamina": 92,
+      "posture": 30,
+      "ownState": "hurt",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1051,
+      "gap": 1.15,
+      "radius": 3.16,
+      "hp": 120,
+      "enemyHp": 29,
+      "stamina": 52,
+      "maxStamina": 92,
+      "posture": 30,
+      "ownState": "hurt",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1055,
+      "gap": 1.15,
+      "radius": 3.16,
+      "hp": 120,
+      "enemyHp": 29,
+      "stamina": 52,
+      "maxStamina": 92,
+      "posture": 30,
+      "ownState": "hurt",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1059,
+      "gap": 1.15,
+      "radius": 3.16,
+      "hp": 120,
+      "enemyHp": 29,
+      "stamina": 52,
+      "maxStamina": 92,
+      "posture": 30,
+      "ownState": "hurt",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1063,
+      "gap": 1.15,
+      "radius": 3.16,
+      "hp": 120,
+      "enemyHp": 29,
+      "stamina": 52,
+      "maxStamina": 92,
+      "posture": 30,
+      "ownState": "hurt",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1067,
+      "gap": 1.23,
+      "radius": 3.16,
+      "hp": 120,
+      "enemyHp": 29,
+      "stamina": 52,
+      "maxStamina": 92,
+      "posture": 30,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1071,
+      "gap": 1.48,
+      "radius": 3.01,
+      "hp": 120,
+      "enemyHp": 29,
+      "stamina": 52,
+      "maxStamina": 92,
+      "posture": 30,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1074,
+      "gap": 1.67,
+      "radius": 2.9,
+      "hp": 120,
+      "enemyHp": 29,
+      "stamina": 52,
+      "maxStamina": 92,
+      "posture": 30,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1078,
+      "gap": 1.92,
+      "radius": 2.75,
+      "hp": 120,
+      "enemyHp": 29,
+      "stamina": 52,
+      "maxStamina": 92,
+      "posture": 30,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1082,
+      "gap": 2.09,
+      "radius": 2.6,
+      "hp": 120,
+      "enemyHp": 29,
+      "stamina": 52,
+      "maxStamina": 92,
+      "posture": 30,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1086,
+      "gap": 2.26,
+      "radius": 2.45,
+      "hp": 120,
+      "enemyHp": 29,
+      "stamina": 54.66666666666666,
+      "maxStamina": 92,
+      "posture": 29.400000000000002,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1090,
+      "gap": 2.26,
+      "radius": 2.45,
+      "hp": 120,
+      "enemyHp": 29,
+      "stamina": 57.333333333333314,
+      "maxStamina": 92,
+      "posture": 28.600000000000005,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1094,
+      "gap": 2.2,
+      "radius": 2.45,
+      "hp": 120,
+      "enemyHp": 29,
+      "stamina": 59.99999999999997,
+      "maxStamina": 92,
+      "posture": 27.800000000000008,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1098,
+      "gap": 1.94,
+      "radius": 2.6,
+      "hp": 120,
+      "enemyHp": 29,
+      "stamina": 62.66666666666663,
+      "maxStamina": 92,
+      "posture": 27.00000000000001,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1101,
+      "gap": 1.81,
+      "radius": 2.71,
+      "hp": 120,
+      "enemyHp": 29,
+      "stamina": 64.66666666666663,
+      "maxStamina": 92,
+      "posture": 26.400000000000013,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1105,
+      "gap": 1.64,
+      "radius": 2.87,
+      "hp": 120,
+      "enemyHp": 29,
+      "stamina": 67.33333333333331,
+      "maxStamina": 92,
+      "posture": 25.600000000000016,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1109,
+      "gap": 1.47,
+      "radius": 3.03,
+      "hp": 120,
+      "enemyHp": 29,
+      "stamina": 70,
+      "maxStamina": 92,
+      "posture": 24.80000000000002,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1113,
+      "gap": 1.3,
+      "radius": 3.18,
+      "hp": 120,
+      "enemyHp": 29,
+      "stamina": 72.00000000000001,
+      "maxStamina": 92,
+      "posture": 24.20000000000002,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1117,
+      "gap": 1.13,
+      "radius": 3.35,
+      "hp": 120,
+      "enemyHp": 29,
+      "stamina": 75.33333333333337,
+      "maxStamina": 92,
+      "posture": 23.200000000000024,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1121,
+      "gap": 0.96,
+      "radius": 3.51,
+      "hp": 120,
+      "enemyHp": 29,
+      "stamina": 78.00000000000006,
+      "maxStamina": 92,
+      "posture": 22.400000000000027,
+      "ownState": "ready",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1124,
+      "gap": 0.91,
+      "radius": 3.51,
+      "hp": 120,
+      "enemyHp": 29,
+      "stamina": 58.00000000000006,
+      "maxStamina": 92,
+      "posture": 21.80000000000003,
+      "ownState": "thrust",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1128,
+      "gap": 0.85,
+      "radius": 3.52,
+      "hp": 120,
+      "enemyHp": 29,
+      "stamina": 58.00000000000006,
+      "maxStamina": 92,
+      "posture": 21.80000000000003,
+      "ownState": "thrust",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1132,
+      "gap": 0.85,
+      "radius": 3.52,
+      "hp": 120,
+      "enemyHp": 29,
+      "stamina": 58.00000000000006,
+      "maxStamina": 92,
+      "posture": 20.400000000000034,
+      "ownState": "thrust",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1136,
+      "gap": 0.85,
+      "radius": 3.52,
+      "hp": 120,
+      "enemyHp": 29,
+      "stamina": 58.00000000000006,
+      "maxStamina": 92,
+      "posture": 19.800000000000036,
+      "ownState": "thrust",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1137,
+      "gap": 1.15,
+      "radius": 3.23,
+      "hp": 115,
+      "enemyHp": 29,
+      "stamina": 43.00000000000006,
+      "maxStamina": 92,
+      "posture": 49.20000000000004,
+      "ownState": "hurt",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1141,
+      "gap": 1.15,
+      "radius": 3.23,
+      "hp": 115,
+      "enemyHp": 29,
+      "stamina": 43.00000000000006,
+      "maxStamina": 92,
+      "posture": 49.20000000000004,
+      "ownState": "hurt",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1145,
+      "gap": 1.15,
+      "radius": 3.23,
+      "hp": 115,
+      "enemyHp": 29,
+      "stamina": 43.00000000000006,
+      "maxStamina": 92,
+      "posture": 49.20000000000004,
+      "ownState": "hurt",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1149,
+      "gap": 1.15,
+      "radius": 3.23,
+      "hp": 115,
+      "enemyHp": 29,
+      "stamina": 43.00000000000006,
+      "maxStamina": 92,
+      "posture": 49.20000000000004,
+      "ownState": "hurt",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1152,
+      "gap": 1.15,
+      "radius": 3.23,
+      "hp": 115,
+      "enemyHp": 29,
+      "stamina": 43.00000000000006,
+      "maxStamina": 92,
+      "posture": 49.20000000000004,
+      "ownState": "hurt",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1156,
+      "gap": 1.15,
+      "radius": 3.23,
+      "hp": 115,
+      "enemyHp": 29,
+      "stamina": 43.00000000000006,
+      "maxStamina": 92,
+      "posture": 49.20000000000004,
+      "ownState": "hurt",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1160,
+      "gap": 1.15,
+      "radius": 3.23,
+      "hp": 115,
+      "enemyHp": 29,
+      "stamina": 43.00000000000006,
+      "maxStamina": 92,
+      "posture": 49.20000000000004,
+      "ownState": "hurt",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1164,
+      "gap": 1.19,
+      "radius": 3.23,
+      "hp": 115,
+      "enemyHp": 29,
+      "stamina": 43.00000000000006,
+      "maxStamina": 92,
+      "posture": 49.20000000000004,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1168,
+      "gap": 1.44,
+      "radius": 3.07,
+      "hp": 115,
+      "enemyHp": 29,
+      "stamina": 43.00000000000006,
+      "maxStamina": 92,
+      "posture": 49.20000000000004,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1172,
+      "gap": 1.69,
+      "radius": 2.92,
+      "hp": 115,
+      "enemyHp": 29,
+      "stamina": 43.00000000000006,
+      "maxStamina": 92,
+      "posture": 49.20000000000004,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1175,
+      "gap": 1.88,
+      "radius": 2.8,
+      "hp": 115,
+      "enemyHp": 29,
+      "stamina": 43.00000000000006,
+      "maxStamina": 92,
+      "posture": 49.20000000000004,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1179,
+      "gap": 2.07,
+      "radius": 2.65,
+      "hp": 115,
+      "enemyHp": 29,
+      "stamina": 43.00000000000006,
+      "maxStamina": 92,
+      "posture": 49.20000000000004,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1183,
+      "gap": 2.21,
+      "radius": 2.5,
+      "hp": 115,
+      "enemyHp": 29,
+      "stamina": 44.333333333333385,
+      "maxStamina": 92,
+      "posture": 49.000000000000036,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1187,
+      "gap": 2.09,
+      "radius": 2.5,
+      "hp": 115,
+      "enemyHp": 29,
+      "stamina": 47.00000000000004,
+      "maxStamina": 92,
+      "posture": 48.200000000000024,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1191,
+      "gap": 2,
+      "radius": 2.5,
+      "hp": 115,
+      "enemyHp": 29,
+      "stamina": 49.000000000000036,
+      "maxStamina": 92,
+      "posture": 47.600000000000016,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1195,
+      "gap": 2,
+      "radius": 2.5,
+      "hp": 115,
+      "enemyHp": 29,
+      "stamina": 52.33333333333336,
+      "maxStamina": 92,
+      "posture": 46.6,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1198,
+      "gap": 1.87,
+      "radius": 2.61,
+      "hp": 115,
+      "enemyHp": 29,
+      "stamina": 54.33333333333335,
+      "maxStamina": 92,
+      "posture": 45.99999999999999,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1202,
+      "gap": 1.7,
+      "radius": 2.77,
+      "hp": 115,
+      "enemyHp": 29,
+      "stamina": 57.00000000000001,
+      "maxStamina": 92,
+      "posture": 45.19999999999998,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1206,
+      "gap": 1.53,
+      "radius": 2.92,
+      "hp": 115,
+      "enemyHp": 29,
+      "stamina": 59,
+      "maxStamina": 92,
+      "posture": 44.59999999999997,
+      "ownState": "ready",
+      "enemyState": "guard"
+    },
+    {
+      "tick": 1210,
+      "gap": 1.36,
+      "radius": 3.08,
+      "hp": 115,
+      "enemyHp": 29,
+      "stamina": 62.33333333333332,
+      "maxStamina": 92,
+      "posture": 43.59999999999996,
+      "ownState": "ready",
+      "enemyState": "guard"
+    },
+    {
+      "tick": 1214,
+      "gap": 1.19,
+      "radius": 3.25,
+      "hp": 115,
+      "enemyHp": 29,
+      "stamina": 64.33333333333331,
+      "maxStamina": 92,
+      "posture": 42.99999999999995,
+      "ownState": "ready",
+      "enemyState": "guard"
+    },
+    {
+      "tick": 1218,
+      "gap": 1.02,
+      "radius": 3.41,
+      "hp": 115,
+      "enemyHp": 29,
+      "stamina": 67.66666666666667,
+      "maxStamina": 92,
+      "posture": 41.999999999999936,
+      "ownState": "ready",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1221,
+      "gap": 1.02,
+      "radius": 3.41,
+      "hp": 115,
+      "enemyHp": 29,
+      "stamina": 47.66666666666667,
+      "maxStamina": 92,
+      "posture": 41.79999999999993,
+      "ownState": "thrust",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1225,
+      "gap": 0.85,
+      "radius": 3.49,
+      "hp": 115,
+      "enemyHp": 29,
+      "stamina": 47.66666666666667,
+      "maxStamina": 92,
+      "posture": 40.99999999999992,
+      "ownState": "thrust",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1229,
+      "gap": 0.85,
+      "radius": 3.49,
+      "hp": 115,
+      "enemyHp": 29,
+      "stamina": 47.66666666666667,
+      "maxStamina": 92,
+      "posture": 39.99999999999991,
+      "ownState": "thrust",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1233,
+      "gap": 0.85,
+      "radius": 3.49,
+      "hp": 115,
+      "enemyHp": 29,
+      "stamina": 47.66666666666667,
+      "maxStamina": 92,
+      "posture": 38.99999999999989,
+      "ownState": "thrust",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1235,
+      "gap": 1,
+      "radius": 3.49,
+      "hp": 115,
+      "enemyHp": 12,
+      "stamina": 47.66666666666667,
+      "maxStamina": 92,
+      "posture": 38.59999999999989,
+      "ownState": "thrust",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 1238,
+      "gap": 1,
+      "radius": 3.49,
+      "hp": 115,
+      "enemyHp": 12,
+      "stamina": 47.66666666666667,
+      "maxStamina": 92,
+      "posture": 37.99999999999988,
+      "ownState": "thrust",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 1242,
+      "gap": 1,
+      "radius": 3.49,
+      "hp": 115,
+      "enemyHp": 12,
+      "stamina": 47.66666666666667,
+      "maxStamina": 92,
+      "posture": 37.99999999999988,
+      "ownState": "thrust",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 1246,
+      "gap": 1,
+      "radius": 3.49,
+      "hp": 115,
+      "enemyHp": 12,
+      "stamina": 47.66666666666667,
+      "maxStamina": 92,
+      "posture": 36.999999999999865,
+      "ownState": "thrust",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 1250,
+      "gap": 1,
+      "radius": 3.49,
+      "hp": 115,
+      "enemyHp": 12,
+      "stamina": 47.66666666666667,
+      "maxStamina": 92,
+      "posture": 35.99999999999985,
+      "ownState": "thrust",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 1253,
+      "gap": 1,
+      "radius": 3.49,
+      "hp": 115,
+      "enemyHp": 12,
+      "stamina": 47.66666666666667,
+      "maxStamina": 92,
+      "posture": 34.99999999999984,
+      "ownState": "thrust",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 1257,
+      "gap": 1,
+      "radius": 3.49,
+      "hp": 115,
+      "enemyHp": 12,
+      "stamina": 47.66666666666667,
+      "maxStamina": 92,
+      "posture": 34.99999999999984,
+      "ownState": "thrust",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 1261,
+      "gap": 1,
+      "radius": 3.49,
+      "hp": 115,
+      "enemyHp": 12,
+      "stamina": 47.66666666666667,
+      "maxStamina": 92,
+      "posture": 33.399999999999814,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 1265,
+      "gap": 1.17,
+      "radius": 3.33,
+      "hp": 115,
+      "enemyHp": 12,
+      "stamina": 49,
+      "maxStamina": 92,
+      "posture": 32.5999999999998,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 1269,
+      "gap": 1.34,
+      "radius": 3.17,
+      "hp": 115,
+      "enemyHp": 12,
+      "stamina": 51.66666666666666,
+      "maxStamina": 92,
+      "posture": 31.799999999999798,
+      "ownState": "ready",
+      "enemyState": "hurt"
+    },
+    {
+      "tick": 1273,
+      "gap": 1.59,
+      "radius": 3.02,
+      "hp": 115,
+      "enemyHp": 12,
+      "stamina": 54.333333333333314,
+      "maxStamina": 92,
+      "posture": 30.9999999999998,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1277,
+      "gap": 1.84,
+      "radius": 2.86,
+      "hp": 115,
+      "enemyHp": 12,
+      "stamina": 56.33333333333331,
+      "maxStamina": 92,
+      "posture": 30.399999999999803,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1280,
+      "gap": 1.99,
+      "radius": 2.74,
+      "hp": 115,
+      "enemyHp": 12,
+      "stamina": 58.3333333333333,
+      "maxStamina": 92,
+      "posture": 29.799999999999805,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1284,
+      "gap": 2.16,
+      "radius": 2.58,
+      "hp": 115,
+      "enemyHp": 12,
+      "stamina": 61.66666666666662,
+      "maxStamina": 92,
+      "posture": 28.79999999999981,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1288,
+      "gap": 2.1,
+      "radius": 2.58,
+      "hp": 115,
+      "enemyHp": 12,
+      "stamina": 64.33333333333329,
+      "maxStamina": 92,
+      "posture": 27.99999999999981,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1292,
+      "gap": 1.98,
+      "radius": 2.58,
+      "hp": 115,
+      "enemyHp": 12,
+      "stamina": 66.3333333333333,
+      "maxStamina": 92,
+      "posture": 27.399999999999814,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1296,
+      "gap": 1.81,
+      "radius": 2.74,
+      "hp": 115,
+      "enemyHp": 12,
+      "stamina": 69.66666666666666,
+      "maxStamina": 92,
+      "posture": 26.399999999999817,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1300,
+      "gap": 1.64,
+      "radius": 2.9,
+      "hp": 115,
+      "enemyHp": 12,
+      "stamina": 72.33333333333334,
+      "maxStamina": 92,
+      "posture": 25.59999999999982,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1303,
+      "gap": 1.51,
+      "radius": 3.02,
+      "hp": 115,
+      "enemyHp": 12,
+      "stamina": 74.33333333333336,
+      "maxStamina": 92,
+      "posture": 24.999999999999822,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1307,
+      "gap": 1.34,
+      "radius": 3.17,
+      "hp": 115,
+      "enemyHp": 12,
+      "stamina": 77.00000000000004,
+      "maxStamina": 92,
+      "posture": 24.199999999999825,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1311,
+      "gap": 1.17,
+      "radius": 3.33,
+      "hp": 115,
+      "enemyHp": 12,
+      "stamina": 79.66666666666673,
+      "maxStamina": 92,
+      "posture": 23.399999999999828,
+      "ownState": "ready",
+      "enemyState": "ready"
+    },
+    {
+      "tick": 1315,
+      "gap": 1,
+      "radius": 3.49,
+      "hp": 115,
+      "enemyHp": 12,
+      "stamina": 82.33333333333341,
+      "maxStamina": 92,
+      "posture": 22.59999999999983,
+      "ownState": "ready",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1319,
+      "gap": 0.95,
+      "radius": 3.49,
+      "hp": 115,
+      "enemyHp": 12,
+      "stamina": 62.333333333333414,
+      "maxStamina": 92,
+      "posture": 21.999999999999833,
+      "ownState": "thrust",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1323,
+      "gap": 0.85,
+      "radius": 3.55,
+      "hp": 115,
+      "enemyHp": 12,
+      "stamina": 62.333333333333414,
+      "maxStamina": 92,
+      "posture": 20.999999999999837,
+      "ownState": "thrust",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1326,
+      "gap": 0.85,
+      "radius": 3.55,
+      "hp": 115,
+      "enemyHp": 12,
+      "stamina": 62.333333333333414,
+      "maxStamina": 92,
+      "posture": 20.39999999999984,
+      "ownState": "thrust",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1330,
+      "gap": 0.85,
+      "radius": 3.55,
+      "hp": 115,
+      "enemyHp": 12,
+      "stamina": 62.333333333333414,
+      "maxStamina": 92,
+      "posture": 19.99999999999984,
+      "ownState": "thrust",
+      "enemyState": "kick"
+    },
+    {
+      "tick": 1332,
+      "gap": 1.3,
+      "radius": 3.27,
+      "hp": 110,
+      "enemyHp": 0,
+      "stamina": 47.333333333333414,
+      "maxStamina": 92,
+      "posture": 49.19999999999985,
+      "ownState": "hurt",
+      "enemyState": "dead"
+    }
+  ],
+  "errors": [],
+  "playerProfile": {
+    "name": "intermediate",
+    "seed": 2026100507,
+    "reactionMs": 240,
+    "settings": {
+      "reactionMs": 280,
+      "jitterMs": 40,
+      "gapBias": -0.1,
+      "staminaBias": 5,
+      "wrongGuard": 0.08,
+      "missedCounter": 0.2,
+      "slashPreference": 0.2
+    },
+    "interventions": {
+      "optimistic range/stamina judgement": 13,
+      "prefers simple slash": 2
+    },
+    "model": "seeded synthetic persona; not a validated human skill distribution",
+    "mistakesUse": "already-limited observations; no future state; each credited intervention is a unique decision situation"
+  },
+  "geometry": {
+    "arenaRadius": 8.55,
+    "wallRadius": 7.15
+  },
+  "renderer": {
+    "name": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+    "canvas": [
+      390,
+      844
+    ],
+    "dpr": 1
+  },
+  "openingScreenshot": "artifacts/combat/live-retest-20261006/browser-intermediate/executioner-2026100507-opening.png",
+  "videoGeometry": {
+    "initial": {
+      "layout": [
+        390,
+        844
+      ],
+      "canvas": [
+        0,
+        0,
+        390,
+        844
+      ]
+    },
+    "checks": 21,
+    "changes": [],
+    "suitableForReview": true
+  },
+  "endTick": 1332,
+  "finalHealth": {
+    "player": 110,
+    "opponent": 0
+  },
+  "finishScreenshot": "artifacts/combat/live-retest-20261006/browser-intermediate/executioner-2026100507-finish.png",
+  "outcome": "win",
+  "durationSeconds": 22.2,
+  "damageSources": {
+    "player": {
+      "hits": 165,
+      "guardBreaks": 0,
+      "blockedChip": 0,
+      "specials": 0,
+      "total": 165
+    },
+    "opponent": {
+      "hits": 40,
+      "guardBreaks": 0,
+      "blockedChip": 0,
+      "specials": 0,
+      "total": 40
+    },
+    "arena": {
+      "toPlayer": 0,
+      "toOpponent": 0
+    }
+  },
+  "damageDealt": 165,
+  "damageTaken": 40,
+  "wallWhips": 0,
+  "thrustStarts": 9,
+  "thrustHits": 7,
+  "thrustDamage": 107,
+  "emptySwings": 0,
+  "attacksByMove": {
+    "thrust": {
+      "starts": 9,
+      "hits": 7,
+      "hitDamage": 107,
+      "guardBreakDamage": 0
+    },
+    "light_right": {
+      "starts": 3,
+      "hits": 2,
+      "hitDamage": 28,
+      "guardBreakDamage": 0
+    },
+    "riposte": {
+      "starts": 1,
+      "hits": 1,
+      "hitDamage": 30,
+      "guardBreakDamage": 0
+    }
+  },
+  "attackMix": {
+    "attacks": 13,
+    "heavies": 0,
+    "heavyPercent": 0,
+    "passed": true
+  },
+  "defenceExchanges": [
+    {
+      "tell": {
+        "tick": 144,
+        "move": "heavy_overhead",
+        "direction": "overhead"
+      },
+      "choice": {
+        "tick": 170,
+        "intent": "guard the observed attack",
+        "keys": [
+          "KeyQ",
+          "ArrowUp"
+        ],
+        "press": null
+      },
+      "result": {
+        "tick": 180,
+        "type": "Parried",
+        "damageTaken": 0,
+        "demonstratedAvoidance": false
+      },
+      "nextUsefulHit": {
+        "tick": 295,
+        "move": "light_right",
+        "damage": 14,
+        "secondsLater": 1.92,
+        "beforeNextEnemyHit": true,
+        "beforeNextEnemyAttack": true
+      },
+      "spacing": {
+        "before": {
+          "tick": 100,
+          "gap": 2.29,
+          "radius": 1.35
+        },
+        "after": {
+          "tick": 224,
+          "gap": 3.15,
+          "radius": 3.0304125131737427
+        }
+      }
+    },
+    {
+      "tell": {
+        "tick": 440,
+        "move": "heavy_counter",
+        "direction": "overhead"
+      },
+      "choice": null,
+      "result": {
+        "tick": 461,
+        "type": "Hit",
+        "damageTaken": 25,
+        "demonstratedAvoidance": false
+      },
+      "nextUsefulHit": {
+        "tick": 528,
+        "move": "light_right",
+        "damage": 14,
+        "secondsLater": 1.12,
+        "beforeNextEnemyHit": true,
+        "beforeNextEnemyAttack": true
+      },
+      "spacing": {
+        "before": {
+          "tick": 410,
+          "gap": 1.31,
+          "radius": 0.9000555538409837
+        },
+        "after": {
+          "tick": 472,
+          "gap": 1.05,
+          "radius": 0.9895453501482385
+        }
+      }
+    },
+    {
+      "tell": {
+        "tick": 625,
+        "move": "kick"
+      },
+      "choice": null,
+      "result": {
+        "tick": 633,
+        "type": "Interrupted",
+        "damageTaken": 0,
+        "demonstratedAvoidance": false
+      },
+      "nextUsefulHit": {
+        "tick": 633,
+        "move": "thrust",
+        "damage": 17,
+        "secondsLater": 0,
+        "beforeNextEnemyHit": true,
+        "beforeNextEnemyAttack": true
+      },
+      "spacing": {
+        "before": {
+          "tick": 596,
+          "gap": 1.91,
+          "radius": 1.4101418368376988
+        },
+        "after": {
+          "tick": 659,
+          "gap": 1,
+          "radius": 2.5560125195311545
+        }
+      }
+    },
+    {
+      "tell": {
+        "tick": 721,
+        "move": "kick"
+      },
+      "choice": null,
+      "result": {
+        "tick": 738,
+        "type": "Interrupted",
+        "damageTaken": 0,
+        "demonstratedAvoidance": false
+      },
+      "nextUsefulHit": {
+        "tick": 738,
+        "move": "thrust",
+        "damage": 17,
+        "secondsLater": 0,
+        "beforeNextEnemyHit": true,
+        "beforeNextEnemyAttack": true
+      },
+      "spacing": {
+        "before": {
+          "tick": 721,
+          "gap": 1.04,
+          "radius": 2.8164161624305453
+        },
+        "after": {
+          "tick": 783,
+          "gap": 1.81,
+          "radius": 2.253042387528472
+        }
+      }
+    },
+    {
+      "tell": {
+        "tick": 829,
+        "move": "kick"
+      },
+      "choice": null,
+      "result": {
+        "tick": 831,
+        "type": "Interrupted",
+        "damageTaken": 0,
+        "demonstratedAvoidance": false
+      },
+      "nextUsefulHit": {
+        "tick": 831,
+        "move": "riposte",
+        "damage": 30,
+        "secondsLater": 0,
+        "beforeNextEnemyHit": true,
+        "beforeNextEnemyAttack": true
+      },
+      "spacing": {
+        "before": {
+          "tick": 783,
+          "gap": 1.81,
+          "radius": 2.253042387528472
+        },
+        "after": {
+          "tick": 846,
+          "gap": 1.05,
+          "radius": 3.040164469235176
+        }
+      }
+    },
+    {
+      "tell": {
+        "tick": 919,
+        "move": "kick"
+      },
+      "choice": null,
+      "result": {
+        "tick": 936,
+        "type": "Interrupted",
+        "damageTaken": 0,
+        "demonstratedAvoidance": false
+      },
+      "nextUsefulHit": {
+        "tick": 936,
+        "move": "thrust",
+        "damage": 17,
+        "secondsLater": 0,
+        "beforeNextEnemyHit": true,
+        "beforeNextEnemyAttack": true
+      },
+      "spacing": {
+        "before": {
+          "tick": 907,
+          "gap": 1.55,
+          "radius": 2.716799587750263
+        },
+        "after": {
+          "tick": 970,
+          "gap": 1.34,
+          "radius": 2.935370504723381
+        }
+      }
+    },
+    {
+      "tell": {
+        "tick": 1020,
+        "move": "kick"
+      },
+      "choice": null,
+      "result": {
+        "tick": 1038,
+        "type": "Hit",
+        "damageTaken": 5,
+        "demonstratedAvoidance": false
+      },
+      "nextUsefulHit": {
+        "tick": 1235,
+        "move": "thrust",
+        "damage": 17,
+        "secondsLater": 3.28,
+        "beforeNextEnemyHit": false,
+        "beforeNextEnemyAttack": false
+      },
+      "spacing": {
+        "before": {
+          "tick": 970,
+          "gap": 1.34,
+          "radius": 2.935370504723381
+        },
+        "after": {
+          "tick": 1094,
+          "gap": 2.2,
+          "radius": 2.454587541726715
+        }
+      }
+    },
+    {
+      "tell": {
+        "tick": 1119,
+        "move": "kick"
+      },
+      "choice": null,
+      "result": {
+        "tick": 1137,
+        "type": "Hit",
+        "damageTaken": 5,
+        "demonstratedAvoidance": false
+      },
+      "nextUsefulHit": {
+        "tick": 1235,
+        "move": "thrust",
+        "damage": 17,
+        "secondsLater": 1.63,
+        "beforeNextEnemyHit": true,
+        "beforeNextEnemyAttack": false
+      },
+      "spacing": {
+        "before": {
+          "tick": 1094,
+          "gap": 2.2,
+          "radius": 2.454587541726715
+        },
+        "after": {
+          "tick": 1156,
+          "gap": 1.15,
+          "radius": 3.233403779301311
+        }
+      }
+    },
+    {
+      "tell": {
+        "tick": 1218,
+        "move": "kick"
+      },
+      "choice": null,
+      "result": {
+        "tick": 1235,
+        "type": "Interrupted",
+        "damageTaken": 0,
+        "demonstratedAvoidance": false
+      },
+      "nextUsefulHit": {
+        "tick": 1235,
+        "move": "thrust",
+        "damage": 17,
+        "secondsLater": 0,
+        "beforeNextEnemyHit": true,
+        "beforeNextEnemyAttack": true
+      },
+      "spacing": {
+        "before": {
+          "tick": 1218,
+          "gap": 1.02,
+          "radius": 3.40812265037513
+        },
+        "after": {
+          "tick": 1280,
+          "gap": 1.99,
+          "radius": 2.7389231460557633
+        }
+      }
+    },
+    {
+      "tell": {
+        "tick": 1314,
+        "move": "kick"
+      },
+      "choice": null,
+      "result": {
+        "tick": 1332,
+        "type": "Hit",
+        "damageTaken": 5,
+        "demonstratedAvoidance": false
+      },
+      "nextUsefulHit": null,
+      "spacing": {
+        "before": {
+          "tick": 1280,
+          "gap": 1.99,
+          "radius": 2.7389231460557633
+        },
+        "after": {
+          "tick": 1332,
+          "gap": 1.99,
+          "radius": 2.7389231460557633
+        }
+      }
+    }
+  ],
+  "defensiveChoices": {
+    "roll": 1,
+    "backstep": 0,
+    "guard": 0,
+    "parry": 1,
+    "feint": 0
+  },
+  "secondsNearWall": 0,
+  "longestNoContactSeconds": 2.38,
+  "secondsWithoutContact": 0,
+  "initiativeAfterDefence": {
+    "kept": 1,
+    "chances": 1
+  },
+  "blocks": 0,
+  "parries": 1,
+  "counterStarts": 0,
+  "counterHits": 0,
+  "exhaustions": 0,
+  "aftermathEvents": [],
+  "defences": [
+    {
+      "tick": 180,
+      "type": "parry",
+      "attackTick": 144,
+      "resolutionTick": 180,
+      "against": "heavy_overhead",
+      "charged": false,
+      "result": "parried",
+      "avoided": 22,
+      "windowOpened": true,
+      "windowUsed": false,
+      "answer": null,
+      "counterMove": false,
+      "landed": false,
+      "distance": 1,
+      "wall": 1.6,
+      "avoidanceCredited": true,
+      "windowCredited": true
+    },
+    {
+      "tick": 190,
+      "type": "roll",
+      "attackTick": null,
+      "resolutionTick": null,
+      "against": null,
+      "charged": false,
+      "result": "no attack in flight",
+      "avoided": 0,
+      "windowOpened": false,
+      "windowUsed": false,
+      "answer": null,
+      "counterMove": false,
+      "landed": false,
+      "distance": 1.97,
+      "wall": 2.64
+    }
+  ],
+  "defenceSummary": {
+    "block": {
+      "count": 0,
+      "underThreat": 0,
+      "avoided": 0,
+      "hitAnyway": 0,
+      "windowsOpened": 0,
+      "windowsUsed": 0,
+      "landed": 0,
+      "distance": null,
+      "wall": null
+    },
+    "perfect block": {
+      "count": 0,
+      "underThreat": 0,
+      "avoided": 0,
+      "hitAnyway": 0,
+      "windowsOpened": 0,
+      "windowsUsed": 0,
+      "landed": 0,
+      "distance": null,
+      "wall": null
+    },
+    "parry": {
+      "count": 1,
+      "underThreat": 1,
+      "avoided": 22,
+      "hitAnyway": 0,
+      "windowsOpened": 1,
+      "windowsUsed": 0,
+      "landed": 0,
+      "distance": 1,
+      "wall": 1.6
+    },
+    "roll": {
+      "count": 1,
+      "underThreat": 0,
+      "avoided": 0,
+      "hitAnyway": 0,
+      "windowsOpened": 0,
+      "windowsUsed": 0,
+      "landed": 0,
+      "distance": 1.97,
+      "wall": 2.64
+    },
+    "backstep": {
+      "count": 0,
+      "underThreat": 0,
+      "avoided": 0,
+      "hitAnyway": 0,
+      "windowsOpened": 0,
+      "windowsUsed": 0,
+      "landed": 0,
+      "distance": null,
+      "wall": null
+    }
+  },
+  "learning": {
+    "schemaVersion": 1,
+    "reviewRubric": [
+      {
+        "dimension": "animation / contact",
+        "questions": "Anticipation, blade/body contact, weight, foot sliding, recovery and transition continuity",
+        "status": "unreviewed",
+        "finding": null
+      },
+      {
+        "dimension": "direction / counterplay",
+        "questions": "Can a clean pre-contact clip identify attack direction, charge, threat and available defensive answers?",
+        "status": "unreviewed",
+        "finding": null
+      },
+      {
+        "dimension": "impact / confirmation",
+        "questions": "Distinct hit, miss, block, parry and stagger; hit-stop and shake sell force without concealing the next decision",
+        "status": "unreviewed",
+        "finding": null
+      },
+      {
+        "dimension": "camera / framing",
+        "questions": "Horizon stability, roll disorientation/reacquisition, clipping, body overlap, weapon visibility and boundary awareness",
+        "status": "unreviewed",
+        "finding": null
+      },
+      {
+        "dimension": "VFX / art coherence",
+        "questions": "Blood origin/scale/duration, sparks, trails, repetition, clutter, contrast and gritty style",
+        "status": "unreviewed",
+        "finding": null
+      },
+      {
+        "dimension": "spacing / movement",
+        "questions": "Reach vs visible contact, whiff feedback, footwork, evade destination and re-entry",
+        "status": "unreviewed",
+        "finding": null
+      },
+      {
+        "dimension": "tempo / commitment",
+        "questions": "Start/contact/recovery timing, meaningful punish opportunities, interruption and readable pressure escape",
+        "status": "unreviewed",
+        "finding": null
+      },
+      {
+        "dimension": "resources / fairness",
+        "questions": "Stamina/posture costs, guard-break explanation, recovery opportunity and useful choices across synthetic profiles",
+        "status": "unreviewed",
+        "finding": null
+      },
+      {
+        "dimension": "input / performance",
+        "questions": "Accepted action latency, held/released controls and capture continuity; real input-to-photon/touch comfort remains untested",
+        "status": "unreviewed",
+        "finding": null
+      },
+      {
+        "dimension": "audio / accessibility",
+        "questions": "Unassessed in silent capture: sound layering, cue recognition, reduced-shake/motion comfort and physical device usability",
+        "status": "unreviewed",
+        "finding": null
+      }
+    ],
+    "attacks": [
+      {
+        "tick": 127,
+        "move": "thrust",
+        "choiceTick": 126,
+        "perceivedGap": 1.5,
+        "perceivedUpper": 1.75,
+        "actualGapAtChoice": 0.87,
+        "judgement": {
+          "gap": 1.4,
+          "gapUpper": 1.65,
+          "stamina": 100
+        },
+        "atStart": {
+          "tick": 126,
+          "gap": 0.87,
+          "radius": 0.05,
+          "hp": 150,
+          "enemyHp": 160,
+          "stamina": 100,
+          "maxStamina": 100,
+          "posture": 0,
+          "ownState": "ready",
+          "enemyState": "ready",
+          "sampleAgeTicks": 1
+        },
+        "atContact": {
+          "tick": 143,
+          "gap": 0.89,
+          "radius": 0.05,
+          "hp": 150,
+          "enemyHp": 149,
+          "stamina": 80,
+          "maxStamina": 100,
+          "posture": 0,
+          "ownState": "thrust",
+          "enemyState": "ready",
+          "sampleAgeTicks": 0
+        },
+        "authoredReach": 2,
+        "result": "Hit",
+        "contactTick": 143,
+        "note": "Sampled spacing is diagnostic; facing, minimum reach, movement and interruption also affect contact."
+      },
+      {
+        "tick": 275,
+        "move": "light_right",
+        "choiceTick": 274,
+        "perceivedGap": 1.5,
+        "perceivedUpper": 1.75,
+        "actualGapAtChoice": 1.03,
+        "judgement": {
+          "gap": 1.4,
+          "gapUpper": 1.65,
+          "stamina": 87.00000000000001
+        },
+        "atStart": {
+          "tick": 274,
+          "gap": 1.03,
+          "radius": 1.12,
+          "hp": 150,
+          "enemyHp": 149,
+          "stamina": 82.00000000000001,
+          "maxStamina": 100,
+          "posture": 0,
+          "ownState": "ready",
+          "enemyState": "ready",
+          "sampleAgeTicks": 1
+        },
+        "atContact": {
+          "tick": 295,
+          "gap": 1.33,
+          "radius": 0.95,
+          "hp": 150,
+          "enemyHp": 135,
+          "stamina": 57.666666666666686,
+          "maxStamina": 100,
+          "posture": 0,
+          "ownState": "light_right",
+          "enemyState": "hurt",
+          "sampleAgeTicks": 0
+        },
+        "authoredReach": 1.65,
+        "result": "Hit",
+        "contactTick": 295,
+        "note": "Sampled spacing is diagnostic; facing, minimum reach, movement and interruption also affect contact."
+      },
+      {
+        "tick": 349,
+        "move": "thrust",
+        "choiceTick": 348,
+        "perceivedGap": 1.5,
+        "perceivedUpper": 1.75,
+        "actualGapAtChoice": 1.91,
+        "judgement": {
+          "gap": 1.4,
+          "gapUpper": 1.65,
+          "stamina": 78.00000000000006
+        },
+        "atStart": {
+          "tick": 348,
+          "gap": 1.91,
+          "radius": 0.95,
+          "hp": 150,
+          "enemyHp": 135,
+          "stamina": 73.00000000000006,
+          "maxStamina": 100,
+          "posture": 0,
+          "ownState": "ready",
+          "enemyState": "ready",
+          "sampleAgeTicks": 1
+        },
+        "atContact": {
+          "tick": 365,
+          "gap": 1.31,
+          "radius": 0.9,
+          "hp": 150,
+          "enemyHp": 124,
+          "stamina": 53.66666666666673,
+          "maxStamina": 100,
+          "posture": 0,
+          "ownState": "thrust",
+          "enemyState": "ready",
+          "sampleAgeTicks": 0
+        },
+        "authoredReach": 2,
+        "result": "Hit",
+        "contactTick": 365,
+        "note": "Sampled spacing is diagnostic; facing, minimum reach, movement and interruption also affect contact."
+      },
+      {
+        "tick": 423,
+        "move": "thrust",
+        "choiceTick": 422,
+        "perceivedGap": 1.5,
+        "perceivedUpper": 1.75,
+        "actualGapAtChoice": 1.31,
+        "judgement": {
+          "gap": 1.4,
+          "gapUpper": 1.65,
+          "stamina": 78.00000000000009
+        },
+        "atStart": {
+          "tick": 422,
+          "gap": 1.31,
+          "radius": 0.9,
+          "hp": 150,
+          "enemyHp": 124,
+          "stamina": 73.00000000000009,
+          "maxStamina": 100,
+          "posture": 0,
+          "ownState": "ready",
+          "enemyState": "guard",
+          "sampleAgeTicks": 1
+        },
+        "atContact": {
+          "tick": 439,
+          "gap": 0.85,
+          "radius": 1.11,
+          "hp": 150,
+          "enemyHp": 124,
+          "stamina": 53.000000000000085,
+          "maxStamina": 100,
+          "posture": 0,
+          "ownState": "thrust",
+          "enemyState": "guard",
+          "sampleAgeTicks": 0
+        },
+        "authoredReach": 2,
+        "result": "Blocked",
+        "contactTick": 439,
+        "note": "Sampled spacing is diagnostic; facing, minimum reach, movement and interruption also affect contact."
+      },
+      {
+        "tick": 508,
+        "move": "light_right",
+        "choiceTick": 507,
+        "perceivedGap": 1,
+        "perceivedUpper": 1.25,
+        "actualGapAtChoice": 1.41,
+        "judgement": {
+          "gap": 0.9,
+          "gapUpper": 1.15,
+          "stamina": 59.06666666666675
+        },
+        "atStart": {
+          "tick": 507,
+          "gap": 1.41,
+          "radius": 0.99,
+          "hp": 125,
+          "enemyHp": 124,
+          "stamina": 54.06666666666675,
+          "maxStamina": 92,
+          "posture": 37.3,
+          "ownState": "ready",
+          "enemyState": "ready",
+          "sampleAgeTicks": 1
+        },
+        "atContact": {
+          "tick": 528,
+          "gap": 1.71,
+          "radius": 1.19,
+          "hp": 125,
+          "enemyHp": 110,
+          "stamina": 29.066666666666748,
+          "maxStamina": 92,
+          "posture": 33.09999999999994,
+          "ownState": "light_right",
+          "enemyState": "hurt",
+          "sampleAgeTicks": 0
+        },
+        "authoredReach": 1.65,
+        "result": "Hit",
+        "contactTick": 528,
+        "note": "Sampled spacing is diagnostic; facing, minimum reach, movement and interruption also affect contact."
+      },
+      {
+        "tick": 617,
+        "move": "thrust",
+        "choiceTick": 616,
+        "perceivedGap": 1.5,
+        "perceivedUpper": 1.75,
+        "actualGapAtChoice": 1.13,
+        "judgement": {
+          "gap": 1.4,
+          "gapUpper": 1.65,
+          "stamina": 65.53333333333333
+        },
+        "atStart": {
+          "tick": 616,
+          "gap": 1.13,
+          "radius": 2.17,
+          "hp": 125,
+          "enemyHp": 110,
+          "stamina": 60.533333333333324,
+          "maxStamina": 92,
+          "posture": 15.499999999999982,
+          "ownState": "ready",
+          "enemyState": "ready",
+          "sampleAgeTicks": 1
+        },
+        "atContact": {
+          "tick": 633,
+          "gap": 1,
+          "radius": 2.56,
+          "hp": 125,
+          "enemyHp": 93,
+          "stamina": 40.533333333333324,
+          "maxStamina": 92,
+          "posture": 12.099999999999994,
+          "ownState": "thrust",
+          "enemyState": "hurt",
+          "sampleAgeTicks": 0
+        },
+        "authoredReach": 2,
+        "result": "Hit",
+        "contactTick": 633,
+        "note": "Sampled spacing is diagnostic; facing, minimum reach, movement and interruption also affect contact."
+      },
+      {
+        "tick": 722,
+        "move": "thrust",
+        "choiceTick": 721,
+        "perceivedGap": 1.5,
+        "perceivedUpper": 1.75,
+        "actualGapAtChoice": 1.04,
+        "judgement": {
+          "gap": 1.4,
+          "gapUpper": 1.65,
+          "stamina": 80.33333333333331
+        },
+        "atStart": {
+          "tick": 721,
+          "gap": 1.04,
+          "radius": 2.82,
+          "hp": 125,
+          "enemyHp": 93,
+          "stamina": 75.33333333333331,
+          "maxStamina": 92,
+          "posture": 0,
+          "ownState": "ready",
+          "enemyState": "kick",
+          "sampleAgeTicks": 1
+        },
+        "atContact": {
+          "tick": 738,
+          "gap": 1,
+          "radius": 2.91,
+          "hp": 125,
+          "enemyHp": 76,
+          "stamina": 55.333333333333314,
+          "maxStamina": 92,
+          "posture": 0,
+          "ownState": "thrust",
+          "enemyState": "hurt",
+          "sampleAgeTicks": 0
+        },
+        "authoredReach": 2,
+        "result": "Hit",
+        "contactTick": 738,
+        "note": "Sampled spacing is diagnostic; facing, minimum reach, movement and interruption also affect contact."
+      },
+      {
+        "tick": 819,
+        "move": "riposte",
+        "choiceTick": 818,
+        "perceivedGap": 1.5,
+        "perceivedUpper": 1.75,
+        "actualGapAtChoice": 1,
+        "judgement": {
+          "gap": 1.4,
+          "gapUpper": 1.65,
+          "stamina": 95.00000000000013
+        },
+        "atStart": {
+          "tick": 818,
+          "gap": 1,
+          "radius": 2.91,
+          "hp": 125,
+          "enemyHp": 76,
+          "stamina": 90.00000000000013,
+          "maxStamina": 92,
+          "posture": 0,
+          "ownState": "ready",
+          "enemyState": "hurt",
+          "sampleAgeTicks": 1
+        },
+        "atContact": {
+          "tick": 831,
+          "gap": 1.05,
+          "radius": 3.04,
+          "hp": 125,
+          "enemyHp": 46,
+          "stamina": 70.00000000000013,
+          "maxStamina": 92,
+          "posture": 0,
+          "ownState": "riposte",
+          "enemyState": "hurt",
+          "sampleAgeTicks": 0
+        },
+        "authoredReach": 1.65,
+        "result": "Hit",
+        "contactTick": 831,
+        "note": "Sampled spacing is diagnostic; facing, minimum reach, movement and interruption also affect contact."
+      },
+      {
+        "tick": 920,
+        "move": "thrust",
+        "choiceTick": 919,
+        "perceivedGap": 1.5,
+        "perceivedUpper": 1.75,
+        "actualGapAtChoice": 1.04,
+        "judgement": {
+          "gap": 1.4,
+          "gapUpper": 1.65,
+          "stamina": 97
+        },
+        "atStart": {
+          "tick": 919,
+          "gap": 1.04,
+          "radius": 3.11,
+          "hp": 125,
+          "enemyHp": 46,
+          "stamina": 92,
+          "maxStamina": 92,
+          "posture": 0,
+          "ownState": "ready",
+          "enemyState": "kick",
+          "sampleAgeTicks": 1
+        },
+        "atContact": {
+          "tick": 936,
+          "gap": 1,
+          "radius": 3.19,
+          "hp": 125,
+          "enemyHp": 29,
+          "stamina": 72,
+          "maxStamina": 92,
+          "posture": 0,
+          "ownState": "thrust",
+          "enemyState": "hurt",
+          "sampleAgeTicks": 0
+        },
+        "authoredReach": 2,
+        "result": "Hit",
+        "contactTick": 936,
+        "note": "Sampled spacing is diagnostic; facing, minimum reach, movement and interruption also affect contact."
+      },
+      {
+        "tick": 1021,
+        "move": "light_right",
+        "choiceTick": 1020,
+        "perceivedGap": 1.5,
+        "perceivedUpper": 1.75,
+        "actualGapAtChoice": 1.01,
+        "judgement": {
+          "gap": 1.4,
+          "gapUpper": 1.65,
+          "stamina": 97
+        },
+        "atStart": {
+          "tick": 1020,
+          "gap": 1.01,
+          "radius": 3.39,
+          "hp": 125,
+          "enemyHp": 29,
+          "stamina": 92,
+          "maxStamina": 92,
+          "posture": 0,
+          "ownState": "ready",
+          "enemyState": "kick",
+          "sampleAgeTicks": 1
+        },
+        "atContact": null,
+        "authoredReach": 1.65,
+        "result": "unresolved",
+        "contactTick": null,
+        "note": "Sampled spacing is diagnostic; facing, minimum reach, movement and interruption also affect contact."
+      },
+      {
+        "tick": 1122,
+        "move": "thrust",
+        "choiceTick": 1121,
+        "perceivedGap": 1.5,
+        "perceivedUpper": 1.75,
+        "actualGapAtChoice": 0.96,
+        "judgement": {
+          "gap": 1.4,
+          "gapUpper": 1.65,
+          "stamina": 83.00000000000006
+        },
+        "atStart": {
+          "tick": 1121,
+          "gap": 0.96,
+          "radius": 3.51,
+          "hp": 120,
+          "enemyHp": 29,
+          "stamina": 78.00000000000006,
+          "maxStamina": 92,
+          "posture": 22.400000000000027,
+          "ownState": "ready",
+          "enemyState": "kick",
+          "sampleAgeTicks": 1
+        },
+        "atContact": null,
+        "authoredReach": 2,
+        "result": "unresolved",
+        "contactTick": null,
+        "note": "Sampled spacing is diagnostic; facing, minimum reach, movement and interruption also affect contact."
+      },
+      {
+        "tick": 1219,
+        "move": "thrust",
+        "choiceTick": 1218,
+        "perceivedGap": 1.5,
+        "perceivedUpper": 1.75,
+        "actualGapAtChoice": 1.02,
+        "judgement": {
+          "gap": 1.4,
+          "gapUpper": 1.65,
+          "stamina": 72.66666666666667
+        },
+        "atStart": {
+          "tick": 1218,
+          "gap": 1.02,
+          "radius": 3.41,
+          "hp": 115,
+          "enemyHp": 29,
+          "stamina": 67.66666666666667,
+          "maxStamina": 92,
+          "posture": 41.999999999999936,
+          "ownState": "ready",
+          "enemyState": "kick",
+          "sampleAgeTicks": 1
+        },
+        "atContact": {
+          "tick": 1235,
+          "gap": 1,
+          "radius": 3.49,
+          "hp": 115,
+          "enemyHp": 12,
+          "stamina": 47.66666666666667,
+          "maxStamina": 92,
+          "posture": 38.59999999999989,
+          "ownState": "thrust",
+          "enemyState": "hurt",
+          "sampleAgeTicks": 0
+        },
+        "authoredReach": 2,
+        "result": "Hit",
+        "contactTick": 1235,
+        "note": "Sampled spacing is diagnostic; facing, minimum reach, movement and interruption also affect contact."
+      },
+      {
+        "tick": 1316,
+        "move": "thrust",
+        "choiceTick": 1315,
+        "perceivedGap": 1.5,
+        "perceivedUpper": 1.75,
+        "actualGapAtChoice": 1,
+        "judgement": {
+          "gap": 1.4,
+          "gapUpper": 1.65,
+          "stamina": 87.33333333333341
+        },
+        "atStart": {
+          "tick": 1315,
+          "gap": 1,
+          "radius": 3.49,
+          "hp": 115,
+          "enemyHp": 12,
+          "stamina": 82.33333333333341,
+          "maxStamina": 92,
+          "posture": 22.59999999999983,
+          "ownState": "ready",
+          "enemyState": "kick",
+          "sampleAgeTicks": 1
+        },
+        "atContact": {
+          "tick": 1332,
+          "gap": 1.3,
+          "radius": 3.27,
+          "hp": 110,
+          "enemyHp": 0,
+          "stamina": 47.333333333333414,
+          "maxStamina": 92,
+          "posture": 49.19999999999985,
+          "ownState": "hurt",
+          "enemyState": "dead",
+          "sampleAgeTicks": 0
+        },
+        "authoredReach": 2,
+        "result": "Hit",
+        "contactTick": 1332,
+        "note": "Sampled spacing is diagnostic; facing, minimum reach, movement and interruption also affect contact."
+      }
+    ],
+    "defenceOutcomes": [
+      {
+        "tick": 180,
+        "type": "parry",
+        "attackTick": 144,
+        "resolutionTick": 180,
+        "against": "heavy_overhead",
+        "charged": false,
+        "result": "parried",
+        "avoided": 22,
+        "windowOpened": true,
+        "windowUsed": false,
+        "answer": null,
+        "counterMove": false,
+        "landed": false,
+        "distance": 1,
+        "wall": 1.6,
+        "avoidanceCredited": true,
+        "windowCredited": true,
+        "positionBefore": {
+          "tick": 180,
+          "gap": 0.85,
+          "radius": 0.05,
+          "hp": 150,
+          "enemyHp": 149,
+          "stamina": 82.99999999999996,
+          "maxStamina": 100,
+          "posture": 0,
+          "ownState": "guard",
+          "enemyState": "hurt",
+          "sampleAgeTicks": 0
+        },
+        "positionAfter": {
+          "tick": 208,
+          "gap": 1.85,
+          "radius": 1.65,
+          "hp": 150,
+          "enemyHp": 149,
+          "stamina": 55.999999999999915,
+          "maxStamina": 100,
+          "posture": 0,
+          "ownState": "roll",
+          "enemyState": "hurt",
+          "sampleAgeTicks": 2
+        },
+        "nextUsefulHit": {
+          "tick": 295,
+          "move": "light_right",
+          "damage": 14,
+          "secondsAfterAction": 1.917,
+          "secondsAfterResolution": 1.917,
+          "beforeNextThreat": true
+        },
+        "damageReceivedBeforeNextHit": 0,
+        "observation": "Recorded sequence, not proof the defence caused subsequent damage or a miss."
+      },
+      {
+        "tick": 190,
+        "type": "roll",
+        "attackTick": null,
+        "resolutionTick": null,
+        "against": null,
+        "charged": false,
+        "result": "no attack in flight",
+        "avoided": 0,
+        "windowOpened": false,
+        "windowUsed": false,
+        "answer": null,
+        "counterMove": false,
+        "landed": false,
+        "distance": 1.97,
+        "wall": 2.64,
+        "positionBefore": {
+          "tick": 189,
+          "gap": 0.85,
+          "radius": 0.05,
+          "hp": 150,
+          "enemyHp": 149,
+          "stamina": 85.33333333333326,
+          "maxStamina": 100,
+          "posture": 0,
+          "ownState": "guard",
+          "enemyState": "hurt",
+          "sampleAgeTicks": 1
+        },
+        "positionAfter": {
+          "tick": 224,
+          "gap": 3.15,
+          "radius": 3.03,
+          "hp": 150,
+          "enemyHp": 149,
+          "stamina": 55.999999999999915,
+          "maxStamina": 100,
+          "posture": 0,
+          "ownState": "roll",
+          "enemyState": "hurt",
+          "sampleAgeTicks": 2
+        },
+        "nextUsefulHit": {
+          "tick": 295,
+          "move": "light_right",
+          "damage": 14,
+          "secondsAfterAction": 1.75,
+          "secondsAfterResolution": 1.75,
+          "beforeNextThreat": true
+        },
+        "damageReceivedBeforeNextHit": 0,
+        "observation": "Recorded sequence, not proof the defence caused subsequent damage or a miss."
+      }
+    ],
+    "trades": [
+      {
+        "fromTick": 1332,
+        "toTick": 1332,
+        "dealt": 17,
+        "taken": 5,
+        "netRawDamage": 12,
+        "bothDamaged": true,
+        "contacts": [
+          {
+            "tick": 1332,
+            "type": "Hit",
+            "actor": 0,
+            "target": 1,
+            "move": "thrust",
+            "damage": 17
+          },
+          {
+            "tick": 1332,
+            "type": "Hit",
+            "actor": 1,
+            "target": 0,
+            "move": "kick",
+            "damage": 5
+          }
+        ],
+        "lethal": true,
+        "damageBasis": "Raw event damage; can exceed remaining HP. Contact bursts <=45-tick gaps, <=120-tick span; correlation, not causal trades."
+      }
+    ],
+    "visualCases": [
+      {
+        "kind": "parry impact",
+        "tick": 180,
+        "fromTick": 90,
+        "toTick": 330,
+        "questions": [
+          "Can we see the opponent opening?",
+          "Can we reacquire the blade before the punish?"
+        ],
+        "assessment": null,
+        "status": "requires normal-speed visual review; logs cannot judge taste or camera comfort"
+      },
+      {
+        "kind": "blood / hit feedback",
+        "tick": 143,
+        "fromTick": 53,
+        "toTick": 293,
+        "questions": [
+          "Does blood originate at contact and fit the gritty art?",
+          "Does it obscure weapon/body motion or feel repetitive?"
+        ],
+        "assessment": null,
+        "status": "requires normal-speed visual review; logs cannot judge taste or camera comfort"
+      },
+      {
+        "kind": "roll camera",
+        "tick": 190,
+        "fromTick": 100,
+        "toTick": 340,
+        "questions": [
+          "Is disorientation brief and controlled?",
+          "When is the opponent weapon readable again?",
+          "Does the next threat arrive before recovery?"
+        ],
+        "assessment": null,
+        "status": "requires normal-speed visual review; logs cannot judge taste or camera comfort"
+      }
+    ],
+    "limits": [
+      "Synthetic player; no human skill calibration",
+      "Silent capture cannot assess sound",
+      "Camera comfort/touch feel require device evidence",
+      "Authored reach and nominal avoided damage are not measured counterfactuals"
+    ]
+  },
+  "chargedHeavies": [],
+  "moments": [],
+  "videoTailSeconds": null,
+  "inputsReleased": true,
+  "video": "artifacts/combat/live-retest-20261006/browser-intermediate/executioner-2026100507.webm",
+  "videoAlignment": {
+    "verified": false,
+    "reason": "Wall-clock WebM timestamps cannot establish exact combat ticks; use reviewFrames for event-aligned visual evidence."
+  }
+}

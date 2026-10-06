@@ -1,0 +1,41 @@
+{
+  "jobId": "6ac51250404719ba37661317",
+  "url": "https://huggingface.co/jobs/Domlynch/6ac51250404719ba37661317",
+  "terminalStatus": {
+    "stage": "COMPLETED",
+    "message": null
+  },
+  "botRevision": "0536608a4491b4885cda9f0fde53f92c07c7fc49",
+  "gameRevision": "6fb21b3437a6e794e47dc5a91141b67df7d69162",
+  "tests": 112,
+  "pass": 112,
+  "fail": 0,
+  "logsTail": [
+    "  ---",
+    "  duration_ms: 2.292784",
+    "  type: 'test'",
+    "  ...",
+    "# Subtest: workaround is opt-in, labelled and cannot qualify as acceptance; malformed mode rejected",
+    "ok 112 - workaround is opt-in, labelled and cannot qualify as acceptance; malformed mode rejected",
+    "  ---",
+    "  duration_ms: 60.748674",
+    "  type: 'test'",
+    "  ...",
+    "1..112",
+    "# tests 112",
+    "# suites 0",
+    "# pass 112",
+    "# fail 0",
+    "# cancelled 0",
+    "# skipped 0",
+    "# todo 0",
+    "# duration_ms 792.690759",
+    "VERIFIED_RECEIPT {\"bot\":\"0536608a4491b4885cda9f0fde53f92c07c7fc49\",\"game\":\"6fb21b3437a6e794e47dc5a91141b67df7d69162\",\"testLogSha256\":\"5d7dc4bb985e3d0b1bfbcff1518ac712c61ecfa789679dbfef8bab1fcfe82768\"}"
+  ],
+  "logLimit": "Retained final20 lines, full logs not downloaded",
+  "testLogSha256": "5d7dc4bb985e3d0b1bfbcff1518ac712c61ecfa789679dbfef8bab1fcfe82768",
+  "hardware": "cpu-upgrade",
+  "timeoutSeconds": 300,
+  "envSecretsTransferred": [],
+  "cost": "At verified $0.03/hour rate, five-minute cap is $0.0025; actual billed cost not measured."
+}

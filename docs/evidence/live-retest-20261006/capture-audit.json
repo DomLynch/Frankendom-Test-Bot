@@ -1,0 +1,60 @@
+{
+  "captures": [
+    {
+      "name": "senses-high",
+      "clipSha256": "7ec1e0199a8e54f9dda586de6f06c48c12e9730e6d2c2e04c426fea2f68db76b",
+      "fixtureSha256": "cfca92cf31b8ead8916c5bf6c36c4f3c6ff831a79ea10a089ef231e2c0bf04ea",
+      "recordSha256": "84eb5c6a4c629875dec51b7f167b0c3d1b0dbcb24522d4bff5740c1072b64d61",
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+      "events": 32,
+      "audioSamples": 427,
+      "visualSamples": 62,
+      "allEventsAndFinalStateIdentical": true
+    },
+    {
+      "name": "senses-low",
+      "clipSha256": "87b3f88fc5d421e1bf13a2b0962d964bef6503192ab40a6eaa857e2bde0ddc67",
+      "fixtureSha256": "cfca92cf31b8ead8916c5bf6c36c4f3c6ff831a79ea10a089ef231e2c0bf04ea",
+      "recordSha256": "84eb5c6a4c629875dec51b7f167b0c3d1b0dbcb24522d4bff5740c1072b64d61",
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+      "events": 32,
+      "audioSamples": 426,
+      "visualSamples": 62,
+      "allEventsAndFinalStateIdentical": true
+    },
+    {
+      "name": "senses-off",
+      "clipSha256": "5555f6adacd6d749931632625412956a5b3430980a19ad8065650f94220e26f7",
+      "fixtureSha256": "cfca92cf31b8ead8916c5bf6c36c4f3c6ff831a79ea10a089ef231e2c0bf04ea",
+      "recordSha256": "84eb5c6a4c629875dec51b7f167b0c3d1b0dbcb24522d4bff5740c1072b64d61",
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+      "events": 32,
+      "audioSamples": 430,
+      "visualSamples": 62,
+      "allEventsAndFinalStateIdentical": true
+    },
+    {
+      "name": "senses-high-impact",
+      "clipSha256": "868419b822ddfc575a7aa60790a00349b5f0abdedd30216394400b2dce456412",
+      "fixtureSha256": "cfca92cf31b8ead8916c5bf6c36c4f3c6ff831a79ea10a089ef231e2c0bf04ea",
+      "recordSha256": "84eb5c6a4c629875dec51b7f167b0c3d1b0dbcb24522d4bff5740c1072b64d61",
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+      "events": 32,
+      "audioSamples": 427,
+      "visualSamples": 62,
+      "allEventsAndFinalStateIdentical": true
+    },
+    {
+      "name": "senses-off-impact",
+      "clipSha256": "ac5b141acc0ddabdd8972ca53679edd654a734c81e58f5234cf15384d0cd180a",
+      "fixtureSha256": "cfca92cf31b8ead8916c5bf6c36c4f3c6ff831a79ea10a089ef231e2c0bf04ea",
+      "recordSha256": "84eb5c6a4c629875dec51b7f167b0c3d1b0dbcb24522d4bff5740c1072b64d61",
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+      "events": 32,
+      "audioSamples": 429,
+      "visualSamples": 62,
+      "allEventsAndFinalStateIdentical": true
+    }
+  ],
+  "note": "Five native AV views of one engine-authored verified replay, not five additional player wins; full originals retained locally."
+}
