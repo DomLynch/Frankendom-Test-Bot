@@ -13,12 +13,14 @@ export function liveAVMode({nativeAV=false,research,recordVideo=true,reviewFrame
   return 'native real-time; polling delay plus automation overhead';
 }
 export function liveAVCoverage(receipt, fightEvents, endTick) {
-  assert.ok(receipt.frames.length>1,'No native frame timeline');
+  assert.ok(Number.isFinite(receipt.begin?.performanceMs)&&Number.isFinite(receipt.end?.performanceMs),'Missing native recording bounds');
+  const frames=receipt.frames.filter(f=>f.performanceMs>=receipt.begin.performanceMs&&f.performanceMs<=receipt.end.performanceMs);
+  assert.ok(frames.length>1,'No native frame timeline');
   assert.equal(receipt.audioTracks,1,'Missing actual audio track');
   assert.ok(receipt.levels.some(s=>s.rms>.00001),'Actual final audio stayed silent');
   assert.deepEqual(receipt.visualErrors,[]);
   assert.ok(receipt.visualSamples.length>0,'No rendered pixel samples');
-  const first=receipt.frames[0].tick,last=receipt.frames.at(-1).tick;
+  const first=frames[0].tick,last=frames.at(-1).tick;
   assert.ok(Number.isFinite(endTick)&&last>=endTick,'Final combat tick not covered');
   const expected=fightEvents.filter(e=>e.tick>=first&&e.tick<=endTick);
   assert.ok(expected.length>0,'No fight events within capture');

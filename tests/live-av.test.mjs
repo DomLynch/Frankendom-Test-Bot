@@ -9,7 +9,7 @@ test('native AV rejects controlled frame capture and missing video, and requires
   for(const patch of [{research:false},{recordVideo:false},{reviewFrames:true}])assert.throws(()=>liveAVMode({...config,...patch}));
 });
 const event={tick:20,type:'Hit',actor:0,target:1,move:'thrust',damage:11};
-const sample=()=>({frames:[{tick:10,performanceMs:1000},{tick:20,performanceMs:1167},{tick:21,performanceMs:1184}],
+const sample=()=>({begin:{performanceMs:1000},end:{performanceMs:1184},frames:[{tick:10,performanceMs:1000},{tick:20,performanceMs:1167},{tick:21,performanceMs:1184}],
   events:[{tick:5,type:'ActionStarted',actor:0,action:'draw'},event],audioTracks:1,
   levels:[{rms:.01,peak:.1}],visualSamples:[{tick:20}],visualErrors:[]});
 test('live AV matches recorded events only within captured frames and reports cropped warmup',()=>{
@@ -24,4 +24,8 @@ test('silent, missing-track, incomplete and mismatched captures cannot pass',()=
   assert.throws(()=>liveAVCoverage({...sample(),frames:[{tick:10},{tick:19}]},[event],20));
   assert.throws(()=>liveAVCoverage({...sample(),events:[{...event,damage:12}]},[event],20));
   assert.throws(()=>liveAVCoverage({...sample(),visualErrors:['read failed']},[event],20));
+});
+test('frames rendered while recorder stop resolves cannot falsely cover the fight end',()=>{
+  const r=sample();r.frames.push({tick:25,performanceMs:1250});
+  assert.throws(()=>liveAVCoverage(r,[event],25),'Post-stop render is outside recorded video');
 });

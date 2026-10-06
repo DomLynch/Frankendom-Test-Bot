@@ -112,7 +112,7 @@ export function installAudioReview() {
       const data=new Uint8Array(await new Blob(chunks,{type}).arrayBuffer());
       let binary='';for(let n=0;n<data.length;n+=32768)binary+=String.fromCharCode(...data.subarray(n,n+32768));
       return {base64:btoa(binary),type,begin:lab.beginStamp,end:lab.endStamp,starts:lab.starts,stops:lab.stops,
-        frames:lab.frames.filter(f=>f.performanceMs>=lab.beginStamp.performanceMs),events:lab.events,
+        frames:lab.frames.filter(f=>f.performanceMs>=lab.beginStamp.performanceMs&&f.performanceMs<=lab.endStamp.performanceMs),events:lab.events,
         levels:lab.levels,decoded:lab.decoded,visualSamples:lab.visualSamples,visualErrors:lab.visualErrors,frameProofs:lab.frameProofs,sampleRate:context.sampleRate,audioTracks:stream.getAudioTracks().length,
         method:'native canvas captureStream plus actual final game WebAudio bus in one MediaRecorder; native clocks; silent speaker sink'};
     };
