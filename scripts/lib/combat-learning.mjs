@@ -18,6 +18,24 @@ export const COMBAT_REVIEW_RUBRIC = [
   ['audio / accessibility','Unassessed in silent capture: sound layering, cue recognition, reduced-shake/motion comfort and physical device usability'],
 ];
 const seconds = ticks => +(ticks / 60).toFixed(3);
+// A received hit alone is not proof of interruption: poise and simultaneous trades exist.
+// Staggered explicitly puts its actor into hurt in the pinned engine; feint abandons the swing.
+export function attackTermination(events, start, contact, nextTick = Infinity) {
+  const window = events.filter(e => e.tick >= start.tick && e.tick < nextTick);
+  const stop = window.find(e => e.actor === 0 && (e.type === 'Staggered'
+    || e.type === 'ActionStarted' && e.action === 'feint') || e.type === 'Killed');
+  const resolved = contact && (!stop || contact.tick <= stop.tick);
+  const status = resolved ? 'resolved' : stop?.type === 'Staggered' ? 'interrupted'
+    : stop?.action === 'feint' ? 'feinted' : stop?.type === 'Killed' ? 'fight ended' : 'unknown';
+  const end = resolved ? contact : stop;
+  const source = damageSources(end ? window.filter(e => e.tick <= end.tick) : []);
+  return { status, tick:end?.tick ?? null, event:end?.type ?? null,
+    result:resolved ? contact.type : null,
+    damageReceivedUntilTermination:end ? source.opponent.total + source.arena.toPlayer : null,
+    evidence:resolved ? 'Recorded attack resolution (including same-tick trade/parry).'
+      : stop ? 'Recorded stagger, feint or fight end before an attack resolution.'
+      : 'No recorded termination; do not count as a range miss or assume interruption.' };
+}
 export function combatLearning(events, decisions, track, defences, moveReach = {}, actionDuration = {roll:36,backstep:12}) {
   const attacks = events.filter(e => e.type === 'AttackStarted' && e.actor === 0).map(start => {
     const next = events.find(e => e.type === 'AttackStarted' && e.actor === 0 && e.tick > start.tick)?.tick ?? Infinity;
@@ -32,6 +50,7 @@ export function combatLearning(events, decisions, track, defences, moveReach = {
       actualGapAtChoice:choice?.actualGap ?? null, judgement:choice?.judgement ?? null,
       atStart:stateAt(track,start.tick), atContact:contact ? stateAt(track,contact.tick) : null,
       authoredReach:reach, result:contact?.type ?? 'unresolved', contactTick:contact?.tick ?? null,
+      termination:attackTermination(events,start,contact,next),
       note:'Sampled spacing is diagnostic; facing, minimum reach, movement and interruption also affect contact.' };
   });
   const defenceOutcomes = defences.map(d => {
@@ -41,7 +60,13 @@ export function combatLearning(events, decisions, track, defences, moveReach = {
     const before = stateAt(track,d.tick), after = stateAt(track,d.tick + (actionDuration[d.type] ?? 30));
     const takenUntil = nextHit?.tick ?? events.at(-1)?.tick ?? from;
     const received = damageSources(events.filter(e => e.tick >= d.tick && e.tick <= takenUntil));
+    const firstOwnAction = events.find(e => e.tick > from && e.actor === 0
+      && (e.type === 'ActionStarted' || e.type === 'AttackStarted'));
     return { ...d, positionBefore:before, positionAfter:after,
+      firstOwnAction:firstOwnAction ? { tick:firstOwnAction.tick,
+        action:firstOwnAction.action ?? firstOwnAction.move,
+        secondsAfterResolution:seconds(firstOwnAction.tick-from),
+        beforeNextEnemyAttackStart:!nextThreat || firstOwnAction.tick < nextThreat.tick } : null,
       nextUsefulHit:nextHit ? { tick:nextHit.tick,move:nextHit.move,damage:nextHit.damage,
         secondsAfterAction:seconds(nextHit.tick-d.tick),secondsAfterResolution:seconds(nextHit.tick-from),
         beforeNextThreat:!nextThreat || nextHit.tick < nextThreat.tick } : null,
@@ -71,6 +96,8 @@ export function combatLearning(events, decisions, track, defences, moveReach = {
   add('blood / hit feedback',events.find(e=>e.type==='Hit'&&e.damage>0),['Does blood originate at contact and fit the gritty art?','Does it obscure weapon/body motion or feel repetitive?']);
   add('roll camera',events.find(e=>e.type==='ActionStarted'&&e.actor===0&&e.action==='roll'),['Is disorientation brief and controlled?','When is the opponent weapon readable again?','Does the next threat arrive before recovery?']);
   add('charge consequence',events.find(e=>e.type==='Charged'&&e.actor===1),['Is wind-up readable without debug?','Is the defensive result understandable?']);
-  return {schemaVersion:1,reviewRubric:COMBAT_REVIEW_RUBRIC.map(([dimension,questions])=>({dimension,questions,status:'unreviewed',finding:null})),attacks,defenceOutcomes,trades,visualCases,
+  const attackTerminations = Object.fromEntries(['resolved','interrupted','feinted','fight ended','unknown']
+    .map(status => [status,attacks.filter(a => a.termination.status === status).length]));
+  return {schemaVersion:2,reviewRubric:COMBAT_REVIEW_RUBRIC.map(([dimension,questions])=>({dimension,questions,status:'unreviewed',finding:null})),attacks,attackTerminations,defenceOutcomes,trades,visualCases,
     limits:['Synthetic player; no human skill calibration','Silent capture cannot assess sound','Camera comfort/touch feel require device evidence','Authored reach and nominal avoided damage are not measured counterfactuals']};
 }
